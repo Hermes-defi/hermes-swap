@@ -13,7 +13,6 @@ module.exports = {
           },
         },
       },
-        /*
       {
         version: "0.7.6",
         settings: {
@@ -23,8 +22,6 @@ module.exports = {
           },
         },
       },
-
-         */
     ],
   },
   networks: {

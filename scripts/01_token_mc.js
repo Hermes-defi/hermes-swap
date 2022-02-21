@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 
-// npx hardhat run scripts\main.js --network one
+// npx hardhat run scripts\01_token_mc.js --network testnet
 async function main() {
 
     const network = await ethers.getDefaultProvider().getNetwork();

@@ -129,12 +129,12 @@ library SafeERC20 {
     }
 }
 
-// File: contracts/traderjoe/interfaces/IJoeERC20.sol
+// File: contracts/hermesswap/interfaces/IHermesERC20.sol
 
 
 pragma solidity >=0.5.0;
 
-interface IJoeERC20 {
+interface IHermesERC20 {
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -184,12 +184,12 @@ interface IJoeERC20 {
     ) external;
 }
 
-// File: contracts/traderjoe/interfaces/IJoePair.sol
+// File: contracts/hermesswap/interfaces/IHermesPair.sol
 
 
 pragma solidity >=0.5.0;
 
-interface IJoePair {
+interface IHermesPair {
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -298,12 +298,12 @@ interface IJoePair {
     function initialize(address, address) external;
 }
 
-// File: contracts/traderjoe/interfaces/IJoeFactory.sol
+// File: contracts/hermesswap/interfaces/IHermesFactory.sol
 
 
 pragma solidity >=0.5.0;
 
-interface IJoeFactory {
+interface IHermesFactory {
     event PairCreated(
         address indexed token0,
         address indexed token1,
@@ -412,7 +412,7 @@ contract BoringOwnable is BoringOwnableData {
     }
 }
 
-// File: contracts/JoeMaker.sol
+// File: contracts/HermesMaker.sol
 
 
 // P1 - P3: OK
@@ -424,22 +424,22 @@ pragma solidity 0.6.12;
 
 
 
-// JoeMaker is MasterJoe's left hand and kinda a wizard. He can cook up Joe from pretty much anything!
-// This contract handles "serving up" rewards for xJoe holders by trading tokens collected from fees for Joe.
+// HermesMaker is MasterHermes's left hand and kinda a wizard. He can cook up Hermes from pretty much anything!
+// This contract handles "serving up" rewards for xHermes holders by trading tokens collected from fees for Hermes.
 
 // T1 - T4: OK
-contract JoeMaker is BoringOwnable {
+contract HermesMaker is BoringOwnable {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
     // V1 - V5: OK
-    IJoeFactory public immutable factory;
+    IHermesFactory public immutable factory;
     //0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac
     // V1 - V5: OK
     address public immutable bar;
     //0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272
     // V1 - V5: OK
-    address private immutable joe;
+    address private immutable hermes;
     //0x6B3595068778DD592e39A122f4f5a5cF09C90fE2
     // V1 - V5: OK
     address private immutable wavax;
@@ -457,18 +457,18 @@ contract JoeMaker is BoringOwnable {
         address indexed token1,
         uint256 amount0,
         uint256 amount1,
-        uint256 amountJOE
+        uint256 amountHERMES
     );
 
     constructor(
         address _factory,
         address _bar,
-        address _joe,
+        address _hermes,
         address _wavax
     ) public {
-        factory = IJoeFactory(_factory);
+        factory = IHermesFactory(_factory);
         bar = _bar;
-        joe = _joe;
+        hermes = _hermes;
         wavax = _wavax;
     }
 
@@ -486,8 +486,8 @@ contract JoeMaker is BoringOwnable {
     function setBridge(address token, address bridge) external onlyOwner {
         // Checks
         require(
-            token != joe && token != wavax && token != bridge,
-            "JoeMaker: Invalid bridge"
+            token != hermes && token != wavax && token != bridge,
+            "HermesMaker: Invalid bridge"
         );
 
         // Effects
@@ -500,14 +500,14 @@ contract JoeMaker is BoringOwnable {
     // C6: It's not a fool proof solution, but it prevents flash loans, so here it's ok to use tx.origin
     modifier onlyEOA() {
         // Try to make flash-loan exploit harder to do by only allowing externally owned addresses.
-        require(msg.sender == tx.origin, "JoeMaker: must use EOA");
+        require(msg.sender == tx.origin, "HermesMaker: must use EOA");
         _;
     }
 
     // F1 - F10: OK
     // F3: _convert is separate to save gas by only checking the 'onlyEOA' modifier once in case of convertMultiple
-    // F6: There is an exploit to add lots of JOE to the bar, run convert, then remove the JOE again.
-    //     As the size of the JoeBar has grown, this requires large amounts of funds and isn't super profitable anymore
+    // F6: There is an exploit to add lots of HERMES to the bar, run convert, then remove the HERMES again.
+    //     As the size of the HermesBar has grown, this requires large amounts of funds and isn't super profitable anymore
     //     The onlyEOA modifier prevents this being done with a flash loan.
     // C1 - C24: OK
     function convert(address token0, address token1) external onlyEOA() {
@@ -533,8 +533,8 @@ contract JoeMaker is BoringOwnable {
     function _convert(address token0, address token1) internal {
         // Interactions
         // S1 - S4: OK
-        IJoePair pair = IJoePair(factory.getPair(token0, token1));
-        require(address(pair) != address(0), "JoeMaker: Invalid pair");
+        IHermesPair pair = IHermesPair(factory.getPair(token0, token1));
+        require(address(pair) != address(0), "HermesMaker: Invalid pair");
         // balanceOf: S1 - S4: OK
         // transfer: X1 - X5: OK
         IERC20(address(pair)).safeTransfer(
@@ -558,43 +558,43 @@ contract JoeMaker is BoringOwnable {
 
     // F1 - F10: OK
     // C1 - C24: OK
-    // All safeTransfer, _swap, _toJOE, _convertStep: X1 - X5: OK
+    // All safeTransfer, _swap, _toHERMES, _convertStep: X1 - X5: OK
     function _convertStep(
         address token0,
         address token1,
         uint256 amount0,
         uint256 amount1
-    ) internal returns (uint256 joeOut) {
+    ) internal returns (uint256 hermesOut) {
         // Interactions
         if (token0 == token1) {
             uint256 amount = amount0.add(amount1);
-            if (token0 == joe) {
-                IERC20(joe).safeTransfer(bar, amount);
-                joeOut = amount;
+            if (token0 == hermes) {
+                IERC20(hermes).safeTransfer(bar, amount);
+                hermesOut = amount;
             } else if (token0 == wavax) {
-                joeOut = _toJOE(wavax, amount);
+                hermesOut = _toHERMES(wavax, amount);
             } else {
                 address bridge = bridgeFor(token0);
                 amount = _swap(token0, bridge, amount, address(this));
-                joeOut = _convertStep(bridge, bridge, amount, 0);
+                hermesOut = _convertStep(bridge, bridge, amount, 0);
             }
-        } else if (token0 == joe) {
-            // eg. JOE - AVAX
-            IERC20(joe).safeTransfer(bar, amount0);
-            joeOut = _toJOE(token1, amount1).add(amount0);
-        } else if (token1 == joe) {
-            // eg. USDT - JOE
-            IERC20(joe).safeTransfer(bar, amount1);
-            joeOut = _toJOE(token0, amount0).add(amount1);
+        } else if (token0 == hermes) {
+            // eg. HERMES - AVAX
+            IERC20(hermes).safeTransfer(bar, amount0);
+            hermesOut = _toHERMES(token1, amount1).add(amount0);
+        } else if (token1 == hermes) {
+            // eg. USDT - HERMES
+            IERC20(hermes).safeTransfer(bar, amount1);
+            hermesOut = _toHERMES(token0, amount0).add(amount1);
         } else if (token0 == wavax) {
             // eg. AVAX - USDC
-            joeOut = _toJOE(
+            hermesOut = _toHERMES(
                 wavax,
                 _swap(token1, wavax, amount1, address(this)).add(amount0)
             );
         } else if (token1 == wavax) {
             // eg. USDT - AVAX
-            joeOut = _toJOE(
+            hermesOut = _toHERMES(
                 wavax,
                 _swap(token0, wavax, amount0, address(this)).add(amount1)
             );
@@ -604,7 +604,7 @@ contract JoeMaker is BoringOwnable {
             address bridge1 = bridgeFor(token1);
             if (bridge0 == token1) {
                 // eg. MIC - USDT - and bridgeFor(MIC) = USDT
-                joeOut = _convertStep(
+                hermesOut = _convertStep(
                     bridge0,
                     token1,
                     _swap(token0, bridge0, amount0, address(this)),
@@ -612,14 +612,14 @@ contract JoeMaker is BoringOwnable {
                 );
             } else if (bridge1 == token0) {
                 // eg. WBTC - DSD - and bridgeFor(DSD) = WBTC
-                joeOut = _convertStep(
+                hermesOut = _convertStep(
                     token0,
                     bridge1,
                     amount0,
                     _swap(token1, bridge1, amount1, address(this))
                 );
             } else {
-                joeOut = _convertStep(
+                hermesOut = _convertStep(
                     bridge0,
                     bridge1, // eg. USDT - DSD - and bridgeFor(DSD) = WBTC
                     _swap(token0, bridge0, amount0, address(this)),
@@ -640,8 +640,8 @@ contract JoeMaker is BoringOwnable {
     ) internal returns (uint256 amountOut) {
         // Checks
         // X1 - X5: OK
-        IJoePair pair = IJoePair(factory.getPair(fromToken, toToken));
-        require(address(pair) != address(0), "JoeMaker: Cannot convert");
+        IHermesPair pair = IHermesPair(factory.getPair(fromToken, toToken));
+        require(address(pair) != address(0), "HermesMaker: Cannot convert");
 
         // Interactions
         // X1 - X5: OK
@@ -666,11 +666,11 @@ contract JoeMaker is BoringOwnable {
 
     // F1 - F10: OK
     // C1 - C24: OK
-    function _toJOE(address token, uint256 amountIn)
+    function _toHERMES(address token, uint256 amountIn)
         internal
         returns (uint256 amountOut)
     {
         // X1 - X5: OK
-        amountOut = _swap(token, joe, amountIn, bar);
+        amountOut = _swap(token, hermes, amountIn, bar);
     }
 }

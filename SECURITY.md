@@ -1,12 +1,12 @@
 # Security Policy
 
-At Trader Joe, we consider the security of our systems a top priority. But even with such priority and maximum effort, there is still the possibility that vulnerabilities can exist.
+At Trader Hermes, we consider the security of our systems a top priority. But even with such priority and maximum effort, there is still the possibility that vulnerabilities can exist.
 
 In case you discover a vulnerability, we would like to know about it immediately so we can take steps to address it as quickly as possible.
 
 If you discover a vulnerability, please do the following:
 
-    E-mail your findings to traderjoe.team@gmail.com.
+    E-mail your findings to hermesswap.team@gmail.com.
 
     Do not take advantage of the vulnerability or similar problems you have discovered, including, but not limited to, testing the vulnerability on the Avalanche mainnet or testnet.
 

@@ -108,12 +108,12 @@ library SafeERC20 {
     }
 }
 
-// File contracts/traderjoe/interfaces/IJoeERC20.sol
+// File contracts/hermesswap/interfaces/IHermesERC20.sol
 // License-Identifier: GPL-3.0
 
 pragma solidity >=0.5.0;
 
-interface IJoeERC20 {
+interface IHermesERC20 {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 
@@ -156,12 +156,12 @@ interface IJoeERC20 {
     ) external;
 }
 
-// File contracts/traderjoe/interfaces/IJoePair.sol
+// File contracts/hermesswap/interfaces/IHermesPair.sol
 // License-Identifier: GPL-3.0
 
 pragma solidity >=0.5.0;
 
-interface IJoePair {
+interface IHermesPair {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 
@@ -256,12 +256,12 @@ interface IJoePair {
     function initialize(address, address) external;
 }
 
-// File contracts/traderjoe/interfaces/IJoeFactory.sol
+// File contracts/hermesswap/interfaces/IHermesFactory.sol
 // License-Identifier: GPL-3.0
 
 pragma solidity >=0.5.0;
 
-interface IJoeFactory {
+interface IHermesFactory {
     event PairCreated(address indexed token0, address indexed token1, address pair, uint256);
 
     function feeTo() external view returns (address);
@@ -351,7 +351,7 @@ contract BoringOwnable is BoringOwnableData {
     }
 }
 
-// File contracts/traderjoe/FarmLens.sol
+// File contracts/hermesswap/FarmLens.sol
 // License-Identifier: MIT
 pragma solidity 0.6.12;
 pragma experimental ABIEncoderV2;
@@ -362,10 +362,10 @@ pragma experimental ABIEncoderV2;
 
 interface IMasterChef {
     struct PoolInfo {
-        IJoeERC20 lpToken; // Address of LP token contract.
-        uint256 allocPoint; // How many allocation points assigned to this pool. JOE to distribute per block.
-        uint256 lastRewardTimestamp; // Last block number that JOE distribution occurs.
-        uint256 accJoePerShare; // Accumulated JOE per share, times 1e12. See below.
+        IHermesERC20 lpToken; // Address of LP token contract.
+        uint256 allocPoint; // How many allocation points assigned to this pool. HERMES to distribute per block.
+        uint256 lastRewardTimestamp; // Last block number that HERMES distribution occurs.
+        uint256 accHermesPerShare; // Accumulated HERMES per share, times 1e12. See below.
     }
 
     function poolLength() external view returns (uint256);
@@ -374,46 +374,46 @@ interface IMasterChef {
 
     function totalAllocPoint() external view returns (uint256);
 
-    function joePerSec() external view returns (uint256);
+    function hermesPerSec() external view returns (uint256);
 }
 
 contract FarmLens is BoringOwnable {
     using SafeMath for uint256;
 
-    address public joe; // 0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd;
+    address public hermes; // 0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd;
     address public wavax; // 0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7;
     address public wavaxUsdt; // 0xeD8CBD9F0cE3C6986b22002F03c6475CEb7a6256
     address public wavaxUsdc; // 0x87Dee1cC9FFd464B79e058ba20387c1984aed86a
     address public wavaxDai; // 0xA389f9430876455C36478DeEa9769B7Ca4E3DDB1
-    IJoeFactory public joeFactory; // IJoeFactory(0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10);
+    IHermesFactory public hermesFactory; // IHermesFactory(0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10);
     IMasterChef public chefv2; //0xd6a4F121CA35509aF06A0Be99093d08462f53052
     IMasterChef public chefv3; //0x188bED1968b795d5c9022F6a0bb5931Ac4c18F00
 
     constructor(
-        address joe_,
+        address hermes_,
         address wavax_,
         address wavaxUsdt_,
         address wavaxUsdc_,
         address wavaxDai_,
-        IJoeFactory joeFactory_,
+        IHermesFactory hermesFactory_,
         IMasterChef chefv2_,
         IMasterChef chefv3_
     ) public {
-        joe = joe_;
+        hermes = hermes_;
         wavax = wavax_;
         wavaxUsdt = wavaxUsdt_;
         wavaxUsdc = wavaxUsdc_;
         wavaxDai = wavaxDai_;
-        joeFactory = IJoeFactory(joeFactory_);
+        hermesFactory = IHermesFactory(hermesFactory_);
         chefv2 = chefv2_;
         chefv3 = chefv3_;
     }
 
     /// @notice Returns price of avax in usd.
     function getAvaxPrice() public view returns (uint256) {
-        uint256 priceFromWavaxUsdt = _getAvaxPrice(IJoePair(wavaxUsdt)); // 18
-        uint256 priceFromWavaxUsdc = _getAvaxPrice(IJoePair(wavaxUsdc)); // 18
-        uint256 priceFromWavaxDai = _getAvaxPrice(IJoePair(wavaxDai)); // 18
+        uint256 priceFromWavaxUsdt = _getAvaxPrice(IHermesPair(wavaxUsdt)); // 18
+        uint256 priceFromWavaxUsdc = _getAvaxPrice(IHermesPair(wavaxUsdc)); // 18
+        uint256 priceFromWavaxDai = _getAvaxPrice(IHermesPair(wavaxDai)); // 18
 
         uint256 sumPrice = priceFromWavaxUsdt.add(priceFromWavaxUsdc).add(priceFromWavaxDai); // 18
         uint256 avaxPrice = sumPrice / 3; // 18
@@ -422,7 +422,7 @@ contract FarmLens is BoringOwnable {
 
     /// @notice Returns value of wavax in units of stablecoins per wavax.
     /// @param pair A wavax-stablecoin pair.
-    function _getAvaxPrice(IJoePair pair) private view returns (uint256) {
+    function _getAvaxPrice(IHermesPair pair) private view returns (uint256) {
         (uint256 reserve0, uint256 reserve1, ) = pair.getReserves();
 
         if (pair.token0() == wavax) {
@@ -448,7 +448,7 @@ contract FarmLens is BoringOwnable {
             return 1e18;
         }
 
-        IJoePair pair = IJoePair(joeFactory.getPair(tokenAddress, wavax));
+        IHermesPair pair = IHermesPair(hermesFactory.getPair(tokenAddress, wavax));
 
         (uint256 reserve0, uint256 reserve1, ) = pair.getReserves();
         address token0Address = pair.token0();
@@ -466,13 +466,13 @@ contract FarmLens is BoringOwnable {
     /// @notice Calculates the multiplier needed to scale a token's numerical field to 18 decimals.
     /// @param tokenAddress Address of the token.
     function _tokenDecimalsMultiplier(address tokenAddress) private pure returns (uint256) {
-        uint256 decimalsNeeded = 18 - IJoeERC20(tokenAddress).decimals();
+        uint256 decimalsNeeded = 18 - IHermesERC20(tokenAddress).decimals();
         return 1 * (10**decimalsNeeded);
     }
 
     /// @notice Calculates the reserve of a pair in usd.
     /// @param pair Pair for which the reserve will be calculated.
-    function getReserveUsd(IJoePair pair) public view returns (uint256) {
+    function getReserveUsd(IHermesPair pair) public view returns (uint256) {
         address token0Address = pair.token0();
         address token1Address = pair.token1();
 
@@ -504,7 +504,7 @@ contract FarmLens is BoringOwnable {
         address chefAddress;
         uint256 chefBalanceScaled;
         uint256 chefTotalAlloc;
-        uint256 chefJoePerSec;
+        uint256 chefHermesPerSec;
     }
 
     /// @notice Gets the farm pair data for a given MasterChef.
@@ -522,9 +522,9 @@ contract FarmLens is BoringOwnable {
 
         for (uint256 i = 0; i < whitelistLength; i++) {
             IMasterChef.PoolInfo memory pool = chef.poolInfo(whitelistedPids[i]);
-            IJoePair lpToken = IJoePair(address(pool.lpToken));
+            IHermesPair lpToken = IHermesPair(address(pool.lpToken));
 
-            //get pool information 
+            //get pool information
             farmPairs[i].id = whitelistedPids[i];
             farmPairs[i].allocPoint = pool.allocPoint;
 
@@ -535,8 +535,8 @@ contract FarmLens is BoringOwnable {
             farmPairs[i].lpAddress = lpAddress;
             farmPairs[i].token0Address = token0Address;
             farmPairs[i].token1Address = token1Address;
-            farmPairs[i].token0Symbol = IJoeERC20(token0Address).symbol();
-            farmPairs[i].token1Symbol = IJoeERC20(token1Address).symbol();
+            farmPairs[i].token0Symbol = IHermesERC20(token0Address).symbol();
+            farmPairs[i].token1Symbol = IHermesERC20(token1Address).symbol();
 
             // calculate reserveUsd of lp
             farmPairs[i].reserveUsd = getReserveUsd(lpToken); // 18
@@ -549,7 +549,7 @@ contract FarmLens is BoringOwnable {
             farmPairs[i].chefBalanceScaled = balance.mul(_tokenDecimalsMultiplier(lpAddress));
             farmPairs[i].chefAddress = chefAddress;
             farmPairs[i].chefTotalAlloc = chef.totalAllocPoint();
-            farmPairs[i].chefJoePerSec = chef.joePerSec();
+            farmPairs[i].chefHermesPerSec = chef.hermesPerSec();
         }
 
         return farmPairs;
@@ -557,11 +557,11 @@ contract FarmLens is BoringOwnable {
 
     struct AllFarmData {
         uint256 avaxPriceUsd;
-        uint256 joePriceUsd;
+        uint256 hermesPriceUsd;
         uint256 totalAllocChefV2;
         uint256 totalAllocChefV3;
-        uint256 joePerSecChefV2;
-        uint256 joePerSecChefV3;
+        uint256 hermesPerSecChefV2;
+        uint256 hermesPerSecChefV3;
         FarmPair[] farmPairsV2;
         FarmPair[] farmPairsV3;
     }
@@ -577,13 +577,13 @@ contract FarmLens is BoringOwnable {
         AllFarmData memory allFarmData;
 
         allFarmData.avaxPriceUsd = getAvaxPrice();
-        allFarmData.joePriceUsd = getPriceInUsd(joe);
+        allFarmData.hermesPriceUsd = getPriceInUsd(hermes);
 
         allFarmData.totalAllocChefV2 = IMasterChef(chefv2).totalAllocPoint();
-        allFarmData.joePerSecChefV2 = IMasterChef(chefv2).joePerSec();
+        allFarmData.hermesPerSecChefV2 = IMasterChef(chefv2).hermesPerSec();
 
         allFarmData.totalAllocChefV3 = IMasterChef(chefv3).totalAllocPoint();
-        allFarmData.joePerSecChefV3 = IMasterChef(chefv3).joePerSec();
+        allFarmData.hermesPerSecChefV3 = IMasterChef(chefv3).hermesPerSec();
 
         allFarmData.farmPairsV2 = getFarmPairs(address(chefv2), whitelistedPidsV2);
         allFarmData.farmPairsV3 = getFarmPairs(address(chefv3), whitelistedPidsV3);

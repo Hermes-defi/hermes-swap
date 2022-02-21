@@ -312,7 +312,7 @@ interface IBar {
     function balanceOf(address account) external view returns (uint256);
 }
 
-// File: contracts/JoeVote.sol
+// File: contracts/HermesVote.sol
 
 pragma solidity 0.6.12;
 
@@ -323,21 +323,21 @@ interface IMasterChef {
         returns (uint256, uint256);
 }
 
-contract JoeVote {
+contract HermesVote {
     using SafeMath for uint256;
 
-    IPair pair; // JOE-AVAX LP
+    IPair pair; // HERMES-AVAX LP
     IBar bar;
-    IERC20 joe;
+    IERC20 hermes;
     IMasterChef chef;
-    uint256 pid; // Pool ID of the JOE-AVAX LP in MasterChefV2
+    uint256 pid; // Pool ID of the HERMES-AVAX LP in MasterChefV2
 
     function name() public pure returns (string memory) {
-        return "JoeVote";
+        return "HermesVote";
     }
 
     function symbol() public pure returns (string memory) {
-        return "JOEVOTE";
+        return "HERMESVOTE";
     }
 
     function decimals() public pure returns (uint8) {
@@ -347,29 +347,29 @@ contract JoeVote {
     constructor(
         address _pair,
         address _bar,
-        address _joe,
+        address _hermes,
         address _chef,
         uint256 _pid
     ) public {
         pair = IPair(_pair);
         bar = IBar(_bar);
-        joe = IERC20(_joe);
+        hermes = IERC20(_hermes);
         chef = IMasterChef(_chef);
         pid = _pid;
     }
 
     function totalSupply() public view returns (uint256) {
-        (uint256 lp_totalJoe, , ) = pair.getReserves();
-        uint256 xjoe_totalJoe = joe.balanceOf(address(bar));
+        (uint256 lp_totalHermes, , ) = pair.getReserves();
+        uint256 xhermes_totalHermes = hermes.balanceOf(address(bar));
 
-        return lp_totalJoe.mul(2).add(xjoe_totalJoe);
+        return lp_totalHermes.mul(2).add(xhermes_totalHermes);
     }
 
     function balanceOf(address owner) public view returns (uint256) {
         //////////////////////////
         // Get balance from LPs //
         //////////////////////////
-        uint256 lp_totalJoe = joe.balanceOf(address(pair));
+        uint256 lp_totalHermes = hermes.balanceOf(address(pair));
         uint256 lp_total = pair.totalSupply();
         uint256 lp_balance = pair.balanceOf(owner);
 
@@ -377,27 +377,27 @@ contract JoeVote {
         (uint256 lp_stakedBalance, ) = chef.userInfo(pid, owner);
         lp_balance = lp_balance.add(lp_stakedBalance);
 
-        // LP voting power is 2x the users JOE share in the pool.
-        uint256 lp_powah = lp_totalJoe.mul(lp_balance).div(lp_total).mul(2);
+        // LP voting power is 2x the users HERMES share in the pool.
+        uint256 lp_powah = lp_totalHermes.mul(lp_balance).div(lp_total).mul(2);
 
         ///////////////////////////
-        // Get balance from xJOE //
+        // Get balance from xHERMES //
         ///////////////////////////
 
-        uint256 xjoe_balance = bar.balanceOf(owner);
-        uint256 xjoe_total = bar.totalSupply();
-        uint256 xjoe_totalJoe = joe.balanceOf(address(bar));
+        uint256 xhermes_balance = bar.balanceOf(owner);
+        uint256 xhermes_total = bar.totalSupply();
+        uint256 xhermes_totalHermes = hermes.balanceOf(address(bar));
 
-        // xJOE voting power is the users JOE share in the bar
-        uint256 xjoe_powah = xjoe_totalJoe.mul(xjoe_balance).div(xjoe_total);
+        // xHERMES voting power is the users HERMES share in the bar
+        uint256 xhermes_powah = xhermes_totalHermes.mul(xhermes_balance).div(xhermes_total);
 
         //////////////////////////
-        // Get balance from JOE //
+        // Get balance from HERMES //
         //////////////////////////
 
-        uint256 joe_balance = joe.balanceOf(owner);
+        uint256 hermes_balance = hermes.balanceOf(owner);
 
-        return lp_powah.add(xjoe_powah).add(joe_balance);
+        return lp_powah.add(xhermes_powah).add(hermes_balance);
     }
 
     function allowance(address, address) public pure returns (uint256) {

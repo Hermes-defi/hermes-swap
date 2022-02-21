@@ -1,4 +1,4 @@
-const { WAVAX } = require("@traderjoe-xyz/sdk");
+const { WAVAX } = require("@hermesswap-xyz/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
@@ -29,20 +29,20 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     wavaxDaiAddress = address("0x63fce17ba68c82a322fdd5a4d03aedbedbd730fd");
   }
 
-  const joeAddress = (await deployments.get("JoeToken")).address;
-  const joeFactoryAddress = (await deployments.get("JoeFactory")).address;
-  const chefAddress = (await deployments.get("MasterChefJoeV2")).address;
-  const chefAddressV3 = (await deployments.get("MasterChefJoeV3")).address;
+  const hermesAddress = (await deployments.get("HermesToken")).address;
+  const hermesFactoryAddress = (await deployments.get("HermesFactory")).address;
+  const chefAddress = (await deployments.get("MasterChefHermesV2")).address;
+  const chefAddressV3 = (await deployments.get("MasterChefHermesV3")).address;
 
   await deploy("FarmLens", {
     from: deployer,
     args: [
-      joeAddress,
+      hermesAddress,
       wavaxAddress,
       wavaxUsdtAddress,
       wavaxUsdcAddress,
       wavaxDaiAddress,
-      joeFactoryAddress,
+      hermesFactoryAddress,
       chefAddress,
       chefAddressV3,
     ],
@@ -53,9 +53,9 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
 module.exports.tags = ["FarmLens"];
 module.exports.dependencies = [
-  "JoeToken",
-  "JoeFactory",
-  "MasterChefJoeV2",
-  "MasterChefJoeV3",
+  "HermesToken",
+  "HermesFactory",
+  "MasterChefHermesV2",
+  "MasterChefHermesV3",
   "WAVAX9Mock",
 ];

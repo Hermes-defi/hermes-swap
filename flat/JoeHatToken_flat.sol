@@ -670,18 +670,18 @@ abstract contract ERC20Burnable is Context, ERC20 {
     }
 }
 
-// File: contracts/JoeHatToken.sol
+// File: contracts/HermesHatToken.sol
 
 pragma solidity ^0.6.2;
 
 
-contract JoeHatToken is ERC20Burnable {
+contract HermesHatToken is ERC20Burnable {
     /**
      * @dev Mints `initialSupply` amount of token and transfers them to `owner`.
      *
      * See {ERC20-constructor}.
      */
-    constructor(address owner) public ERC20("Joe Hat Token", "HAT") {
+    constructor(address owner) public ERC20("Hermes Hat Token", "HAT") {
         uint256 initialSupply = 150e18;
         _mint(owner, initialSupply);
     }

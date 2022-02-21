@@ -5,15 +5,15 @@ module.exports = async function ({ ethers, getNamedAccounts, deployments }) {
 
   const chainId = await getChainId();
 
-  const joe = await ethers.getContract("JoeToken");
+  const hermes = await ethers.getContract("HermesToken");
 
   await deploy("Cliff", {
     from: deployer,
-    args: [joe.address, dev, 0, 3],
+    args: [hermes.address, dev, 0, 3],
     log: true,
     deterministicDeployment: false,
   });
 };
 
 module.exports.tags = ["Cliff"];
-module.exports.dependencies = ["JoeToken"];
+module.exports.dependencies = ["HermesToken"];

@@ -698,7 +698,7 @@ pragma experimental ABIEncoderV2;
 interface IRewarder {
     using SafeERC20 for IERC20;
 
-    function onJoeReward(address user, uint256 newLpAmount) external;
+    function onHermesReward(address user, uint256 newLpAmount) external;
 
     function pendingTokens(address user)
         external
@@ -710,7 +710,7 @@ interface IMasterChef {
     function deposit(uint256 _pid, uint256 _amount) external;
 }
 
-interface IMasterChefJoeV2 {
+interface IMasterChefHermesV2 {
     using SafeERC20 for IERC20;
 
     struct UserInfo {
@@ -722,7 +722,7 @@ interface IMasterChefJoeV2 {
         IERC20 lpToken; // Address of LP token contract.
         uint256 allocPoint; // How many allocation points assigned to this poolInfo. SUSHI to distribute per block.
         uint256 lastRewardTimestamp; // Last block number that SUSHI distribution occurs.
-        uint256 accJoePerShare; // Accumulated SUSHI per share, times 1e12. See below.
+        uint256 accHermesPerShare; // Accumulated SUSHI per share, times 1e12. See below.
     }
 
     function poolInfo(uint256 pid) external view returns (PoolInfo memory);
@@ -733,14 +733,14 @@ interface IMasterChefJoeV2 {
 }
 
 /**
- * This is a sample contract to be used in the MasterChefJoeV2 contract for partners to reward
- * stakers with their native token alongside JOE.
+ * This is a sample contract to be used in the MasterChefHermesV2 contract for partners to reward
+ * stakers with their native token alongside HERMES.
  *
  * It assumes the project already has an existing MasterChef-style farm contract.
  * In which case, the init() function is called to deposit a dummy token into one
  * of the MasterChef farms so this contract can accrue rewards from that farm.
  * The contract then transfers the reward token to the user on each call to
- * onJoeReward().
+ * onHermesReward().
  *
  */
 contract MasterChefRewarderPerBlockMock is IRewarder, Ownable {
@@ -751,19 +751,19 @@ contract MasterChefRewarderPerBlockMock is IRewarder, Ownable {
     IERC20 public immutable lpToken;
     uint256 public immutable MCV1_pid;
     IMasterChef public immutable MCV1;
-    IMasterChefJoeV2 public immutable MCV2;
+    IMasterChefHermesV2 public immutable MCV2;
 
     /// @notice Info of each MCV2 user.
     /// `amount` LP token amount the user has provided.
-    /// `rewardDebt` The amount of JOE entitled to the user.
+    /// `rewardDebt` The amount of HERMES entitled to the user.
     struct UserInfo {
         uint256 amount;
         uint256 rewardDebt;
     }
 
     /// @notice Info of each MCV2 poolInfo.
-    /// `accTokenPerShare` Amount of JOE each LP token is worth.
-    /// `lastRewardBlock` The last block JOE was rewarded to the poolInfo.
+    /// `accTokenPerShare` Amount of HERMES each LP token is worth.
+    /// `lastRewardBlock` The last block HERMES was rewarded to the poolInfo.
     struct PoolInfo {
         uint256 accTokenPerShare;
         uint256 lastRewardBlock;
@@ -794,7 +794,7 @@ contract MasterChefRewarderPerBlockMock is IRewarder, Ownable {
         uint256 _tokenPerBlock,
         uint256 _MCV1_pid,
         IMasterChef _MCV1,
-        IMasterChefJoeV2 _MCV2
+        IMasterChefHermesV2 _MCV2
     ) public {
         require(
             Address.isContract(address(_rewardToken)),
@@ -810,7 +810,7 @@ contract MasterChefRewarderPerBlockMock is IRewarder, Ownable {
         );
         require(
             Address.isContract(address(_MCV2)),
-            "constructor: MasterChefJoeV2 must be a valid contract"
+            "constructor: MasterChefHermesV2 must be a valid contract"
         );
 
         rewardToken = _rewardToken;
@@ -872,10 +872,10 @@ contract MasterChefRewarderPerBlockMock is IRewarder, Ownable {
         MCV1.deposit(MCV1_pid, 0);
     }
 
-    /// @notice Function called by MasterChefJoeV2 whenever staker claims JOE harvest. Allows staker to also receive a 2nd reward token.
+    /// @notice Function called by MasterChefHermesV2 whenever staker claims HERMES harvest. Allows staker to also receive a 2nd reward token.
     /// @param _user Address of user
     /// @param _lpAmount Number of LP tokens the user has
-    function onJoeReward(address _user, uint256 _lpAmount)
+    function onHermesReward(address _user, uint256 _lpAmount)
         external
         override
         onlyMCV2

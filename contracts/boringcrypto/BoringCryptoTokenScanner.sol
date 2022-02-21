@@ -96,9 +96,9 @@ interface IMasterChef {
 
     function startTimestamp() external view returns (uint256);
 
-    function joe() external view returns (address);
+    function hermes() external view returns (address);
 
-    function joePerSec() external view returns (uint256);
+    function hermesPerSec() external view returns (uint256);
 
     function totalAllocPoint() external view returns (uint256);
 

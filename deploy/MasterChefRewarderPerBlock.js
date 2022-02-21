@@ -1,4 +1,4 @@
-// Deploy for testing of MasterChefJoeV2
+// Deploy for testing of MasterChefHermesV2
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
 
@@ -6,7 +6,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
   const sushi = await ethers.getContract("SushiToken");
   const mcv1 = await ethers.getContract("MasterChef");
-  const mcv2 = await ethers.getContract("MasterChefJoeV2");
+  const mcv2 = await ethers.getContract("MasterChefHermesV2");
   const lpTokenAddress = "0x6d551ad3570888d49da4d6c8b8a626c8cbfd5ac2"; // WAVAX-USDT on Rinkeby
 
   await deploy("ERC20Mock", {
@@ -42,4 +42,4 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 };
 
 module.exports.tags = ["MasterChefRewarderPerBlock"];
-module.exports.dependencies = ["SushiToken", "MasterChef", "MasterChefJoeV2"];
+module.exports.dependencies = ["SushiToken", "MasterChef", "MasterChefHermesV2"];

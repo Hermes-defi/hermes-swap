@@ -1,4 +1,4 @@
-// Deploy for testing of MasterChefJoeV2
+// Deploy for testing of MasterChefHermesV2
 module.exports = async function ({ ethers, deployments, getNamedAccounts }) {
   const { deploy } = deployments;
 

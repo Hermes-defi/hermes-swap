@@ -6,21 +6,21 @@ pragma solidity 0.6.12;
 import "./libraries/SafeMath.sol";
 import "./libraries/SafeERC20.sol";
 
-import "./traderjoe/interfaces/IERC20.sol";
-import "./traderjoe/interfaces/IJoePair.sol";
-import "./traderjoe/interfaces/IJoeFactory.sol";
+import "./hermesswap/interfaces/IERC20.sol";
+import "./hermesswap/interfaces/IHermesPair.sol";
+import "./hermesswap/interfaces/IHermesFactory.sol";
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title Money Maker
-/// @author Trader Joe
-/// @notice MoneyMaker receives 0.05% of the swaps done on Trader Joe in the form of an LP. It swaps those LPs
-/// to a token of choice and sends it to the JoeBar
+/// @author Trader Hermes
+/// @notice MoneyMaker receives 0.05% of the swaps done on Trader Hermes in the form of an LP. It swaps those LPs
+/// to a token of choice and sends it to the HermesBar
 contract MoneyMaker is Ownable {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IJoeFactory public immutable factory;
+    IHermesFactory public immutable factory;
 
     address public immutable bar;
     address private immutable wavax;
@@ -57,8 +57,8 @@ contract MoneyMaker is Ownable {
     );
 
     /// @notice Constructor
-    /// @param _factory The address of JoeFactory
-    /// @param _bar The address of JoeBar
+    /// @param _factory The address of HermesFactory
+    /// @param _bar The address of HermesBar
     /// @param _tokenTo The address of the token we want to convert to
     /// @param _wavax The address of wavax
     constructor(
@@ -67,7 +67,7 @@ contract MoneyMaker is Ownable {
         address _tokenTo,
         address _wavax
     ) public {
-        factory = IJoeFactory(_factory);
+        factory = IHermesFactory(_factory);
         bar = _bar;
         tokenTo = _tokenTo;
         wavax = _wavax;
@@ -203,7 +203,7 @@ contract MoneyMaker is Ownable {
             amount0 = IERC20(token0).balanceOf(address(this));
             amount1 = 0;
         } else {
-            IJoePair pair = IJoePair(factory.getPair(token0, token1));
+            IHermesPair pair = IHermesPair(factory.getPair(token0, token1));
             require(address(pair) != address(0), "MoneyMaker: Invalid pair");
 
             IERC20(address(pair)).safeTransfer(address(pair), pair.balanceOf(address(this)));
@@ -321,7 +321,7 @@ contract MoneyMaker is Ownable {
     ) internal returns (uint256 amountOut) {
         // Checks
         // X1 - X5: OK
-        IJoePair pair = IJoePair(factory.getPair(fromToken, toToken));
+        IHermesPair pair = IHermesPair(factory.getPair(fromToken, toToken));
         require(address(pair) != address(0), "MoneyMaker: Cannot convert");
 
         (uint256 reserve0, uint256 reserve1, ) = pair.getReserves();
@@ -356,7 +356,7 @@ contract MoneyMaker is Ownable {
     /// @param token The address of token that will be swapped
     /// @param amountIn The amount of the `token`
     /// @param slippage The accepted slippage, in basis points aka parts per 10,000 so 5000 is 50%
-    /// @return amountOut The amount of `toToken` sent to JoeBar
+    /// @return amountOut The amount of `toToken` sent to HermesBar
     function _toToken(
         address token,
         uint256 amountIn,

@@ -5,7 +5,7 @@
  * Contract is available only via etherscan: https://etherscan.io/address/0x11ca5375adafd6205e41131a4409f182677996e6#code
  * It needs flattened due to cyclic dependencies.
  * BoringHelperV1 has been modified by:
- *  - Renaming Sushi -> Joe
+ *  - Renaming Sushi -> Hermes
  *  - Renaming ETH -> AVAX
  *  - Removed bentobox/kashi logic.
  *
@@ -46,9 +46,9 @@ interface IMasterChef {
 
     function startBlock() external view returns (uint256);
 
-    function joe() external view returns (address);
+    function hermes() external view returns (address);
 
-    function joePerBlock() external view returns (uint256);
+    function hermesPerBlock() external view returns (uint256);
 
     function totalAllocPoint() external view returns (uint256);
 
@@ -513,27 +513,27 @@ contract BoringHelperV1 is Ownable {
     using BoringPair for IPair;
 
     IMasterChef public chef; // IMasterChef(0xc2EdaD668740f1aA35E4D8f227fB8E17dcA888Cd);
-    address public maker; // IJoeMaker(0xE11fc0B43ab98Eb91e9836129d1ee7c3Bc95df50);
-    IERC20 public joe; // IJoeToken(0x6B3595068778DD592e39A122f4f5a5cF09C90fE2);
+    address public maker; // IHermesMaker(0xE11fc0B43ab98Eb91e9836129d1ee7c3Bc95df50);
+    IERC20 public hermes; // IHermesToken(0x6B3595068778DD592e39A122f4f5a5cF09C90fE2);
     IERC20 public WAVAX; // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
-    IFactory public joeFactory; // IFactory(0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac);
+    IFactory public hermesFactory; // IFactory(0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac);
     IFactory public pangolinFactory; // IFactory(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f);
     IERC20 public bar; // 0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272;
 
     constructor(
         IMasterChef chef_,
         address maker_,
-        IERC20 joe_,
+        IERC20 hermes_,
         IERC20 WAVAX_,
-        IFactory joeFactory_,
+        IFactory hermesFactory_,
         IFactory pangolinFactory_,
         IERC20 bar_
     ) public {
         chef = chef_;
         maker = maker_;
-        joe = joe_;
+        hermes = hermes_;
         WAVAX = WAVAX;
-        joeFactory = joeFactory_;
+        hermesFactory = hermesFactory_;
         pangolinFactory = pangolinFactory_;
         bar = bar_;
     }
@@ -541,17 +541,17 @@ contract BoringHelperV1 is Ownable {
     function setContracts(
         IMasterChef chef_,
         address maker_,
-        IERC20 joe_,
+        IERC20 hermes_,
         IERC20 WAVAX_,
-        IFactory joeFactory_,
+        IFactory hermesFactory_,
         IFactory pangolinFactory_,
         IERC20 bar_
     ) public onlyOwner {
         chef = chef_;
         maker = maker_;
-        joe = joe_;
+        hermes = hermes_;
         WAVAX = WAVAX_;
-        joeFactory = joeFactory_;
+        hermesFactory = hermesFactory_;
         pangolinFactory = pangolinFactory_;
         bar = bar_;
     }
@@ -561,14 +561,14 @@ contract BoringHelperV1 is Ownable {
             return 1e18;
         }
         IPair pairPangolin;
-        IPair pairJoe;
+        IPair pairHermes;
         if (pangolinFactory != IFactory(0)) {
             pairPangolin = IPair(pangolinFactory.getPair(token, WAVAX));
         }
-        if (joeFactory != IFactory(0)) {
-            pairJoe = IPair(joeFactory.getPair(token, WAVAX));
+        if (hermesFactory != IFactory(0)) {
+            pairHermes = IPair(hermesFactory.getPair(token, WAVAX));
         }
-        if (address(pairPangolin) == address(0) && address(pairJoe) == address(0)) {
+        if (address(pairPangolin) == address(0) && address(pairHermes) == address(0)) {
             return 0;
         }
 
@@ -582,12 +582,12 @@ contract BoringHelperV1 is Ownable {
             token0 = pairPangolin.token0();
         }
 
-        if (address(pairJoe) != address(0)) {
-            (uint112 reserve0Joe, uint112 reserve1Joe, ) = pairJoe.getReserves();
-            reserve0 += reserve0Joe;
-            reserve1 += reserve1Joe;
+        if (address(pairHermes) != address(0)) {
+            (uint112 reserve0Hermes, uint112 reserve1Hermes, ) = pairHermes.getReserves();
+            reserve0 += reserve0Hermes;
+            reserve1 += reserve1Hermes;
             if (token0 == IERC20(0)) {
-                token0 = pairJoe.token0();
+                token0 = pairHermes.token0();
             }
         }
 
@@ -605,16 +605,16 @@ contract BoringHelperV1 is Ownable {
 
     struct UIInfo {
         uint256 avaxBalance;
-        uint256 joeBalance;
-        uint256 joeBarBalance;
-        uint256 xjoeBalance;
-        uint256 xjoeSupply;
-        uint256 joeBarAllowance;
+        uint256 hermesBalance;
+        uint256 hermesBarBalance;
+        uint256 xhermesBalance;
+        uint256 xhermesSupply;
+        uint256 hermesBarAllowance;
         Factory[] factories;
         uint256 avaxRate;
-        uint256 joeRate;
+        uint256 hermesRate;
         uint256 btcRate;
-        uint256 pendingJoe;
+        uint256 pendingHermes;
         uint256 blockTimeStamp;
     }
 
@@ -638,26 +638,26 @@ contract BoringHelperV1 is Ownable {
             info.avaxRate = getAVAXRate(currency);
         }
 
-        if (joe != IERC20(0)) {
-            info.joeRate = getAVAXRate(joe);
-            info.joeBalance = joe.balanceOf(who);
-            info.joeBarBalance = joe.balanceOf(address(bar));
-            info.joeBarAllowance = joe.allowance(who, address(bar));
+        if (hermes != IERC20(0)) {
+            info.hermesRate = getAVAXRate(hermes);
+            info.hermesBalance = hermes.balanceOf(who);
+            info.hermesBarBalance = hermes.balanceOf(address(bar));
+            info.hermesBarAllowance = hermes.allowance(who, address(bar));
         }
 
         if (bar != IERC20(0)) {
-            info.xjoeBalance = bar.balanceOf(who);
-            info.xjoeSupply = bar.totalSupply();
+            info.xhermesBalance = bar.balanceOf(who);
+            info.xhermesSupply = bar.totalSupply();
         }
 
         if (chef != IMasterChef(0)) {
             uint256 poolLength = chef.poolLength();
-            uint256 pendingJoe;
+            uint256 pendingHermes;
             for (uint256 i = 0; i < poolLength; i++) {
-                (uint256 pendingJoeAmt, , , ) = chef.pendingTokens(i, who);
-                pendingJoe += pendingJoeAmt;
+                (uint256 pendingHermesAmt, , , ) = chef.pendingTokens(i, who);
+                pendingHermes += pendingHermesAmt;
             }
-            info.pendingJoe = pendingJoe;
+            info.pendingHermes = pendingHermes;
         }
         info.blockTimeStamp = block.timestamp;
 
@@ -858,8 +858,8 @@ contract BoringHelperV1 is Ownable {
         for (uint256 i = 0; i < pids.length; i++) {
             (uint256 amount, ) = chef.userInfo(pids[i], who);
             pools[i].balance = amount;
-            (uint256 pendingJoe, , , ) = chef.pendingTokens(pids[i], who);
-            pools[i].pending = pendingJoe;
+            (uint256 pendingHermes, , , ) = chef.pendingTokens(pids[i], who);
+            pools[i].pending = pendingHermes;
 
             (address lpToken, , , ) = chef.poolInfo(pids[i]);
             pools[i].pid = pids[i];

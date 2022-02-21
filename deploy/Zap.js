@@ -11,10 +11,10 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   });
 
   const zap = await ethers.getContract("Zap");
-  const joe = await deployments.get("JoeToken");
-  const router = await deployments.get("JoeRouter02");
-  await zap.initialize(joe.address, router.address);
+  const hermes = await deployments.get("HermesToken");
+  const router = await deployments.get("HermesRouter02");
+  await zap.initialize(hermes.address, router.address);
 };
 
 module.exports.tags = ["Zap"];
-module.exports.dependencies = ["JoeRouter02", "JoeToken"];
+module.exports.dependencies = ["HermesRouter02", "HermesToken"];

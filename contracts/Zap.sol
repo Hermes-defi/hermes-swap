@@ -2,7 +2,7 @@
 pragma solidity =0.6.12;
 
 /*
- * Trader Joe
+ * Trader Hermes
  * MIT License; modified from PancakeBunny
  *
  */
@@ -11,9 +11,9 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
-import "./traderjoe/interfaces/IJoePair.sol";
-import "./traderjoe/interfaces/IJoeRouter02.sol";
-import "./traderjoe/interfaces/IWAVAX.sol";
+import "./hermesswap/interfaces/IHermesPair.sol";
+import "./hermesswap/interfaces/IHermesRouter02.sol";
+import "./hermesswap/interfaces/IWAVAX.sol";
 
 contract Zap is OwnableUpgradeable {
     using SafeMath for uint256;
@@ -21,12 +21,12 @@ contract Zap is OwnableUpgradeable {
 
     /* ========== CONSTANT VARIABLES ========== */
 
-    address public JOE;
+    address public HERMES;
     address public constant USDT = 0xde3A24028580884448a5397872046a019649b084;
     address public constant DAI = 0xbA7dEebBFC5fA1100Fb055a87773e1E99Cd3507a;
     address public constant WAVAX = 0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7;
 
-    IJoeRouter02 private ROUTER;
+    IHermesRouter02 private ROUTER;
 
     /* ========== STATE VARIABLES ========== */
 
@@ -36,15 +36,15 @@ contract Zap is OwnableUpgradeable {
 
     /* ========== INITIALIZER ========== */
 
-    function initialize(address _joe, address _router) external initializer {
+    function initialize(address _hermes, address _router) external initializer {
         __Ownable_init();
         require(owner() != address(0), "ZapETH: owner must be set");
 
-        JOE = _joe;
-        ROUTER = IJoeRouter02(_router);
+        HERMES = _hermes;
+        ROUTER = IHermesRouter02(_router);
         setNotLP(WAVAX);
         setNotLP(USDT);
-        setNotLP(JOE);
+        setNotLP(HERMES);
         setNotLP(DAI);
     }
 
@@ -71,7 +71,7 @@ contract Zap is OwnableUpgradeable {
         _approveTokenIfNeeded(_from);
 
         if (isLP(_to)) {
-            IJoePair pair = IJoePair(_to);
+            IHermesPair pair = IHermesPair(_to);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (_from == token0 || _from == token1) {
@@ -110,7 +110,7 @@ contract Zap is OwnableUpgradeable {
         if (!isLP(_from)) {
             _swapTokenForAVAX(_from, amount, msg.sender);
         } else {
-            IJoePair pair = IJoePair(_from);
+            IHermesPair pair = IHermesPair(_from);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (token0 == WAVAX || token1 == WAVAX) {
@@ -145,7 +145,7 @@ contract Zap is OwnableUpgradeable {
             _swapAVAXForToken(lp, amount, receiver);
         } else {
             // lp
-            IJoePair pair = IJoePair(lp);
+            IHermesPair pair = IHermesPair(lp);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (token0 == WAVAX || token1 == WAVAX) {

@@ -810,20 +810,20 @@ abstract contract Ownable is Context {
     }
 }
 
-// File: contracts/JoeToken.sol
+// File: contracts/HermesToken.sol
 
 pragma solidity 0.6.12;
 
-// JoeToken with Governance.
-contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
+// HermesToken with Governance.
+contract HermesToken is ERC20("HermesToken", "HERMES"), Ownable {
     /// @notice Total number of tokens
-    uint256 maxSupply = 500_000_000e18; // 500 million Joe
+    uint256 maxSupply = 500_000_000e18; // 500 million Hermes
 
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterJoe).
+    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterHermes).
     function mint(address _to, uint256 _amount) public onlyOwner {
         require(
             totalSupply().add(_amount) <= maxSupply,
-            "JOE::mint: cannot exceed max supply"
+            "HERMES::mint: cannot exceed max supply"
         );
         _mint(_to, _amount);
         _moveDelegates(address(0), _delegates[_to], _amount);
@@ -930,13 +930,13 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
         address signatory = ecrecover(digest, v, r, s);
         require(
             signatory != address(0),
-            "JOE::delegateBySig: invalid signature"
+            "HERMES::delegateBySig: invalid signature"
         );
         require(
             nonce == nonces[signatory]++,
-            "JOE::delegateBySig: invalid nonce"
+            "HERMES::delegateBySig: invalid nonce"
         );
-        require(now <= expiry, "JOE::delegateBySig: signature expired");
+        require(now <= expiry, "HERMES::delegateBySig: signature expired");
         return _delegate(signatory, delegatee);
     }
 
@@ -965,7 +965,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
     {
         require(
             blockNumber < block.number,
-            "JOE::getPriorVotes: not yet determined"
+            "HERMES::getPriorVotes: not yet determined"
         );
 
         uint32 nCheckpoints = numCheckpoints[account];
@@ -1001,7 +1001,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
 
     function _delegate(address delegator, address delegatee) internal {
         address currentDelegate = _delegates[delegator];
-        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying JOEs (not scaled);
+        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying HERMESs (not scaled);
         _delegates[delegator] = delegatee;
 
         emit DelegateChanged(delegator, currentDelegate, delegatee);
@@ -1045,7 +1045,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
     ) internal {
         uint32 blockNumber = safe32(
             block.number,
-            "JOE::_writeCheckpoint: block number exceeds 32 bits"
+            "HERMES::_writeCheckpoint: block number exceeds 32 bits"
         );
 
         if (

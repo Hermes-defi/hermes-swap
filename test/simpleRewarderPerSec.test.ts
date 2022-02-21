@@ -34,8 +34,8 @@ describe("simple rewarder per seconds", function () {
 
     // ABIs
     let ERC20MockDecimalsCF = await ethers.getContractFactory("ERC20MockDecimals")
-    let PairCF = await ethers.getContractFactory("JoePair")
-    let MCV3CF = await ethers.getContractFactory("MasterChefJoeV3")
+    let PairCF = await ethers.getContractFactory("HermesPair")
+    let MCV3CF = await ethers.getContractFactory("MasterChefHermesV3")
     this.simpleRewarderPerSecCF = await ethers.getContractFactory("SimpleRewarderPerSec")
 
     // Account
@@ -51,7 +51,7 @@ describe("simple rewarder per seconds", function () {
     this.wavax = await ethers.getContractAt("IWAVAX", WAVAX_ADDRESS, this.dev)
     this.ust = await ERC20MockDecimalsCF.attach(UST_ADDRESS)
     this.luna = await ERC20MockDecimalsCF.attach(LUNA_ADDRESS)
-    this.joe = await ERC20MockDecimalsCF.deploy(18)
+    this.hermes = await ERC20MockDecimalsCF.deploy(18)
     this.token6D = await ERC20MockDecimalsCF.deploy(6)
 
     // Pairs
@@ -60,7 +60,7 @@ describe("simple rewarder per seconds", function () {
 
   beforeEach(async function () {
     // We redeploy simpleRewarderPerSec for each tests
-    this.simpleRewarderPerSec = await this.simpleRewarderPerSecCF.deploy(this.joe.address, USTWAVAX_ADDRESS, "450", this.MCV3.address, false)
+    this.simpleRewarderPerSec = await this.simpleRewarderPerSecCF.deploy(this.hermes.address, USTWAVAX_ADDRESS, "450", this.MCV3.address, false)
 
     await this.token6D.mint(this.simpleRewarderPerSec.address, ethers.utils.parseUnits("1000", 6))
   })

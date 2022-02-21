@@ -1,4 +1,4 @@
-// File: contracts/traderjoe/libraries/SafeMath.sol
+// File: contracts/hermesswap/libraries/SafeMath.sol
 
 // SPDX-License-Identifier: GPL-3.0
 
@@ -6,7 +6,7 @@ pragma solidity =0.6.12;
 
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
 
-library SafeMathJoe {
+library SafeMathHermes {
     function add(uint256 x, uint256 y) internal pure returns (uint256 z) {
         require((z = x + y) >= x, "ds-math-add-overflow");
     }
@@ -20,14 +20,14 @@ library SafeMathJoe {
     }
 }
 
-// File: contracts/traderjoe/JoeERC20.sol
+// File: contracts/hermesswap/HermesERC20.sol
 
 pragma solidity =0.6.12;
 
-contract JoeERC20 {
-    using SafeMathJoe for uint256;
+contract HermesERC20 {
+    using SafeMathHermes for uint256;
 
-    string public constant name = "Joe LP Token";
+    string public constant name = "Hermes LP Token";
     string public constant symbol = "JLP";
     uint8 public constant decimals = 18;
     uint256 public totalSupply;
@@ -129,7 +129,7 @@ contract JoeERC20 {
         bytes32 r,
         bytes32 s
     ) external {
-        require(deadline >= block.timestamp, "Joe: EXPIRED");
+        require(deadline >= block.timestamp, "Hermes: EXPIRED");
         bytes32 digest = keccak256(
             abi.encodePacked(
                 "\x19\x01",
@@ -149,13 +149,13 @@ contract JoeERC20 {
         address recoveredAddress = ecrecover(digest, v, r, s);
         require(
             recoveredAddress != address(0) && recoveredAddress == owner,
-            "Joe: INVALID_SIGNATURE"
+            "Hermes: INVALID_SIGNATURE"
         );
         _approve(owner, spender, value);
     }
 }
 
-// File: contracts/traderjoe/libraries/Math.sol
+// File: contracts/hermesswap/libraries/Math.sol
 
 pragma solidity =0.6.12;
 
@@ -181,7 +181,7 @@ library Math {
     }
 }
 
-// File: contracts/traderjoe/libraries/UQ112x112.sol
+// File: contracts/hermesswap/libraries/UQ112x112.sol
 
 pragma solidity =0.6.12;
 
@@ -204,11 +204,11 @@ library UQ112x112 {
     }
 }
 
-// File: contracts/traderjoe/interfaces/IERC20.sol
+// File: contracts/hermesswap/interfaces/IERC20.sol
 
 pragma solidity >=0.5.0;
 
-interface IERC20Joe {
+interface IERC20Hermes {
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -242,11 +242,11 @@ interface IERC20Joe {
     ) external returns (bool);
 }
 
-// File: contracts/traderjoe/interfaces/IJoeFactory.sol
+// File: contracts/hermesswap/interfaces/IHermesFactory.sol
 
 pragma solidity >=0.5.0;
 
-interface IJoeFactory {
+interface IHermesFactory {
     event PairCreated(
         address indexed token0,
         address indexed token1,
@@ -280,12 +280,12 @@ interface IJoeFactory {
     function setMigrator(address) external;
 }
 
-// File: contracts/traderjoe/interfaces/IJoeCallee.sol
+// File: contracts/hermesswap/interfaces/IHermesCallee.sol
 
 pragma solidity >=0.5.0;
 
-interface IJoeCallee {
-    function joeCall(
+interface IHermesCallee {
+    function hermesCall(
         address sender,
         uint256 amount0,
         uint256 amount1,
@@ -293,7 +293,7 @@ interface IJoeCallee {
     ) external;
 }
 
-// File: contracts/traderjoe/JoePair.sol
+// File: contracts/hermesswap/HermesPair.sol
 
 pragma solidity =0.6.12;
 
@@ -302,8 +302,8 @@ interface IMigrator {
     function desiredLiquidity() external view returns (uint256);
 }
 
-contract JoePair is JoeERC20 {
-    using SafeMathJoe for uint256;
+contract HermesPair is HermesERC20 {
+    using SafeMathHermes for uint256;
     using UQ112x112 for uint224;
 
     uint256 public constant MINIMUM_LIQUIDITY = 10**3;
@@ -324,7 +324,7 @@ contract JoePair is JoeERC20 {
 
     uint256 private unlocked = 1;
     modifier lock() {
-        require(unlocked == 1, "Joe: LOCKED");
+        require(unlocked == 1, "Hermes: LOCKED");
         unlocked = 0;
         _;
         unlocked = 1;
@@ -354,7 +354,7 @@ contract JoePair is JoeERC20 {
         );
         require(
             success && (data.length == 0 || abi.decode(data, (bool))),
-            "Joe: TRANSFER_FAILED"
+            "Hermes: TRANSFER_FAILED"
         );
     }
 
@@ -381,7 +381,7 @@ contract JoePair is JoeERC20 {
 
     // called once by the factory at time of deployment
     function initialize(address _token0, address _token1) external {
-        require(msg.sender == factory, "Joe: FORBIDDEN"); // sufficient check
+        require(msg.sender == factory, "Hermes: FORBIDDEN"); // sufficient check
         token0 = _token0;
         token1 = _token1;
     }
@@ -395,7 +395,7 @@ contract JoePair is JoeERC20 {
     ) private {
         require(
             balance0 <= uint112(-1) && balance1 <= uint112(-1),
-            "Joe: OVERFLOW"
+            "Hermes: OVERFLOW"
         );
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
         uint32 timeElapsed = blockTimestamp - blockTimestampLast; // overflow is desired
@@ -419,7 +419,7 @@ contract JoePair is JoeERC20 {
         private
         returns (bool feeOn)
     {
-        address feeTo = IJoeFactory(factory).feeTo();
+        address feeTo = IHermesFactory(factory).feeTo();
         feeOn = feeTo != address(0);
         uint256 _kLast = kLast; // gas savings
         if (feeOn) {
@@ -441,15 +441,15 @@ contract JoePair is JoeERC20 {
     // this low-level function should be called from a contract which performs important safety checks
     function mint(address to) external lock returns (uint256 liquidity) {
         (uint112 _reserve0, uint112 _reserve1, ) = getReserves(); // gas savings
-        uint256 balance0 = IERC20Joe(token0).balanceOf(address(this));
-        uint256 balance1 = IERC20Joe(token1).balanceOf(address(this));
+        uint256 balance0 = IERC20Hermes(token0).balanceOf(address(this));
+        uint256 balance1 = IERC20Hermes(token1).balanceOf(address(this));
         uint256 amount0 = balance0.sub(_reserve0);
         uint256 amount1 = balance1.sub(_reserve1);
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
         uint256 _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         if (_totalSupply == 0) {
-            address migrator = IJoeFactory(factory).migrator();
+            address migrator = IHermesFactory(factory).migrator();
             if (msg.sender == migrator) {
                 liquidity = IMigrator(migrator).desiredLiquidity();
                 require(
@@ -469,7 +469,7 @@ contract JoePair is JoeERC20 {
                 amount1.mul(_totalSupply) / _reserve1
             );
         }
-        require(liquidity > 0, "Joe: INSUFFICIENT_LIQUIDITY_MINTED");
+        require(liquidity > 0, "Hermes: INSUFFICIENT_LIQUIDITY_MINTED");
         _mint(to, liquidity);
 
         _update(balance0, balance1, _reserve0, _reserve1);
@@ -486,8 +486,8 @@ contract JoePair is JoeERC20 {
         (uint112 _reserve0, uint112 _reserve1, ) = getReserves(); // gas savings
         address _token0 = token0; // gas savings
         address _token1 = token1; // gas savings
-        uint256 balance0 = IERC20Joe(_token0).balanceOf(address(this));
-        uint256 balance1 = IERC20Joe(_token1).balanceOf(address(this));
+        uint256 balance0 = IERC20Hermes(_token0).balanceOf(address(this));
+        uint256 balance1 = IERC20Hermes(_token1).balanceOf(address(this));
         uint256 liquidity = balanceOf[address(this)];
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
@@ -496,13 +496,13 @@ contract JoePair is JoeERC20 {
         amount1 = liquidity.mul(balance1) / _totalSupply; // using balances ensures pro-rata distribution
         require(
             amount0 > 0 && amount1 > 0,
-            "Joe: INSUFFICIENT_LIQUIDITY_BURNED"
+            "Hermes: INSUFFICIENT_LIQUIDITY_BURNED"
         );
         _burn(address(this), liquidity);
         _safeTransfer(_token0, to, amount0);
         _safeTransfer(_token1, to, amount1);
-        balance0 = IERC20Joe(_token0).balanceOf(address(this));
-        balance1 = IERC20Joe(_token1).balanceOf(address(this));
+        balance0 = IERC20Hermes(_token0).balanceOf(address(this));
+        balance1 = IERC20Hermes(_token1).balanceOf(address(this));
 
         _update(balance0, balance1, _reserve0, _reserve1);
         if (feeOn) kLast = uint256(reserve0).mul(reserve1); // reserve0 and reserve1 are up-to-date
@@ -518,12 +518,12 @@ contract JoePair is JoeERC20 {
     ) external lock {
         require(
             amount0Out > 0 || amount1Out > 0,
-            "Joe: INSUFFICIENT_OUTPUT_AMOUNT"
+            "Hermes: INSUFFICIENT_OUTPUT_AMOUNT"
         );
         (uint112 _reserve0, uint112 _reserve1, ) = getReserves(); // gas savings
         require(
             amount0Out < _reserve0 && amount1Out < _reserve1,
-            "Joe: INSUFFICIENT_LIQUIDITY"
+            "Hermes: INSUFFICIENT_LIQUIDITY"
         );
 
         uint256 balance0;
@@ -532,18 +532,18 @@ contract JoePair is JoeERC20 {
             // scope for _token{0,1}, avoids stack too deep errors
             address _token0 = token0;
             address _token1 = token1;
-            require(to != _token0 && to != _token1, "Joe: INVALID_TO");
+            require(to != _token0 && to != _token1, "Hermes: INVALID_TO");
             if (amount0Out > 0) _safeTransfer(_token0, to, amount0Out); // optimistically transfer tokens
             if (amount1Out > 0) _safeTransfer(_token1, to, amount1Out); // optimistically transfer tokens
             if (data.length > 0)
-                IJoeCallee(to).joeCall(
+                IHermesCallee(to).hermesCall(
                     msg.sender,
                     amount0Out,
                     amount1Out,
                     data
                 );
-            balance0 = IERC20Joe(_token0).balanceOf(address(this));
-            balance1 = IERC20Joe(_token1).balanceOf(address(this));
+            balance0 = IERC20Hermes(_token0).balanceOf(address(this));
+            balance1 = IERC20Hermes(_token1).balanceOf(address(this));
         }
         uint256 amount0In = balance0 > _reserve0 - amount0Out
             ? balance0 - (_reserve0 - amount0Out)
@@ -553,7 +553,7 @@ contract JoePair is JoeERC20 {
             : 0;
         require(
             amount0In > 0 || amount1In > 0,
-            "Joe: INSUFFICIENT_INPUT_AMOUNT"
+            "Hermes: INSUFFICIENT_INPUT_AMOUNT"
         );
         {
             // scope for reserve{0,1}Adjusted, avoids stack too deep errors
@@ -562,7 +562,7 @@ contract JoePair is JoeERC20 {
             require(
                 balance0Adjusted.mul(balance1Adjusted) >=
                     uint256(_reserve0).mul(_reserve1).mul(1000**2),
-                "Joe: K"
+                "Hermes: K"
             );
         }
 
@@ -577,20 +577,20 @@ contract JoePair is JoeERC20 {
         _safeTransfer(
             _token0,
             to,
-            IERC20Joe(_token0).balanceOf(address(this)).sub(reserve0)
+            IERC20Hermes(_token0).balanceOf(address(this)).sub(reserve0)
         );
         _safeTransfer(
             _token1,
             to,
-            IERC20Joe(_token1).balanceOf(address(this)).sub(reserve1)
+            IERC20Hermes(_token1).balanceOf(address(this)).sub(reserve1)
         );
     }
 
     // force reserves to match balances
     function sync() external lock {
         _update(
-            IERC20Joe(token0).balanceOf(address(this)),
-            IERC20Joe(token1).balanceOf(address(this)),
+            IERC20Hermes(token0).balanceOf(address(this)),
+            IERC20Hermes(token1).balanceOf(address(this)),
             reserve0,
             reserve1
         );

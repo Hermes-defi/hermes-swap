@@ -6,7 +6,7 @@ import { getBigNumber } from "./utilities"
 const ROUTER_ADDRESS = "0x60aE616a2155Ee3d9A68541Ba4544862310933d4"
 
 const WAVAX_ADDRESS = "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7"
-const JOE_ADDRESS = "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd"
+const HERMES_ADDRESS = "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd"
 const USDT_ADDRESS = "0xc7198437980c041c805A1EDcbA50c1Ce5db95118"
 const USDC_ADDRESS = "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664"
 const DAI_ADDRESS = "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70"
@@ -15,13 +15,13 @@ const TIME_ADDRESS = "0xb54f16fb19478766a268f172c9480f8da1a7c9c3"
 const WBTC_ADDRESS = "0x50b7545627a5162F82A992c33b87aDc75187B218"
 const TRACTOR_ADDRESS = "0x542fA0B261503333B90fE60c78F2BeeD16b7b7fD"
 
-const JOEAVAX_ADDRESS = "0x454E67025631C065d3cFAD6d71E6892f74487a15"
+const HERMESAVAX_ADDRESS = "0x454E67025631C065d3cFAD6d71E6892f74487a15"
 const USDCAVAX_ADDRESS = "0xa389f9430876455c36478deea9769b7ca4e3ddb1"
 const MIMTIME_ADDRESS = "0x113f413371fc4cc4c9d6416cf1de9dfd7bf747df"
 const MIMAVAX_ADDRESS = "0x781655d802670bba3c89aebaaea59d3182fd755d"
 const TRACTORAVAX_ADDRESS = "0x601e0f63be88a52b79dbac667d6b4a167ce39113"
 const USDCDAI_ADDRESS = "0x63ABE32d0Ee76C05a11838722A63e012008416E6"
-const JOEUSDT_ADDRESS = "0x1643de2efB8e35374D796297a9f95f64C082a8ce"
+const HERMESUSDT_ADDRESS = "0x1643de2efB8e35374D796297a9f95f64C082a8ce"
 
 const FACTORY_ADDRESS = "0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10"
 const ZAP_ADDRESS = "0x2C7B8e971c704371772eDaf16e0dB381A8D02027"
@@ -33,11 +33,11 @@ describe("moneyMaker", function () {
   before(async function () {
     // ABIs
     this.moneyMakerCF = await ethers.getContractFactory("MoneyMaker")
-    this.joeMakerCF = await ethers.getContractFactory("JoeMaker")
-    this.ERC20CF = await ethers.getContractFactory("JoeERC20")
+    this.hermesMakerCF = await ethers.getContractFactory("HermesMaker")
+    this.ERC20CF = await ethers.getContractFactory("HermesERC20")
     this.ZapCF = await ethers.getContractFactory("Zap")
-    this.PairCF = await ethers.getContractFactory("JoePair")
-    this.RouterCF = await ethers.getContractFactory("JoeRouter02")
+    this.PairCF = await ethers.getContractFactory("HermesPair")
+    this.RouterCF = await ethers.getContractFactory("HermesRouter02")
 
     // Account
     this.signers = await ethers.getSigners()
@@ -45,14 +45,14 @@ describe("moneyMaker", function () {
     this.alice = this.signers[1]
 
     // Contracts
-    this.factory = await ethers.getContractAt("JoeFactory", FACTORY_ADDRESS)
+    this.factory = await ethers.getContractAt("HermesFactory", FACTORY_ADDRESS)
     this.zap = await this.ZapCF.attach(ZAP_ADDRESS, this.dev)
     this.router = await this.RouterCF.attach(ROUTER_ADDRESS, this.dev)
 
     // Tokens
     this.wavax = await ethers.getContractAt("IWAVAX", WAVAX_ADDRESS, this.dev)
     this.wavaxERC20 = await this.ERC20CF.attach(WAVAX_ADDRESS)
-    this.joe = await this.ERC20CF.attach(JOE_ADDRESS)
+    this.hermes = await this.ERC20CF.attach(HERMES_ADDRESS)
     this.usdc = await this.ERC20CF.attach(USDC_ADDRESS)
     this.usdt = await this.ERC20CF.attach(USDT_ADDRESS)
     this.dai = await this.ERC20CF.attach(DAI_ADDRESS)
@@ -62,8 +62,8 @@ describe("moneyMaker", function () {
     this.tractor = await this.ERC20CF.attach(TRACTOR_ADDRESS)
 
     // Pairs
-    this.joeAvax = await this.PairCF.attach(JOEAVAX_ADDRESS, this.dev)
-    this.joeUsdt = await this.PairCF.attach(JOEUSDT_ADDRESS, this.dev)
+    this.hermesAvax = await this.PairCF.attach(HERMESAVAX_ADDRESS, this.dev)
+    this.hermesUsdt = await this.PairCF.attach(HERMESUSDT_ADDRESS, this.dev)
     this.avaxUsdc = await this.PairCF.attach(USDCAVAX_ADDRESS, this.dev)
     this.usdcDai = await this.PairCF.attach(USDCDAI_ADDRESS, this.dev)
     this.mimTime = await this.PairCF.attach(MIMTIME_ADDRESS, this.dev)
@@ -99,7 +99,7 @@ describe("moneyMaker", function () {
     })
 
     it("does not allow to set bridge for WAVAX", async function () {
-      await expect(this.moneyMaker.setBridge(this.wavax.address, this.joe.address)).to.be.revertedWith("MoneyMaker: Invalid bridge")
+      await expect(this.moneyMaker.setBridge(this.wavax.address, this.hermes.address)).to.be.revertedWith("MoneyMaker: Invalid bridge")
     })
 
     it("does not allow to set bridge to itself", async function () {
@@ -107,9 +107,9 @@ describe("moneyMaker", function () {
     })
 
     it("emits correct event on bridge", async function () {
-      await expect(this.moneyMaker.setBridge(this.dai.address, this.joe.address))
+      await expect(this.moneyMaker.setBridge(this.dai.address, this.hermes.address))
         .to.emit(this.moneyMaker, "LogBridgeSet")
-        .withArgs(this.dai.address, this.joe.address)
+        .withArgs(this.dai.address, this.hermes.address)
     })
   })
 
@@ -163,23 +163,23 @@ describe("moneyMaker", function () {
       expect(await this.usdc.balanceOf(BAR_ADDRESS)).to.equal("214878919")
     })
 
-    it("Should convert JOE - AVAX above slippage", async function () {
-      await this.zap.zapIn(this.joeAvax.address, { value: "2000000000000000000" })
+    it("Should convert HERMES - AVAX above slippage", async function () {
+      await this.zap.zapIn(this.hermesAvax.address, { value: "2000000000000000000" })
 
-      const joeAvax = await getPairInfo(this.joeAvax, this.dev.address)
+      const hermesAvax = await getPairInfo(this.hermesAvax, this.dev.address)
       const avaxUsdc = await getPairInfo(this.avaxUsdc, this.dev.address)
 
-      const [joeAmount, avaxAmount] =
-        this.joe.address == joeAvax.token0 ? [joeAvax.amount0, joeAvax.amount1] : [joeAvax.amount1, joeAvax.amount0]
+      const [hermesAmount, avaxAmount] =
+        this.hermes.address == hermesAvax.token0 ? [hermesAvax.amount0, hermesAvax.amount1] : [hermesAvax.amount1, hermesAvax.amount0]
 
-      const swappedJoeToAvax = swapTo(joeAvax, (await joeAvax.token0) == this.joe.address, joeAmount, "9900")
-      const swappedAvaxToUsdc = swapTo(avaxUsdc, (await avaxUsdc.token0) == this.wavax.address, avaxAmount.add(swappedJoeToAvax), "9900")
+      const swappedHermesToAvax = swapTo(hermesAvax, (await hermesAvax.token0) == this.hermes.address, hermesAmount, "9900")
+      const swappedAvaxToUsdc = swapTo(avaxUsdc, (await avaxUsdc.token0) == this.wavax.address, avaxAmount.add(swappedHermesToAvax), "9900")
 
-      await this.joeAvax.transfer(this.moneyMaker.address, await this.joeAvax.balanceOf(this.dev.address))
-      await this.moneyMaker.convert(this.joe.address, this.wavax.address, "100")
+      await this.hermesAvax.transfer(this.moneyMaker.address, await this.hermesAvax.balanceOf(this.dev.address))
+      await this.moneyMaker.convert(this.hermes.address, this.wavax.address, "100")
 
       expect(await this.usdc.balanceOf(this.moneyMaker.address)).to.equal(0)
-      expect(await this.joeAvax.balanceOf(this.moneyMaker.address)).to.equal(0)
+      expect(await this.hermesAvax.balanceOf(this.moneyMaker.address)).to.equal(0)
       expect((await this.usdc.balanceOf(BAR_ADDRESS)).sub(swappedAvaxToUsdc).toNumber()).to.be.above(0)
     })
 
@@ -239,16 +239,16 @@ describe("moneyMaker", function () {
     })
 
     it("reverts if slippage is lower than 0.3% (fees for swap)", async function () {
-      await this.zap.zapIn(this.joeAvax.address, { value: "2000000000000000000" })
-      await this.joeAvax.transfer(this.moneyMaker.address, await this.joeAvax.balanceOf(this.dev.address))
-      await expect(this.moneyMaker.convert(this.joe.address, this.wavax.address, "29")).to.be.revertedWith("MoneyMaker: Slippage caught") // slippage at 0.29% this will revert as the fee for a swap is 0.3%
+      await this.zap.zapIn(this.hermesAvax.address, { value: "2000000000000000000" })
+      await this.hermesAvax.transfer(this.moneyMaker.address, await this.hermesAvax.balanceOf(this.dev.address))
+      await expect(this.moneyMaker.convert(this.hermes.address, this.wavax.address, "29")).to.be.revertedWith("MoneyMaker: Slippage caught") // slippage at 0.29% this will revert as the fee for a swap is 0.3%
     })
 
     it("reverts if using a pair with really low liquidity even with slippage at maximum", async function () {
       await this.zap.zapIn(this.mimTime.address, { value: "2000000000000000000" })
       await this.mimTime.transfer(this.moneyMaker.address, await this.mimTime.balanceOf(this.dev.address))
-      await this.moneyMaker.setBridge(this.mim.address, this.joe.address)
-      await expect(this.moneyMaker.convert(this.mim.address, this.time.address, "4999")).to.be.revertedWith("MoneyMaker: Slippage caught") // slippage at 1% this will revert as the JOE/MIM pair has really low liquidity.
+      await this.moneyMaker.setBridge(this.mim.address, this.hermes.address)
+      await expect(this.moneyMaker.convert(this.mim.address, this.time.address, "4999")).to.be.revertedWith("MoneyMaker: Slippage caught") // slippage at 1% this will revert as the HERMES/MIM pair has really low liquidity.
     })
 
     it("reverts if convert is called by non-authorised user", async function () {
@@ -260,11 +260,11 @@ describe("moneyMaker", function () {
     })
 
     it("reverts if it loops back", async function () {
-      await this.zap.zapIn(this.joeUsdt.address, { value: ethers.utils.parseEther("2") })
-      await this.joeUsdt.transfer(this.moneyMaker.address, await this.joeUsdt.balanceOf(this.dev.address))
-      await this.moneyMaker.setBridge(this.joe.address, this.usdt.address)
-      await this.moneyMaker.setBridge(this.usdt.address, this.joe.address)
-      await expect(this.moneyMaker.convert(this.usdt.address, this.joe.address, "100")).to.be.reverted
+      await this.zap.zapIn(this.hermesUsdt.address, { value: ethers.utils.parseEther("2") })
+      await this.hermesUsdt.transfer(this.moneyMaker.address, await this.hermesUsdt.balanceOf(this.dev.address))
+      await this.moneyMaker.setBridge(this.hermes.address, this.usdt.address)
+      await this.moneyMaker.setBridge(this.usdt.address, this.hermes.address)
+      await expect(this.moneyMaker.convert(this.usdt.address, this.hermes.address, "100")).to.be.reverted
     })
 
     it("reverts if pair does not exist", async function () {
@@ -274,20 +274,20 @@ describe("moneyMaker", function () {
 
   describe("convertMultiple", function () {
     it("should allow to convert multiple", async function () {
-      await this.zap.zapIn(this.joeAvax.address, { value: ethers.utils.parseEther("2") })
+      await this.zap.zapIn(this.hermesAvax.address, { value: ethers.utils.parseEther("2") })
       await this.zap.zapIn(this.avaxUsdc.address, { value: ethers.utils.parseEther("2") })
-      await this.joeAvax.transfer(this.moneyMaker.address, await this.joeAvax.balanceOf(this.dev.address))
+      await this.hermesAvax.transfer(this.moneyMaker.address, await this.hermesAvax.balanceOf(this.dev.address))
       await this.avaxUsdc.transfer(this.moneyMaker.address, await this.avaxUsdc.balanceOf(this.dev.address))
-      await this.moneyMaker.convertMultiple([this.joe.address, this.usdc.address], [this.wavax.address, this.wavax.address], "100")
+      await this.moneyMaker.convertMultiple([this.hermes.address, this.usdc.address], [this.wavax.address, this.wavax.address], "100")
       expect(await this.usdc.balanceOf(this.moneyMaker.address)).to.equal(0)
-      expect(await this.joeAvax.balanceOf(this.moneyMaker.address)).to.equal(0)
+      expect(await this.hermesAvax.balanceOf(this.moneyMaker.address)).to.equal(0)
       expect(await this.avaxUsdc.balanceOf(this.moneyMaker.address)).to.equal(0)
       expect(await this.usdc.balanceOf(BAR_ADDRESS)).to.equal("429576577")
     })
   })
 
   describe("devCut", function () {
-    it("should redirect 50% of JOE to dev address", async function () {
+    it("should redirect 50% of HERMES to dev address", async function () {
       await this.moneyMaker.setDevAddr(this.dev.address)
       await this.moneyMaker.setDevCut("5000")
 
@@ -307,27 +307,27 @@ describe("moneyMaker", function () {
   })
 
   describe("setToken", function () {
-    it("should convert JOE - AVAX to JOE", async function () {
-      this.moneyMaker.setTokenToAddress(this.joe.address)
+    it("should convert HERMES - AVAX to HERMES", async function () {
+      this.moneyMaker.setTokenToAddress(this.hermes.address)
 
-      this.joeMaker = await this.joeMakerCF.deploy(FACTORY_ADDRESS, BAR_ADDRESS, JOE_ADDRESS, WAVAX_ADDRESS)
-      await this.joeMaker.deployed()
+      this.hermesMaker = await this.hermesMakerCF.deploy(FACTORY_ADDRESS, BAR_ADDRESS, HERMES_ADDRESS, WAVAX_ADDRESS)
+      await this.hermesMaker.deployed()
 
-      let previousBalance = await this.joe.balanceOf(BAR_ADDRESS)
+      let previousBalance = await this.hermes.balanceOf(BAR_ADDRESS)
       await this.zap.zapIn(this.avaxUsdc.address, { value: ethers.utils.parseEther("2") })
-      expect(await this.joe.balanceOf(BAR_ADDRESS)).to.equal(previousBalance)
+      expect(await this.hermes.balanceOf(BAR_ADDRESS)).to.equal(previousBalance)
 
-      await this.avaxUsdc.transfer(this.joeMaker.address, (await this.avaxUsdc.balanceOf(this.dev.address)).div(2))
-      await this.joeMaker.convert(this.usdc.address, this.wavax.address)
-      expect((await this.joe.balanceOf(BAR_ADDRESS)).sub(previousBalance.add(ethers.utils.parseEther("50")))).to.be.above(0)
+      await this.avaxUsdc.transfer(this.hermesMaker.address, (await this.avaxUsdc.balanceOf(this.dev.address)).div(2))
+      await this.hermesMaker.convert(this.usdc.address, this.wavax.address)
+      expect((await this.hermes.balanceOf(BAR_ADDRESS)).sub(previousBalance.add(ethers.utils.parseEther("50")))).to.be.above(0)
 
-      previousBalance = await this.joe.balanceOf(BAR_ADDRESS)
+      previousBalance = await this.hermes.balanceOf(BAR_ADDRESS)
       await this.avaxUsdc.transfer(this.moneyMaker.address, await this.avaxUsdc.balanceOf(this.dev.address))
       await this.moneyMaker.convert(this.usdc.address, this.wavax.address, "100")
-      expect((await this.joe.balanceOf(BAR_ADDRESS)).sub(previousBalance.add(ethers.utils.parseEther("50")))).to.be.above(0)
+      expect((await this.hermes.balanceOf(BAR_ADDRESS)).sub(previousBalance.add(ethers.utils.parseEther("50")))).to.be.above(0)
 
-      expect(await this.joe.balanceOf(this.joeMaker.address)).to.equal(0)
-      expect(await this.avaxUsdc.balanceOf(this.joeMaker.address)).to.equal(0)
+      expect(await this.hermes.balanceOf(this.hermesMaker.address)).to.equal(0)
+      expect(await this.avaxUsdc.balanceOf(this.hermesMaker.address)).to.equal(0)
       expect(await this.avaxUsdc.balanceOf(this.moneyMaker.address)).to.equal(0)
     })
   })

@@ -1,6 +1,6 @@
-# Trader Joe
+# Hermes Swap
 
-This repository contains all the contracts for Trader Joe.
+This repository contains all the contracts for Hermes Swap.
 
 ## Deployed Contracts
 
@@ -20,7 +20,7 @@ Then refer to the following docs below.
 
 [Deployment](docs/DEPLOYMENT.md)
 
-[MasterChefJoeV2](docs/MASTERCHEFJOEV2.md) - if your project is interested in being a double reward farm on Trader Joe!
+[MasterChefHermesV2](docs/MASTERCHEFHERMESV2.md) - if your project is interested in being a double reward farm on Trader Hermes!
 
 ## Security
 

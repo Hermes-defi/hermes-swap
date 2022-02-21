@@ -97,9 +97,9 @@ interface IMasterChef {
 
     function startTimestamp() external view returns (uint256);
 
-    function joe() external view returns (address);
+    function hermes() external view returns (address);
 
-    function joePerSec() external view returns (uint256);
+    function hermesPerSec() external view returns (uint256);
 
     function totalAllocPoint() external view returns (uint256);
 
@@ -187,18 +187,18 @@ contract BoringCryptoDashboardV2 {
 
     IMasterChef chef;
     IFactory pangolinFactory;
-    IFactory joeFactory;
+    IFactory hermesFactory;
     address wavax;
 
     constructor(
         address _chef,
         address _pangolinFactory,
-        address _joeFactory,
+        address _hermesFactory,
         address _wavax
     ) public {
         chef = IMasterChef(_chef);
         pangolinFactory = IFactory(_pangolinFactory);
-        joeFactory = IFactory(_joeFactory);
+        hermesFactory = IFactory(_hermesFactory);
         wavax = _wavax;
     }
 
@@ -258,36 +258,36 @@ contract BoringCryptoDashboardV2 {
         uint256 avax_rate = 1e18;
         if (token != wavax) {
             IPair pairPangolin;
-            IPair pairJoe;
+            IPair pairHermes;
             pairPangolin = IPair(IFactory(pangolinFactory).getPair(token, wavax));
-            pairJoe = IPair(IFactory(joeFactory).getPair(token, wavax));
-            if (address(pairPangolin) == address(0) && address(pairJoe) == address(0)) {
+            pairHermes = IPair(IFactory(hermesFactory).getPair(token, wavax));
+            if (address(pairPangolin) == address(0) && address(pairHermes) == address(0)) {
                 return 0;
             }
 
             uint112 reserve0Pangolin;
             uint112 reserve1Pangolin;
-            uint112 reserve0Joe;
-            uint112 reserve1Joe;
+            uint112 reserve0Hermes;
+            uint112 reserve1Hermes;
 
             if (address(pairPangolin) != address(0)) {
                 (reserve0Pangolin, reserve1Pangolin, ) = pairPangolin.getReserves();
             }
-            if (address(pairJoe) != address(0)) {
-                (reserve0Joe, reserve1Joe, ) = pairJoe.getReserves();
+            if (address(pairHermes) != address(0)) {
+                (reserve0Hermes, reserve1Hermes, ) = pairHermes.getReserves();
             }
 
-            if (address(pairJoe) == address(0) || reserve0Pangolin > reserve0Joe || reserve1Pangolin > reserve1Joe) {
+            if (address(pairHermes) == address(0) || reserve0Pangolin > reserve0Hermes || reserve1Pangolin > reserve1Hermes) {
                 if (pairPangolin.token0() == wavax) {
                     avax_rate = uint256(reserve1Pangolin).mul(1e18).div(reserve0Pangolin);
                 } else {
                     avax_rate = uint256(reserve0Pangolin).mul(1e18).div(reserve1Pangolin);
                 }
             } else {
-                if (pairJoe.token0() == wavax) {
-                    avax_rate = uint256(reserve1Joe).mul(1e18).div(reserve0Joe);
+                if (pairHermes.token0() == wavax) {
+                    avax_rate = uint256(reserve1Hermes).mul(1e18).div(reserve0Hermes);
                 } else {
-                    avax_rate = uint256(reserve0Joe).mul(1e18).div(reserve1Joe);
+                    avax_rate = uint256(reserve0Hermes).mul(1e18).div(reserve1Hermes);
                 }
             }
         }
@@ -306,7 +306,7 @@ contract BoringCryptoDashboardV2 {
         uint256 token0rate;
         uint256 token1rate;
         uint256 rewardDebt;
-        uint256 pending; // Pending JOE
+        uint256 pending; // Pending HERMES
     }
 
     function pollPools(address who, uint256[] calldata pids) public view returns (UserPoolInfo[] memory) {
@@ -315,8 +315,8 @@ contract BoringCryptoDashboardV2 {
         for (uint256 i = 0; i < pids.length; i++) {
             (uint256 amount, ) = chef.userInfo(pids[i], who);
             pools[i].balance = amount;
-            (uint256 pendingJoe, , , ) = chef.pendingTokens(pids[i], who);
-            pools[i].pending = pendingJoe;
+            (uint256 pendingHermes, , , ) = chef.pendingTokens(pids[i], who);
+            pools[i].pending = pendingHermes;
 
             (address lpToken, , , ) = chef.poolInfo(pids[i]);
             pools[i].pid = pids[i];

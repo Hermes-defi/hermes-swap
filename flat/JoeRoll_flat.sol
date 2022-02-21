@@ -656,12 +656,12 @@ abstract contract Ownable is Context {
     }
 }
 
-// File: contracts/traderjoe/interfaces/IJoePair.sol
+// File: contracts/hermesswap/interfaces/IHermesPair.sol
 
 
 pragma solidity >=0.5.0;
 
-interface IJoePair {
+interface IHermesPair {
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -770,12 +770,12 @@ interface IJoePair {
     function initialize(address, address) external;
 }
 
-// File: contracts/traderjoe/interfaces/IJoeRouter01.sol
+// File: contracts/hermesswap/interfaces/IHermesRouter01.sol
 
 
 pragma solidity >=0.6.2;
 
-interface IJoeRouter01 {
+interface IHermesRouter01 {
     function factory() external pure returns (address);
 
     function WAVAX() external pure returns (address);
@@ -934,12 +934,12 @@ interface IJoeRouter01 {
         returns (uint256[] memory amounts);
 }
 
-// File: contracts/traderjoe/interfaces/IJoeFactory.sol
+// File: contracts/hermesswap/interfaces/IHermesFactory.sol
 
 
 pragma solidity >=0.5.0;
 
-interface IJoeFactory {
+interface IHermesFactory {
     event PairCreated(
         address indexed token0,
         address indexed token1,
@@ -973,14 +973,14 @@ interface IJoeFactory {
     function setMigrator(address) external;
 }
 
-// File: contracts/traderjoe/libraries/SafeMath.sol
+// File: contracts/hermesswap/libraries/SafeMath.sol
 
 
 pragma solidity =0.6.12;
 
 // a library for performing overflow-safe math, courtesy of DappHub (https://github.com/dapphub/ds-math)
 
-library SafeMathJoe {
+library SafeMathHermes {
     function add(uint256 x, uint256 y) internal pure returns (uint256 z) {
         require((z = x + y) >= x, "ds-math-add-overflow");
     }
@@ -994,15 +994,15 @@ library SafeMathJoe {
     }
 }
 
-// File: contracts/traderjoe/libraries/JoeLibrary.sol
+// File: contracts/hermesswap/libraries/HermesLibrary.sol
 
 
 pragma solidity >=0.5.0;
 
 
 
-library JoeLibrary {
-    using SafeMathJoe for uint256;
+library HermesLibrary {
+    using SafeMathHermes for uint256;
 
     // returns sorted token addresses, used to handle return values from pairs sorted in this order
     function sortTokens(address tokenA, address tokenB)
@@ -1010,11 +1010,11 @@ library JoeLibrary {
         pure
         returns (address token0, address token1)
     {
-        require(tokenA != tokenB, "JoeLibrary: IDENTICAL_ADDRESSES");
+        require(tokenA != tokenB, "HermesLibrary: IDENTICAL_ADDRESSES");
         (token0, token1) = tokenA < tokenB
             ? (tokenA, tokenB)
             : (tokenB, tokenA);
-        require(token0 != address(0), "JoeLibrary: ZERO_ADDRESS");
+        require(token0 != address(0), "HermesLibrary: ZERO_ADDRESS");
     }
 
     // calculates the CREATE2 address for a pair without making any external calls
@@ -1045,7 +1045,7 @@ library JoeLibrary {
         address tokenB
     ) internal view returns (uint256 reserveA, uint256 reserveB) {
         (address token0, ) = sortTokens(tokenA, tokenB);
-        (uint256 reserve0, uint256 reserve1, ) = IJoePair(
+        (uint256 reserve0, uint256 reserve1, ) = IHermesPair(
             pairFor(factory, tokenA, tokenB)
         ).getReserves();
         (reserveA, reserveB) = tokenA == token0
@@ -1059,10 +1059,10 @@ library JoeLibrary {
         uint256 reserveA,
         uint256 reserveB
     ) internal pure returns (uint256 amountB) {
-        require(amountA > 0, "JoeLibrary: INSUFFICIENT_AMOUNT");
+        require(amountA > 0, "HermesLibrary: INSUFFICIENT_AMOUNT");
         require(
             reserveA > 0 && reserveB > 0,
-            "JoeLibrary: INSUFFICIENT_LIQUIDITY"
+            "HermesLibrary: INSUFFICIENT_LIQUIDITY"
         );
         amountB = amountA.mul(reserveB) / reserveA;
     }
@@ -1073,10 +1073,10 @@ library JoeLibrary {
         uint256 reserveIn,
         uint256 reserveOut
     ) internal pure returns (uint256 amountOut) {
-        require(amountIn > 0, "JoeLibrary: INSUFFICIENT_INPUT_AMOUNT");
+        require(amountIn > 0, "HermesLibrary: INSUFFICIENT_INPUT_AMOUNT");
         require(
             reserveIn > 0 && reserveOut > 0,
-            "JoeLibrary: INSUFFICIENT_LIQUIDITY"
+            "HermesLibrary: INSUFFICIENT_LIQUIDITY"
         );
         uint256 amountInWithFee = amountIn.mul(997);
         uint256 numerator = amountInWithFee.mul(reserveOut);
@@ -1090,10 +1090,10 @@ library JoeLibrary {
         uint256 reserveIn,
         uint256 reserveOut
     ) internal pure returns (uint256 amountIn) {
-        require(amountOut > 0, "JoeLibrary: INSUFFICIENT_OUTPUT_AMOUNT");
+        require(amountOut > 0, "HermesLibrary: INSUFFICIENT_OUTPUT_AMOUNT");
         require(
             reserveIn > 0 && reserveOut > 0,
-            "JoeLibrary: INSUFFICIENT_LIQUIDITY"
+            "HermesLibrary: INSUFFICIENT_LIQUIDITY"
         );
         uint256 numerator = reserveIn.mul(amountOut).mul(1000);
         uint256 denominator = reserveOut.sub(amountOut).mul(997);
@@ -1106,7 +1106,7 @@ library JoeLibrary {
         uint256 amountIn,
         address[] memory path
     ) internal view returns (uint256[] memory amounts) {
-        require(path.length >= 2, "JoeLibrary: INVALID_PATH");
+        require(path.length >= 2, "HermesLibrary: INVALID_PATH");
         amounts = new uint256[](path.length);
         amounts[0] = amountIn;
         for (uint256 i; i < path.length - 1; i++) {
@@ -1125,7 +1125,7 @@ library JoeLibrary {
         uint256 amountOut,
         address[] memory path
     ) internal view returns (uint256[] memory amounts) {
-        require(path.length >= 2, "JoeLibrary: INVALID_PATH");
+        require(path.length >= 2, "HermesLibrary: INVALID_PATH");
         amounts = new uint256[](path.length);
         amounts[amounts.length - 1] = amountOut;
         for (uint256 i = path.length - 1; i > 0; i--) {
@@ -1139,7 +1139,7 @@ library JoeLibrary {
     }
 }
 
-// File: contracts/JoeRoll.sol
+// File: contracts/HermesRoll.sol
 
 
 pragma solidity 0.6.12;
@@ -1151,15 +1151,15 @@ pragma solidity 0.6.12;
 
 
 
-// JoeRoll helps your migrate your existing Uniswap LP tokens to TraderJoe LP ones
-contract JoeRoll is Ownable {
+// HermesRoll helps your migrate your existing Uniswap LP tokens to TraderHermes LP ones
+contract HermesRoll is Ownable {
     using SafeERC20 for IERC20;
 
-    IJoeRouter01 public oldRouter;
-    IJoeRouter01 public router;
+    IHermesRouter01 public oldRouter;
+    IHermesRouter01 public router;
     IERC20 public hatToken = IERC20(0x82FE038Ea4b50f9C957da326C412ebd73462077C);
 
-    constructor(IJoeRouter01 _oldRouter, IJoeRouter01 _router) public {
+    constructor(IHermesRouter01 _oldRouter, IHermesRouter01 _router) public {
         oldRouter = _oldRouter;
         router = _router;
     }
@@ -1175,7 +1175,7 @@ contract JoeRoll is Ownable {
         bytes32 r,
         bytes32 s
     ) public {
-        IJoePair pair = IJoePair(pairForOldRouter(tokenA, tokenB));
+        IHermesPair pair = IHermesPair(pairForOldRouter(tokenA, tokenB));
         pair.permit(msg.sender, address(this), liquidity, deadline, v, r, s);
 
         migrate(tokenA, tokenB, liquidity, amountAMin, amountBMin, deadline);
@@ -1190,7 +1190,7 @@ contract JoeRoll is Ownable {
         uint256 amountBMin,
         uint256 deadline
     ) public {
-        require(deadline >= block.timestamp, "JoeSwap: EXPIRED");
+        require(deadline >= block.timestamp, "HermesSwap: EXPIRED");
 
         // Remove liquidity from the old router with permit
         (uint256 amountA, uint256 amountB) = removeLiquidity(
@@ -1236,15 +1236,15 @@ contract JoeRoll is Ownable {
         uint256 amountBMin,
         uint256 deadline
     ) internal returns (uint256 amountA, uint256 amountB) {
-        IJoePair pair = IJoePair(pairForOldRouter(tokenA, tokenB));
+        IHermesPair pair = IHermesPair(pairForOldRouter(tokenA, tokenB));
         pair.transferFrom(msg.sender, address(pair), liquidity);
         (uint256 amount0, uint256 amount1) = pair.burn(address(this));
-        (address token0, ) = JoeLibrary.sortTokens(tokenA, tokenB);
+        (address token0, ) = HermesLibrary.sortTokens(tokenA, tokenB);
         (amountA, amountB) = tokenA == token0
             ? (amount0, amount1)
             : (amount1, amount0);
-        require(amountA >= amountAMin, "JoeRoll: INSUFFICIENT_A_AMOUNT");
-        require(amountB >= amountBMin, "JoeRoll: INSUFFICIENT_B_AMOUNT");
+        require(amountA >= amountAMin, "HermesRoll: INSUFFICIENT_A_AMOUNT");
+        require(amountB >= amountBMin, "HermesRoll: INSUFFICIENT_B_AMOUNT");
     }
 
     // calculates the CREATE2 address for a pair without making any external calls
@@ -1253,7 +1253,7 @@ contract JoeRoll is Ownable {
         view
         returns (address pair)
     {
-        (address token0, address token1) = JoeLibrary.sortTokens(
+        (address token0, address token1) = HermesLibrary.sortTokens(
             tokenA,
             tokenB
         );
@@ -1283,10 +1283,10 @@ contract JoeRoll is Ownable {
             amountADesired,
             amountBDesired
         );
-        address pair = JoeLibrary.pairFor(router.factory(), tokenA, tokenB);
+        address pair = HermesLibrary.pairFor(router.factory(), tokenA, tokenB);
         IERC20(tokenA).safeTransfer(pair, amountA);
         IERC20(tokenB).safeTransfer(pair, amountB);
-        IJoePair(pair).mint(msg.sender);
+        IHermesPair(pair).mint(msg.sender);
     }
 
     function _addLiquidity(
@@ -1296,11 +1296,11 @@ contract JoeRoll is Ownable {
         uint256 amountBDesired
     ) internal returns (uint256 amountA, uint256 amountB) {
         // create the pair if it doesn't exist yet
-        IJoeFactory factory = IJoeFactory(router.factory());
+        IHermesFactory factory = IHermesFactory(router.factory());
         if (factory.getPair(tokenA, tokenB) == address(0)) {
             factory.createPair(tokenA, tokenB);
         }
-        (uint256 reserveA, uint256 reserveB) = JoeLibrary.getReserves(
+        (uint256 reserveA, uint256 reserveB) = HermesLibrary.getReserves(
             address(factory),
             tokenA,
             tokenB
@@ -1308,7 +1308,7 @@ contract JoeRoll is Ownable {
         if (reserveA == 0 && reserveB == 0) {
             (amountA, amountB) = (amountADesired, amountBDesired);
         } else {
-            uint256 amountBOptimal = JoeLibrary.quote(
+            uint256 amountBOptimal = HermesLibrary.quote(
                 amountADesired,
                 reserveA,
                 reserveB
@@ -1316,7 +1316,7 @@ contract JoeRoll is Ownable {
             if (amountBOptimal <= amountBDesired) {
                 (amountA, amountB) = (amountADesired, amountBOptimal);
             } else {
-                uint256 amountAOptimal = JoeLibrary.quote(
+                uint256 amountAOptimal = HermesLibrary.quote(
                     amountBDesired,
                     reserveB,
                     reserveA

@@ -3,7 +3,7 @@
 pragma solidity 0.7.6;
 
 /// @title Vote Escrow ERC20 Token Interface
-/// @author Trader Joe
+/// @author Trader Hermes
 /// @notice Interface of a ERC20 token used for vote escrow. Notice that transfers and
 /// allowances are disabled
 interface IVeERC20 {

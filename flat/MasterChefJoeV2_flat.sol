@@ -1262,23 +1262,23 @@ contract ERC20 is Context, IERC20 {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 }
 
-// File: contracts/JoeToken.sol
+// File: contracts/HermesToken.sol
 
 
 pragma solidity 0.6.12;
 
 
 
-// JoeToken with Governance.
-contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
+// HermesToken with Governance.
+contract HermesToken is ERC20("HermesToken", "HERMES"), Ownable {
     /// @notice Total number of tokens
-    uint256 public maxSupply = 500_000_000e18; // 500 million Joe
+    uint256 public maxSupply = 500_000_000e18; // 500 million Hermes
 
-    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterJoe).
+    /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterHermes).
     function mint(address _to, uint256 _amount) public onlyOwner {
         require(
             totalSupply().add(_amount) <= maxSupply,
-            "JOE::mint: cannot exceed max supply"
+            "HERMES::mint: cannot exceed max supply"
         );
         _mint(_to, _amount);
         _moveDelegates(address(0), _delegates[_to], _amount);
@@ -1385,13 +1385,13 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
         address signatory = ecrecover(digest, v, r, s);
         require(
             signatory != address(0),
-            "JOE::delegateBySig: invalid signature"
+            "HERMES::delegateBySig: invalid signature"
         );
         require(
             nonce == nonces[signatory]++,
-            "JOE::delegateBySig: invalid nonce"
+            "HERMES::delegateBySig: invalid nonce"
         );
-        require(now <= expiry, "JOE::delegateBySig: signature expired");
+        require(now <= expiry, "HERMES::delegateBySig: signature expired");
         return _delegate(signatory, delegatee);
     }
 
@@ -1420,7 +1420,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
     {
         require(
             blockNumber < block.number,
-            "JOE::getPriorVotes: not yet determined"
+            "HERMES::getPriorVotes: not yet determined"
         );
 
         uint32 nCheckpoints = numCheckpoints[account];
@@ -1456,7 +1456,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
 
     function _delegate(address delegator, address delegatee) internal {
         address currentDelegate = _delegates[delegator];
-        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying JOEs (not scaled);
+        uint256 delegatorBalance = balanceOf(delegator); // balance of underlying HERMESs (not scaled);
         _delegates[delegator] = delegatee;
 
         emit DelegateChanged(delegator, currentDelegate, delegatee);
@@ -1500,7 +1500,7 @@ contract JoeToken is ERC20("JoeToken", "JOE"), Ownable {
     ) internal {
         uint32 blockNumber = safe32(
             block.number,
-            "JOE::_writeCheckpoint: block number exceeds 32 bits"
+            "HERMES::_writeCheckpoint: block number exceeds 32 bits"
         );
 
         if (
@@ -3178,7 +3178,7 @@ library console {
 
 }
 
-// File: contracts/MasterChefJoeV2.sol
+// File: contracts/MasterChefHermesV2.sol
 
 
 pragma solidity 0.6.12;
@@ -3195,7 +3195,7 @@ pragma experimental ABIEncoderV2;
 interface IRewarder {
     using SafeERC20 for IERC20;
 
-    function onJoeReward(address user, uint256 newLpAmount) external;
+    function onHermesReward(address user, uint256 newLpAmount) external;
 
     function pendingTokens(address user)
         external
@@ -3205,18 +3205,18 @@ interface IRewarder {
     function rewardToken() external view returns (address);
 }
 
-// MasterChefJoe is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
+// MasterChefHermes is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
 // And to top it off, it takes no risks. Because the biggest risk is operator error.
 // So we make it virtually impossible for the operator of this contract to cause a bug with people's harvests.
 //
 // Note that it's ownable and the owner wields tremendous power. The ownership
-// will be transferred to a governance smart contract once JOE is sufficiently
+// will be transferred to a governance smart contract once HERMES is sufficiently
 // distributed and the community can show to govern itself.
 //
 // With thanks to the Lydia Finance team.
 //
 // Godspeed and may the 10x be with you.
-contract MasterChefJoeV2 is Ownable {
+contract MasterChefHermesV2 is Ownable {
     using SafeMath for uint256;
     using BoringERC20 for IERC20;
     using EnumerableSet for EnumerableSet.AddressSet;
@@ -3226,13 +3226,13 @@ contract MasterChefJoeV2 is Ownable {
         uint256 amount; // How many LP tokens the user has provided.
         uint256 rewardDebt; // Reward debt. See explanation below.
         //
-        // We do some fancy math here. Basically, any point in time, the amount of JOEs
+        // We do some fancy math here. Basically, any point in time, the amount of HERMESs
         // entitled to a user but is pending to be distributed is:
         //
-        //   pending reward = (user.amount * pool.accJoePerShare) - user.rewardDebt
+        //   pending reward = (user.amount * pool.accHermesPerShare) - user.rewardDebt
         //
         // Whenever a user deposits or withdraws LP tokens to a pool. Here's what happens:
-        //   1. The pool's `accJoePerShare` (and `lastRewardTimestamp`) gets updated.
+        //   1. The pool's `accHermesPerShare` (and `lastRewardTimestamp`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
         //   4. User's `rewardDebt` gets updated.
@@ -3241,22 +3241,22 @@ contract MasterChefJoeV2 is Ownable {
     // Info of each pool.
     struct PoolInfo {
         IERC20 lpToken; // Address of LP token contract.
-        uint256 allocPoint; // How many allocation points assigned to this pool. JOEs to distribute per second.
-        uint256 lastRewardTimestamp; // Last timestamp that JOEs distribution occurs.
-        uint256 accJoePerShare; // Accumulated JOEs per share, times 1e12. See below.
+        uint256 allocPoint; // How many allocation points assigned to this pool. HERMESs to distribute per second.
+        uint256 lastRewardTimestamp; // Last timestamp that HERMESs distribution occurs.
+        uint256 accHermesPerShare; // Accumulated HERMESs per share, times 1e12. See below.
         IRewarder rewarder;
     }
 
-    // The JOE TOKEN!
-    JoeToken public joe;
+    // The HERMES TOKEN!
+    HermesToken public hermes;
     // Dev address.
     address public devAddr;
     // Treasury address.
     address public treasuryAddr;
     // Investor address
     address public investorAddr;
-    // JOE tokens created per second.
-    uint256 public joePerSec;
+    // HERMES tokens created per second.
+    uint256 public hermesPerSec;
     // Percentage of pool rewards that goto the devs.
     uint256 public devPercent;
     // Percentage of pool rewards that goes to the treasury.
@@ -3272,7 +3272,7 @@ contract MasterChefJoeV2 is Ownable {
     mapping(uint256 => mapping(address => UserInfo)) public userInfo;
     // Total allocation points. Must be the sum of all allocation points in all pools.
     uint256 public totalAllocPoint;
-    // The timestamp when JOE mining starts.
+    // The timestamp when HERMES mining starts.
     uint256 public startTimestamp;
 
     event Add(
@@ -3293,7 +3293,7 @@ contract MasterChefJoeV2 is Ownable {
         uint256 indexed pid,
         uint256 lastRewardTimestamp,
         uint256 lpSupply,
-        uint256 accJoePerShare
+        uint256 accHermesPerShare
     );
     event Harvest(address indexed user, uint256 indexed pid, uint256 amount);
     event EmergencyWithdraw(
@@ -3302,14 +3302,14 @@ contract MasterChefJoeV2 is Ownable {
         uint256 amount
     );
     event SetDevAddress(address indexed oldAddress, address indexed newAddress);
-    event UpdateEmissionRate(address indexed user, uint256 _joePerSec);
+    event UpdateEmissionRate(address indexed user, uint256 _hermesPerSec);
 
     constructor(
-        JoeToken _joe,
+        HermesToken _hermes,
         address _devAddr,
         address _treasuryAddr,
         address _investorAddr,
-        uint256 _joePerSec,
+        uint256 _hermesPerSec,
         uint256 _startTimestamp,
         uint256 _devPercent,
         uint256 _treasuryPercent,
@@ -3331,11 +3331,11 @@ contract MasterChefJoeV2 is Ownable {
             _devPercent + _treasuryPercent + _investorPercent <= 1000,
             "constructor: total percent over max"
         );
-        joe = _joe;
+        hermes = _hermes;
         devAddr = _devAddr;
         treasuryAddr = _treasuryAddr;
         investorAddr = _investorAddr;
-        joePerSec = _joePerSec;
+        hermesPerSec = _hermesPerSec;
         startTimestamp = _startTimestamp;
         devPercent = _devPercent;
         treasuryPercent = _treasuryPercent;
@@ -3374,7 +3374,7 @@ contract MasterChefJoeV2 is Ownable {
                 lpToken: _lpToken,
                 allocPoint: _allocPoint,
                 lastRewardTimestamp: lastRewardTimestamp,
-                accJoePerShare: 0,
+                accHermesPerShare: 0,
                 rewarder: _rewarder
             })
         );
@@ -3382,7 +3382,7 @@ contract MasterChefJoeV2 is Ownable {
         emit Add(poolInfo.length.sub(1), _allocPoint, _lpToken, _rewarder);
     }
 
-    // Update the given pool's JOE allocation point. Can only be called by the owner.
+    // Update the given pool's HERMES allocation point. Can only be called by the owner.
     function set(
         uint256 _pid,
         uint256 _allocPoint,
@@ -3410,12 +3410,12 @@ contract MasterChefJoeV2 is Ownable {
         );
     }
 
-    // View function to see pending JOEs on frontend.
+    // View function to see pending HERMESs on frontend.
     function pendingTokens(uint256 _pid, address _user)
         external
         view
         returns (
-            uint256 pendingJoe,
+            uint256 pendingHermes,
             address bonusTokenAddress,
             string memory bonusTokenSymbol,
             uint256 pendingBonusToken
@@ -3423,7 +3423,7 @@ contract MasterChefJoeV2 is Ownable {
     {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
-        uint256 accJoePerShare = pool.accJoePerShare;
+        uint256 accHermesPerShare = pool.accHermesPerShare;
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0) {
             uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
@@ -3431,17 +3431,17 @@ contract MasterChefJoeV2 is Ownable {
                 devPercent -
                 treasuryPercent -
                 investorPercent;
-            uint256 joeReward = multiplier
-            .mul(joePerSec)
+            uint256 hermesReward = multiplier
+            .mul(hermesPerSec)
             .mul(pool.allocPoint)
             .div(totalAllocPoint)
             .mul(lpPercent)
             .div(1000);
-            accJoePerShare = accJoePerShare.add(
-                joeReward.mul(1e12).div(lpSupply)
+            accHermesPerShare = accHermesPerShare.add(
+                hermesReward.mul(1e12).div(lpSupply)
             );
         }
-        pendingJoe = user.amount.mul(accJoePerShare).div(1e12).sub(
+        pendingHermes = user.amount.mul(accHermesPerShare).div(1e12).sub(
             user.rewardDebt
         );
 
@@ -3487,50 +3487,50 @@ contract MasterChefJoeV2 is Ownable {
             return;
         }
         uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
-        uint256 joeReward = multiplier.mul(joePerSec).mul(pool.allocPoint).div(
+        uint256 hermesReward = multiplier.mul(hermesPerSec).mul(pool.allocPoint).div(
             totalAllocPoint
         );
         uint256 lpPercent = 1000 -
             devPercent -
             treasuryPercent -
             investorPercent;
-        joe.mint(devAddr, joeReward.mul(devPercent).div(1000));
-        joe.mint(treasuryAddr, joeReward.mul(treasuryPercent).div(1000));
-        joe.mint(investorAddr, joeReward.mul(investorPercent).div(1000));
-        joe.mint(address(this), joeReward.mul(lpPercent).div(1000));
-        pool.accJoePerShare = pool.accJoePerShare.add(
-            joeReward.mul(1e12).div(lpSupply).mul(lpPercent).div(1000)
+        hermes.mint(devAddr, hermesReward.mul(devPercent).div(1000));
+        hermes.mint(treasuryAddr, hermesReward.mul(treasuryPercent).div(1000));
+        hermes.mint(investorAddr, hermesReward.mul(investorPercent).div(1000));
+        hermes.mint(address(this), hermesReward.mul(lpPercent).div(1000));
+        pool.accHermesPerShare = pool.accHermesPerShare.add(
+            hermesReward.mul(1e12).div(lpSupply).mul(lpPercent).div(1000)
         );
         pool.lastRewardTimestamp = block.timestamp;
         emit UpdatePool(
             _pid,
             pool.lastRewardTimestamp,
             lpSupply,
-            pool.accJoePerShare
+            pool.accHermesPerShare
         );
     }
 
-    // Deposit LP tokens to MasterChef for JOE allocation.
+    // Deposit LP tokens to MasterChef for HERMES allocation.
     function deposit(uint256 _pid, uint256 _amount) public {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         updatePool(_pid);
         if (user.amount > 0) {
-            // Harvest JOE
+            // Harvest HERMES
             uint256 pending = user
             .amount
-            .mul(pool.accJoePerShare)
+            .mul(pool.accHermesPerShare)
             .div(1e12)
             .sub(user.rewardDebt);
-            safeJoeTransfer(msg.sender, pending);
+            safeHermesTransfer(msg.sender, pending);
             emit Harvest(msg.sender, _pid, pending);
         }
         user.amount = user.amount.add(_amount);
-        user.rewardDebt = user.amount.mul(pool.accJoePerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accHermesPerShare).div(1e12);
 
         IRewarder rewarder = poolInfo[_pid].rewarder;
         if (address(rewarder) != address(0)) {
-            rewarder.onJoeReward(msg.sender, user.amount);
+            rewarder.onHermesReward(msg.sender, user.amount);
         }
 
         pool.lpToken.safeTransferFrom(
@@ -3549,19 +3549,19 @@ contract MasterChefJoeV2 is Ownable {
 
         updatePool(_pid);
 
-        // Harvest JOE
-        uint256 pending = user.amount.mul(pool.accJoePerShare).div(1e12).sub(
+        // Harvest HERMES
+        uint256 pending = user.amount.mul(pool.accHermesPerShare).div(1e12).sub(
             user.rewardDebt
         );
-        safeJoeTransfer(msg.sender, pending);
+        safeHermesTransfer(msg.sender, pending);
         emit Harvest(msg.sender, _pid, pending);
 
         user.amount = user.amount.sub(_amount);
-        user.rewardDebt = user.amount.mul(pool.accJoePerShare).div(1e12);
+        user.rewardDebt = user.amount.mul(pool.accHermesPerShare).div(1e12);
 
         IRewarder rewarder = poolInfo[_pid].rewarder;
         if (address(rewarder) != address(0)) {
-            rewarder.onJoeReward(msg.sender, user.amount);
+            rewarder.onHermesReward(msg.sender, user.amount);
         }
 
         pool.lpToken.safeTransfer(address(msg.sender), _amount);
@@ -3578,13 +3578,13 @@ contract MasterChefJoeV2 is Ownable {
         user.rewardDebt = 0;
     }
 
-    // Safe joe transfer function, just in case if rounding error causes pool to not have enough JOEs.
-    function safeJoeTransfer(address _to, uint256 _amount) internal {
-        uint256 joeBal = joe.balanceOf(address(this));
-        if (_amount > joeBal) {
-            joe.transfer(_to, joeBal);
+    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.
+    function safeHermesTransfer(address _to, uint256 _amount) internal {
+        uint256 hermesBal = hermes.balanceOf(address(this));
+        if (_amount > hermesBal) {
+            hermes.transfer(_to, hermesBal);
         } else {
-            joe.transfer(_to, _amount);
+            hermes.transfer(_to, _amount);
         }
     }
 
@@ -3645,9 +3645,9 @@ contract MasterChefJoeV2 is Ownable {
 
     // Pancake has to add hidden dummy pools inorder to alter the emission,
     // here we make it simple and transparent to all.
-    function updateEmissionRate(uint256 _joePerSec) public onlyOwner {
+    function updateEmissionRate(uint256 _hermesPerSec) public onlyOwner {
         massUpdatePools();
-        joePerSec = _joePerSec;
-        emit UpdateEmissionRate(msg.sender, _joePerSec);
+        hermesPerSec = _hermesPerSec;
+        emit UpdateEmissionRate(msg.sender, _hermesPerSec);
     }
 }

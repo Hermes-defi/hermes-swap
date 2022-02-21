@@ -902,11 +902,11 @@ abstract contract OwnableUpgradeable is Initializable, ContextUpgradeable {
     uint256[49] private __gap;
 }
 
-// File: contracts/traderjoe/interfaces/IJoePair.sol
+// File: contracts/hermesswap/interfaces/IHermesPair.sol
 
 pragma solidity >=0.5.0;
 
-interface IJoePair {
+interface IHermesPair {
     event Approval(
         address indexed owner,
         address indexed spender,
@@ -1015,11 +1015,11 @@ interface IJoePair {
     function initialize(address, address) external;
 }
 
-// File: contracts/traderjoe/interfaces/IJoeRouter01.sol
+// File: contracts/hermesswap/interfaces/IHermesRouter01.sol
 
 pragma solidity >=0.6.2;
 
-interface IJoeRouter01 {
+interface IHermesRouter01 {
     function factory() external pure returns (address);
 
     function WAVAX() external pure returns (address);
@@ -1178,11 +1178,11 @@ interface IJoeRouter01 {
         returns (uint256[] memory amounts);
 }
 
-// File: contracts/traderjoe/interfaces/IJoeRouter02.sol
+// File: contracts/hermesswap/interfaces/IHermesRouter02.sol
 
 pragma solidity >=0.6.2;
 
-interface IJoeRouter02 is IJoeRouter01 {
+interface IHermesRouter02 is IHermesRouter01 {
     function removeLiquidityAVAXSupportingFeeOnTransferTokens(
         address token,
         uint256 liquidity,
@@ -1229,7 +1229,7 @@ interface IJoeRouter02 is IJoeRouter01 {
     ) external;
 }
 
-// File: contracts/traderjoe/interfaces/IWAVAX.sol
+// File: contracts/hermesswap/interfaces/IWAVAX.sol
 
 pragma solidity >=0.5.0;
 
@@ -1246,7 +1246,7 @@ interface IWAVAX {
 pragma solidity =0.6.12;
 
 /*
- * Trader Joe
+ * Trader Hermes
  * MIT License; modified from PancakeBunny
  *
  */
@@ -1257,13 +1257,13 @@ contract Zap is OwnableUpgradeable {
 
     /* ========== CONSTANT VARIABLES ========== */
 
-    address private constant JOE = 0xDDF06D89C908bC38e03067d65408D632fDA4fd9d;
+    address private constant HERMES = 0xDDF06D89C908bC38e03067d65408D632fDA4fd9d;
     address private constant USDT = 0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10;
     address private constant DAI = 0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10;
     address private constant WAVAX = 0xc778417E063141139Fce010982780140Aa0cD5Ab;
 
-    IJoeRouter02 private constant ROUTER =
-        IJoeRouter02(0x4A586DAA5D5EDCD8182339C24291FB510fA4d271);
+    IHermesRouter02 private constant ROUTER =
+        IHermesRouter02(0x4A586DAA5D5EDCD8182339C24291FB510fA4d271);
 
     /* ========== STATE VARIABLES ========== */
 
@@ -1279,7 +1279,7 @@ contract Zap is OwnableUpgradeable {
 
         setNotLP(WAVAX);
         setNotLP(USDT);
-        setNotLP(JOE);
+        setNotLP(HERMES);
         setNotLP(DAI);
     }
 
@@ -1306,7 +1306,7 @@ contract Zap is OwnableUpgradeable {
         _approveTokenIfNeeded(_from);
 
         if (isLP(_to)) {
-            IJoePair pair = IJoePair(_to);
+            IHermesPair pair = IHermesPair(_to);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (_from == token0 || _from == token1) {
@@ -1354,7 +1354,7 @@ contract Zap is OwnableUpgradeable {
         if (!isLP(_from)) {
             _swapTokenForAVAX(_from, amount, msg.sender);
         } else {
-            IJoePair pair = IJoePair(_from);
+            IHermesPair pair = IHermesPair(_from);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (token0 == WAVAX || token1 == WAVAX) {
@@ -1397,7 +1397,7 @@ contract Zap is OwnableUpgradeable {
             _swapAVAXForToken(lp, amount, receiver);
         } else {
             // lp
-            IJoePair pair = IJoePair(lp);
+            IHermesPair pair = IHermesPair(lp);
             address token0 = pair.token0();
             address token1 = pair.token1();
             if (token0 == WAVAX || token1 == WAVAX) {

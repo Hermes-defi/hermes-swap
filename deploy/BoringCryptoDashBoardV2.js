@@ -1,4 +1,4 @@
-const { WAVAX } = require("@traderjoe-xyz/sdk");
+const { WAVAX } = require("@hermesswap-xyz/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
@@ -23,15 +23,15 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     43114: "0xefa94DE7a4656D787667C749f7E1223D71E9FD88",
   };
 
-  const chefAddress = (await deployments.get("MasterChefJoeV2")).address;
-  const joeFactoryAddress = (await deployments.get("JoeFactory")).address;
+  const chefAddress = (await deployments.get("MasterChefHermesV2")).address;
+  const hermesFactoryAddress = (await deployments.get("HermesFactory")).address;
 
   await deploy("BoringCryptoDashboardV2", {
     from: deployer,
     args: [
       chefAddress,
       pangolinFactoryAddress[chainId],
-      joeFactoryAddress,
+      hermesFactoryAddress,
       wavaxAddress,
     ],
     log: true,
@@ -40,4 +40,4 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 };
 
 module.exports.tags = ["BoringCryptoDashboardV2", "boring"];
-module.exports.dependencies = ["MasterChefJoeV2", "JoeFactory"];
+module.exports.dependencies = ["MasterChefHermesV2", "HermesFactory"];

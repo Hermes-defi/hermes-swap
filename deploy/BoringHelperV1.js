@@ -1,4 +1,4 @@
-const { WAVAX } = require("@traderjoe-xyz/sdk");
+const { WAVAX } = require("@hermesswap-xyz/sdk");
 
 module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deploy } = deployments;
@@ -25,20 +25,20 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
     43114: "0xefa94DE7a4656D787667C749f7E1223D71E9FD88",
   };
 
-  const chefAddress = (await deployments.get("MasterChefJoeV2")).address;
-  const makerAddress = (await deployments.get("JoeMaker")).address;
-  const joeAddress = (await deployments.get("JoeToken")).address;
-  const joeFactoryAddress = (await deployments.get("JoeFactory")).address;
-  const barAddress = (await deployments.get("JoeBar")).address;
+  const chefAddress = (await deployments.get("MasterChefHermesV2")).address;
+  const makerAddress = (await deployments.get("HermesMaker")).address;
+  const hermesAddress = (await deployments.get("HermesToken")).address;
+  const hermesFactoryAddress = (await deployments.get("HermesFactory")).address;
+  const barAddress = (await deployments.get("HermesBar")).address;
 
   await deploy("BoringHelperV1", {
     from: deployer,
     args: [
       chefAddress,
       makerAddress,
-      joeAddress,
+      hermesAddress,
       wavaxAddress,
-      joeFactoryAddress,
+      hermesFactoryAddress,
       pangolinFactoryAddress[chainId],
       barAddress,
     ],
@@ -49,9 +49,9 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
 
 module.exports.tags = ["BoringHelperV1", "boring"];
 module.exports.dependencies = [
-  "MasterChefJoeV2",
-  "JoeMaker",
-  "JoeToken",
-  "JoeFactory",
-  "JoeBar",
+  "MasterChefHermesV2",
+  "HermesMaker",
+  "HermesToken",
+  "HermesFactory",
+  "HermesBar",
 ];

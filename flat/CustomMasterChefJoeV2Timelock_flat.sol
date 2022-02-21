@@ -215,7 +215,7 @@ library SafeMath {
     }
 }
 
-// File: contracts/timelock/CustomMasterChefJoeV2Timelock.sol
+// File: contracts/timelock/CustomMasterChefHermesV2Timelock.sol
 
 
 // COPIED FROM https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorAlpha.sol
@@ -234,7 +234,7 @@ pragma solidity 0.6.12;
 // XXX: import "./SafeMath.sol";
 
 
-contract CustomMasterChefJoeV2Timelock {
+contract CustomMasterChefHermesV2Timelock {
     using SafeMath for uint256;
 
     event NewAdmin(address indexed newAdmin);
@@ -280,7 +280,7 @@ contract CustomMasterChefJoeV2Timelock {
     uint256 public devPercentLimit;
     uint256 public investorPercentLimit;
     uint256 public treasuryPercentLimit;
-    uint256 public joePerSecLimit;
+    uint256 public hermesPerSecLimit;
     bool public admin_initialized;
 
     mapping(bytes32 => bool) public queuedTransactions;
@@ -289,33 +289,33 @@ contract CustomMasterChefJoeV2Timelock {
       if (keccak256(bytes(signature)) == keccak256(bytes(SET_DEV_PERCENT_SIG))) {
         uint256 devPercent = abi.decode(data, (uint256));
         require(devPercent <= devPercentLimit,
-                "CustomMasterChefJoeV2Timelock::withinLimits: devPercent must not exceed limit.");
+                "CustomMasterChefHermesV2Timelock::withinLimits: devPercent must not exceed limit.");
       } else if (keccak256(bytes(signature)) == keccak256(bytes(SET_TREASURY_PERCENT_SIG))) {
         uint256 treasuryPercent = abi.decode(data, (uint256));
         require(treasuryPercent <= treasuryPercentLimit,
-                "CustomMasterChefJoeV2Timelock::withinLimits: treasuryPercent must not exceed limit.");
+                "CustomMasterChefHermesV2Timelock::withinLimits: treasuryPercent must not exceed limit.");
       } else if (keccak256(bytes(signature)) == keccak256(bytes(SET_INVESTOR_PERCENT_SIG))) {
         uint256 investorPercent = abi.decode(data, (uint256));
         require(investorPercent <= investorPercentLimit,
-                "CustomMasterChefJoeV2Timelock::withinLimits: investorPercent must not exceed limit.");
+                "CustomMasterChefHermesV2Timelock::withinLimits: investorPercent must not exceed limit.");
       } else if (keccak256(bytes(signature)) ==
                  keccak256(bytes(UPDATE_EMISSION_RATE_SIG))) {
-        uint256 joePerSec = abi.decode(data, (uint256));
-        require(joePerSec <= joePerSecLimit, "CustomMasterChefJoeV2Timelock::withinLimits: joePerSec must not exceed limit.");
+        uint256 hermesPerSec = abi.decode(data, (uint256));
+        require(hermesPerSec <= hermesPerSecLimit, "CustomMasterChefHermesV2Timelock::withinLimits: hermesPerSec must not exceed limit.");
       }
       _;
     }
 
     constructor(address admin_, uint256 delay_, uint256 devPercentLimit_,
                 uint256 treasuryPercentLimit_, uint256 investorPercentLimit_,
-                uint256 joePerSecLimit_) public {
+                uint256 hermesPerSecLimit_) public {
         require(
             delay_ >= MINIMUM_DELAY,
-            "CustomMasterChefJoeV2Timelock::constructor: Delay must exceed minimum delay."
+            "CustomMasterChefHermesV2Timelock::constructor: Delay must exceed minimum delay."
         );
         require(
             delay_ <= MAXIMUM_DELAY,
-            "CustomMasterChefJoeV2Timelock::constructor: Delay must not exceed maximum delay."
+            "CustomMasterChefHermesV2Timelock::constructor: Delay must not exceed maximum delay."
         );
 
         admin = admin_;
@@ -324,7 +324,7 @@ contract CustomMasterChefJoeV2Timelock {
         devPercentLimit = devPercentLimit_;
         treasuryPercentLimit = treasuryPercentLimit_;
         investorPercentLimit = investorPercentLimit_;
-        joePerSecLimit = joePerSecLimit_;
+        hermesPerSecLimit = hermesPerSecLimit_;
     }
 
     // XXX: function() external payable { }
@@ -333,15 +333,15 @@ contract CustomMasterChefJoeV2Timelock {
     function setDelay(uint256 delay_) public {
         require(
             msg.sender == address(this),
-            "CustomMasterChefJoeV2Timelock::setDelay: Call must come from CustomMasterChefJoeV2Timelock."
+            "CustomMasterChefHermesV2Timelock::setDelay: Call must come from CustomMasterChefHermesV2Timelock."
         );
         require(
             delay_ >= MINIMUM_DELAY,
-            "CustomMasterChefJoeV2Timelock::setDelay: Delay must exceed minimum delay."
+            "CustomMasterChefHermesV2Timelock::setDelay: Delay must exceed minimum delay."
         );
         require(
             delay_ <= MAXIMUM_DELAY,
-            "CustomMasterChefJoeV2Timelock::setDelay: Delay must not exceed maximum delay."
+            "CustomMasterChefHermesV2Timelock::setDelay: Delay must not exceed maximum delay."
         );
         delay = delay_;
 
@@ -351,7 +351,7 @@ contract CustomMasterChefJoeV2Timelock {
     function acceptAdmin() public {
         require(
             msg.sender == pendingAdmin,
-            "CustomMasterChefJoeV2Timelock::acceptAdmin: Call must come from pendingAdmin."
+            "CustomMasterChefHermesV2Timelock::acceptAdmin: Call must come from pendingAdmin."
         );
         admin = msg.sender;
         pendingAdmin = address(0);
@@ -364,12 +364,12 @@ contract CustomMasterChefJoeV2Timelock {
         if (admin_initialized) {
             require(
                 msg.sender == address(this),
-                "CustomMasterChefJoeV2Timelock::setPendingAdmin: Call must come from CustomMasterChefJoeV2Timelock."
+                "CustomMasterChefHermesV2Timelock::setPendingAdmin: Call must come from CustomMasterChefHermesV2Timelock."
             );
         } else {
             require(
                 msg.sender == admin,
-                "CustomMasterChefJoeV2Timelock::setPendingAdmin: First call must come from admin."
+                "CustomMasterChefHermesV2Timelock::setPendingAdmin: First call must come from admin."
             );
             admin_initialized = true;
         }
@@ -387,11 +387,11 @@ contract CustomMasterChefJoeV2Timelock {
     ) public withinLimits(signature, data) returns (bytes32) {
         require(
             msg.sender == admin,
-            "CustomMasterChefJoeV2Timelock::queueTransaction: Call must come from admin."
+            "CustomMasterChefHermesV2Timelock::queueTransaction: Call must come from admin."
         );
         require(
             eta >= getBlockTimestamp().add(delay),
-            "CustomMasterChefJoeV2Timelock::queueTransaction: Estimated execution block must satisfy delay."
+            "CustomMasterChefHermesV2Timelock::queueTransaction: Estimated execution block must satisfy delay."
         );
 
         bytes32 txHash = keccak256(
@@ -412,7 +412,7 @@ contract CustomMasterChefJoeV2Timelock {
     ) public {
         require(
             msg.sender == admin,
-            "CustomMasterChefJoeV2Timelock::cancelTransaction: Call must come from admin."
+            "CustomMasterChefHermesV2Timelock::cancelTransaction: Call must come from admin."
         );
 
         bytes32 txHash = keccak256(
@@ -432,7 +432,7 @@ contract CustomMasterChefJoeV2Timelock {
     ) public payable returns (bytes memory) {
         require(
             msg.sender == admin,
-            "CustomMasterChefJoeV2Timelock::executeTransaction: Call must come from admin."
+            "CustomMasterChefHermesV2Timelock::executeTransaction: Call must come from admin."
         );
 
         bytes32 txHash = keccak256(
@@ -440,15 +440,15 @@ contract CustomMasterChefJoeV2Timelock {
         );
         require(
             queuedTransactions[txHash],
-            "CustomMasterChefJoeV2Timelock::executeTransaction: Transaction hasn't been queued."
+            "CustomMasterChefHermesV2Timelock::executeTransaction: Transaction hasn't been queued."
         );
         require(
             getBlockTimestamp() >= eta,
-            "CustomMasterChefJoeV2Timelock::executeTransaction: Transaction hasn't surpassed time lock."
+            "CustomMasterChefHermesV2Timelock::executeTransaction: Transaction hasn't surpassed time lock."
         );
         require(
             getBlockTimestamp() <= eta.add(GRACE_PERIOD),
-            "CustomMasterChefJoeV2Timelock::executeTransaction: Transaction is stale."
+            "CustomMasterChefHermesV2Timelock::executeTransaction: Transaction is stale."
         );
 
         queuedTransactions[txHash] = false;
@@ -466,7 +466,7 @@ contract CustomMasterChefJoeV2Timelock {
         );
         require(
             success,
-            "CustomMasterChefJoeV2Timelock::executeTransaction: Transaction execution reverted."
+            "CustomMasterChefHermesV2Timelock::executeTransaction: Transaction execution reverted."
         );
 
         emit ExecuteTransaction(txHash, target, value, signature, data, eta);

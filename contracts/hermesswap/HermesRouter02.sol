@@ -8,26 +8,26 @@ import "./libraries/TransferHelper.sol";
 import "./interfaces/IHermesRouter02.sol";
 import "./interfaces/IHermesFactory.sol";
 import "./interfaces/IERC20.sol";
-import "./interfaces/IWAVAX.sol";
+import "./interfaces/IWONE.sol";
 
 contract HermesRouter02 is IHermesRouter02 {
     using SafeMathHermes for uint256;
 
     address public immutable override factory;
-    address public immutable override WAVAX;
+    address public immutable override WONE;
 
     modifier ensure(uint256 deadline) {
         require(deadline >= block.timestamp, "HermesRouter: EXPIRED");
         _;
     }
 
-    constructor(address _factory, address _WAVAX) public {
+    constructor(address _factory, address _WONE) public {
         factory = _factory;
-        WAVAX = _WAVAX;
+        WONE = _WONE;
     }
 
     receive() external payable {
-        assert(msg.sender == WAVAX); // only accept AVAX via fallback from the WAVAX contract
+        assert(msg.sender == WONE); // only accept ONE via fallback from the WONE contract
     }
 
     // **** ADD LIQUIDITY ****
@@ -87,11 +87,11 @@ contract HermesRouter02 is IHermesRouter02 {
         liquidity = IHermesPair(pair).mint(to);
     }
 
-    function addLiquidityAVAX(
+    function addLiquidityONE(
         address token,
         uint256 amountTokenDesired,
         uint256 amountTokenMin,
-        uint256 amountAVAXMin,
+        uint256 amountONEMin,
         address to,
         uint256 deadline
     )
@@ -102,25 +102,25 @@ contract HermesRouter02 is IHermesRouter02 {
         ensure(deadline)
         returns (
             uint256 amountToken,
-            uint256 amountAVAX,
+            uint256 amountONE,
             uint256 liquidity
         )
     {
-        (amountToken, amountAVAX) = _addLiquidity(
+        (amountToken, amountONE) = _addLiquidity(
             token,
-            WAVAX,
+            WONE,
             amountTokenDesired,
             msg.value,
             amountTokenMin,
-            amountAVAXMin
+            amountONEMin
         );
-        address pair = HermesLibrary.pairFor(factory, token, WAVAX);
+        address pair = HermesLibrary.pairFor(factory, token, WONE);
         TransferHelper.safeTransferFrom(token, msg.sender, pair, amountToken);
-        IWAVAX(WAVAX).deposit{value: amountAVAX}();
-        assert(IWAVAX(WAVAX).transfer(pair, amountAVAX));
+        IWONE(WONE).deposit{value: amountONE}();
+        assert(IWONE(WONE).transfer(pair, amountONE));
         liquidity = IHermesPair(pair).mint(to);
         // refund dust eth, if any
-        if (msg.value > amountAVAX) TransferHelper.safeTransferAVAX(msg.sender, msg.value - amountAVAX);
+        if (msg.value > amountONE) TransferHelper.safeTransferONE(msg.sender, msg.value - amountONE);
     }
 
     // **** REMOVE LIQUIDITY ****
@@ -142,26 +142,26 @@ contract HermesRouter02 is IHermesRouter02 {
         require(amountB >= amountBMin, "HermesRouter: INSUFFICIENT_B_AMOUNT");
     }
 
-    function removeLiquidityAVAX(
+    function removeLiquidityONE(
         address token,
         uint256 liquidity,
         uint256 amountTokenMin,
-        uint256 amountAVAXMin,
+        uint256 amountONEMin,
         address to,
         uint256 deadline
-    ) public virtual override ensure(deadline) returns (uint256 amountToken, uint256 amountAVAX) {
-        (amountToken, amountAVAX) = removeLiquidity(
+    ) public virtual override ensure(deadline) returns (uint256 amountToken, uint256 amountONE) {
+        (amountToken, amountONE) = removeLiquidity(
             token,
-            WAVAX,
+            WONE,
             liquidity,
             amountTokenMin,
-            amountAVAXMin,
+            amountONEMin,
             address(this),
             deadline
         );
         TransferHelper.safeTransfer(token, to, amountToken);
-        IWAVAX(WAVAX).withdraw(amountAVAX);
-        TransferHelper.safeTransferAVAX(to, amountAVAX);
+        IWONE(WONE).withdraw(amountONE);
+        TransferHelper.safeTransferONE(to, amountONE);
     }
 
     function removeLiquidityWithPermit(
@@ -183,67 +183,67 @@ contract HermesRouter02 is IHermesRouter02 {
         (amountA, amountB) = removeLiquidity(tokenA, tokenB, liquidity, amountAMin, amountBMin, to, deadline);
     }
 
-    function removeLiquidityAVAXWithPermit(
+    function removeLiquidityONEWithPermit(
         address token,
         uint256 liquidity,
         uint256 amountTokenMin,
-        uint256 amountAVAXMin,
+        uint256 amountONEMin,
         address to,
         uint256 deadline,
         bool approveMax,
         uint8 v,
         bytes32 r,
         bytes32 s
-    ) external virtual override returns (uint256 amountToken, uint256 amountAVAX) {
-        address pair = HermesLibrary.pairFor(factory, token, WAVAX);
+    ) external virtual override returns (uint256 amountToken, uint256 amountONE) {
+        address pair = HermesLibrary.pairFor(factory, token, WONE);
         uint256 value = approveMax ? uint256(-1) : liquidity;
         IHermesPair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
-        (amountToken, amountAVAX) = removeLiquidityAVAX(token, liquidity, amountTokenMin, amountAVAXMin, to, deadline);
+        (amountToken, amountONE) = removeLiquidityONE(token, liquidity, amountTokenMin, amountONEMin, to, deadline);
     }
 
     // **** REMOVE LIQUIDITY (supporting fee-on-transfer tokens) ****
-    function removeLiquidityAVAXSupportingFeeOnTransferTokens(
+    function removeLiquidityONESupportingFeeOnTransferTokens(
         address token,
         uint256 liquidity,
         uint256 amountTokenMin,
-        uint256 amountAVAXMin,
+        uint256 amountONEMin,
         address to,
         uint256 deadline
-    ) public virtual override ensure(deadline) returns (uint256 amountAVAX) {
-        (, amountAVAX) = removeLiquidity(
+    ) public virtual override ensure(deadline) returns (uint256 amountONE) {
+        (, amountONE) = removeLiquidity(
             token,
-            WAVAX,
+            WONE,
             liquidity,
             amountTokenMin,
-            amountAVAXMin,
+            amountONEMin,
             address(this),
             deadline
         );
         TransferHelper.safeTransfer(token, to, IERC20Hermes(token).balanceOf(address(this)));
-        IWAVAX(WAVAX).withdraw(amountAVAX);
-        TransferHelper.safeTransferAVAX(to, amountAVAX);
+        IWONE(WONE).withdraw(amountONE);
+        TransferHelper.safeTransferONE(to, amountONE);
     }
 
-    function removeLiquidityAVAXWithPermitSupportingFeeOnTransferTokens(
+    function removeLiquidityONEWithPermitSupportingFeeOnTransferTokens(
         address token,
         uint256 liquidity,
         uint256 amountTokenMin,
-        uint256 amountAVAXMin,
+        uint256 amountONEMin,
         address to,
         uint256 deadline,
         bool approveMax,
         uint8 v,
         bytes32 r,
         bytes32 s
-    ) external virtual override returns (uint256 amountAVAX) {
-        address pair = HermesLibrary.pairFor(factory, token, WAVAX);
+    ) external virtual override returns (uint256 amountONE) {
+        address pair = HermesLibrary.pairFor(factory, token, WONE);
         uint256 value = approveMax ? uint256(-1) : liquidity;
         IHermesPair(pair).permit(msg.sender, address(this), value, deadline, v, r, s);
-        amountAVAX = removeLiquidityAVAXSupportingFeeOnTransferTokens(
+        amountONE = removeLiquidityONESupportingFeeOnTransferTokens(
             token,
             liquidity,
             amountTokenMin,
-            amountAVAXMin,
+            amountONEMin,
             to,
             deadline
         );
@@ -294,66 +294,66 @@ contract HermesRouter02 is IHermesRouter02 {
         _swap(amounts, path, to);
     }
 
-    function swapExactAVAXForTokens(
+    function swapExactONEForTokens(
         uint256 amountOutMin,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external payable virtual override ensure(deadline) returns (uint256[] memory amounts) {
-        require(path[0] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[0] == WONE, "HermesRouter: INVALID_PATH");
         amounts = HermesLibrary.getAmountsOut(factory, msg.value, path);
         require(amounts[amounts.length - 1] >= amountOutMin, "HermesRouter: INSUFFICIENT_OUTPUT_AMOUNT");
-        IWAVAX(WAVAX).deposit{value: amounts[0]}();
-        assert(IWAVAX(WAVAX).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
+        IWONE(WONE).deposit{value: amounts[0]}();
+        assert(IWONE(WONE).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
     }
 
-    function swapTokensForExactAVAX(
+    function swapTokensForExactONE(
         uint256 amountOut,
         uint256 amountInMax,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external virtual override ensure(deadline) returns (uint256[] memory amounts) {
-        require(path[path.length - 1] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[path.length - 1] == WONE, "HermesRouter: INVALID_PATH");
         amounts = HermesLibrary.getAmountsIn(factory, amountOut, path);
         require(amounts[0] <= amountInMax, "HermesRouter: EXCESSIVE_INPUT_AMOUNT");
         TransferHelper.safeTransferFrom(path[0], msg.sender, HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]);
         _swap(amounts, path, address(this));
-        IWAVAX(WAVAX).withdraw(amounts[amounts.length - 1]);
-        TransferHelper.safeTransferAVAX(to, amounts[amounts.length - 1]);
+        IWONE(WONE).withdraw(amounts[amounts.length - 1]);
+        TransferHelper.safeTransferONE(to, amounts[amounts.length - 1]);
     }
 
-    function swapExactTokensForAVAX(
+    function swapExactTokensForONE(
         uint256 amountIn,
         uint256 amountOutMin,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external virtual override ensure(deadline) returns (uint256[] memory amounts) {
-        require(path[path.length - 1] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[path.length - 1] == WONE, "HermesRouter: INVALID_PATH");
         amounts = HermesLibrary.getAmountsOut(factory, amountIn, path);
         require(amounts[amounts.length - 1] >= amountOutMin, "HermesRouter: INSUFFICIENT_OUTPUT_AMOUNT");
         TransferHelper.safeTransferFrom(path[0], msg.sender, HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]);
         _swap(amounts, path, address(this));
-        IWAVAX(WAVAX).withdraw(amounts[amounts.length - 1]);
-        TransferHelper.safeTransferAVAX(to, amounts[amounts.length - 1]);
+        IWONE(WONE).withdraw(amounts[amounts.length - 1]);
+        TransferHelper.safeTransferONE(to, amounts[amounts.length - 1]);
     }
 
-    function swapAVAXForExactTokens(
+    function swapONEForExactTokens(
         uint256 amountOut,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external payable virtual override ensure(deadline) returns (uint256[] memory amounts) {
-        require(path[0] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[0] == WONE, "HermesRouter: INVALID_PATH");
         amounts = HermesLibrary.getAmountsIn(factory, amountOut, path);
         require(amounts[0] <= msg.value, "HermesRouter: EXCESSIVE_INPUT_AMOUNT");
-        IWAVAX(WAVAX).deposit{value: amounts[0]}();
-        assert(IWAVAX(WAVAX).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
+        IWONE(WONE).deposit{value: amounts[0]}();
+        assert(IWONE(WONE).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
         // refund dust eth, if any
-        if (msg.value > amounts[0]) TransferHelper.safeTransferAVAX(msg.sender, msg.value - amounts[0]);
+        if (msg.value > amounts[0]) TransferHelper.safeTransferONE(msg.sender, msg.value - amounts[0]);
     }
 
     // **** SWAP (supporting fee-on-transfer tokens) ****
@@ -398,16 +398,16 @@ contract HermesRouter02 is IHermesRouter02 {
         );
     }
 
-    function swapExactAVAXForTokensSupportingFeeOnTransferTokens(
+    function swapExactONEForTokensSupportingFeeOnTransferTokens(
         uint256 amountOutMin,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external payable virtual override ensure(deadline) {
-        require(path[0] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[0] == WONE, "HermesRouter: INVALID_PATH");
         uint256 amountIn = msg.value;
-        IWAVAX(WAVAX).deposit{value: amountIn}();
-        assert(IWAVAX(WAVAX).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amountIn));
+        IWONE(WONE).deposit{value: amountIn}();
+        assert(IWONE(WONE).transfer(HermesLibrary.pairFor(factory, path[0], path[1]), amountIn));
         uint256 balanceBefore = IERC20Hermes(path[path.length - 1]).balanceOf(to);
         _swapSupportingFeeOnTransferTokens(path, to);
         require(
@@ -416,20 +416,20 @@ contract HermesRouter02 is IHermesRouter02 {
         );
     }
 
-    function swapExactTokensForAVAXSupportingFeeOnTransferTokens(
+    function swapExactTokensForONESupportingFeeOnTransferTokens(
         uint256 amountIn,
         uint256 amountOutMin,
         address[] calldata path,
         address to,
         uint256 deadline
     ) external virtual override ensure(deadline) {
-        require(path[path.length - 1] == WAVAX, "HermesRouter: INVALID_PATH");
+        require(path[path.length - 1] == WONE, "HermesRouter: INVALID_PATH");
         TransferHelper.safeTransferFrom(path[0], msg.sender, HermesLibrary.pairFor(factory, path[0], path[1]), amountIn);
         _swapSupportingFeeOnTransferTokens(path, address(this));
-        uint256 amountOut = IERC20Hermes(WAVAX).balanceOf(address(this));
+        uint256 amountOut = IERC20Hermes(WONE).balanceOf(address(this));
         require(amountOut >= amountOutMin, "HermesRouter: INSUFFICIENT_OUTPUT_AMOUNT");
-        IWAVAX(WAVAX).withdraw(amountOut);
-        TransferHelper.safeTransferAVAX(to, amountOut);
+        IWONE(WONE).withdraw(amountOut);
+        TransferHelper.safeTransferONE(to, amountOut);
     }
 
     // **** LIBRARY FUNCTIONS ****

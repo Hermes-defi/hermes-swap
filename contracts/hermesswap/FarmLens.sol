@@ -32,51 +32,51 @@ contract FarmLens is BoringOwnable {
     using SafeMath for uint256;
 
     address public hermes; // 0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd;
-    address public wavax; // 0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7;
-    address public wavaxUsdt; // 0xeD8CBD9F0cE3C6986b22002F03c6475CEb7a6256
-    address public wavaxUsdc; // 0x87Dee1cC9FFd464B79e058ba20387c1984aed86a
-    address public wavaxDai; // 0xA389f9430876455C36478DeEa9769B7Ca4E3DDB1
+    address public wone; // 0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7;
+    address public woneUsdt; // 0xeD8CBD9F0cE3C6986b22002F03c6475CEb7a6256
+    address public woneUsdc; // 0x87Dee1cC9FFd464B79e058ba20387c1984aed86a
+    address public woneDai; // 0xA389f9430876455C36478DeEa9769B7Ca4E3DDB1
     IHermesFactory public hermesFactory; // IHermesFactory(0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10);
     IMasterChef public chefv2; //0xd6a4F121CA35509aF06A0Be99093d08462f53052
     IMasterChef public chefv3; //0x188bED1968b795d5c9022F6a0bb5931Ac4c18F00
 
     constructor(
         address hermes_,
-        address wavax_,
-        address wavaxUsdt_,
-        address wavaxUsdc_,
-        address wavaxDai_,
+        address wone_,
+        address woneUsdt_,
+        address woneUsdc_,
+        address woneDai_,
         IHermesFactory hermesFactory_,
         IMasterChef chefv2_,
         IMasterChef chefv3_
     ) public {
         hermes = hermes_;
-        wavax = wavax_;
-        wavaxUsdt = wavaxUsdt_;
-        wavaxUsdc = wavaxUsdc_;
-        wavaxDai = wavaxDai_;
+        wone = wone_;
+        woneUsdt = woneUsdt_;
+        woneUsdc = woneUsdc_;
+        woneDai = woneDai_;
         hermesFactory = IHermesFactory(hermesFactory_);
         chefv2 = chefv2_;
         chefv3 = chefv3_;
     }
 
-    /// @notice Returns price of avax in usd.
+    /// @notice Returns price of one in usd.
     function getAvaxPrice() public view returns (uint256) {
-        uint256 priceFromWavaxUsdt = _getAvaxPrice(IHermesPair(wavaxUsdt)); // 18
-        uint256 priceFromWavaxUsdc = _getAvaxPrice(IHermesPair(wavaxUsdc)); // 18
-        uint256 priceFromWavaxDai = _getAvaxPrice(IHermesPair(wavaxDai)); // 18
+        uint256 priceFromWoneUsdt = _getAvaxPrice(IHermesPair(woneUsdt)); // 18
+        uint256 priceFromWoneUsdc = _getAvaxPrice(IHermesPair(woneUsdc)); // 18
+        uint256 priceFromWoneDai = _getAvaxPrice(IHermesPair(woneDai)); // 18
 
-        uint256 sumPrice = priceFromWavaxUsdt.add(priceFromWavaxUsdc).add(priceFromWavaxDai); // 18
-        uint256 avaxPrice = sumPrice / 3; // 18
-        return avaxPrice; // 18
+        uint256 sumPrice = priceFromWoneUsdt.add(priceFromWoneUsdc).add(priceFromWoneDai); // 18
+        uint256 onePrice = sumPrice / 3; // 18
+        return onePrice; // 18
     }
 
-    /// @notice Returns value of wavax in units of stablecoins per wavax.
-    /// @param pair A wavax-stablecoin pair.
+    /// @notice Returns value of wone in units of stablecoins per wone.
+    /// @param pair A wone-stablecoin pair.
     function _getAvaxPrice(IHermesPair pair) private view returns (uint256) {
         (uint256 reserve0, uint256 reserve1, ) = pair.getReserves();
 
-        if (pair.token0() == wavax) {
+        if (pair.token0() == wone) {
             reserve1 = reserve1.mul(_tokenDecimalsMultiplier(pair.token1())); // 18
             return (reserve1.mul(1e18)) / reserve0; // 18
         } else {
@@ -95,17 +95,17 @@ contract FarmLens is BoringOwnable {
     /// @param tokenAddress Address of the token.
     /// @dev Need to be aware of decimals here, not always 18, it depends on the token.
     function getPriceInAvax(address tokenAddress) public view returns (uint256) {
-        if (tokenAddress == wavax) {
+        if (tokenAddress == wone) {
             return 1e18;
         }
 
-        IHermesPair pair = IHermesPair(hermesFactory.getPair(tokenAddress, wavax));
+        IHermesPair pair = IHermesPair(hermesFactory.getPair(tokenAddress, wone));
 
         (uint256 reserve0, uint256 reserve1, ) = pair.getReserves();
         address token0Address = pair.token0();
         address token1Address = pair.token1();
 
-        if (token0Address == wavax) {
+        if (token0Address == wone) {
             reserve1 = reserve1.mul(_tokenDecimalsMultiplier(token1Address)); // 18
             return (reserve0.mul(1e18)) / reserve1; // 18
         } else {
@@ -207,7 +207,7 @@ contract FarmLens is BoringOwnable {
     }
 
     struct AllFarmData {
-        uint256 avaxPriceUsd;
+        uint256 onePriceUsd;
         uint256 hermesPriceUsd;
         uint256 totalAllocChefV2;
         uint256 totalAllocChefV3;
@@ -227,7 +227,7 @@ contract FarmLens is BoringOwnable {
     {
         AllFarmData memory allFarmData;
 
-        allFarmData.avaxPriceUsd = getAvaxPrice();
+        allFarmData.onePriceUsd = getAvaxPrice();
         allFarmData.hermesPriceUsd = getPriceInUsd(hermes);
 
         allFarmData.totalAllocChefV2 = IMasterChef(chefv2).totalAllocPoint();

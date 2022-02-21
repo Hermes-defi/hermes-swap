@@ -188,18 +188,18 @@ contract BoringCryptoDashboardV2 {
     IMasterChef chef;
     IFactory pangolinFactory;
     IFactory hermesFactory;
-    address wavax;
+    address wone;
 
     constructor(
         address _chef,
         address _pangolinFactory,
         address _hermesFactory,
-        address _wavax
+        address _wone
     ) public {
         chef = IMasterChef(_chef);
         pangolinFactory = IFactory(_pangolinFactory);
         hermesFactory = IFactory(_hermesFactory);
-        wavax = _wavax;
+        wone = _wone;
     }
 
     function getPools(uint256[] calldata pids) public view returns (PoolsInfo memory, PoolInfo[] memory) {
@@ -254,13 +254,13 @@ contract BoringCryptoDashboardV2 {
         return pools;
     }
 
-    function getAVAXRate(address token) public view returns (uint256) {
-        uint256 avax_rate = 1e18;
-        if (token != wavax) {
+    function getONERate(address token) public view returns (uint256) {
+        uint256 one_rate = 1e18;
+        if (token != wone) {
             IPair pairPangolin;
             IPair pairHermes;
-            pairPangolin = IPair(IFactory(pangolinFactory).getPair(token, wavax));
-            pairHermes = IPair(IFactory(hermesFactory).getPair(token, wavax));
+            pairPangolin = IPair(IFactory(pangolinFactory).getPair(token, wone));
+            pairHermes = IPair(IFactory(hermesFactory).getPair(token, wone));
             if (address(pairPangolin) == address(0) && address(pairHermes) == address(0)) {
                 return 0;
             }
@@ -278,20 +278,20 @@ contract BoringCryptoDashboardV2 {
             }
 
             if (address(pairHermes) == address(0) || reserve0Pangolin > reserve0Hermes || reserve1Pangolin > reserve1Hermes) {
-                if (pairPangolin.token0() == wavax) {
-                    avax_rate = uint256(reserve1Pangolin).mul(1e18).div(reserve0Pangolin);
+                if (pairPangolin.token0() == wone) {
+                    one_rate = uint256(reserve1Pangolin).mul(1e18).div(reserve0Pangolin);
                 } else {
-                    avax_rate = uint256(reserve0Pangolin).mul(1e18).div(reserve1Pangolin);
+                    one_rate = uint256(reserve0Pangolin).mul(1e18).div(reserve1Pangolin);
                 }
             } else {
-                if (pairHermes.token0() == wavax) {
-                    avax_rate = uint256(reserve1Hermes).mul(1e18).div(reserve0Hermes);
+                if (pairHermes.token0() == wone) {
+                    one_rate = uint256(reserve1Hermes).mul(1e18).div(reserve0Hermes);
                 } else {
-                    avax_rate = uint256(reserve0Hermes).mul(1e18).div(reserve1Hermes);
+                    one_rate = uint256(reserve0Hermes).mul(1e18).div(reserve1Hermes);
                 }
             }
         }
-        return avax_rate;
+        return one_rate;
     }
 
     struct UserPoolInfo {
@@ -325,8 +325,8 @@ contract BoringCryptoDashboardV2 {
             pools[i].lpAllowance = pair.allowance(who, address(chef));
             pools[i].lpBalance = pair.balanceOf(who);
             pools[i].lpTotalSupply = pair.totalSupply();
-            pools[i].token0rate = getAVAXRate(pair.token0());
-            pools[i].token1rate = getAVAXRate(pair.token1());
+            pools[i].token0rate = getONERate(pair.token0());
+            pools[i].token1rate = getONERate(pair.token1());
 
             (uint112 reserve0, uint112 reserve1, ) = pair.getReserves();
             pools[i].reserve0 = reserve0;

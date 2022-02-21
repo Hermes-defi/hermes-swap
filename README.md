@@ -28,15 +28,15 @@ After installed modules dependencies, do:
 ### to deploy token and farming:
 
 ```bash
-npx hardhat run scripts\01_token_mc.js --network testnet
+npx hardhat run scripts/01_token_mc.js --network testnet
 ```
 
 ### to deploy the swap
 
-- deploy the factory: `npx hardhat run scripts\01_token_mc.js --network testnet`
+- deploy the factory: `npx hardhat run scripts/02_factory.js --network testnet`
 - now the factory will print the current init code hash, change it in the file `contracts/hermesswap/libraries/HermesLibrary.sol`
 - now the factory and the hash has been saved to contracts.json
-- open the file `scripts\03_router.js` to check the weth address, you should add a if for one on your network.
-- deploy the router: `npx hardhat run scripts\03_router.js --network testnet`
+- open the file `scripts/03_router.js` to check the weth address, you should add a if for one on your network.
+- deploy the router: `npx hardhat run scripts/03_router.js --network testnet`
 
 At this point you should have a factory and a router linked.

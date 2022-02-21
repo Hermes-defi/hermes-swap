@@ -8,16 +8,16 @@ async function main() {
     let weth;
     const network = await ethers.getDefaultProvider().getNetwork();
     if (network.chainId == 1) {
-        const _WAVAX9Mock = await hre.ethers.getContractFactory("WAVAX9Mock");
-        const WAVAX9Mock = await _WAVAX9Mock.deploy();
-        await WAVAX9Mock.deployed();
-        weth = WAVAX9Mock.address;
+        const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
+        const WONE9Mock = await _WONE9Mock.deploy();
+        await WONE9Mock.deployed();
+        weth = WONE9Mock.address;
     }else if (network.chainId == '1666700000') {
         // testnet
-        const _WAVAX9Mock = await hre.ethers.getContractFactory("WAVAX9Mock");
-        const WAVAX9Mock = await _WAVAX9Mock.deploy();
-        await WAVAX9Mock.deployed();
-        weth = WAVAX9Mock.address;
+        const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
+        const WONE9Mock = await _WONE9Mock.deploy();
+        await WONE9Mock.deployed();
+        weth = WONE9Mock.address;
     }else if (network.chainId == '1666600000') {
         // mainnet
         weth = '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a';

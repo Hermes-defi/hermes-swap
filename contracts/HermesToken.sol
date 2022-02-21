@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 // HermesToken with Governance.
-contract HermesToken is ERC20("HermesToken", "HERMES"), Ownable {
+contract HermesToken is ERC20("HermesToken", "HRMS"), Ownable {
     /// @notice Total number of tokens
     uint256 public maxSupply = 30_000_000e18; // 30 million Hermes
     mapping(address => bool) private minters;

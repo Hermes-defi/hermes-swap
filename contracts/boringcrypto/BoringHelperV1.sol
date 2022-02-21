@@ -6,7 +6,7 @@
  * It needs flattened due to cyclic dependencies.
  * BoringHelperV1 has been modified by:
  *  - Renaming Sushi -> Hermes
- *  - Renaming ETH -> AVAX
+ *  - Renaming ETH -> ONE
  *  - Removed bentobox/kashi logic.
  *
  */
@@ -515,7 +515,7 @@ contract BoringHelperV1 is Ownable {
     IMasterChef public chef; // IMasterChef(0xc2EdaD668740f1aA35E4D8f227fB8E17dcA888Cd);
     address public maker; // IHermesMaker(0xE11fc0B43ab98Eb91e9836129d1ee7c3Bc95df50);
     IERC20 public hermes; // IHermesToken(0x6B3595068778DD592e39A122f4f5a5cF09C90fE2);
-    IERC20 public WAVAX; // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+    IERC20 public WONE; // 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
     IFactory public hermesFactory; // IFactory(0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac);
     IFactory public pangolinFactory; // IFactory(0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f);
     IERC20 public bar; // 0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272;
@@ -524,7 +524,7 @@ contract BoringHelperV1 is Ownable {
         IMasterChef chef_,
         address maker_,
         IERC20 hermes_,
-        IERC20 WAVAX_,
+        IERC20 WONE_,
         IFactory hermesFactory_,
         IFactory pangolinFactory_,
         IERC20 bar_
@@ -532,7 +532,7 @@ contract BoringHelperV1 is Ownable {
         chef = chef_;
         maker = maker_;
         hermes = hermes_;
-        WAVAX = WAVAX;
+        WONE = WONE;
         hermesFactory = hermesFactory_;
         pangolinFactory = pangolinFactory_;
         bar = bar_;
@@ -542,7 +542,7 @@ contract BoringHelperV1 is Ownable {
         IMasterChef chef_,
         address maker_,
         IERC20 hermes_,
-        IERC20 WAVAX_,
+        IERC20 WONE_,
         IFactory hermesFactory_,
         IFactory pangolinFactory_,
         IERC20 bar_
@@ -550,23 +550,23 @@ contract BoringHelperV1 is Ownable {
         chef = chef_;
         maker = maker_;
         hermes = hermes_;
-        WAVAX = WAVAX_;
+        WONE = WONE_;
         hermesFactory = hermesFactory_;
         pangolinFactory = pangolinFactory_;
         bar = bar_;
     }
 
-    function getAVAXRate(IERC20 token) public view returns (uint256) {
-        if (token == WAVAX) {
+    function getONERate(IERC20 token) public view returns (uint256) {
+        if (token == WONE) {
             return 1e18;
         }
         IPair pairPangolin;
         IPair pairHermes;
         if (pangolinFactory != IFactory(0)) {
-            pairPangolin = IPair(pangolinFactory.getPair(token, WAVAX));
+            pairPangolin = IPair(pangolinFactory.getPair(token, WONE));
         }
         if (hermesFactory != IFactory(0)) {
-            pairHermes = IPair(hermesFactory.getPair(token, WAVAX));
+            pairHermes = IPair(hermesFactory.getPair(token, WONE));
         }
         if (address(pairPangolin) == address(0) && address(pairHermes) == address(0)) {
             return 0;
@@ -591,7 +591,7 @@ contract BoringHelperV1 is Ownable {
             }
         }
 
-        if (token0 == WAVAX) {
+        if (token0 == WONE) {
             return (uint256(reserve1) * 1e18) / reserve0;
         } else {
             return (uint256(reserve0) * 1e18) / reserve1;
@@ -604,14 +604,14 @@ contract BoringHelperV1 is Ownable {
     }
 
     struct UIInfo {
-        uint256 avaxBalance;
+        uint256 oneBalance;
         uint256 hermesBalance;
         uint256 hermesBarBalance;
         uint256 xhermesBalance;
         uint256 xhermesSupply;
         uint256 hermesBarAllowance;
         Factory[] factories;
-        uint256 avaxRate;
+        uint256 oneRate;
         uint256 hermesRate;
         uint256 btcRate;
         uint256 pendingHermes;
@@ -625,7 +625,7 @@ contract BoringHelperV1 is Ownable {
         address[] calldata masterContracts
     ) public view returns (UIInfo memory) {
         UIInfo memory info;
-        info.avaxBalance = who.balance;
+        info.oneBalance = who.balance;
 
         info.factories = new Factory[](factoryAddresses.length);
         for (uint256 i = 0; i < factoryAddresses.length; i++) {
@@ -635,11 +635,11 @@ contract BoringHelperV1 is Ownable {
         }
 
         if (currency != IERC20(0)) {
-            info.avaxRate = getAVAXRate(currency);
+            info.oneRate = getONERate(currency);
         }
 
         if (hermes != IERC20(0)) {
-            info.hermesRate = getAVAXRate(hermes);
+            info.hermesRate = getONERate(hermes);
             info.hermesBalance = hermes.balanceOf(who);
             info.hermesBarBalance = hermes.balanceOf(address(bar));
             info.hermesBarAllowance = hermes.allowance(who, address(bar));
@@ -723,7 +723,7 @@ contract BoringHelperV1 is Ownable {
             balances[i].token = token;
             balances[i].balance = token.balanceOf(who);
             balances[i].nonce = token.nonces(who);
-            balances[i].rate = getAVAXRate(token);
+            balances[i].rate = getONERate(token);
         }
 
         return balances;

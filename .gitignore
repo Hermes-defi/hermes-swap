@@ -1,20 +1,10 @@
-abi/
-artifacts/
-cache/
-coverage/
-exports/
-node_modules/
-types/
-package-lock.json
-coverage.json
+node_modules
 .env
-.DS_Store
-truffle.js
-MurlocToken*.*
-FishToken*.*
-deployments/localhost/
-contracts/.deps/
+coverage
+coverage.json
+typechain
 
+#Hardhat files
+cache
+artifacts
 .idea
-.openzeppelin
-.vscode

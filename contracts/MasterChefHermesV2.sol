@@ -43,7 +43,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     struct UserInfo {
         uint256 amount; // How many LP tokens the user has provided.
         uint256 rewardDebt; // Reward debt. See explanation below.
-        uint256 rewardDebtAtBlock; // the last block user stake
         uint256 lastWithdrawBlock; // the last block a user withdrew at.
         uint256 firstDepositBlock; // the last block a user deposited at.
         uint256 blockdelta; //time passed since withdrawals
@@ -295,8 +294,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         if (address(rewarder) != address(0)) {
             rewarder.onHermesReward(msg.sender, user.amount);
         }
-
+        if (user.firstDepositBlock > 0) {} else {
+            user.firstDepositBlock = block.number;
+        }
         emit Deposit(msg.sender, _pid, _amount);
+        user.lastDepositBlock = block.number;
     }
 
     // Withdraw LP tokens from MasterChef.
@@ -326,10 +328,18 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         emit Withdraw(msg.sender, _pid, _amount);
     }
 
+    /**
+        This function execute withdraw fee logic, the rule for withdraw is:
+        before 1 day = 1% withdraw fee
+        before 1 week = 0.2% withdraw fee
+        before 2 weeks = 0.05% withdraw fee
+    **/
+
     function _withdraw(uint256 _pid, uint256 _amount) internal {
         if (_amount == 0) return;
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
+        // get detal, ie how many blocks before last withdraw
         if (user.lastWithdrawBlock > 0) {
             user.blockdelta = block.number - user.lastWithdrawBlock;
         } else {
@@ -352,6 +362,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[2]).div(10000) );
             pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[2]).div(10000) );
         }
+        user.lastWithdrawBlock = block.number;
     }
 
     function userDelta(uint256 _pid) public view returns (uint256) {

@@ -43,14 +43,19 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     struct UserInfo {
         uint256 amount; // How many LP tokens the user has provided.
         uint256 rewardDebt; // Reward debt. See explanation below.
+        uint256 rewardDebtAtBlock; // the last block user stake
+        uint256 lastWithdrawBlock; // the last block a user withdrew at.
+        uint256 firstDepositBlock; // the last block a user deposited at.
+        uint256 blockdelta; //time passed since withdrawals
+        uint256 lastDepositBlock;
         //
-        // We do some fancy math here. Basically, any point in time, the amount of HERMESs
+        // We do some fancy math here. Basically, any point in time, the amount of GovernanceTokens
         // entitled to a user but is pending to be distributed is:
         //
-        //   pending reward = (user.amount * pool.accHermesPerShare) - user.rewardDebt
+        //   pending reward = (user.amount * pool.accGovTokenPerShare) - user.rewardDebt
         //
         // Whenever a user deposits or withdraws LP tokens to a pool. Here's what happens:
-        //   1. The pool's `accHermesPerShare` (and `lastRewardTimestamp`) gets updated.
+        //   1. The pool's `accGovTokenPerShare` (and `lastRewardBlock`) gets updated.
         //   2. User receives the pending reward sent to his/her address.
         //   3. User's `amount` gets updated.
         //   4. User's `rewardDebt` gets updated.
@@ -92,6 +97,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     uint256 public totalAllocPoint;
     // The timestamp when HERMES mining starts.
     uint256 public startTimestamp;
+
+    uint256[] public blockDeltaStartStage = [42504,297528,595056];
+    uint256[] public blockDeltaEndStage =   [297528,595056];
+    uint256[] public userFeeStage = [99,998,9995];
+    uint256[] public devFeeStage =  [1 ,2  ,5];
 
     event Add(uint256 indexed pid, uint256 allocPoint, IERC20 indexed lpToken, IRewarder indexed rewarder);
     event Set(uint256 indexed pid, uint256 allocPoint, IRewarder indexed rewarder, bool overwrite);
@@ -152,12 +162,12 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         totalAllocPoint = totalAllocPoint.add(_allocPoint);
         poolInfo.push(
             PoolInfo({
-                lpToken: _lpToken,
-                allocPoint: _allocPoint,
-                lastRewardTimestamp: lastRewardTimestamp,
-                accHermesPerShare: 0,
-                rewarder: _rewarder
-            })
+        lpToken : _lpToken,
+        allocPoint : _allocPoint,
+        lastRewardTimestamp : lastRewardTimestamp,
+        accHermesPerShare : 0,
+        rewarder : _rewarder
+        })
         );
         lpTokens.add(address(_lpToken));
         emit Add(poolInfo.length.sub(1), _allocPoint, _lpToken, _rewarder);
@@ -185,14 +195,14 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     // View function to see pending HERMESs on frontend.
     function pendingTokens(uint256 _pid, address _user)
-        external
-        view
-        returns (
-            uint256 pendingHermes,
-            address bonusTokenAddress,
-            string memory bonusTokenSymbol,
-            uint256 pendingBonusToken
-        )
+    external
+    view
+    returns (
+        uint256 pendingHermes,
+        address bonusTokenAddress,
+        string memory bonusTokenSymbol,
+        uint256 pendingBonusToken
+    )
     {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
@@ -217,9 +227,9 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     // Get bonus token info from the rewarder contract for a given pool, if it is a double reward farm
     function rewarderBonusTokenInfo(uint256 _pid)
-        public
-        view
-        returns (address bonusTokenAddress, string memory bonusTokenSymbol)
+    public
+    view
+    returns (address bonusTokenAddress, string memory bonusTokenSymbol)
     {
         PoolInfo storage pool = poolInfo[_pid];
         if (address(pool.rewarder) != address(0)) {
@@ -310,8 +320,58 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             rewarder.onHermesReward(msg.sender, user.amount);
         }
 
-        pool.lpToken.safeTransfer(address(msg.sender), _amount);
+        _withdraw(_pid, _amount);
+        // pool.lpToken.safeTransfer(address(msg.sender), _amount);
+
         emit Withdraw(msg.sender, _pid, _amount);
+    }
+
+    function _withdraw(uint256 _pid, uint256 _amount) internal {
+        if (_amount == 0) return;
+        PoolInfo storage pool = poolInfo[_pid];
+        UserInfo storage user = userInfo[_pid][msg.sender];
+        if (user.lastWithdrawBlock > 0) {
+            user.blockdelta = block.number - user.lastWithdrawBlock;
+        } else {
+            user.blockdelta = block.number - user.firstDepositBlock;
+        }
+
+        if ( user.blockdelta <= blockDeltaEndStage[0] ) { // 1% <= 1 day
+            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[0]).div(100));
+            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[0]).div(100));
+        } else if ( // 0.2% <= 1 week
+            user.blockdelta >= blockDeltaStartStage[0] &&
+            user.blockdelta <= blockDeltaEndStage[0]
+        ) {
+            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[1]).div(1000));
+            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[1]).div(1000));
+        } else if ( // 0.05% <= 2 week
+            user.blockdelta >= blockDeltaStartStage[1] &&
+            user.blockdelta <= blockDeltaEndStage[1]
+        ) {
+            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[2]).div(10000) );
+            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[2]).div(10000) );
+        }
+    }
+
+    function userDelta(uint256 _pid) public view returns (uint256) {
+        UserInfo storage user = userInfo[_pid][msg.sender];
+        if (user.lastWithdrawBlock > 0) {
+            uint256 estDelta = block.number - user.lastWithdrawBlock;
+            return estDelta;
+        } else {
+            uint256 estDelta = block.number - user.firstDepositBlock;
+            return estDelta;
+        }
+    }
+
+    function reviseWithdraw(
+        uint256 _pid,
+        address _user,
+        uint256 _block
+    ) public onlyOwner {
+        UserInfo storage user = userInfo[_pid][_user];
+        user.lastWithdrawBlock = _block;
     }
 
     // Withdraw without caring about rewards. EMERGENCY ONLY.
@@ -383,5 +443,19 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         massUpdatePools();
         hermesPerSec = _hermesPerSec;
         emit UpdateEmissionRate(msg.sender, _hermesPerSec);
+    }
+
+
+    function setStageStarts(uint256[] memory _blockStarts) public onlyOwner {
+        blockDeltaStartStage = _blockStarts;
+    }
+    function setStageEnds(uint256[] memory _blockEnds) public onlyOwner {
+        blockDeltaEndStage = _blockEnds;
+    }
+    function setUserFeeStage(uint256[] memory _userFees) public onlyOwner {
+        userFeeStage = _userFees;
+    }
+    function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
+        devFeeStage = _devFees;
     }
 }

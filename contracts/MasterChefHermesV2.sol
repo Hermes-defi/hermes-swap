@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-
+// import "hardhat/console.sol";
 pragma solidity 0.6.12;
 pragma experimental ABIEncoderV2;
 
@@ -97,10 +97,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     // The timestamp when HERMES mining starts.
     uint256 public startTimestamp;
 
-    uint256[] public blockDeltaStartStage = [42504,297528,595056];
-    uint256[] public blockDeltaEndStage =   [297528,595056];
-    uint256[] public userFeeStage = [99,998,9995];
-    uint256[] public devFeeStage =  [1 ,2  ,5];
 
     event Add(uint256 indexed pid, uint256 allocPoint, IERC20 indexed lpToken, IRewarder indexed rewarder);
     event Set(uint256 indexed pid, uint256 allocPoint, IRewarder indexed rewarder, bool overwrite);
@@ -295,7 +291,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             rewarder.onHermesReward(msg.sender, user.amount);
         }
         if (user.firstDepositBlock > 0) {} else {
-            user.firstDepositBlock = block.number;
+            user.firstDepositBlock = block.timestamp;
         }
         emit Deposit(msg.sender, _pid, _amount);
         user.lastDepositBlock = block.number;
@@ -335,64 +331,61 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         before 2 weeks = 0.05% withdraw fee
     **/
 
+    uint256[] public blockDeltaStartStage = [604800,1209600];
+    uint256[] public blockDeltaEndStage =   [1209600];
+    uint256[] public userFeeStage = [99,998,9995];
+    uint256[] public devFeeStage =  [1 ,2  ,5];
+
     function _withdraw(uint256 _pid, uint256 _amount) internal {
         if (_amount == 0) return;
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         // get detal, ie how many blocks before last withdraw
         if (user.lastWithdrawBlock > 0) {
-            user.blockdelta = block.number - user.lastWithdrawBlock;
+            user.blockdelta = block.timestamp - user.lastWithdrawBlock;
         } else {
-            user.blockdelta = block.number - user.firstDepositBlock;
+            user.blockdelta = block.timestamp - user.firstDepositBlock;
         }
 
-        if ( user.blockdelta <= blockDeltaEndStage[0] ) { // 1% <= 1 day
+        if ( user.blockdelta <= 604800 ) { // 1% <= 1 week
             pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[0]).div(100));
             pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[0]).div(100));
-        } else if ( // 0.2% <= 1 week
-            user.blockdelta >= blockDeltaStartStage[0] &&
-            user.blockdelta <= blockDeltaEndStage[0]
+        } else if ( // 0.2% >= 1 week
+            user.blockdelta >= 604800 &&
+            user.blockdelta <= 1209600
         ) {
             pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[1]).div(1000));
             pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[1]).div(1000));
-        } else if ( // 0.05% <= 2 week
-            user.blockdelta >= blockDeltaStartStage[1] &&
-            user.blockdelta <= blockDeltaEndStage[1]
-        ) {
+        } else {
             pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[2]).div(10000) );
             pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[2]).div(10000) );
         }
-        user.lastWithdrawBlock = block.number;
+        user.lastWithdrawBlock = block.timestamp;
     }
 
-    function userDelta(uint256 _pid) public view returns (uint256) {
-        UserInfo storage user = userInfo[_pid][msg.sender];
+    function userDelta(uint256 _pid, address _user) public view returns (uint256) {
+        UserInfo storage user = userInfo[_pid][_user];
         if (user.lastWithdrawBlock > 0) {
-            uint256 estDelta = block.number - user.lastWithdrawBlock;
+            uint256 estDelta = block.timestamp - user.lastWithdrawBlock;
             return estDelta;
         } else {
-            uint256 estDelta = block.number - user.firstDepositBlock;
+            uint256 estDelta = block.timestamp - user.firstDepositBlock;
             return estDelta;
         }
     }
 
-    function reviseWithdraw(
-        uint256 _pid,
-        address _user,
-        uint256 _block
-    ) public onlyOwner {
-        UserInfo storage user = userInfo[_pid][_user];
-        user.lastWithdrawBlock = _block;
-    }
-
-    // Withdraw without caring about rewards. EMERGENCY ONLY.
+    // Withdraw without caring about rewards. EMERGENCY ONLY. This has the same 1% fee as same block withdrawals to prevent abuse of this function.
     function emergencyWithdraw(uint256 _pid) public {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
-        pool.lpToken.safeTransfer(address(msg.sender), user.amount);
-        emit EmergencyWithdraw(msg.sender, _pid, user.amount);
+        //reordered from Sushi function to prevent risk of reentrancy
+        uint256 amountToSend = user.amount.mul(99).div(100);
+        uint256 devToSend = user.amount.mul(1).div(100);
         user.amount = 0;
         user.rewardDebt = 0;
+        pool.lpToken.safeTransfer(address(msg.sender), amountToSend);
+        pool.lpToken.safeTransfer(address(treasuryAddr), devToSend);
+        emit EmergencyWithdraw(msg.sender, _pid, amountToSend);
     }
 
     // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.

@@ -37,21 +37,21 @@ describe("MasterChefHermesV2", function () {
         this.partner = await this.Token.deploy() // b=2
         await this.partner.deployed()
     })
-    /*
-        it("Hermes Token: should allow mint only by authorized", async function () {
-            await expect(
-                this.token.connect(this.treasury).mint(this.dev.address, '1')
-            ).to.be.revertedWith("'minter: caller is not a minter")
 
-            await this.token.mint(this.dev.address, '1')
-            const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
-            expect(balanceOfDev).to.be.eq('1');
+    it("Hermes Token: should allow mint only by authorized", async function () {
+        await expect(
+            this.token.connect(this.treasury).mint(this.dev.address, '1')
+        ).to.be.revertedWith("'minter: caller is not a minter")
 
-            await this.token.setMinter(this.treasury.address, true)
-            await this.token.connect(this.treasury).mint(this.treasury.address, '1');
+        await this.token.mint(this.dev.address, '1')
+        const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
+        expect(balanceOfDev).to.be.eq('1');
 
-        });
-    */
+        await this.token.setMinter(this.treasury.address, true)
+        await this.token.connect(this.treasury).mint(this.treasury.address, '1');
+
+    });
+
     it("Hermes: apply 1% fee on deposit/withdraw instantly", async function () {
         const startTime = (await latest()).add(60)
         this.chef = await this.main.deploy(
@@ -105,7 +105,7 @@ describe("MasterChefHermesV2", function () {
         await this.chef.connect(this.dev).deposit('0', depoistAmount);
 
         const oneWeek = duration.weeks(1).toNumber();
-        await advanceTimeAndBlock( oneWeek );
+        await advanceTimeAndBlock(oneWeek);
         await advanceTime(oneWeek)
 
         await this.chef.connect(this.dev).withdraw('0', depoistAmount);
@@ -142,7 +142,7 @@ describe("MasterChefHermesV2", function () {
         await this.chef.connect(this.dev).deposit('0', depoistAmount);
 
         let twoWeek = duration.weeks(2).toNumber();
-        await advanceTimeAndBlock( twoWeek++ );
+        await advanceTimeAndBlock(twoWeek++);
         await advanceTime(twoWeek)
 
         await this.chef.connect(this.dev).withdraw('0', depoistAmount);
@@ -156,170 +156,158 @@ describe("MasterChefHermesV2", function () {
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-    /*
-        it("should revert contract creation if dev and treasury percents don't meet criteria", async function () {
-            const startTime = (await latest()).add(60)
-            // Invalid dev percent failure
-            await expect(
-                this.main.deploy(
-                    this.token.address,
-                    this.dev.address,
-                    this.treasury.address,
-                    this.investor.address,
-                    "100",
-                    startTime,
-                    "1100",
-                    this.treasuryPercent,
-                    this.investorPercent
-                )
-            ).to.be.revertedWith("constructor: invalid dev percent value")
-
-            // Invalid treasury percent failure
-            await expect(
-                this.main.deploy(
-                    this.token.address,
-                    this.dev.address,
-                    this.treasury.address,
-                    this.investor.address,
-                    "100",
-                    startTime,
-                    this.devPercent,
-                    "1100",
-                    this.investorPercent
-                )
-            ).to.be.revertedWith("constructor: invalid treasury percent value")
-
-            // Invalid treasury percent failure
-            await expect(
-                this.main.deploy(
-                    this.token.address,
-                    this.dev.address,
-                    this.treasury.address,
-                    this.investor.address,
-                    "100",
-                    startTime,
-                    this.devPercent,
-                    this.treasuryPercent,
-                    "1100"
-                )
-            ).to.be.revertedWith("constructor: invalid investor percent value")
-
-            // Sum of dev, treasury and investor  precent too high
-            await expect(
-                this.main.deploy(this.token.address, this.dev.address, this.treasury.address, this.investor.address, "100", startTime, "300", "300", "401")
-            ).to.be.revertedWith("constructor: total percent over max")
-        })
-
-        it("should set correct state variables", async function () {
-            // We make start time 60 seconds past the last block
-            const startTime = (await latest()).add(60)
-            this.chef = await this.main.deploy(
+    it("should revert contract creation if dev and treasury percents don't meet criteria", async function () {
+        const startTime = (await latest()).add(60)
+        // Invalid dev percent failure
+        await expect(
+            this.main.deploy(
                 this.token.address,
                 this.dev.address,
                 this.treasury.address,
                 this.investor.address,
-                this.tokenPerSec,
+                "100",
                 startTime,
-                this.devPercent,
+                "1100",
                 this.treasuryPercent,
                 this.investorPercent
             )
-            await this.chef.deployed()
+        ).to.be.revertedWith("constructor: invalid dev percent value")
 
-            await this.token.transferOwnership(this.chef.address)
-
-            const joe = await this.chef.hermes()
-            const devAddr = await this.chef.devAddr()
-            const treasuryAddr = await this.chef.treasuryAddr()
-            const investorAddr = await this.chef.investorAddr()
-            const owner = await this.token.owner()
-            const devPercent = await this.chef.devPercent()
-            const treasuryPercent = await this.chef.treasuryPercent()
-            const investorPercent = await this.chef.investorPercent()
-
-            expect(joe).to.equal(this.token.address)
-            expect(devAddr).to.equal(this.dev.address)
-            expect(treasuryAddr).to.equal(this.treasury.address)
-            expect(investorAddr).to.equal(this.investor.address)
-            expect(owner).to.equal(this.chef.address)
-            expect(devPercent).to.equal(this.devPercent)
-            expect(treasuryPercent).to.equal(this.treasuryPercent)
-            expect(investorPercent).to.equal(this.investorPercent)
-        })
-
-        it("should allow dev, treasury and investor to update themselves", async function () {
-            const startTime = (await latest()).add(60)
-            this.chef = await this.main.deploy(
+        // Invalid treasury percent failure
+        await expect(
+            this.main.deploy(
                 this.token.address,
                 this.dev.address,
                 this.treasury.address,
                 this.investor.address,
-                this.tokenPerSec,
+                "100",
                 startTime,
                 this.devPercent,
-                this.treasuryPercent,
+                "1100",
                 this.investorPercent
             )
-            await this.chef.deployed()
+        ).to.be.revertedWith("constructor: invalid treasury percent value")
 
-            expect(await this.chef.devAddr()).to.equal(this.dev.address)
-
-            await expect(this.chef.connect(this.bob).dev(this.bob.address, { from: this.bob.address })).to.be.revertedWith("dev: wut?")
-            await this.chef.connect(this.dev).dev(this.bob.address, { from: this.dev.address })
-            expect(await this.chef.devAddr()).to.equal(this.bob.address)
-
-            await expect(this.chef.connect(this.bob).setTreasuryAddr(this.bob.address, { from: this.bob.address })).to.be.revertedWith(
-                "setTreasuryAddr: wut?"
-            )
-            await this.chef.connect(this.treasury).setTreasuryAddr(this.bob.address, { from: this.treasury.address })
-            expect(await this.chef.treasuryAddr()).to.equal(this.bob.address)
-
-            await expect(this.chef.connect(this.bob).setInvestorAddr(this.bob.address, { from: this.bob.address })).to.be.revertedWith(
-                "setInvestorAddr: wut?"
-            )
-            await this.chef.connect(this.investor).setInvestorAddr(this.bob.address, { from: this.investor.address })
-            expect(await this.chef.investorAddr()).to.equal(this.bob.address)
-        })
-
-        it("should check dev, treasury and investor percents are set correctly", async function () {
-            const startTime = (await latest()).add(60)
-            this.chef = await this.main.deploy(
+        // Invalid treasury percent failure
+        await expect(
+            this.main.deploy(
                 this.token.address,
                 this.dev.address,
                 this.treasury.address,
                 this.investor.address,
-                this.tokenPerSec,
+                "100",
                 startTime,
                 this.devPercent,
                 this.treasuryPercent,
-                this.investorPercent
+                "1100"
             )
-            await this.chef.deployed()
+        ).to.be.revertedWith("constructor: invalid investor percent value")
 
-            await this.chef.setDevPercent(100)
-            await this.chef.setTreasuryPercent(100)
-            await this.chef.setInvestorPercent(800)
-            expect(await this.chef.devPercent()).to.equal("100")
-            expect(await this.chef.treasuryPercent()).to.equal("100")
-            expect(await this.chef.investorPercent()).to.equal("800")
-            // We don't test negative values because function only takes in unsigned ints
-            await expect(this.chef.setDevPercent("1200")).to.be.revertedWith("setDevPercent: invalid percent value")
-            await expect(this.chef.setDevPercent("900")).to.be.revertedWith("setDevPercent: total percent over max")
-            await expect(this.chef.setTreasuryPercent("1200")).to.be.revertedWith("setTreasuryPercent: invalid percent value")
-            await expect(this.chef.setTreasuryPercent("900")).to.be.revertedWith("setTreasuryPercent: total percent over max")
-        })
-    */
+        // Sum of dev, treasury and investor  precent too high
+        await expect(
+            this.main.deploy(this.token.address, this.dev.address, this.treasury.address, this.investor.address, "100", startTime, "300", "300", "401")
+        ).to.be.revertedWith("constructor: total percent over max")
+    })
+
+    it("should set correct state variables", async function () {
+        // We make start time 60 seconds past the last block
+        const startTime = (await latest()).add(60)
+        this.chef = await this.main.deploy(
+            this.token.address,
+            this.dev.address,
+            this.treasury.address,
+            this.investor.address,
+            this.tokenPerSec,
+            startTime,
+            this.devPercent,
+            this.treasuryPercent,
+            this.investorPercent
+        )
+        await this.chef.deployed()
+
+        await this.token.transferOwnership(this.chef.address)
+
+        const joe = await this.chef.hermes()
+        const devAddr = await this.chef.devAddr()
+        const treasuryAddr = await this.chef.treasuryAddr()
+        const investorAddr = await this.chef.investorAddr()
+        const owner = await this.token.owner()
+        const devPercent = await this.chef.devPercent()
+        const treasuryPercent = await this.chef.treasuryPercent()
+        const investorPercent = await this.chef.investorPercent()
+
+        expect(joe).to.equal(this.token.address)
+        expect(devAddr).to.equal(this.dev.address)
+        expect(treasuryAddr).to.equal(this.treasury.address)
+        expect(investorAddr).to.equal(this.investor.address)
+        expect(owner).to.equal(this.chef.address)
+        expect(devPercent).to.equal(this.devPercent)
+        expect(treasuryPercent).to.equal(this.treasuryPercent)
+        expect(investorPercent).to.equal(this.investorPercent)
+    })
+
+    it("should allow dev, treasury and investor to update themselves", async function () {
+        const startTime = (await latest()).add(60)
+        this.chef = await this.main.deploy(
+            this.token.address,
+            this.dev.address,
+            this.treasury.address,
+            this.investor.address,
+            this.tokenPerSec,
+            startTime,
+            this.devPercent,
+            this.treasuryPercent,
+            this.investorPercent
+        )
+        await this.chef.deployed()
+
+        expect(await this.chef.devAddr()).to.equal(this.dev.address)
+
+        await expect(this.chef.connect(this.bob).dev(this.bob.address, {from: this.bob.address})).to.be.revertedWith("dev: wut?")
+        await this.chef.connect(this.dev).dev(this.bob.address, {from: this.dev.address})
+        expect(await this.chef.devAddr()).to.equal(this.bob.address)
+
+        await expect(this.chef.connect(this.bob).setTreasuryAddr(this.bob.address, {from: this.bob.address})).to.be.revertedWith(
+            "setTreasuryAddr: wut?"
+        )
+        await this.chef.connect(this.treasury).setTreasuryAddr(this.bob.address, {from: this.treasury.address})
+        expect(await this.chef.treasuryAddr()).to.equal(this.bob.address)
+
+        await expect(this.chef.connect(this.bob).setInvestorAddr(this.bob.address, {from: this.bob.address})).to.be.revertedWith(
+            "setInvestorAddr: wut?"
+        )
+        await this.chef.connect(this.investor).setInvestorAddr(this.bob.address, {from: this.investor.address})
+        expect(await this.chef.investorAddr()).to.equal(this.bob.address)
+    })
+
+    it("should check dev, treasury and investor percents are set correctly", async function () {
+        const startTime = (await latest()).add(60)
+        this.chef = await this.main.deploy(
+            this.token.address,
+            this.dev.address,
+            this.treasury.address,
+            this.investor.address,
+            this.tokenPerSec,
+            startTime,
+            this.devPercent,
+            this.treasuryPercent,
+            this.investorPercent
+        )
+        await this.chef.deployed()
+
+        await this.chef.setDevPercent(100)
+        await this.chef.setTreasuryPercent(100)
+        await this.chef.setInvestorPercent(800)
+        expect(await this.chef.devPercent()).to.equal("100")
+        expect(await this.chef.treasuryPercent()).to.equal("100")
+        expect(await this.chef.investorPercent()).to.equal("800")
+        // We don't test negative values because function only takes in unsigned ints
+        await expect(this.chef.setDevPercent("1200")).to.be.revertedWith("setDevPercent: invalid percent value")
+        await expect(this.chef.setDevPercent("900")).to.be.revertedWith("setDevPercent: total percent over max")
+        await expect(this.chef.setTreasuryPercent("1200")).to.be.revertedWith("setTreasuryPercent: invalid percent value")
+        await expect(this.chef.setTreasuryPercent("900")).to.be.revertedWith("setTreasuryPercent: total percent over max")
+    })
+
     after(async function () {
         await network.provider.request({
             method: "hardhat_reset",

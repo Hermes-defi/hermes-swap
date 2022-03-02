@@ -1,7 +1,7 @@
-const {ethers, network} = require("hardhat")
-const {expect} = require("chai")
+const { ethers, network } = require("hardhat")
+const { expect } = require("chai")
 
-const {BigNumber} = require("ethers")
+const { BigNumber } = require("ethers")
 
 const BASE_TEN = 10
 const ADDRESS_ZERO = "0x0000000000000000000000000000000000000000"
@@ -18,7 +18,7 @@ describe("MasterChefHermesV2", function () {
         this.investor = this.signers[5]
         this.minter = this.signers[6]
 
-        this.Token = await ethers.getContractFactory("HermesToken")
+        this.Token = await ethers.getContractFactory("Hermes")
         this.main = await ethers.getContractFactory("MasterChefHermesV2")
         this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
 
@@ -47,7 +47,7 @@ describe("MasterChefHermesV2", function () {
             const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
             expect(balanceOfDev).to.be.eq('1');
 
-            await this.token.setMinter(this.treasury.address, true)
+            await this.token.grantMinterRole(this.chef.address);
             await this.token.connect(this.treasury).mint(this.treasury.address, '1');
 
         });
@@ -66,19 +66,19 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.token.address, ADDRESS_ZERO);
 
-        await this.token.connect(this.dev).approve(this.chef.address, '100');
-        await this.token.mint(this.dev.address, '100');
-        await this.chef.connect(this.dev).deposit('0', '100');
-        await this.chef.connect(this.dev).withdraw('0', '100');
+        await this.token.connect(this.dev).approve(this.chef.address, '1000');
+        await this.token.mint(this.dev.address, '1000');
+        await this.chef.connect(this.dev).deposit('0', '1000');
+        await this.chef.connect(this.dev).withdraw('0', '1000');
 
         const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
-        expect(balanceOfDev).to.be.eq('99');
+        expect(balanceOfDev).to.be.eq('990');
 
         const balanceOfTreasure = (await this.token.balanceOf(this.treasury.address)).toString();
-        expect(balanceOfTreasure).to.be.eq('1');
+        expect(balanceOfTreasure).to.be.eq('10');
 
     });
 
@@ -96,7 +96,7 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.partner.address, ADDRESS_ZERO);
 
         const depoistAmount = '10000';
@@ -105,7 +105,7 @@ describe("MasterChefHermesV2", function () {
         await this.chef.connect(this.dev).deposit('0', depoistAmount);
 
         const oneWeek = duration.weeks(1).toNumber();
-        await advanceTimeAndBlock( oneWeek );
+        await advanceTimeAndBlock(oneWeek);
         await advanceTime(oneWeek)
 
         await this.chef.connect(this.dev).withdraw('0', depoistAmount);
@@ -133,7 +133,7 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.partner.address, ADDRESS_ZERO);
 
         const depoistAmount = '10000';
@@ -142,7 +142,7 @@ describe("MasterChefHermesV2", function () {
         await this.chef.connect(this.dev).deposit('0', depoistAmount);
 
         let twoWeek = duration.weeks(2).toNumber();
-        await advanceTimeAndBlock( twoWeek++ );
+        await advanceTimeAndBlock(twoWeek++);
         await advanceTime(twoWeek)
 
         await this.chef.connect(this.dev).withdraw('0', depoistAmount);

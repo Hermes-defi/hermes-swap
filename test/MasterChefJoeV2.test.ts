@@ -311,8 +311,8 @@ describe("MasterChefHermesV2", function () {
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)
-
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")// TODO account for fee
+      // account for withdraw fee
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")// TODO account for fee
     })
 
     it("should allow emergency withdraw from rewarder contract", async function () {

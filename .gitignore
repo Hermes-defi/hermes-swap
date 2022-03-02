@@ -9,3 +9,6 @@ types
 cache
 artifacts
 .idea
+
+#VSCODE
+.VSCODE

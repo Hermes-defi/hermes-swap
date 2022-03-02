@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// import "hardhat/console.sol";
+
 pragma solidity 0.6.12;
 pragma experimental ABIEncoderV2;
 
@@ -8,9 +8,8 @@ import "@openzeppelin/contracts/utils/EnumerableSet.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./HermesToken.sol";
 import "./libraries/BoringERC20.sol";
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 import "./libraries/ReentrancyGuard.sol";
 
 interface IRewarder {
@@ -24,6 +23,17 @@ interface IRewarder {
         returns (uint256 pending);
 
     function rewardToken() external view returns (address);
+}
+
+interface IHermesToken {
+    // balanceOf
+    function balanceOf(address account) external view returns (uint256);
+
+    //mint
+    function mint(address _account, uint256 _amount) external;
+
+    //transfer
+    function transfer(address to, uint256 amount) external returns (bool);
 }
 
 // MasterChefHermes is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
@@ -73,7 +83,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // The HERMES TOKEN!
-    HermesToken public hermes;
+    IHermesToken public hermes;
     // Dev address.
     address public devAddr;
     // Treasury address.
@@ -130,7 +140,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     event UpdateEmissionRate(address indexed user, uint256 _hermesPerSec);
 
     constructor(
-        HermesToken _hermes,
+        IHermesToken _hermes,
         address _devAddr,
         address _treasuryAddr,
         address _investorAddr,

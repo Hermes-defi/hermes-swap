@@ -3,7 +3,7 @@ import { expect } from "chai"
 
 describe("HermesToken", function () {
   before(async function () {
-    this.HermesToken = await ethers.getContractFactory("HermesToken")
+    this.HermesToken = await ethers.getContractFactory("Hermes")
     this.signers = await ethers.getSigners()
     this.alice = this.signers[0]
     this.bob = this.signers[1]
@@ -27,8 +27,10 @@ describe("HermesToken", function () {
   it("should only allow owner to mint token", async function () {
     await this.hermes.mint(this.alice.address, "100")
     await this.hermes.mint(this.bob.address, "1000")
+    const bobAddr = this.bob.address.toString().toLowerCase()
     await expect(this.hermes.connect(this.bob).mint(this.carol.address, "1000", { from: this.bob.address })).to.be.revertedWith(
-      "minter: caller is not a minter"
+      `AccessControl: account ${bobAddr} is missing role 0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6`
+      // "minter: caller is not a minter"
     )
     const totalSupply = await this.hermes.totalSupply()
     const aliceBal = await this.hermes.balanceOf(this.alice.address)
@@ -66,7 +68,7 @@ describe("HermesToken", function () {
   })
 
   it("should not exceed max supply of 30m", async function () {
-    await expect(this.hermes.mint(this.alice.address, "30000000000000000000000001")).to.be.revertedWith("HERMES::mint: cannot exceed max supply")
+    await expect(this.hermes.mint(this.alice.address, "30000000000000000000000001")).to.be.revertedWith("ERC20Capped: cap exceeded")
     await this.hermes.mint(this.alice.address, "30000000000000000000000000")
   })
 

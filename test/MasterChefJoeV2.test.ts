@@ -20,7 +20,7 @@ describe("MasterChefHermesV2", function () {
     this.SimpleRewarderPerSec = await ethers.getContractFactory("SimpleRewarderPerSec")
     // this.MasterChefRewarderPerBlock = await ethers.getContractFactory("MasterChefRewarderPerBlock")
     // this.MasterChefRewarderPerSec = await ethers.getContractFactory("MasterChefRewarderPerSec")
-    this.HermesToken = await ethers.getContractFactory("HermesToken")
+    this.HermesToken = await ethers.getContractFactory("Hermes")
     this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
     this.SushiToken = await ethers.getContractFactory("SushiToken")
 
@@ -460,8 +460,10 @@ describe("MasterChefHermesV2", function () {
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
 
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+
+      await this.hermes.grantMinterRole(this.chef.address)
+
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, ADDRESS_ZERO) // t-55, b=18
 
@@ -563,8 +565,9 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
 
@@ -633,8 +636,8 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
       await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54, b=19
@@ -699,8 +702,8 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", {
@@ -837,8 +840,8 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55, b=18
       await this.lp2.connect(this.bob).approve(this.chef.address, "1000", { from: this.bob.address }) // t-54, b=19
@@ -922,8 +925,8 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55, b=18
       await this.chef.add("10", this.lp.address, this.rewarder.address) // t-54, b=19
@@ -1273,8 +1276,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, ADDRESS_ZERO) // t-55
 
@@ -1375,8 +1378,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
 
@@ -1446,8 +1449,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
       await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54
@@ -1513,8 +1516,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", {
@@ -1652,8 +1655,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55
       await this.lp2.connect(this.bob).approve(this.chef.address, "1000", { from: this.bob.address }) // t-54
@@ -1738,8 +1741,8 @@ await this.hermes.setMinter(this.chef.address, true)
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.setMinter(this.chef.address, true)
-      await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address)
+      // await this.hermes.transferOwnership(this.chef.address) // t-56
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55
       await this.chef.add("10", this.lp.address, this.rewarder.address) // t-54
@@ -1771,7 +1774,7 @@ await this.hermes.setMinter(this.chef.address, true)
     })
   })
 
- 
+
 
   after(async function () {
     await network.provider.request({

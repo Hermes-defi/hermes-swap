@@ -39,15 +39,16 @@ describe("MasterChefHermesV2", function () {
     })
 
     it("Hermes Token: should allow mint only by authorized", async function () {
+        treasAddr = this.treasury.address.toString().toLowerCase()
         await expect(
             this.token.connect(this.treasury).mint(this.dev.address, '1')
-        ).to.be.revertedWith("'minter: caller is not a minter")
+        ).to.be.revertedWith(`AccessControl: account ${treasAddr} is missing role 0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6`)
 
         await this.token.mint(this.dev.address, '1')
         const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
         expect(balanceOfDev).to.be.eq('1');
 
-        await this.token.grantMinterRole(this.chef.address);
+        await this.token.grantMinterRole(this.treasury.address);
         await this.token.connect(this.treasury).mint(this.treasury.address, '1');
 
     });

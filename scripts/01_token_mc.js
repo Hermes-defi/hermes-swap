@@ -2,12 +2,14 @@ const hre = require("hardhat");
 
 // npx hardhat run scripts\01_token_mc.js --network testnet
 async function main() {
-
+    const [_dev] = await ethers.getSigners();
+    const dev = _dev.address;
+    console.log('dev', dev);
     const network = await ethers.getDefaultProvider().getNetwork();
     console.log("Network name=", network.name);
     console.log("Network chain id=", network.chainId);
 
-    const _HermesToken = await hre.ethers.getContractFactory("HermesToken");
+    const _HermesToken = await hre.ethers.getContractFactory("Hermes");
     const HermesToken = await _HermesToken.deploy();
     await HermesToken.deployed();
     console.log("HermesToken:", HermesToken.address);
@@ -38,7 +40,7 @@ async function main() {
         _investorPercent);
     await MasterChefHermesV2.deployed();
     console.log("MasterChefHermesV2:", MasterChefHermesV2.address);
-    await HermesToken.setMinter(MasterChefHermesV2.address, true);
+    await HermesToken.grantMinterRole(MasterChefHermesV2.address);
 }
 
 main()

@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./libraries/BoringERC20.sol";
-// import "hardhat/console.sol";
+import "hardhat/console.sol";
 import "./libraries/ReentrancyGuard.sol";
 
 interface IRewarder {
@@ -363,15 +363,15 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         }
 
         // wendel: prevent deflationary token exploit
-        if (_amount > 0) {
-            uint256 balanceBefore = pool.lpToken.balanceOf(address(this));
-            pool.lpToken.safeTransferFrom(
-                address(msg.sender),
-                address(this),
-                _amount
-            );
-            _amount = pool.lpToken.balanceOf(address(this)).sub(balanceBefore);
-        }
+        // if (_amount > 0) {
+        //     uint256 balanceBefore = pool.lpToken.balanceOf(address(this));
+        //     pool.lpToken.safeTransferFrom(
+        //         address(msg.sender),
+        //         address(this),
+        //         _amount
+        //     );
+        //     _amount = pool.lpToken.balanceOf(address(this)).sub(balanceBefore);
+        // }
 
         user.amount = user.amount.add(_amount);
         user.rewardDebt = user.amount.mul(pool.accHermesPerShare).div(1e12);
@@ -383,6 +383,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         if (user.firstDepositBlock > 0) {} else {
             user.firstDepositBlock = block.timestamp;
         }
+        pool.lpToken.safeTransferFrom(
+            address(msg.sender),
+            address(this),
+            _amount
+        );
         emit Deposit(msg.sender, _pid, _amount);
         user.lastDepositBlock = block.number;
     }
@@ -421,6 +426,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         before 1 day = 1% withdraw fee
         before 1 week = 0.2% withdraw fee
         before 2 weeks = 0.05% withdraw fee
+        TODO: should the fees be collected on the LP?
     **/
 
     uint256[] public blockDeltaStartStage = [604800, 1209600];
@@ -429,6 +435,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     uint256[] public devFeeStage = [1, 2, 5];
 
     function _withdraw(uint256 _pid, uint256 _amount) internal {
+        console.log("withdraw amount", _amount);
         if (_amount == 0) return;
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
@@ -447,6 +454,12 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             );
             pool.lpToken.safeTransfer(
                 address(treasuryAddr),
+                _amount.sub(_amount.mul(userFeeStage[0]).div(100))
+            );
+            console.log(
+                "amount to user",
+                _amount.mul(userFeeStage[0]).div(100),
+                "+ amount to fee addr",
                 _amount.mul(devFeeStage[0]).div(100)
             );
         } else if (

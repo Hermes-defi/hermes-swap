@@ -740,7 +740,7 @@ describe("MasterChefHermesV2", function () {
       // for rounding errors with an offset
       expect(await this.hermes.balanceOf(this.alice.address)).to.be.within(283 - this.tokenOffset, 333 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.alice.address)).to.be.within(120 - this.tokenOffset, 120 + this.tokenOffset)
-      //TODO figure out whytest fails -> partner token not as expected
+      //TODO figure out why test fails -> partner token not as expected
       expect(await this.hermes.balanceOf(this.bob.address)).to.equal("0")
       expect(await this.partnerToken.balanceOf(this.bob.address)).to.equal("0")
 

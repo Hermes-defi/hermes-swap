@@ -311,8 +311,8 @@ describe("MasterChefHermesV2", function () {
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)
-      // TODO:account for withdraw fee
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")// TODO: should this fee be on lp or hermes
+      // Done: account for 1% fee to use emergency withdraw on LP
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")
     })
 
     it("should allow emergency withdraw from rewarder contract", async function () {
@@ -811,10 +811,12 @@ describe("MasterChefHermesV2", function () {
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(0, 0 + this.tokenOffset)
 
       // // All of them should have 1000 LPs back.
-      //TODO: account for withdrawal fee.
-      expect(await this.lp.balanceOf(this.alice.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.carol.address)).to.equal("1000")
+      //DONE: should deduct 1% as we are withdrawing less than a week.
+      expect(await this.lp.balanceOf(this.alice.address)).to.equal("999")
+
+      // around 2% because we do 2 withdraw, so apply 1% on both
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("998")
+      expect(await this.lp.balanceOf(this.carol.address)).to.equal("999")
     })
 
     it("should give proper HERMESs allocation to each pool", async function () {
@@ -1625,10 +1627,13 @@ describe("MasterChefHermesV2", function () {
       // MasterChefHermes should have nothing
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(0, 0 + this.tokenOffset)
 
-      // // All of them should have 1000 LPs back.
-      expect(await this.lp.balanceOf(this.alice.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.carol.address)).to.equal("1000")
+      // All of them should have 1000 LPs back.
+      //DONE: should consider 1% fee because we are withdrawing before 1 week
+      expect(await this.lp.balanceOf(this.alice.address)).to.equal("999")
+
+      //around 2% debig because we are doing 2 withdraw
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("998")
+      expect(await this.lp.balanceOf(this.carol.address)).to.equal("999")
     })
 
     it("should give proper HERMESs allocation to each pool", async function () {

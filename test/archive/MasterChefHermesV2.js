@@ -1,7 +1,7 @@
-const {ethers, network} = require("hardhat")
-const {expect} = require("chai")
+const { ethers, network } = require("hardhat")
+const { expect } = require("chai")
 
-const {BigNumber} = require("ethers")
+const { BigNumber } = require("ethers")
 
 const BASE_TEN = 10
 const ADDRESS_ZERO = "0x0000000000000000000000000000000000000000"
@@ -18,7 +18,7 @@ describe("MasterChefHermesV2", function () {
         this.investor = this.signers[5]
         this.minter = this.signers[6]
 
-        this.Token = await ethers.getContractFactory("HermesToken")
+        this.Token = await ethers.getContractFactory("Hermes")
         this.main = await ethers.getContractFactory("MasterChefHermesV2")
         this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
 
@@ -39,18 +39,21 @@ describe("MasterChefHermesV2", function () {
     })
 
     it("Hermes Token: should allow mint only by authorized", async function () {
+        treasAddr = this.treasury.address.toString().toLowerCase()
         await expect(
             this.token.connect(this.treasury).mint(this.dev.address, '1')
-        ).to.be.revertedWith("'minter: caller is not a minter")
+        ).to.be.revertedWith(`AccessControl: account ${treasAddr} is missing role 0x9f2df0fed2c77648de5860a4cc508cd0818c85b8b8a1ab4ceeef8d981c8956a6`)
 
         await this.token.mint(this.dev.address, '1')
         const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
         expect(balanceOfDev).to.be.eq('1');
 
-        await this.token.setMinter(this.treasury.address, true)
+        await this.token.grantMinterRole(this.treasury.address);
         await this.token.connect(this.treasury).mint(this.treasury.address, '1');
 
     });
+
+
 
     it("Hermes: apply 1% fee on deposit/withdraw instantly", async function () {
         const startTime = (await latest()).add(60)
@@ -66,19 +69,19 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.token.address, ADDRESS_ZERO);
 
-        await this.token.connect(this.dev).approve(this.chef.address, '100');
-        await this.token.mint(this.dev.address, '100');
-        await this.chef.connect(this.dev).deposit('0', '100');
-        await this.chef.connect(this.dev).withdraw('0', '100');
+        await this.token.connect(this.dev).approve(this.chef.address, '1000');
+        await this.token.mint(this.dev.address, '1000');
+        await this.chef.connect(this.dev).deposit('0', '1000');
+        await this.chef.connect(this.dev).withdraw('0', '1000');
 
         const balanceOfDev = (await this.token.balanceOf(this.dev.address)).toString();
-        expect(balanceOfDev).to.be.eq('99');
+        expect(balanceOfDev).to.be.eq('990');
 
         const balanceOfTreasure = (await this.token.balanceOf(this.treasury.address)).toString();
-        expect(balanceOfTreasure).to.be.eq('1');
+        expect(balanceOfTreasure).to.be.eq('10');
 
     });
 
@@ -96,7 +99,7 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.partner.address, ADDRESS_ZERO);
 
         const depoistAmount = '10000';
@@ -133,7 +136,7 @@ describe("MasterChefHermesV2", function () {
             this.investorPercent
         )
         await this.chef.deployed();
-        await this.token.setMinter(this.chef.address, true);
+        await this.token.grantMinterRole(this.chef.address);
         await this.chef.add('1', this.partner.address, ADDRESS_ZERO);
 
         const depoistAmount = '10000';
@@ -263,20 +266,20 @@ describe("MasterChefHermesV2", function () {
 
         expect(await this.chef.devAddr()).to.equal(this.dev.address)
 
-        await expect(this.chef.connect(this.bob).dev(this.bob.address, {from: this.bob.address})).to.be.revertedWith("dev: wut?")
-        await this.chef.connect(this.dev).dev(this.bob.address, {from: this.dev.address})
+        await expect(this.chef.connect(this.bob).dev(this.bob.address, { from: this.bob.address })).to.be.revertedWith("dev: wut?")
+        await this.chef.connect(this.dev).dev(this.bob.address, { from: this.dev.address })
         expect(await this.chef.devAddr()).to.equal(this.bob.address)
 
-        await expect(this.chef.connect(this.bob).setTreasuryAddr(this.bob.address, {from: this.bob.address})).to.be.revertedWith(
+        await expect(this.chef.connect(this.bob).setTreasuryAddr(this.bob.address, { from: this.bob.address })).to.be.revertedWith(
             "setTreasuryAddr: wut?"
         )
-        await this.chef.connect(this.treasury).setTreasuryAddr(this.bob.address, {from: this.treasury.address})
+        await this.chef.connect(this.treasury).setTreasuryAddr(this.bob.address, { from: this.treasury.address })
         expect(await this.chef.treasuryAddr()).to.equal(this.bob.address)
 
-        await expect(this.chef.connect(this.bob).setInvestorAddr(this.bob.address, {from: this.bob.address})).to.be.revertedWith(
+        await expect(this.chef.connect(this.bob).setInvestorAddr(this.bob.address, { from: this.bob.address })).to.be.revertedWith(
             "setInvestorAddr: wut?"
         )
-        await this.chef.connect(this.investor).setInvestorAddr(this.bob.address, {from: this.investor.address})
+        await this.chef.connect(this.investor).setInvestorAddr(this.bob.address, { from: this.investor.address })
         expect(await this.chef.investorAddr()).to.equal(this.bob.address)
     })
 

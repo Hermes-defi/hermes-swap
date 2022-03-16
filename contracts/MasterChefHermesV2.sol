@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// import "hardhat/console.sol";
+
 pragma solidity 0.6.12;
 pragma experimental ABIEncoderV2;
 
@@ -8,9 +8,8 @@ import "@openzeppelin/contracts/utils/EnumerableSet.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./HermesToken.sol";
+
 import "./libraries/BoringERC20.sol";
-import "hardhat/console.sol";
 import "./libraries/ReentrancyGuard.sol";
 
 interface IRewarder {
@@ -18,9 +17,23 @@ interface IRewarder {
 
     function onHermesReward(address user, uint256 newLpAmount) external;
 
-    function pendingTokens(address user) external view returns (uint256 pending);
+    function pendingTokens(address user)
+        external
+        view
+        returns (uint256 pending);
 
     function rewardToken() external view returns (address);
+}
+
+interface IHermesToken {
+    // balanceOf
+    function balanceOf(address account) external view returns (uint256);
+
+    //mint
+    function mint(address _account, uint256 _amount) external;
+
+    //transfer
+    function transfer(address to, uint256 amount) external returns (bool);
 }
 
 // MasterChefHermes is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
@@ -70,7 +83,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // The HERMES TOKEN!
-    HermesToken public hermes;
+    IHermesToken public hermes;
     // Dev address.
     address public devAddr;
     // Treasury address.
@@ -97,19 +110,42 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     // The timestamp when HERMES mining starts.
     uint256 public startTimestamp;
 
+    uint256[] public blockDeltaStartStage = [604800, 1209600];
+    uint256[] public blockDeltaEndStage = [1209600];
+    uint256[] public userFeeStage = [99, 998, 9995];
+    uint256[] public devFeeStage = [1, 2, 5];
 
-    event Add(uint256 indexed pid, uint256 allocPoint, IERC20 indexed lpToken, IRewarder indexed rewarder);
-    event Set(uint256 indexed pid, uint256 allocPoint, IRewarder indexed rewarder, bool overwrite);
+    event Add(
+        uint256 indexed pid,
+        uint256 allocPoint,
+        IERC20 indexed lpToken,
+        IRewarder indexed rewarder
+    );
+    event Set(
+        uint256 indexed pid,
+        uint256 allocPoint,
+        IRewarder indexed rewarder,
+        bool overwrite
+    );
     event Deposit(address indexed user, uint256 indexed pid, uint256 amount);
     event Withdraw(address indexed user, uint256 indexed pid, uint256 amount);
-    event UpdatePool(uint256 indexed pid, uint256 lastRewardTimestamp, uint256 lpSupply, uint256 accHermesPerShare);
+    event UpdatePool(
+        uint256 indexed pid,
+        uint256 lastRewardTimestamp,
+        uint256 lpSupply,
+        uint256 accHermesPerShare
+    );
     event Harvest(address indexed user, uint256 indexed pid, uint256 amount);
-    event EmergencyWithdraw(address indexed user, uint256 indexed pid, uint256 amount);
+    event EmergencyWithdraw(
+        address indexed user,
+        uint256 indexed pid,
+        uint256 amount
+    );
     event SetDevAddress(address indexed oldAddress, address indexed newAddress);
     event UpdateEmissionRate(address indexed user, uint256 _hermesPerSec);
 
     constructor(
-        HermesToken _hermes,
+        IHermesToken _hermes,
         address _devAddr,
         address _treasuryAddr,
         address _investorAddr,
@@ -119,10 +155,22 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         uint256 _treasuryPercent,
         uint256 _investorPercent
     ) public {
-        require(0 <= _devPercent && _devPercent <= 1000, "constructor: invalid dev percent value");
-        require(0 <= _treasuryPercent && _treasuryPercent <= 1000, "constructor: invalid treasury percent value");
-        require(0 <= _investorPercent && _investorPercent <= 1000, "constructor: invalid investor percent value");
-        require(_devPercent + _treasuryPercent + _investorPercent <= 1000, "constructor: total percent over max");
+        require(
+            0 <= _devPercent && _devPercent <= 1000,
+            "constructor: invalid dev percent value"
+        );
+        require(
+            0 <= _treasuryPercent && _treasuryPercent <= 1000,
+            "constructor: invalid treasury percent value"
+        );
+        require(
+            0 <= _investorPercent && _investorPercent <= 1000,
+            "constructor: invalid investor percent value"
+        );
+        require(
+            _devPercent + _treasuryPercent + _investorPercent <= 1000,
+            "constructor: total percent over max"
+        );
         hermes = _hermes;
         devAddr = _devAddr;
         treasuryAddr = _treasuryAddr;
@@ -146,23 +194,29 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         IERC20 _lpToken,
         IRewarder _rewarder
     ) public onlyOwner {
-        require(Address.isContract(address(_lpToken)), "add: LP token must be a valid contract");
         require(
-            Address.isContract(address(_rewarder)) || address(_rewarder) == address(0),
+            Address.isContract(address(_lpToken)),
+            "add: LP token must be a valid contract"
+        );
+        require(
+            Address.isContract(address(_rewarder)) ||
+                address(_rewarder) == address(0),
             "add: rewarder must be contract or zero"
         );
         require(!lpTokens.contains(address(_lpToken)), "add: LP already added");
         massUpdatePools();
-        uint256 lastRewardTimestamp = block.timestamp > startTimestamp ? block.timestamp : startTimestamp;
+        uint256 lastRewardTimestamp = block.timestamp > startTimestamp
+            ? block.timestamp
+            : startTimestamp;
         totalAllocPoint = totalAllocPoint.add(_allocPoint);
         poolInfo.push(
             PoolInfo({
-        lpToken : _lpToken,
-        allocPoint : _allocPoint,
-        lastRewardTimestamp : lastRewardTimestamp,
-        accHermesPerShare : 0,
-        rewarder : _rewarder
-        })
+                lpToken: _lpToken,
+                allocPoint: _allocPoint,
+                lastRewardTimestamp: lastRewardTimestamp,
+                accHermesPerShare: 0,
+                rewarder: _rewarder
+            })
         );
         lpTokens.add(address(_lpToken));
         emit Add(poolInfo.length.sub(1), _allocPoint, _lpToken, _rewarder);
@@ -176,28 +230,36 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         bool overwrite
     ) public onlyOwner {
         require(
-            Address.isContract(address(_rewarder)) || address(_rewarder) == address(0),
+            Address.isContract(address(_rewarder)) ||
+                address(_rewarder) == address(0),
             "set: rewarder must be contract or zero"
         );
         massUpdatePools();
-        totalAllocPoint = totalAllocPoint.sub(poolInfo[_pid].allocPoint).add(_allocPoint);
+        totalAllocPoint = totalAllocPoint.sub(poolInfo[_pid].allocPoint).add(
+            _allocPoint
+        );
         poolInfo[_pid].allocPoint = _allocPoint;
         if (overwrite) {
             poolInfo[_pid].rewarder = _rewarder;
         }
-        emit Set(_pid, _allocPoint, overwrite ? _rewarder : poolInfo[_pid].rewarder, overwrite);
+        emit Set(
+            _pid,
+            _allocPoint,
+            overwrite ? _rewarder : poolInfo[_pid].rewarder,
+            overwrite
+        );
     }
 
     // View function to see pending HERMESs on frontend.
     function pendingTokens(uint256 _pid, address _user)
-    external
-    view
-    returns (
-        uint256 pendingHermes,
-        address bonusTokenAddress,
-        string memory bonusTokenSymbol,
-        uint256 pendingBonusToken
-    )
+        external
+        view
+        returns (
+            uint256 pendingHermes,
+            address bonusTokenAddress,
+            string memory bonusTokenSymbol,
+            uint256 pendingBonusToken
+        )
     {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][_user];
@@ -205,26 +267,38 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0) {
             uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
-            uint256 lpPercent = 1000 - devPercent - treasuryPercent - investorPercent;
-            uint256 hermesReward = multiplier.mul(hermesPerSec).mul(pool.allocPoint).div(totalAllocPoint).mul(lpPercent).div(
-                1000
+            uint256 lpPercent = 1000 -
+                devPercent -
+                treasuryPercent -
+                investorPercent;
+            uint256 hermesReward = multiplier
+                .mul(hermesPerSec)
+                .mul(pool.allocPoint)
+                .div(totalAllocPoint)
+                .mul(lpPercent)
+                .div(1000);
+            accHermesPerShare = accHermesPerShare.add(
+                hermesReward.mul(1e12).div(lpSupply)
             );
-            accHermesPerShare = accHermesPerShare.add(hermesReward.mul(1e12).div(lpSupply));
         }
-        pendingHermes = user.amount.mul(accHermesPerShare).div(1e12).sub(user.rewardDebt);
+        pendingHermes = user.amount.mul(accHermesPerShare).div(1e12).sub(
+            user.rewardDebt
+        );
 
         // If it's a double reward farm, we return info about the bonus token
         if (address(pool.rewarder) != address(0)) {
-            (bonusTokenAddress, bonusTokenSymbol) = rewarderBonusTokenInfo(_pid);
+            (bonusTokenAddress, bonusTokenSymbol) = rewarderBonusTokenInfo(
+                _pid
+            );
             pendingBonusToken = pool.rewarder.pendingTokens(_user);
         }
     }
 
     // Get bonus token info from the rewarder contract for a given pool, if it is a double reward farm
     function rewarderBonusTokenInfo(uint256 _pid)
-    public
-    view
-    returns (address bonusTokenAddress, string memory bonusTokenSymbol)
+        public
+        view
+        returns (address bonusTokenAddress, string memory bonusTokenSymbol)
     {
         PoolInfo storage pool = poolInfo[_pid];
         if (address(pool.rewarder) != address(0)) {
@@ -253,34 +327,44 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             return;
         }
         uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
-        uint256 hermesReward = multiplier.mul(hermesPerSec).mul(pool.allocPoint).div(totalAllocPoint);
-        uint256 lpPercent = 1000 - devPercent - treasuryPercent - investorPercent;
+        uint256 hermesReward = multiplier
+            .mul(hermesPerSec)
+            .mul(pool.allocPoint)
+            .div(totalAllocPoint);
+        uint256 lpPercent = 1000 -
+            devPercent -
+            treasuryPercent -
+            investorPercent;
         hermes.mint(devAddr, hermesReward.mul(devPercent).div(1000));
         hermes.mint(treasuryAddr, hermesReward.mul(treasuryPercent).div(1000));
         hermes.mint(investorAddr, hermesReward.mul(investorPercent).div(1000));
         hermes.mint(address(this), hermesReward.mul(lpPercent).div(1000));
-        pool.accHermesPerShare = pool.accHermesPerShare.add(hermesReward.mul(1e12).div(lpSupply).mul(lpPercent).div(1000));
+        pool.accHermesPerShare = pool.accHermesPerShare.add(
+            hermesReward.mul(1e12).div(lpSupply).mul(lpPercent).div(1000)
+        );
         pool.lastRewardTimestamp = block.timestamp;
-        emit UpdatePool(_pid, pool.lastRewardTimestamp, lpSupply, pool.accHermesPerShare);
+        emit UpdatePool(
+            _pid,
+            pool.lastRewardTimestamp,
+            lpSupply,
+            pool.accHermesPerShare
+        );
     }
 
     // Deposit LP tokens to MasterChef for HERMES allocation.
-    function deposit(uint256 _pid, uint256 _amount) nonReentrant external {
+    function deposit(uint256 _pid, uint256 _amount) external nonReentrant {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         updatePool(_pid);
         if (user.amount > 0) {
             // Harvest HERMES
-            uint256 pending = user.amount.mul(pool.accHermesPerShare).div(1e12).sub(user.rewardDebt);
-            safeHermesTransfer(msg.sender, pending);
+            uint256 pending = user
+                .amount
+                .mul(pool.accHermesPerShare)
+                .div(1e12)
+                .sub(user.rewardDebt);
+            _safeHermesTransfer(msg.sender, pending);
             emit Harvest(msg.sender, _pid, pending);
-        }
-
-        // wendel: prevent deflationary token exploit
-        if (_amount > 0) {
-            uint256 balanceBefore = pool.lpToken.balanceOf(address(this));
-            pool.lpToken.safeTransferFrom(address(msg.sender), address(this), _amount);
-            _amount = pool.lpToken.balanceOf(address(this)).sub(balanceBefore);
         }
 
         user.amount = user.amount.add(_amount);
@@ -293,12 +377,17 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         if (user.firstDepositBlock > 0) {} else {
             user.firstDepositBlock = block.timestamp;
         }
+        pool.lpToken.safeTransferFrom(
+            address(msg.sender),
+            address(this),
+            _amount
+        );
         emit Deposit(msg.sender, _pid, _amount);
         user.lastDepositBlock = block.number;
     }
 
     // Withdraw LP tokens from MasterChef.
-    function withdraw(uint256 _pid, uint256 _amount) nonReentrant external {
+    function withdraw(uint256 _pid, uint256 _amount) external nonReentrant {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
@@ -306,8 +395,10 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         updatePool(_pid);
 
         // Harvest HERMES
-        uint256 pending = user.amount.mul(pool.accHermesPerShare).div(1e12).sub(user.rewardDebt);
-        safeHermesTransfer(msg.sender, pending);
+        uint256 pending = user.amount.mul(pool.accHermesPerShare).div(1e12).sub(
+            user.rewardDebt
+        );
+        _safeHermesTransfer(msg.sender, pending);
         emit Harvest(msg.sender, _pid, pending);
 
         user.amount = user.amount.sub(_amount);
@@ -324,46 +415,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         emit Withdraw(msg.sender, _pid, _amount);
     }
 
-    /**
-        This function execute withdraw fee logic, the rule for withdraw is:
-        before 1 day = 1% withdraw fee
-        before 1 week = 0.2% withdraw fee
-        before 2 weeks = 0.05% withdraw fee
-    **/
-
-    uint256[] public blockDeltaStartStage = [604800,1209600];
-    uint256[] public blockDeltaEndStage =   [1209600];
-    uint256[] public userFeeStage = [99,998,9995];
-    uint256[] public devFeeStage =  [1 ,2  ,5];
-
-    function _withdraw(uint256 _pid, uint256 _amount) internal {
-        if (_amount == 0) return;
-        PoolInfo storage pool = poolInfo[_pid];
-        UserInfo storage user = userInfo[_pid][msg.sender];
-        // get detal, ie how many blocks before last withdraw
-        if (user.lastWithdrawBlock > 0) {
-            user.blockdelta = block.timestamp - user.lastWithdrawBlock;
-        } else {
-            user.blockdelta = block.timestamp - user.firstDepositBlock;
-        }
-
-        if ( user.blockdelta <= 604800 ) { // 1% <= 1 week
-            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[0]).div(100));
-            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[0]).div(100));
-        } else if ( // 0.2% >= 1 week
-            user.blockdelta >= 604800 &&
-            user.blockdelta <= 1209600
-        ) {
-            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[1]).div(1000));
-            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[1]).div(1000));
-        } else {
-            pool.lpToken.safeTransfer(address(msg.sender), _amount.mul(userFeeStage[2]).div(10000) );
-            pool.lpToken.safeTransfer(address(treasuryAddr), _amount.mul(devFeeStage[2]).div(10000) );
-        }
-        user.lastWithdrawBlock = block.timestamp;
-    }
-
-    function userDelta(uint256 _pid, address _user) public view returns (uint256) {
+    function userDelta(uint256 _pid, address _user)
+        public
+        view
+        returns (uint256)
+    {
         UserInfo storage user = userInfo[_pid][_user];
         if (user.lastWithdrawBlock > 0) {
             uint256 estDelta = block.timestamp - user.lastWithdrawBlock;
@@ -388,16 +444,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         emit EmergencyWithdraw(msg.sender, _pid, amountToSend);
     }
 
-    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.
-    function safeHermesTransfer(address _to, uint256 _amount) internal {
-        uint256 hermesBal = hermes.balanceOf(address(this));
-        if (_amount > hermesBal) {
-            hermes.transfer(_to, hermesBal);
-        } else {
-            hermes.transfer(_to, _amount);
-        }
-    }
-
     // Update dev address by the previous dev.
     function dev(address _devAddr) public {
         require(msg.sender == devAddr, "dev: wut?");
@@ -406,8 +452,14 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     function setDevPercent(uint256 _newDevPercent) public onlyOwner {
-        require(0 <= _newDevPercent && _newDevPercent <= 1000, "setDevPercent: invalid percent value");
-        require(treasuryPercent + _newDevPercent + investorPercent <= 1000, "setDevPercent: total percent over max");
+        require(
+            0 <= _newDevPercent && _newDevPercent <= 1000,
+            "setDevPercent: invalid percent value"
+        );
+        require(
+            treasuryPercent + _newDevPercent + investorPercent <= 1000,
+            "setDevPercent: total percent over max"
+        );
         devPercent = _newDevPercent;
     }
 
@@ -418,7 +470,10 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     function setTreasuryPercent(uint256 _newTreasuryPercent) public onlyOwner {
-        require(0 <= _newTreasuryPercent && _newTreasuryPercent <= 1000, "setTreasuryPercent: invalid percent value");
+        require(
+            0 <= _newTreasuryPercent && _newTreasuryPercent <= 1000,
+            "setTreasuryPercent: invalid percent value"
+        );
         require(
             devPercent + _newTreasuryPercent + investorPercent <= 1000,
             "setTreasuryPercent: total percent over max"
@@ -433,7 +488,10 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     function setInvestorPercent(uint256 _newInvestorPercent) public onlyOwner {
-        require(0 <= _newInvestorPercent && _newInvestorPercent <= 1000, "setInvestorPercent: invalid percent value");
+        require(
+            0 <= _newInvestorPercent && _newInvestorPercent <= 1000,
+            "setInvestorPercent: invalid percent value"
+        );
         require(
             devPercent + _newInvestorPercent + treasuryPercent <= 1000,
             "setInvestorPercent: total percent over max"
@@ -441,25 +499,87 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         investorPercent = _newInvestorPercent;
     }
 
-    // Pancake has to add hidden dummy pools inorder to alter the emission,
-    // here we make it simple and transparent to all.
+    /// @notice simple and transparent to emission update.
     function updateEmissionRate(uint256 _hermesPerSec) public onlyOwner {
         massUpdatePools();
         hermesPerSec = _hermesPerSec;
         emit UpdateEmissionRate(msg.sender, _hermesPerSec);
     }
 
-
     function setStageStarts(uint256[] memory _blockStarts) public onlyOwner {
         blockDeltaStartStage = _blockStarts;
     }
+
     function setStageEnds(uint256[] memory _blockEnds) public onlyOwner {
         blockDeltaEndStage = _blockEnds;
     }
+
     function setUserFeeStage(uint256[] memory _userFees) public onlyOwner {
         userFeeStage = _userFees;
     }
+
     function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
         devFeeStage = _devFees;
+    }
+
+    /// @dev This function execute withdraw fee logic, the rule for withdraw is:
+    /// before 1 day = 1% withdraw fee
+    /// before 1 week = 0.2% withdraw fee
+    /// before 2 weeks = 0.05% withdraw fee
+
+    function _withdraw(uint256 _pid, uint256 _amount) internal {
+        if (_amount == 0) return;
+        PoolInfo storage pool = poolInfo[_pid];
+        UserInfo storage user = userInfo[_pid][msg.sender];
+        // get detail, ie how many blocks before last withdraw
+        if (user.lastWithdrawBlock > 0) {
+            user.blockdelta = block.timestamp - user.lastWithdrawBlock;
+        } else {
+            user.blockdelta = block.timestamp - user.firstDepositBlock;
+        }
+
+        if (user.blockdelta <= 604800) {
+            // 1% <= 1 week
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[0]).div(100)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.sub(_amount.mul(userFeeStage[0]).div(100))
+            );
+        } else if (
+            // 0.2% >= 1 week
+            user.blockdelta >= 604800 && user.blockdelta <= 1209600
+        ) {
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[1]).div(1000)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.mul(devFeeStage[1]).div(1000)
+            );
+        } else {
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[2]).div(10000)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.mul(devFeeStage[2]).div(10000)
+            );
+        }
+        user.lastWithdrawBlock = block.timestamp;
+    }
+
+    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.
+    function _safeHermesTransfer(address _to, uint256 _amount) internal {
+        uint256 hermesBal = hermes.balanceOf(address(this));
+        if (_amount > hermesBal) {
+            hermes.transfer(_to, hermesBal);
+        } else {
+            hermes.transfer(_to, _amount);
+        }
     }
 }

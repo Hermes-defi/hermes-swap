@@ -309,8 +309,10 @@ describe("MasterChefHermesV2", function () {
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)
-      // account for 1% fee to use emergency withdraw on LP
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")
+
+      // the lp fee to use emergencyWithdraw is always 1%
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")// 99%
+      expect(await this.lp.balanceOf(this.treasury.address)).to.equal("1")// 1%
     })
 
     it("should allow emergency withdraw from rewarder contract", async function () {

@@ -13,13 +13,11 @@ describe("MasterChefHermesV2", function () {
     this.investor = this.signers[5]
     this.minter = this.signers[6]
 
-    // this.MCV1PerBlock = await ethers.getContractFactory("MasterChef")
-    // this.MCV1PerSec = await ethers.getContractFactory("MasterChefPerSec")
+
     this.MCV2 = await ethers.getContractFactory("MasterChefHermesV2")
     this.SimpleRewarderPerBlock = await ethers.getContractFactory("SimpleRewarderPerBlock")
     this.SimpleRewarderPerSec = await ethers.getContractFactory("SimpleRewarderPerSec")
-    // this.MasterChefRewarderPerBlock = await ethers.getContractFactory("MasterChefRewarderPerBlock")
-    // this.MasterChefRewarderPerSec = await ethers.getContractFactory("MasterChefRewarderPerSec")
+
     this.HermesToken = await ethers.getContractFactory("Hermes")
     this.ERC20Mock = await ethers.getContractFactory("ERC20Mock", this.minter)
     this.SushiToken = await ethers.getContractFactory("SushiToken")
@@ -311,6 +309,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)
+
       // the lp fee to use emergencyWithdraw is always 1%
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")// 99%
       expect(await this.lp.balanceOf(this.treasury.address)).to.equal("1")// 1%
@@ -462,9 +461,7 @@ describe("MasterChefHermesV2", function () {
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
 
 
-      await this.hermes.grantMinterRole(this.chef.address)
-
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address)// t-56, b=17
 
       await this.chef.add("100", this.lp.address, ADDRESS_ZERO) // t-55, b=18
 
@@ -567,8 +564,7 @@ describe("MasterChefHermesV2", function () {
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
 
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
 
@@ -637,8 +633,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
       await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54, b=19
@@ -657,6 +652,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.hermes.balanceOf(this.dev.address)).to.equal("0")
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("990")
       await advanceTimeAndBlock(10) // t+75, b=24
+
       // Revert if Bob withdraws more than he deposited
       await expect(this.chef.connect(this.bob).withdraw(0, "11")).to.be.revertedWith("withdraw: not good") // t+76, b=25
       await this.chef.connect(this.bob).withdraw(0, "10") // t+77, b=26
@@ -703,8 +699,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address) // t-56, b=17
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55, b=18
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", {
@@ -720,12 +715,15 @@ describe("MasterChefHermesV2", function () {
       // Alice deposits 10 LPs at t+10
       await advanceTimeAndBlock(61) // t+9, b=22
       await this.chef.connect(this.alice).deposit(0, "10", { from: this.alice.address }) // t+10, b=23
+
       // Bob deposits 20 LPs at t+14
       await advanceTimeAndBlock(3) // t+13, b=24
       await this.chef.connect(this.bob).deposit(0, "20") // t+14, b=25
+
       // Carol deposits 30 LPs at block t+18
       await advanceTimeAndBlock(3) // t+17, b=26
       await this.chef.connect(this.carol).deposit(0, "30", { from: this.carol.address }) // t+18, b=27
+
       // Alice deposits 10 more LPs at t+20. At this point:
       //   Alice should have:
       //      - 4*50 + 4*50*1/3 + 2*50*1/6 = 283 (+50) HermesToken
@@ -737,11 +735,11 @@ describe("MasterChefHermesV2", function () {
       await advanceTimeAndBlock(1) // t+19, b=28
       await this.chef.connect(this.alice).deposit(0, "10", { from: this.alice.address }) // t+20, b=29
       expect(await this.hermes.totalSupply()).to.be.within(1000, 1100)
+
       // Because LP rewards are divided among participants and rounded down, we account
       // for rounding errors with an offset
       expect(await this.hermes.balanceOf(this.alice.address)).to.be.within(283 - this.tokenOffset, 333 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.alice.address)).to.be.within(120 - this.tokenOffset, 120 + this.tokenOffset)
-      //TODO figure out whytest fails -> partner token not as expected
       expect(await this.hermes.balanceOf(this.bob.address)).to.equal("0")
       expect(await this.partnerToken.balanceOf(this.bob.address)).to.equal("0")
 
@@ -752,6 +750,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.hermes.balanceOf(this.treasury.address)).to.be.within(200 - this.tokenOffset, 220 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.investor.address)).to.be.within(100 - this.tokenOffset, 110 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(217 - this.tokenOffset, 317 + this.tokenOffset)
+
       // Bob withdraws 5 LPs at t+30. At this point:
       //   Bob should have:
       //     - 4*50*2/3 + 2*50*2/6 + 10*50*2/7 = 309 (+50) HermesToken
@@ -763,6 +762,7 @@ describe("MasterChefHermesV2", function () {
       await advanceTimeAndBlock(9) // t+29, b=32
       await this.chef.connect(this.bob).withdraw(0, "5", { from: this.bob.address }) // t+30, b=33
       expect(await this.hermes.totalSupply()).to.be.within(2000, 2100)
+
       // Because of rounding errors, we use token offsets
       expect(await this.hermes.balanceOf(this.alice.address)).to.be.within(283 - this.tokenOffset, 333 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.alice.address)).to.be.within(119 - this.tokenOffset, 119 + this.tokenOffset)
@@ -777,6 +777,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.hermes.balanceOf(this.treasury.address)).to.be.within(400 - this.tokenOffset, 420 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.investor.address)).to.be.within(200 - this.tokenOffset, 210 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(408 - this.tokenOffset, 508 + this.tokenOffset)
+
       // Alice withdraws 20 LPs at t+40
       // Bob withdraws 15 LPs at t+50
       // Carol withdraws 30 LPs at t+60
@@ -787,35 +788,41 @@ describe("MasterChefHermesV2", function () {
       await advanceTimeAndBlock(9) // t+59, b=38
       await this.chef.connect(this.carol).withdraw(0, "30", { from: this.carol.address }) // t+60, b=39
       expect(await this.hermes.totalSupply()).to.be.within(5000, 5100)
+
       // Alice should have:
       //  - 283 + 10*50*2/7 + 10*50*20/65 = 579 (+50) HermesToken
       //  - 120 + 2*40*2/7 + 2*40*20/65 = 167 PartnerToken
       expect(await this.hermes.balanceOf(this.alice.address)).to.be.within(579 - this.tokenOffset, 629 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.alice.address)).to.be.within(167 - this.tokenOffset, 167 + this.tokenOffset)
+
       // Bob should have:
       //  - 309 + 10*50*15/65 + 10*50*15/45 = 591 (+50) HermesToken
       //  - 102 + 2*40*15/65 + 2*40*15/45 = 147 PartnerToken
       expect(await this.hermes.balanceOf(this.bob.address)).to.be.within(591 - this.tokenOffset, 641 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.bob.address)).to.be.within(147 - this.tokenOffset, 147 + this.tokenOffset)
+
       // Carol should have:
       //  - 2*50*3/6 + 10*50*3/7 + 10*50*30/65 + 10*50*30/45 + 10*50 = 1445 (+50) HermesToken
       //  - 2*40*1/2 + 2*40*3/7 + 2*40*30/65 + 2*40*30/45 + 2*40 = 244 PartnerToken
       expect(await this.hermes.balanceOf(this.carol.address)).to.be.within(1328 - this.tokenOffset, 1378 + this.tokenOffset)
       expect(await this.partnerToken.balanceOf(this.carol.address)).to.be.within(244 - this.tokenOffset, 244 + this.tokenOffset)
+
       // Dev should have: 50*20 = 1000 (+20)
       // Treasury should have: 50*20 = 1000 (+20)
       // Investor should have: 50*10 = 500 (+10)
       expect(await this.hermes.balanceOf(this.dev.address)).to.be.within(1000 - this.tokenOffset, 1020 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.treasury.address)).to.be.within(1000 - this.tokenOffset, 1020 + this.tokenOffset)
       expect(await this.hermes.balanceOf(this.investor.address)).to.be.within(500 - this.tokenOffset, 510 + this.tokenOffset)
+
       // MasterChefHermes should have nothing
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(0, 0 + this.tokenOffset)
 
-      // // All of them should have 1000 LPs back.
-      //TODO: account for withdrawal fee.
-      expect(await this.lp.balanceOf(this.alice.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.carol.address)).to.equal("1000")
+      // All of them should have 1000 LPs back.
+      expect(await this.lp.balanceOf(this.alice.address)).to.equal("999")
+
+      // around 2% because we do 2 withdraw, so apply 1% on both
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("998")
+      expect(await this.lp.balanceOf(this.carol.address)).to.equal("999")
     })
 
     it("should give proper HERMESs allocation to each pool", async function () {
@@ -842,27 +849,32 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address) // t-56, b=17
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55, b=18
       await this.lp2.connect(this.bob).approve(this.chef.address, "1000", { from: this.bob.address }) // t-54, b=19
+
       // Add first LP to the pool with allocation 10
       await this.chef.add("10", this.lp.address, this.rewarder.address) // t-53, b=20
+
       // Alice deposits 10 LPs at t+10
       await advanceTimeAndBlock(62) // t+9, b=21
       await this.chef.connect(this.alice).deposit(0, "10", { from: this.alice.address }) // t+10, b=22
+
       // Add LP2 to the pool with allocation 20 at t+20
       await advanceTimeAndBlock(9) // t+19, b=23
       await this.chef.add("20", this.lp2.address, ADDRESS_ZERO) // t+20, b=24
+
       // Alice's pending reward should be:
       //   - 10*50 = 500 (+50) HermesToken
       //   - 2*40 = 80 PartnerToken
       expect((await this.chef.pendingTokens(0, this.alice.address)).pendingHermes).to.be.within(500 - this.tokenOffset, 550 + this.tokenOffset)
       expect(await this.rewarder.pendingTokens(this.alice.address)).to.equal(80)
+
       // Bob deposits 10 LP2s at t+25
       await advanceTimeAndBlock(4) // t+24, b=25
       await this.chef.connect(this.bob).deposit(1, "10", { from: this.bob.address }) // t+25, b=26
+
       // Alice's pending reward should be:
       //   - 500 + 5*1/3*50 = 583 (+50) HermesToken
       //   - 80 + 2*40 = 160 PartnerToken
@@ -927,14 +939,15 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58, b=15
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57, b=16
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56, b=17
+      await this.hermes.grantMinterRole(this.chef.address) // t-56, b=17
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55, b=18
       await this.chef.add("10", this.lp.address, this.rewarder.address) // t-54, b=19
+
       // Alice deposits 10 LPs at t+10
       await advanceTimeAndBlock(63) // t+9, b=20
       await this.chef.connect(this.alice).deposit(0, "10", { from: this.alice.address }) // t+10, b=21
+
       // At t+110, Alice should have:
       //   - 100*50 = 5000 (+50) HermesToken
       //   - 1*40 = 40 PartnerToken
@@ -943,12 +956,14 @@ describe("MasterChefHermesV2", function () {
       expect(await this.rewarder.pendingTokens(this.alice.address)).to.equal(40)
       // Lower HERMES emission rate to 40 HERMES per sec
       await this.chef.updateEmissionRate(40) // t+111, b=23
+
       // At t+115, Alice should have:
       //   - 5000 + 1*100*0.5 + 4*40*0.5 = 5130 (+50) HermesToken
       //   - 40 + 2*40 = 120 PartnerToken
       await advanceTimeAndBlock(4) // t+115, b=24
       expect((await this.chef.pendingTokens(0, this.alice.address)).pendingHermes).to.be.within(5130, 5180)
       expect(await this.rewarder.pendingTokens(this.alice.address)).to.equal(120)
+
       // Increase PartnerToken emission rate to 90 PartnerToken per block
       await this.rewarder.setRewardRate(90) // t+116, b=25
       // At b=35, Alice should have:
@@ -1078,23 +1093,23 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.emergencyWithdraw()
       expect(await this.partnerToken.balanceOf(this.alice.address)).to.equal("1000000")
 
-      // AVAX
-      this.rewarderAVAX = await this.SimpleRewarderPerSec.deploy(
+      // ONE
+      this.rewarderONE = await this.SimpleRewarderPerSec.deploy(
         this.partnerToken.address, // Use any token address
         this.lp.address,
         this.partnerRewardPerSec,
         this.chef.address,
         true
       )
-      await this.rewarderAVAX.deployed()
+      await this.rewarderONE.deployed()
 
       const rewardAmount = ethers.utils.parseEther("10")
-      const tx = { to: this.rewarderAVAX.address, value: rewardAmount }
+      const tx = { to: this.rewarderONE.address, value: rewardAmount }
       await this.bob.sendTransaction(tx)
-      const bal = await ethers.provider.getBalance(this.rewarderAVAX.address)
+      const bal = await ethers.provider.getBalance(this.rewarderONE.address)
       expect(bal).to.equal(rewardAmount)
       const aliceBalBefore = await this.alice.getBalance()
-      await this.rewarderAVAX.emergencyWithdraw()
+      await this.rewarderONE.emergencyWithdraw()
       const aliceBalAfter = await this.alice.getBalance()
       expect(aliceBalAfter.sub(aliceBalBefore)).to.lt(rewardAmount)
     })
@@ -1134,6 +1149,7 @@ describe("MasterChefHermesV2", function () {
       await advanceTimeAndBlock(4) // t-49
 
       await this.chef.connect(this.bob).deposit(0, "0") // t-48
+
       // Bob should have:
       //   - 0 HermesToken
       //   - 80 PartnerToken
@@ -1151,7 +1167,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.partnerToken.balanceOf(this.bob.address)).to.be.within(760, 920)
     })
 
-    it("should reward AVAX accurately after rewarder runs out of AVAX and is topped up again", async function () {
+    it("should reward ONE accurately after rewarder runs out of ONE and is topped up again", async function () {
       const bobBalBefore = await this.bob.getBalance()
       const startTime = (await latest()).add(60)
       this.chef = await this.MCV2.deploy(
@@ -1167,26 +1183,27 @@ describe("MasterChefHermesV2", function () {
       )
       await this.chef.deployed() // t-59
 
-      this.rewarderAVAX = await this.SimpleRewarderPerSec.deploy(
+      this.rewarderONE = await this.SimpleRewarderPerSec.deploy(
         this.partnerToken.address, // Use any token
         this.lp.address,
         ethers.utils.parseEther("10"),
         this.chef.address,
         true
       )
-      await this.rewarderAVAX.deployed() // t-58
+      await this.rewarderONE.deployed() // t-58
 
-      await this.alice.sendTransaction({ to: this.rewarderAVAX.address, value: ethers.utils.parseEther("20") }) // t-57
+      await this.alice.sendTransaction({ to: this.rewarderONE.address, value: ethers.utils.parseEther("20") }) // t-57
 
       await this.hermes.transferOwnership(this.chef.address) // t-56
 
-      await this.chef.add("100", this.lp.address, this.rewarderAVAX.address) // t-55
+      await this.chef.add("100", this.lp.address, this.rewarderONE.address) // t-55
 
       await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54
       await this.chef.connect(this.bob).deposit(0, "100") // t-53
       await advanceTimeAndBlock(4) // t-49
 
       await this.chef.connect(this.bob).deposit(0, "0") // t-48
+
       // Bob should have:
       //   - 0 HermesToken
       //   - 20 Ether
@@ -1195,7 +1212,7 @@ describe("MasterChefHermesV2", function () {
       expect(bobBalAfter.sub(bobBalBefore)).to.lt(ethers.utils.parseEther("20"))
       await advanceTimeAndBlock(5) // t-43
 
-      await this.alice.sendTransaction({ to: this.rewarderAVAX.address, value: ethers.utils.parseEther("1000") }) // t-42
+      await this.alice.sendTransaction({ to: this.rewarderONE.address, value: ethers.utils.parseEther("1000") }) // t-42
       await advanceTimeAndBlock(10) // t-32
 
       await this.chef.connect(this.bob).deposit(0, "0") // t-31
@@ -1278,8 +1295,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, ADDRESS_ZERO) // t-55
 
@@ -1380,8 +1396,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
 
@@ -1451,8 +1466,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
       await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54
@@ -1518,8 +1532,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.chef.add("100", this.lp.address, this.rewarder.address) // t-55
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", {
@@ -1626,10 +1639,13 @@ describe("MasterChefHermesV2", function () {
       // MasterChefHermes should have nothing
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(0, 0 + this.tokenOffset)
 
-      // // All of them should have 1000 LPs back.
-      expect(await this.lp.balanceOf(this.alice.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.bob.address)).to.equal("1000")
-      expect(await this.lp.balanceOf(this.carol.address)).to.equal("1000")
+      // All of them should have 1000 LPs back.
+      // should consider 1% fee because we are withdrawing before 1 week
+      expect(await this.lp.balanceOf(this.alice.address)).to.equal("999")
+
+      //around 2% debig because we are doing 2 withdraw
+      expect(await this.lp.balanceOf(this.bob.address)).to.equal("998")
+      expect(await this.lp.balanceOf(this.carol.address)).to.equal("999")
     })
 
     it("should give proper HERMESs allocation to each pool", async function () {
@@ -1657,8 +1673,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55
       await this.lp2.connect(this.bob).approve(this.chef.address, "1000", { from: this.bob.address }) // t-54
@@ -1743,8 +1758,7 @@ describe("MasterChefHermesV2", function () {
       await this.rewarder.deployed() // t-58
 
       await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000") // t-57
-      await this.hermes.grantMinterRole(this.chef.address)
-      // await this.hermes.transferOwnership(this.chef.address) // t-56
+      await this.hermes.grantMinterRole(this.chef.address) // t-56
 
       await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address }) // t-55
       await this.chef.add("10", this.lp.address, this.rewarder.address) // t-54

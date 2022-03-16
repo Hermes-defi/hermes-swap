@@ -68,7 +68,7 @@ const config: HardhatUserConfig = {
 
 
         },
-        "harmony-testnet": {
+        testnet: {
             url: "https://api.s0.b.hmny.io",
             accounts:
                 process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],

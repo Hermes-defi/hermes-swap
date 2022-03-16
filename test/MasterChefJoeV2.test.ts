@@ -309,7 +309,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)
-      // Done: account for 1% fee to use emergency withdraw on LP
+      // account for 1% fee to use emergency withdraw on LP
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("999")
     })
 
@@ -1638,7 +1638,7 @@ describe("MasterChefHermesV2", function () {
       expect(await this.hermes.balanceOf(this.chef.address)).to.be.within(0, 0 + this.tokenOffset)
 
       // All of them should have 1000 LPs back.
-      //DONE: should consider 1% fee because we are withdrawing before 1 week
+      // should consider 1% fee because we are withdrawing before 1 week
       expect(await this.lp.balanceOf(this.alice.address)).to.equal("999")
 
       //around 2% debig because we are doing 2 withdraw

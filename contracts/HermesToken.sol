@@ -1,8 +1,8 @@
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/IERC20.sol)
 
@@ -89,10 +89,10 @@ interface IERC20 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
 
@@ -121,10 +121,10 @@ abstract contract Context {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)
 
@@ -157,10 +157,10 @@ interface IERC20Metadata is IERC20 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/ERC20.sol)
 
@@ -248,7 +248,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public view virtual override returns (uint8) {
-        return 18;
+        return 9;
     }
 
     /**
@@ -548,10 +548,10 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)
 
@@ -581,10 +581,10 @@ interface IERC165 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)
 
@@ -618,10 +618,10 @@ abstract contract ERC165 is IERC165 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/Strings.sol)
 
@@ -693,10 +693,10 @@ library Strings {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (access/IAccessControl.sol)
 
@@ -789,10 +789,10 @@ interface IAccessControl {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/ERC20Capped.sol)
 
@@ -834,10 +834,10 @@ abstract contract ERC20Capped is ERC20 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (access/AccessControl.sol)
 
@@ -1065,10 +1065,10 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
 
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
-            
+
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (access/Ownable.sol)
 
@@ -1147,7 +1147,7 @@ abstract contract Ownable is Context {
 }
 
 
-/** 
+/**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
 */
 

@@ -1,7 +1,6 @@
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/IERC20.sol)
@@ -38,7 +37,10 @@ interface IERC20 {
      *
      * This value changes when {approve} or {transferFrom} are called.
      */
-    function allowance(address owner, address spender) external view returns (uint256);
+    function allowance(address owner, address spender)
+        external
+        view
+        returns (uint256);
 
     /**
      * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.
@@ -83,15 +85,16 @@ interface IERC20 {
      * @dev Emitted when the allowance of a `spender` for an `owner` is set by
      * a call to {approve}. `value` is the new allowance.
      */
-    event Approval(address indexed owner, address indexed spender, uint256 value);
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 value
+    );
 }
-
-
-
 
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/Context.sol)
@@ -118,12 +121,9 @@ abstract contract Context {
     }
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/IERC20Metadata.sol)
@@ -154,12 +154,9 @@ interface IERC20Metadata is IERC20 {
     function decimals() external view returns (uint8);
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/ERC20.sol)
@@ -261,7 +258,13 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     /**
      * @dev See {IERC20-balanceOf}.
      */
-    function balanceOf(address account) public view virtual override returns (uint256) {
+    function balanceOf(address account)
+        public
+        view
+        virtual
+        override
+        returns (uint256)
+    {
         return _balances[account];
     }
 
@@ -273,7 +276,12 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * - `to` cannot be the zero address.
      * - the caller must have a balance of at least `amount`.
      */
-    function transfer(address to, uint256 amount) public virtual override returns (bool) {
+    function transfer(address to, uint256 amount)
+        public
+        virtual
+        override
+        returns (bool)
+    {
         address owner = _msgSender();
         _transfer(owner, to, amount);
         return true;
@@ -282,7 +290,13 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     /**
      * @dev See {IERC20-allowance}.
      */
-    function allowance(address owner, address spender) public view virtual override returns (uint256) {
+    function allowance(address owner, address spender)
+        public
+        view
+        virtual
+        override
+        returns (uint256)
+    {
         return _allowances[owner][spender];
     }
 
@@ -296,7 +310,12 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      *
      * - `spender` cannot be the zero address.
      */
-    function approve(address spender, uint256 amount) public virtual override returns (bool) {
+    function approve(address spender, uint256 amount)
+        public
+        virtual
+        override
+        returns (bool)
+    {
         address owner = _msgSender();
         _approve(owner, spender, amount);
         return true;
@@ -341,7 +360,11 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      *
      * - `spender` cannot be the zero address.
      */
-    function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool) {
+    function increaseAllowance(address spender, uint256 addedValue)
+        public
+        virtual
+        returns (bool)
+    {
         address owner = _msgSender();
         _approve(owner, spender, _allowances[owner][spender] + addedValue);
         return true;
@@ -361,10 +384,17 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      * - `spender` must have allowance for the caller of at least
      * `subtractedValue`.
      */
-    function decreaseAllowance(address spender, uint256 subtractedValue) public virtual returns (bool) {
+    function decreaseAllowance(address spender, uint256 subtractedValue)
+        public
+        virtual
+        returns (bool)
+    {
         address owner = _msgSender();
         uint256 currentAllowance = _allowances[owner][spender];
-        require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
+        require(
+            currentAllowance >= subtractedValue,
+            "ERC20: decreased allowance below zero"
+        );
         unchecked {
             _approve(owner, spender, currentAllowance - subtractedValue);
         }
@@ -397,7 +427,10 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         _beforeTokenTransfer(from, to, amount);
 
         uint256 fromBalance = _balances[from];
-        require(fromBalance >= amount, "ERC20: transfer amount exceeds balance");
+        require(
+            fromBalance >= amount,
+            "ERC20: transfer amount exceeds balance"
+        );
         unchecked {
             _balances[from] = fromBalance - amount;
         }
@@ -497,7 +530,10 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     ) internal virtual {
         uint256 currentAllowance = allowance(owner, spender);
         if (currentAllowance != type(uint256).max) {
-            require(currentAllowance >= amount, "ERC20: insufficient allowance");
+            require(
+                currentAllowance >= amount,
+                "ERC20: insufficient allowance"
+            );
             unchecked {
                 _approve(owner, spender, currentAllowance - amount);
             }
@@ -545,12 +581,9 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     ) internal virtual {}
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/IERC165.sol)
@@ -578,12 +611,9 @@ interface IERC165 {
     function supportsInterface(bytes4 interfaceId) external view returns (bool);
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/introspection/ERC165.sol)
@@ -610,17 +640,20 @@ abstract contract ERC165 is IERC165 {
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        virtual
+        override
+        returns (bool)
+    {
         return interfaceId == type(IERC165).interfaceId;
     }
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (utils/Strings.sol)
@@ -677,7 +710,11 @@ library Strings {
     /**
      * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.
      */
-    function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {
+    function toHexString(uint256 value, uint256 length)
+        internal
+        pure
+        returns (string memory)
+    {
         bytes memory buffer = new bytes(2 * length + 2);
         buffer[0] = "0";
         buffer[1] = "x";
@@ -690,12 +727,9 @@ library Strings {
     }
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (access/IAccessControl.sol)
@@ -714,7 +748,11 @@ interface IAccessControl {
      *
      * _Available since v3.1._
      */
-    event RoleAdminChanged(bytes32 indexed role, bytes32 indexed previousAdminRole, bytes32 indexed newAdminRole);
+    event RoleAdminChanged(
+        bytes32 indexed role,
+        bytes32 indexed previousAdminRole,
+        bytes32 indexed newAdminRole
+    );
 
     /**
      * @dev Emitted when `account` is granted `role`.
@@ -722,7 +760,11 @@ interface IAccessControl {
      * `sender` is the account that originated the contract call, an admin role
      * bearer except when using {AccessControl-_setupRole}.
      */
-    event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);
+    event RoleGranted(
+        bytes32 indexed role,
+        address indexed account,
+        address indexed sender
+    );
 
     /**
      * @dev Emitted when `account` is revoked `role`.
@@ -731,12 +773,19 @@ interface IAccessControl {
      *   - if using `revokeRole`, it is the admin role bearer
      *   - if using `renounceRole`, it is the role bearer (i.e. `account`)
      */
-    event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);
+    event RoleRevoked(
+        bytes32 indexed role,
+        address indexed account,
+        address indexed sender
+    );
 
     /**
      * @dev Returns `true` if `account` has been granted `role`.
      */
-    function hasRole(bytes32 role, address account) external view returns (bool);
+    function hasRole(bytes32 role, address account)
+        external
+        view
+        returns (bool);
 
     /**
      * @dev Returns the admin role that controls `role`. See {grantRole} and
@@ -786,12 +835,9 @@ interface IAccessControl {
     function renounceRole(bytes32 role, address account) external;
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (token/ERC20/extensions/ERC20Capped.sol)
@@ -826,17 +872,17 @@ abstract contract ERC20Capped is ERC20 {
      * @dev See {ERC20-_mint}.
      */
     function _mint(address account, uint256 amount) internal virtual override {
-        require(ERC20.totalSupply() + amount <= cap(), "ERC20Capped: cap exceeded");
+        require(
+            ERC20.totalSupply() + amount <= cap(),
+            "ERC20Capped: cap exceeded"
+        );
         super._mint(account, amount);
     }
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (access/AccessControl.sol)
@@ -914,14 +960,28 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
     /**
      * @dev See {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {
-        return interfaceId == type(IAccessControl).interfaceId || super.supportsInterface(interfaceId);
+    function supportsInterface(bytes4 interfaceId)
+        public
+        view
+        virtual
+        override
+        returns (bool)
+    {
+        return
+            interfaceId == type(IAccessControl).interfaceId ||
+            super.supportsInterface(interfaceId);
     }
 
     /**
      * @dev Returns `true` if `account` has been granted `role`.
      */
-    function hasRole(bytes32 role, address account) public view virtual override returns (bool) {
+    function hasRole(bytes32 role, address account)
+        public
+        view
+        virtual
+        override
+        returns (bool)
+    {
         return _roles[role].members[account];
     }
 
@@ -953,7 +1013,13 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
      *
      * To change a role's admin, use {_setRoleAdmin}.
      */
-    function getRoleAdmin(bytes32 role) public view virtual override returns (bytes32) {
+    function getRoleAdmin(bytes32 role)
+        public
+        view
+        virtual
+        override
+        returns (bytes32)
+    {
         return _roles[role].adminRole;
     }
 
@@ -967,7 +1033,12 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
      *
      * - the caller must have ``role``'s admin role.
      */
-    function grantRole(bytes32 role, address account) public virtual override onlyRole(getRoleAdmin(role)) {
+    function grantRole(bytes32 role, address account)
+        public
+        virtual
+        override
+        onlyRole(getRoleAdmin(role))
+    {
         _grantRole(role, account);
     }
 
@@ -980,7 +1051,12 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
      *
      * - the caller must have ``role``'s admin role.
      */
-    function revokeRole(bytes32 role, address account) public virtual override onlyRole(getRoleAdmin(role)) {
+    function revokeRole(bytes32 role, address account)
+        public
+        virtual
+        override
+        onlyRole(getRoleAdmin(role))
+    {
         _revokeRole(role, account);
     }
 
@@ -998,8 +1074,15 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
      *
      * - the caller must be `account`.
      */
-    function renounceRole(bytes32 role, address account) public virtual override {
-        require(account == _msgSender(), "AccessControl: can only renounce roles for self");
+    function renounceRole(bytes32 role, address account)
+        public
+        virtual
+        override
+    {
+        require(
+            account == _msgSender(),
+            "AccessControl: can only renounce roles for self"
+        );
 
         _revokeRole(role, account);
     }
@@ -1062,12 +1145,9 @@ abstract contract AccessControl is Context, IAccessControl, ERC165 {
     }
 }
 
-
-
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts v4.4.1 (access/Ownable.sol)
@@ -1091,7 +1171,10 @@ pragma solidity ^0.8.0;
 abstract contract Ownable is Context {
     address private _owner;
 
-    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+    event OwnershipTransferred(
+        address indexed previousOwner,
+        address indexed newOwner
+    );
 
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
@@ -1131,7 +1214,10 @@ abstract contract Ownable is Context {
      * Can only be called by the current owner.
      */
     function transferOwnership(address newOwner) public virtual onlyOwner {
-        require(newOwner != address(0), "Ownable: new owner is the zero address");
+        require(
+            newOwner != address(0),
+            "Ownable: new owner is the zero address"
+        );
         _transferOwnership(newOwner);
     }
 
@@ -1146,10 +1232,9 @@ abstract contract Ownable is Context {
     }
 }
 
-
 /**
  *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
-*/
+ */
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
 
@@ -1240,4 +1325,3 @@ contract Hermes is
         _transferOwnership(newOwner);
     }
 }
-

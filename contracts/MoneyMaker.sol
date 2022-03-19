@@ -6,9 +6,9 @@ pragma solidity 0.6.12;
 import "./libraries/SafeMath.sol";
 import "./libraries/SafeERC20.sol";
 
-import "./hermesSwap/interfaces/IERC20.sol";
-import "./hermesSwap/interfaces/IHermesPair.sol";
-import "./hermesSwap/interfaces/IHermesFactory.sol";
+import "./hermesswap/interfaces/IERC20.sol";
+import "./hermesswap/interfaces/IHermesPair.sol";
+import "./hermesswap/interfaces/IHermesFactory.sol";
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 

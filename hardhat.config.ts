@@ -1,10 +1,12 @@
+// TODO: remove unused imprts
+
 import "dotenv/config"
 import "@nomiclabs/hardhat-etherscan"
 import "@nomiclabs/hardhat-solhint"
 import "@nomiclabs/hardhat-ethers"
 // import "@tenderly/hardhat-tenderly"
 import "@nomiclabs/hardhat-waffle"
-// import "@openzeppelin/hardhat-upgrades"
+import "@openzeppelin/hardhat-upgrades"
 // import "hardhat-abi-exporter"
 // import "hardhat-deploy"
 // import "hardhat-deploy-ethers"

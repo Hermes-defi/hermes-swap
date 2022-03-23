@@ -32,14 +32,11 @@ describe("Stable Hermes Staking", function () {
       ethers.utils.parseEther("1000000")
     ); // 1_000_000 tokens
 
-    this.stableHermesStaking = await hre.upgrades.deployProxy(
-      this.StableHermesStakingCF,
-      [
+    this.stableHermesStaking = await this.StableHermesStakingCF.deploy(
         this.rewardToken.address,
         this.hermes.address,
         this.penaltyCollector.address,
         ethers.utils.parseEther("0.03"),
-      ]
     );
 
     await this.hermes
@@ -90,6 +87,12 @@ describe("Stable Hermes Staking", function () {
         ethers.utils.parseEther("800")
         // 97 + 200 * 0.97 = 291
       );
+
+      // user should get 194 -fee sHRMS
+      expect(
+          await this.stableHermesStaking.balanceOf(this.bob.address)
+      ).to.be.equal(ethers.utils.parseEther("194"));
+
       expect(
         await this.hermes.balanceOf(this.stableHermesStaking.address)
       ).to.be.equal(ethers.utils.parseEther("291"));
@@ -705,6 +708,28 @@ describe("Stable Hermes Staking", function () {
       expect(userInfo[0]).to.be.equal(0);
       expect(userInfo[1]).to.be.equal(0);
     });
+
+
+    it("deposit/withdraw and check sHRMS balances", async function () {
+      await this.stableHermesStaking
+          .connect(this.bob)
+          .deposit(ethers.utils.parseEther("100"));
+
+        expect(
+            await this.stableHermesStaking.balanceOf(this.bob.address)
+        ).to.be.equal(ethers.utils.parseEther("97"));
+
+      await this.stableHermesStaking
+          .connect(this.bob)
+          .withdraw(ethers.utils.parseEther("97"));
+
+      expect(
+          await this.stableHermesStaking.balanceOf(this.bob.address)
+      ).to.be.equal(ethers.utils.parseEther("0"));
+
+    });
+
+
   });
 
   after(async function () {

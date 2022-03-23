@@ -2,11 +2,11 @@
 
 pragma solidity 0.7.6;
 
-import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/token/ERC20/SafeERC20Upgradeable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol";
 
 /**
  * @title Stable HERMES Staking
@@ -18,14 +18,16 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/SafeERC20Upgradeable.sol
  * Every time `updateReward(token)` is called, We distribute the balance of that tokens as rewards to users that are
  * currently staking inside this contract, and they can claim it using `withdraw(0)`
  */
-contract StableHermesStaking is Initializable, OwnableUpgradeable {
-    using SafeMathUpgradeable for uint256;
-    using SafeERC20Upgradeable for IERC20Upgradeable;
+contract StableHermesStaking is
+    ERC20("Stable Hermes", "sHRMS"), Ownable
+{
+    using SafeMath for uint256;
+    using SafeERC20 for IERC20;
 
     /// @notice Info of each user
     struct UserInfo {
         uint256 amount;
-        mapping(IERC20Upgradeable => uint256) rewardDebt;
+        mapping(IERC20 => uint256) rewardDebt;
         /**
          * @notice We do some fancy math here. Basically, any point in time, the amount of HERMESs
          * entitled to a user but is pending to be distributed is:
@@ -40,16 +42,16 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
          */
     }
 
-    IERC20Upgradeable public hermes;
+    IERC20 public hermes;
 
     /// @dev Internal balance of HERMES, this gets updated on user deposits / withdrawals
     /// this allows to reward users with HERMES
     uint256 internalHermesBalance;
     /// @notice Array of tokens that users can claim
-    IERC20Upgradeable[] public rewardTokens;
-    mapping(IERC20Upgradeable => bool) public isRewardToken;
+    IERC20[] public rewardTokens;
+    mapping(IERC20 => bool) public isRewardToken;
     /// @notice Last reward balance of `token`
-    mapping(IERC20Upgradeable => uint256) public lastRewardBalance;
+    mapping(IERC20 => uint256) public lastRewardBalance;
 
     address public feeCollector;
 
@@ -57,7 +59,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
     uint256 public depositFeePercent;
 
     /// @notice Accumulated `token` rewards per share, scaled to `PRECISION`. See above
-    mapping(IERC20Upgradeable => uint256) public accRewardPerShare;
+    mapping(IERC20 => uint256) public accRewardPerShare;
     /// @notice `PRECISION` of `accRewardPerShare`
     uint256 public PRECISION;
 
@@ -93,13 +95,12 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @param _hermes The address of the HERMES token
      * @param _depositFeePercent The deposit fee percent, scalled to 1e18, e.g. 3% is 3e16
      */
-    function initialize(
-        IERC20Upgradeable _rewardToken,
-        IERC20Upgradeable _hermes,
+    constructor(
+        IERC20 _rewardToken,
+        IERC20 _hermes,
         address _feeCollector,
         uint256 _depositFeePercent
-    ) external initializer {
-        __Ownable_init();
+    ) public {
         require(_feeCollector != address(0), "StableHermesStaking: fee collector can't be address 0");
         require(_depositFeePercent <= 5e17, "StableHermesStaking: max deposit fee can't be greater than 50%");
 
@@ -122,13 +123,15 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
         uint256 _fee = (_amount * depositFeePercent) / 1e18;
         uint256 _amountMinusFee = _amount.sub(_fee);
 
+        _mint(msg.sender, _amountMinusFee);
+
         uint256 _previousAmount = user.amount;
         uint256 _newAmount = user.amount.add(_amountMinusFee);
         user.amount = _newAmount;
 
         uint256 _len = rewardTokens.length;
         for (uint256 i; i < _len; i++) {
-            IERC20Upgradeable _token = rewardTokens[i];
+            IERC20 _token = rewardTokens[i];
             updateReward(_token);
 
             if (_previousAmount != 0) {
@@ -156,7 +159,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @return The amount of HERMES user has deposited
      * @return The reward debt for the chosen token
      */
-    function getUserInfo(address _user, IERC20Upgradeable _rewardToken) external view returns (uint256, uint256) {
+    function getUserInfo(address _user, IERC20 _rewardToken) external view returns (uint256, uint256) {
         UserInfo storage user = userInfo[_user];
         return (user.amount, user.rewardDebt[_rewardToken]);
     }
@@ -173,7 +176,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @notice Add a reward token
      * @param _rewardToken The address of the reward token
      */
-    function addRewardToken(IERC20Upgradeable _rewardToken) external onlyOwner {
+    function addRewardToken(IERC20 _rewardToken) external onlyOwner {
         require(
             !isRewardToken[_rewardToken] && address(_rewardToken) != address(0),
             "StableHermesStaking: token can't be added"
@@ -189,7 +192,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @notice Remove a reward token
      * @param _rewardToken The address of the reward token
      */
-    function removeRewardToken(IERC20Upgradeable _rewardToken) external onlyOwner {
+    function removeRewardToken(IERC20 _rewardToken) external onlyOwner {
         require(isRewardToken[_rewardToken], "StableHermesStaking: token can't be removed");
         updateReward(_rewardToken);
         isRewardToken[_rewardToken] = false;
@@ -221,7 +224,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @param _token The address of the token
      * @return `_user`'s pending reward token
      */
-    function pendingReward(address _user, IERC20Upgradeable _token) external view returns (uint256) {
+    function pendingReward(address _user, IERC20 _token) external view returns (uint256) {
         require(isRewardToken[_token], "StableHermesStaking: wrong reward token");
         UserInfo storage user = userInfo[_user];
         uint256 _totalHermes = internalHermesBalance;
@@ -251,7 +254,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
         uint256 _len = rewardTokens.length;
         if (_previousAmount != 0) {
             for (uint256 i; i < _len; i++) {
-                IERC20Upgradeable _token = rewardTokens[i];
+                IERC20 _token = rewardTokens[i];
                 updateReward(_token);
 
                 uint256 _pending = _previousAmount.mul(accRewardPerShare[_token]).div(PRECISION).sub(
@@ -268,6 +271,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
 
         internalHermesBalance = internalHermesBalance.sub(_amount);
         hermes.safeTransfer(msg.sender, _amount);
+        _burn(msg.sender, _amount);
         emit Withdraw(msg.sender, _amount);
     }
 
@@ -281,10 +285,11 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
         user.amount = 0;
         uint256 _len = rewardTokens.length;
         for (uint256 i; i < _len; i++) {
-            IERC20Upgradeable _token = rewardTokens[i];
+            IERC20 _token = rewardTokens[i];
             user.rewardDebt[_token] = 0;
         }
         hermes.safeTransfer(msg.sender, _amount);
+        _burn(msg.sender, _amount);
         emit EmergencyWithdraw(msg.sender, _amount);
     }
 
@@ -293,7 +298,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @param _token The address of the reward token
      * @dev Needs to be called before any deposit or withdrawal
      */
-    function updateReward(IERC20Upgradeable _token) public {
+    function updateReward(IERC20 _token) public {
         require(isRewardToken[_token], "StableHermesStaking: wrong reward token");
 
         uint256 _currRewardBalance = _token.balanceOf(address(this));
@@ -320,7 +325,7 @@ contract StableHermesStaking is Initializable, OwnableUpgradeable {
      * @param _amount The amount to send to `_to`
      */
     function safeTokenTransfer(
-        IERC20Upgradeable _token,
+        IERC20 _token,
         address _to,
         uint256 _amount
     ) internal {

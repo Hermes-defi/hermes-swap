@@ -1030,8 +1030,7 @@ pragma solidity 0.7.6;
  * Every time `updateReward(token)` is called, We distribute the balance of that tokens as rewards to users that are
  * currently staking inside this contract, and they can claim it using `withdraw(0)`
  */
-contract StableHermesStaking is
-ERC20("Stable Hermes", "sHRMS"), Ownable
+contract StableHermesStaking is Ownable
 {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
@@ -1134,8 +1133,6 @@ ERC20("Stable Hermes", "sHRMS"), Ownable
 
         uint256 _fee = (_amount * depositFeePercent) / 1e18;
         uint256 _amountMinusFee = _amount.sub(_fee);
-
-        _mint(msg.sender, _amountMinusFee);
 
         uint256 _previousAmount = user.amount;
         uint256 _newAmount = user.amount.add(_amountMinusFee);
@@ -1283,7 +1280,7 @@ ERC20("Stable Hermes", "sHRMS"), Ownable
 
         internalHermesBalance = internalHermesBalance.sub(_amount);
         hermes.safeTransfer(msg.sender, _amount);
-        _burn(msg.sender, _amount);
+
         emit Withdraw(msg.sender, _amount);
     }
 
@@ -1301,7 +1298,6 @@ ERC20("Stable Hermes", "sHRMS"), Ownable
             user.rewardDebt[_token] = 0;
         }
         hermes.safeTransfer(msg.sender, _amount);
-        _burn(msg.sender, _amount);
         emit EmergencyWithdraw(msg.sender, _amount);
     }
 

@@ -88,10 +88,10 @@ describe("Stable Hermes Staking", function () {
         // 97 + 200 * 0.97 = 291
       );
 
-      // user should get 194 -fee sHRMS
-      expect(
-          await this.stableHermesStaking.balanceOf(this.bob.address)
-      ).to.be.equal(ethers.utils.parseEther("194"));
+
+
+
+
 
       expect(
         await this.hermes.balanceOf(this.stableHermesStaking.address)
@@ -708,27 +708,6 @@ describe("Stable Hermes Staking", function () {
       expect(userInfo[0]).to.be.equal(0);
       expect(userInfo[1]).to.be.equal(0);
     });
-
-
-    it("deposit/withdraw and check sHRMS balances", async function () {
-      await this.stableHermesStaking
-          .connect(this.bob)
-          .deposit(ethers.utils.parseEther("100"));
-
-        expect(
-            await this.stableHermesStaking.balanceOf(this.bob.address)
-        ).to.be.equal(ethers.utils.parseEther("97"));
-
-      await this.stableHermesStaking
-          .connect(this.bob)
-          .withdraw(ethers.utils.parseEther("97"));
-
-      expect(
-          await this.stableHermesStaking.balanceOf(this.bob.address)
-      ).to.be.equal(ethers.utils.parseEther("0"));
-
-    });
-
 
   });
 

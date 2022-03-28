@@ -49,6 +49,7 @@ describe("MasterChefHermesV2", function () {
     await this.partnerToken.deployed()
   })
 
+
   it("should revert contract creation if dev and treasury percents don't meet criteria", async function () {
     const startTime = (await latest()).add(60)
     // Invalid dev percent failure
@@ -200,6 +201,8 @@ describe("MasterChefHermesV2", function () {
     await expect(this.chef.setTreasuryPercent("1200")).to.be.revertedWith("setTreasuryPercent: invalid percent value")
     await expect(this.chef.setTreasuryPercent("900")).to.be.revertedWith("setTreasuryPercent: total percent over max")
   })
+
+
 
   context("With ERC/LP token added to the field and using SimpleRewarderPerBlock", function () {
     beforeEach(async function () {
@@ -1788,6 +1791,61 @@ describe("MasterChefHermesV2", function () {
       expect((await this.chef.pendingTokens(0, this.alice.address)).pendingHermes).to.be.within(5550, 5600)
       expect(await this.rewarder.pendingTokens(this.alice.address)).to.be.within(6040, 6130)
     })
+
+
+    it("should stop reward after we reach maxcap", async function () {
+      const startTime = (await latest())
+      this.chef = await this.MCV2.deploy(
+          this.hermes.address,
+          this.dev.address,
+          this.treasury.address,
+          this.investor.address,
+          '100000000000000000000',
+          startTime,
+          this.devPercent,
+          this.treasuryPercent,
+          this.investorPercent
+      )
+      await this.chef.deployed() // t-59
+
+      this.rewarder = await this.SimpleRewarderPerSec.deploy(
+          this.partnerToken.address,
+          this.lp.address,
+          this.partnerRewardPerSec,
+          this.chef.address,
+          false
+      )
+      await this.rewarder.deployed()
+
+      await this.partnerToken.mint(this.rewarder.address, "1000000000000000000000000")
+      await this.hermes.grantMinterRole(this.chef.address)
+
+      await this.hermes.setMaxCap('10000000000000000000000')
+
+      await this.lp.connect(this.alice).approve(this.chef.address, "1000", { from: this.alice.address })
+      await this.chef.add("10", this.lp.address, this.rewarder.address)
+
+      await this.chef.connect(this.alice).deposit(0, "10", { from: this.alice.address })
+
+      await advanceTimeAndBlock(100)
+      await this.chef.massUpdatePools();
+
+      const cap = await this.hermes.cap();
+      const mcToken = await this.hermes.balanceOf(this.chef.address);
+
+      const pending = (await this.chef.pendingTokens(0, this.alice.address)).pendingHermes;
+      console.log('pending', pending.toString()/1e18);
+      console.log('mcToken', mcToken.toString()/1e18);
+      console.log('cap', cap.toString()/1e18);
+
+      await this.chef.connect(this.alice).withdraw(0, "10", { from: this.alice.address })
+
+      const aliceTokens = await this.hermes.balanceOf(this.alice.address);
+      console.log('aliceTokens', aliceTokens.toString()/1e18);
+
+      // expect((await this.chef.pendingTokens(0, this.alice.address)).pendingHermes).to.be.within(5000, 5050)
+    })
+
   })
 
 

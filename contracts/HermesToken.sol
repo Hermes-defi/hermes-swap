@@ -1,6 +1,4 @@
-/**
- *  SourceUnit: /Users/yellow/development/solidity/hermes-defi/PLUTUS-HERMES-migration/contracts/token/Hermes.sol
- */
+import "hardhat/console.sol";
 
 ////// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: MIT
 // OpenZeppelin Contracts (last updated v4.5.0) (token/ERC20/IERC20.sol)
@@ -450,7 +448,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
      *
      * - `account` cannot be the zero address.
      */
-    function _mint(address account, uint256 amount) internal virtual {
+    function _mint(address account, uint256 amount) internal virtual returns(bool){
         require(account != address(0), "ERC20: mint to the zero address");
 
         _beforeTokenTransfer(address(0), account, amount);
@@ -460,6 +458,7 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
         emit Transfer(address(0), account, amount);
 
         _afterTokenTransfer(address(0), account, amount);
+        return true;
     }
 
     /**
@@ -850,15 +849,18 @@ pragma solidity ^0.8.0;
  * @dev Extension of {ERC20} that adds a cap to the supply of tokens.
  */
 abstract contract ERC20Capped is ERC20 {
-    uint256 private immutable _cap;
-
+    uint256 private _cap;
+    address public maxCapManager;
+    event MaxCap(uint _cap);
     /**
      * @dev Sets the value of the `cap`. This value is immutable, it can only be
      * set once during construction.
      */
     constructor(uint256 cap_) {
+        maxCapManager = msg.sender;
         require(cap_ > 0, "ERC20Capped: cap is 0");
         _cap = cap_;
+        emit MaxCap(cap_);
     }
 
     /**
@@ -874,10 +876,22 @@ abstract contract ERC20Capped is ERC20 {
     /**
      * @dev See {ERC20-_mint}.
      */
-    function _mint(address account, uint256 amount) internal virtual override {
+    function _mint(address account, uint256 amount) internal virtual override returns(bool) {
+        // console.log('cap(%s) mint(%s)', cap()/1e18, amount/1e18 );
         // - prevent contract to revert on mint request
-        if( ERC20.totalSupply() + amount <= cap())
-            super._mint(account, amount);
+        if( maxCapReached() == false){
+            ERC20._mint(account, amount);
+            // console.log(' - mint to %s %s %s', account, amount/1e18, balanceOf(account)/1e18 );
+            return true;
+        }else{
+            // console.log(' - mint ignore %s',amount/1e18);
+            return false;
+        }
+    }
+    function setMaxCap( uint cap_ ) public{
+        require( maxCapManager == msg.sender, "!maxCapManager");
+        _cap = cap_;
+        emit MaxCap(_cap);
     }
 }
 
@@ -1272,8 +1286,9 @@ contract Hermes is
     function mint(address _account, uint256 _amount)
         public
         onlyRole(MINTER_ROLE)
+        returns(bool)
     {
-        _mint(_account, _amount);
+        return _mint(_account, _amount);
     }
 
     function grantMinterRole(address _account)
@@ -1308,8 +1323,9 @@ contract Hermes is
         internal
         virtual
         override(ERC20, ERC20Capped)
+        returns(bool)
     {
-        super._mint(account, amount);
+        return super._mint(account, amount);
     }
 
     function transferOwnership(address newOwner)

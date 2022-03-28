@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-
+// import "hardhat/console.sol";
 pragma solidity 0.6.12;
 pragma experimental ABIEncoderV2;
 
@@ -269,7 +269,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         UserInfo storage user = userInfo[_pid][_user];
         uint256 accHermesPerShare = pool.accHermesPerShare;
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
-        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0) {
+        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0 && hermes.maxCapReached() == false ) {
             uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
             uint256 lpPercent = 1000 -
                 devPercent -
@@ -331,6 +331,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             return;
         }
         if( hermes.maxCapReached() ){
+            // console.log('stop minting if we reached max cap');
             // stop minting if we reached max cap
             pool.lastRewardTimestamp = block.timestamp;
             return;
@@ -582,10 +583,13 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         user.lastWithdrawBlock = block.timestamp;
     }
 
-    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.
+    event hermesTransfer(address to, uint request, uint sent);
+    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMES.
     function _safeHermesTransfer(address _to, uint256 _amount) internal {
         uint256 hermesBal = hermes.balanceOf(address(this));
+        // console.log('HRMS transfer %s %s %s', _to, _amount/1e18, hermesBal/1e18);
         if (_amount > hermesBal) {
+            emit hermesTransfer(_to, _amount, hermesBal);
             hermes.transfer(_to, hermesBal);
         } else {
             hermes.transfer(_to, _amount);

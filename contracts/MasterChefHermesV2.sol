@@ -34,6 +34,10 @@ interface IHermesToken {
 
     //transfer
     function transfer(address to, uint256 amount) external returns (bool);
+
+    // get status if we can mint
+    function maxCapReached() external view returns (bool);
+
 }
 
 // MasterChefHermes is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
@@ -323,6 +327,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         }
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
         if (lpSupply == 0) {
+            pool.lastRewardTimestamp = block.timestamp;
+            return;
+        }
+        if( hermes.maxCapReached() ){
+            // stop minting if we reached max cap
             pool.lastRewardTimestamp = block.timestamp;
             return;
         }

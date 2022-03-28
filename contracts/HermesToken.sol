@@ -867,11 +867,15 @@ abstract contract ERC20Capped is ERC20 {
     function cap() public view virtual returns (uint256) {
         return _cap;
     }
-
+    function maxCapReached() public view virtual returns (bool) {
+        // allow mc contract to know if we reached maxcap
+        return ERC20.totalSupply() >= cap();
+    }
     /**
      * @dev See {ERC20-_mint}.
      */
     function _mint(address account, uint256 amount) internal virtual override {
+        // - prevent contract to revert on mint request
         if( ERC20.totalSupply() + amount <= cap())
             super._mint(account, amount);
     }

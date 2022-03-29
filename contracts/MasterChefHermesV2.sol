@@ -14,15 +14,10 @@ import "./libraries/ReentrancyGuard.sol";
 
 interface IRewarder {
     using SafeERC20 for IERC20;
-
     function onHermesReward(address user, uint256 newLpAmount) external;
-
-    function pendingTokens(address user)
-        external
-        view
-        returns (uint256 pending);
-
+    function pendingTokens(address user)  external view returns (uint256 pending);
     function rewardToken() external view returns (address);
+    function isEmissionValid() external view returns(bool);
 }
 
 interface IHermesToken {
@@ -373,6 +368,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
                 .mul(pool.accHermesPerShare)
                 .div(1e12)
                 .sub(user.rewardDebt);
+            // console.log('pending %s', pending);
             _safeHermesTransfer(msg.sender, pending);
             emit Harvest(msg.sender, _pid, pending);
         }
@@ -382,7 +378,16 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
         IRewarder rewarder = poolInfo[_pid].rewarder;
         if (address(rewarder) != address(0)) {
-            rewarder.onHermesReward(msg.sender, user.amount);
+            //console.log('rewarder.isEmissionValid()', rewarder.isEmissionValid());
+            if( rewarder.isEmissionValid() ){
+                rewarder.onHermesReward(msg.sender, user.amount);
+            }else{
+                //console.log('pool.allocPoint=%d', pool.allocPoint);
+                if(pool.allocPoint > 0 ){
+                    pool.allocPoint = 0;
+                    updatePool(_pid);
+                }
+            }
         }
         if (user.firstDepositBlock > 0) {} else {
             user.firstDepositBlock = block.timestamp;

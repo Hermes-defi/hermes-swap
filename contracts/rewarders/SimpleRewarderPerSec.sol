@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.6.12;
 pragma experimental ABIEncoderV2;
-
+// import "hardhat/console.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
@@ -150,8 +150,7 @@ contract SimpleRewarderPerSec is IRewarder, BoringOwnable, ReentrancyGuard {
 
         if (block.timestamp > pool.lastRewardTimestamp) {
             uint256 lpSupply = lpToken.balanceOf(address(MCJ));
-
-            if (lpSupply > 0) {
+            if (lpSupply > 0 && isEmissionValid() ) {
                 uint256 timeElapsed = block.timestamp.sub(pool.lastRewardTimestamp);
                 uint256 tokenReward = timeElapsed.mul(tokenPerSec);
                 pool.accTokenPerShare = pool.accTokenPerShare.add((tokenReward.mul(ACC_TOKEN_PRECISION) / lpSupply));
@@ -185,15 +184,15 @@ contract SimpleRewarderPerSec is IRewarder, BoringOwnable, ReentrancyGuard {
             pending = (user.amount.mul(pool.accTokenPerShare) / ACC_TOKEN_PRECISION).sub(user.rewardDebt).add(
                 user.unpaidRewards
             );
-
+            // console.log('1 onHermesReward pending', pending, address(this).balance);
             if (isNative) {
                 uint256 balance = address(this).balance;
                 if (pending > balance) {
-                    (bool success, ) = _user.call.value(balance)("");
+                    (bool success, ) = _user.call{value:balance}("");
                     require(success, "Transfer failed");
                     user.unpaidRewards = pending - balance;
                 } else {
-                    (bool success, ) = _user.call.value(pending)("");
+                    (bool success, ) = _user.call{value:pending}("");
                     require(success, "Transfer failed");
                     user.unpaidRewards = 0;
                 }
@@ -224,7 +223,7 @@ contract SimpleRewarderPerSec is IRewarder, BoringOwnable, ReentrancyGuard {
         uint256 accTokenPerShare = pool.accTokenPerShare;
         uint256 lpSupply = lpToken.balanceOf(address(MCJ));
 
-        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0) {
+        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0 && isEmissionValid() ) {
             uint256 timeElapsed = block.timestamp.sub(pool.lastRewardTimestamp);
             uint256 tokenReward = timeElapsed.mul(tokenPerSec);
             accTokenPerShare = accTokenPerShare.add(tokenReward.mul(ACC_TOKEN_PRECISION).div(lpSupply));
@@ -239,7 +238,7 @@ contract SimpleRewarderPerSec is IRewarder, BoringOwnable, ReentrancyGuard {
     /// withdrawal of remaining tokens.
     function emergencyWithdraw() public onlyOwner {
         if (isNative) {
-            (bool success, ) = msg.sender.call.value(address(this).balance)("");
+            (bool success, ) = msg.sender.call{value: address(this).balance}("");
             require(success, "Transfer failed");
         } else {
             rewardToken.safeTransfer(address(msg.sender), rewardToken.balanceOf(address(this)));
@@ -253,6 +252,12 @@ contract SimpleRewarderPerSec is IRewarder, BoringOwnable, ReentrancyGuard {
         } else {
             return rewardToken.balanceOf(address(this));
         }
+    }
+
+    function isEmissionValid() public view returns(bool){
+        if (isNative)
+            return address(this).balance > 0;
+        return rewardToken.balanceOf(address(this)) > 0;
     }
 
     /// @notice payable function needed to receive AVAX

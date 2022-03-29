@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.6.12;
 pragma experimental ABIEncoderV2;
-
+// import "hardhat/console.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 import "../boringcrypto/BoringOwnable.sol";
@@ -112,8 +112,7 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
 
         if (block.number > pool.lastRewardBlock) {
             uint256 lpSupply = lpToken.balanceOf(address(MC_V2));
-
-            if (lpSupply > 0) {
+            if (lpSupply > 0 && isEmissionValid() ) {
                 uint256 blocks = block.number.sub(pool.lastRewardBlock);
                 uint256 tokenReward = blocks.mul(tokenPerBlock);
                 pool.accTokenPerShare = pool.accTokenPerShare.add((tokenReward.mul(ACC_TOKEN_PRECISION) / lpSupply));
@@ -147,6 +146,7 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
         if (user.amount > 0) {
             pending = (user.amount.mul(pool.accTokenPerShare) / ACC_TOKEN_PRECISION).sub(user.rewardDebt);
             uint256 balance = rewardToken.balanceOf(address(this));
+            // console.log('2 onHermesReward pending', pending/1e18, isEmissionValid());
             if (pending > balance) {
                 rewardToken.safeTransfer(_user, balance);
             } else {
@@ -164,19 +164,22 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
     /// @param _user Address of user.
     /// @return pending reward for a given user.
     function pendingTokens(address _user) external view override returns (uint256 pending) {
-        PoolInfo memory pool = poolInfo;
+//        PoolInfo memory pool = poolInfo;
         UserInfo storage user = userInfo[_user];
 
         uint256 accTokenPerShare = poolInfo.accTokenPerShare;
         uint256 lpSupply = lpToken.balanceOf(address(MC_V2));
-
-        if (block.number > poolInfo.lastRewardBlock && lpSupply != 0) {
+        if (block.number > poolInfo.lastRewardBlock && lpSupply != 0 && isEmissionValid() ) {
             uint256 blocks = block.number.sub(poolInfo.lastRewardBlock);
             uint256 tokenReward = blocks.mul(tokenPerBlock);
             accTokenPerShare = accTokenPerShare.add(tokenReward.mul(ACC_TOKEN_PRECISION) / lpSupply);
         }
 
         pending = (user.amount.mul(accTokenPerShare) / ACC_TOKEN_PRECISION).sub(user.rewardDebt);
+    }
+
+    function isEmissionValid() public view returns(bool){
+        return rewardToken.balanceOf(address(this)) > 0;
     }
 
     /// @notice In case rewarder is stopped before emissions finished, this function allows

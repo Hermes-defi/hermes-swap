@@ -1230,6 +1230,52 @@ describe("MasterChefHermesV2", function () {
       expect(bobBalFinal.sub(bobBalAfter)).to.lt(ethers.utils.parseEther("210"))
     })
 
+
+    it("should stop master reward after secondary pool run out of reward", async function () {
+      const bobBalBefore = await this.bob.getBalance()
+      const startTime = (await latest()).add(60)
+      this.chef = await this.MCV2.deploy(
+          this.hermes.address,
+          this.dev.address,
+          this.treasury.address,
+          this.investor.address,
+          this.hermesPerSec,
+          startTime,
+          this.devPercent,
+          this.treasuryPercent,
+          this.investorPercent
+      )
+      await this.chef.deployed() // t-59
+
+      this.rewarderONE = await this.SimpleRewarderPerSec.deploy(
+          this.partnerToken.address, // Use any token
+          this.lp.address,
+          ethers.utils.parseEther("10"),
+          this.chef.address,
+          true
+      )
+      await this.rewarderONE.deployed() // t-58
+
+      await this.alice.sendTransaction({ to: this.rewarderONE.address, value: ethers.utils.parseEther("20") }) // t-57
+
+      await this.hermes.transferOwnership(this.chef.address) // t-56
+
+      await this.chef.add("100", this.lp.address, this.rewarderONE.address) // t-55
+
+      await this.lp.connect(this.bob).approve(this.chef.address, "1000") // t-54
+      await this.chef.connect(this.bob).deposit(0, "100") // t-53
+      // await advanceTimeAndBlock(4) // t-49
+      await this.chef.connect(this.bob).deposit(0, "0") // t-48
+      await this.chef.connect(this.bob).deposit(0, "0") // t-31
+      await this.chef.connect(this.bob).deposit(0, "0") // t-31
+      await this.chef.connect(this.bob).deposit(0, "0") // t-31
+      await this.chef.connect(this.bob).deposit(0, "0") // t-31
+      const poolInfo = await this.chef.poolInfo(0);
+      const allocPoint = poolInfo.allocPoint.toString();
+      expect(allocPoint).to.be.eq('0');
+
+    })
+
     it("should only allow MasterChefHermesV2 to call onHermesReward", async function () {
       const startTime = (await latest()).add(60)
       this.chef = await this.MCV2.deploy(

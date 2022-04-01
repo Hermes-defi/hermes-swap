@@ -77,7 +77,7 @@ describe("Distributor", function () {
         ethers.utils.parseUnits('1000000', 18).toString(),
         '0', '0', this.dev.address, '9647704139')
 
-    const amount = ethers.utils.parseUnits('100', 18).toString();
+    const amount = ethers.utils.parseUnits('100000', 18).toString();
     const path = [this.hermes.address, this.dai.address];
     await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount,'0',path,this.dev.address, '9647704139');
 
@@ -94,11 +94,11 @@ describe("Distributor", function () {
 
     const hrmsdaiBalanceOfMain =  fromWei( (await this.hrmsdai.balanceOf(this.main.address)).toString() );
     console.log('hrmsdaiBalanceOfMain', hrmsdaiBalanceOfMain);
-    await expect(hrmsdaiBalanceOfMain).to.be.eq("0")
+    await expect(hrmsdaiBalanceOfMain).to.be.eq("19.482227428699307951")
 
     // const hrmsdaiBalanceOfDev = (await this.hrmsdai.balanceOf(this.dev.address)).toString();
     // await expect(hrmsdaiBalanceOfDev).to.be.eq("0")
-
+    await this.main.breakLp();
   })
 
   it("check balances", async function () {

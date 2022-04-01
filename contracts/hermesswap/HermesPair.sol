@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity =0.6.12;
-
+import "hardhat/console.sol";
 import "./HermesERC20.sol";
 import "./libraries/Math.sol";
 import "./libraries/UQ112x112.sol";
@@ -113,14 +113,18 @@ contract HermesPair is HermesERC20 {
         address feeTo = IHermesFactory(factory).feeTo();
         feeOn = feeTo != address(0);
         uint256 _kLast = kLast; // gas savings
+        // console.log('feeOn', feeOn);
+        // console.log(' _kLast', _kLast, feeTo);
         if (feeOn) {
             if (_kLast != 0) {
                 uint256 rootK = Math.sqrt(uint256(_reserve0).mul(_reserve1));
                 uint256 rootKLast = Math.sqrt(_kLast);
+                // console.log(' rootK > rootKLast', rootK, rootKLast);
                 if (rootK > rootKLast) {
                     uint256 numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint256 denominator = rootK.mul(5).add(rootKLast);
+                    uint256 denominator = rootK.mul(6).add(rootKLast);
                     uint256 liquidity = numerator / denominator;
+                    console.log(" feeTo", feeTo, liquidity);
                     if (liquidity > 0) _mint(feeTo, liquidity);
                 }
             }
@@ -138,6 +142,7 @@ contract HermesPair is HermesERC20 {
         uint256 amount1 = balance1.sub(_reserve1);
 
         bool feeOn = _mintFee(_reserve0, _reserve1);
+
         uint256 _totalSupply = totalSupply; // gas savings, must be defined here since totalSupply can update in _mintFee
         if (_totalSupply == 0) {
             address migrator = IHermesFactory(factory).migrator();

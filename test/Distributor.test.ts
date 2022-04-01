@@ -51,7 +51,7 @@ describe("Distributor", function () {
 
     const pairCodeHash = await this.factory.pairCodeHash();
     // expect(pairCodeHash).to.be.eq('0x83bc7bb34b67d17e1f2fc8ad5d7a0f8a374a52474546c4ecbfb368acdc0ff2e1');
-    expect(pairCodeHash).to.be.eq('0xe904430f935916413f6aa2bae1e94e125c95246681f88b478047b24443cea87b');
+    expect(pairCodeHash).to.be.eq('0x2b5c1f92763cc808d46f799ed176bc720efdf2600b6b6ba91296a61afd2aa00b');
 
   })
 

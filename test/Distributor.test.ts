@@ -79,6 +79,14 @@ describe("Distributor", function () {
             [this.hermes.address, this.wone.address],
             [this.hermes.address, this.wone.address]);
 
+        await this.main.addNewToken(this.dai.address,
+            [this.dai.address, this.wone.address],
+            [this.dai.address, this.wone.address]);
+
+        await this.main.addNewToken(this.ust.address,
+            [this.ust.address, this.wone.address],
+            [this.ust.address, this.wone.address]);
+
         await this.hermes.approve(this.router.address, ethers.utils.parseUnits('9000000', 18).toString());
         await this.dai.approve(this.router.address, ethers.utils.parseUnits('9000000', 18).toString());
         await this.ust.approve(this.router.address, ethers.utils.parseUnits('9000000', 18).toString());
@@ -88,6 +96,7 @@ describe("Distributor", function () {
         this.router.addLiquidity(
             this.hermes.address, this.dai.address, amount, amount,
             '0', '0', this.dev.address, '9647704139')
+
         this.router.addLiquidity(
             this.hermes.address, this.ust.address, amount, amount,
             '0', '0', this.dev.address, '9647704139')
@@ -100,11 +109,22 @@ describe("Distributor", function () {
             this.ust.address,
             amount, '0', '0', this.dev.address, '9647704139', {value: amount1000})
 
+        this.router.addLiquidityONE(
+            this.dai.address,
+            amount, '0', '0', this.dev.address, '9647704139', {value: amount1000})
+
         const amount1 = ethers.utils.parseUnits('10000', 18).toString();
         const path1 = [this.hermes.address, this.dai.address];
         const path2 = [this.hermes.address, this.wone.address];
+        const path3 = [this.dai.address, this.wone.address];
+        const path4 = [this.ust.address, this.wone.address];
+
+        await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path1, this.dev.address, '9647704139');
+        await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path1, this.dev.address, '9647704139');
         await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path1, this.dev.address, '9647704139');
         await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path2, this.dev.address, '9647704139');
+        await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path3, this.dev.address, '9647704139');
+        await this.router.swapExactTokensForTokensSupportingFeeOnTransferTokens(amount1, '0', path4, this.dev.address, '9647704139');
 
         this.router.addLiquidity(
             this.hermes.address, this.dai.address,
@@ -120,18 +140,18 @@ describe("Distributor", function () {
 
         const hrmsdaiBalanceOfMain = fromWei((await this.hrmsdai.balanceOf(this.main.address)).toString());
         // console.log('hrmsdaiBalanceOfMain', hrmsdaiBalanceOfMain);
-        await expect(hrmsdaiBalanceOfMain).to.be.eq("2.121660991929858591")
+        await expect(hrmsdaiBalanceOfMain).to.be.eq("6.302918283888926182")
 
         await this.main.run();
 
         const xHRMSBalance = (await this.hermes.balanceOf(this.xHRMSAddress.address)).toString();
-        await expect(xHRMSBalance).to.be.eq("532509624773258313")
+        await expect(fromWei(xHRMSBalance)).to.be.eq("3.134072770337029409") // HRMS
 
         const sHRMSBalance = (await this.ust.balanceOf(this.sHRMSAddress.address)).toString();
-        await expect(sHRMSBalance).to.be.eq("522030378254482673")
+        await expect(fromWei(sHRMSBalance)).to.be.eq("3.134032541537077918") // UST
 
         const treasureBalance = (await this.wone.balanceOf(this.treasure.address)).toString();
-        await expect(treasureBalance).to.be.eq("1047202910271497")
+        await expect(fromWei(treasureBalance)).to.be.eq("0.006163250774984714") // WONE
 
     })
 

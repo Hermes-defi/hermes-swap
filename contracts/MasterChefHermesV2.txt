@@ -1118,15 +1118,10 @@ pragma experimental ABIEncoderV2;
 
 interface IRewarder {
     using SafeERC20 for IERC20;
-
     function onHermesReward(address user, uint256 newLpAmount) external;
-
-    function pendingTokens(address user)
-        external
-        view
-        returns (uint256 pending);
-
+    function pendingTokens(address user)  external view returns (uint256 pending);
     function rewardToken() external view returns (address);
+    function isEmissionValid() external view returns(bool);
 }
 
 interface IHermesToken {
@@ -1138,6 +1133,10 @@ interface IHermesToken {
 
     //transfer
     function transfer(address to, uint256 amount) external returns (bool);
+
+    // get status if we can mint
+    function maxCapReached() external view returns (bool);
+
 }
 
 // MasterChefHermes is a boss. He says "go f your blocks lego boy, I'm gonna use timestamp instead".
@@ -1213,6 +1212,11 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     uint256 public totalAllocPoint;
     // The timestamp when HERMES mining starts.
     uint256 public startTimestamp;
+
+    uint256[] public blockDeltaStartStage = [604800, 1209600];
+    uint256[] public blockDeltaEndStage = [1209600];
+    uint256[] public userFeeStage = [99, 998, 9995];
+    uint256[] public devFeeStage = [1, 2, 5];
 
     event Add(
         uint256 indexed pid,
@@ -1364,7 +1368,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         UserInfo storage user = userInfo[_pid][_user];
         uint256 accHermesPerShare = pool.accHermesPerShare;
         uint256 lpSupply = pool.lpToken.balanceOf(address(this));
-        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0) {
+        if (block.timestamp > pool.lastRewardTimestamp && lpSupply != 0 && hermes.maxCapReached() == false ) {
             uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
             uint256 lpPercent = 1000 -
                 devPercent -
@@ -1425,6 +1429,12 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             pool.lastRewardTimestamp = block.timestamp;
             return;
         }
+        if( hermes.maxCapReached() ){
+            // console.log('stop minting if we reached max cap');
+            // stop minting if we reached max cap
+            pool.lastRewardTimestamp = block.timestamp;
+            return;
+        }
         uint256 multiplier = block.timestamp.sub(pool.lastRewardTimestamp);
         uint256 hermesReward = multiplier
             .mul(hermesPerSec)
@@ -1462,19 +1472,9 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
                 .mul(pool.accHermesPerShare)
                 .div(1e12)
                 .sub(user.rewardDebt);
-            safeHermesTransfer(msg.sender, pending);
+            // console.log('pending %s', pending);
+            _safeHermesTransfer(msg.sender, pending);
             emit Harvest(msg.sender, _pid, pending);
-        }
-
-        // wendel: prevent deflationary token exploit
-        if (_amount > 0) {
-            uint256 balanceBefore = pool.lpToken.balanceOf(address(this));
-            pool.lpToken.safeTransferFrom(
-                address(msg.sender),
-                address(this),
-                _amount
-            );
-            _amount = pool.lpToken.balanceOf(address(this)).sub(balanceBefore);
         }
 
         user.amount = user.amount.add(_amount);
@@ -1482,11 +1482,25 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
         IRewarder rewarder = poolInfo[_pid].rewarder;
         if (address(rewarder) != address(0)) {
-            rewarder.onHermesReward(msg.sender, user.amount);
+            //console.log('rewarder.isEmissionValid()', rewarder.isEmissionValid());
+            if( rewarder.isEmissionValid() ){
+                rewarder.onHermesReward(msg.sender, user.amount);
+            }else{
+                //console.log('pool.allocPoint=%d', pool.allocPoint);
+                if(pool.allocPoint > 0 ){
+                    pool.allocPoint = 0;
+                    updatePool(_pid);
+                }
+            }
         }
         if (user.firstDepositBlock > 0) {} else {
             user.firstDepositBlock = block.timestamp;
         }
+        pool.lpToken.safeTransferFrom(
+            address(msg.sender),
+            address(this),
+            _amount
+        );
         emit Deposit(msg.sender, _pid, _amount);
         user.lastDepositBlock = block.number;
     }
@@ -1503,7 +1517,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         uint256 pending = user.amount.mul(pool.accHermesPerShare).div(1e12).sub(
             user.rewardDebt
         );
-        safeHermesTransfer(msg.sender, pending);
+        _safeHermesTransfer(msg.sender, pending);
         emit Harvest(msg.sender, _pid, pending);
 
         user.amount = user.amount.sub(_amount);
@@ -1518,64 +1532,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         // pool.lpToken.safeTransfer(address(msg.sender), _amount);
 
         emit Withdraw(msg.sender, _pid, _amount);
-    }
-
-    /**
-        This function execute withdraw fee logic, the rule for withdraw is:
-        before 1 day = 1% withdraw fee
-        before 1 week = 0.2% withdraw fee
-        before 2 weeks = 0.05% withdraw fee
-    **/
-
-    uint256[] public blockDeltaStartStage = [604800, 1209600];
-    uint256[] public blockDeltaEndStage = [1209600];
-    uint256[] public userFeeStage = [99, 998, 9995];
-    uint256[] public devFeeStage = [1, 2, 5];
-
-    function _withdraw(uint256 _pid, uint256 _amount) internal {
-        if (_amount == 0) return;
-        PoolInfo storage pool = poolInfo[_pid];
-        UserInfo storage user = userInfo[_pid][msg.sender];
-        // get detal, ie how many blocks before last withdraw
-        if (user.lastWithdrawBlock > 0) {
-            user.blockdelta = block.timestamp - user.lastWithdrawBlock;
-        } else {
-            user.blockdelta = block.timestamp - user.firstDepositBlock;
-        }
-
-        if (user.blockdelta <= 604800) {
-            // 1% <= 1 week
-            pool.lpToken.safeTransfer(
-                address(msg.sender),
-                _amount.mul(userFeeStage[0]).div(100)
-            );
-            pool.lpToken.safeTransfer(
-                address(treasuryAddr),
-                _amount.mul(devFeeStage[0]).div(100)
-            );
-        } else if (
-            // 0.2% >= 1 week
-            user.blockdelta >= 604800 && user.blockdelta <= 1209600
-        ) {
-            pool.lpToken.safeTransfer(
-                address(msg.sender),
-                _amount.mul(userFeeStage[1]).div(1000)
-            );
-            pool.lpToken.safeTransfer(
-                address(treasuryAddr),
-                _amount.mul(devFeeStage[1]).div(1000)
-            );
-        } else {
-            pool.lpToken.safeTransfer(
-                address(msg.sender),
-                _amount.mul(userFeeStage[2]).div(10000)
-            );
-            pool.lpToken.safeTransfer(
-                address(treasuryAddr),
-                _amount.mul(devFeeStage[2]).div(10000)
-            );
-        }
-        user.lastWithdrawBlock = block.timestamp;
     }
 
     function userDelta(uint256 _pid, address _user)
@@ -1605,16 +1561,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         pool.lpToken.safeTransfer(address(msg.sender), amountToSend);
         pool.lpToken.safeTransfer(address(treasuryAddr), devToSend);
         emit EmergencyWithdraw(msg.sender, _pid, amountToSend);
-    }
-
-    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMESs.
-    function safeHermesTransfer(address _to, uint256 _amount) internal {
-        uint256 hermesBal = hermes.balanceOf(address(this));
-        if (_amount > hermesBal) {
-            hermes.transfer(_to, hermesBal);
-        } else {
-            hermes.transfer(_to, _amount);
-        }
     }
 
     // Update dev address by the previous dev.
@@ -1672,8 +1618,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         investorPercent = _newInvestorPercent;
     }
 
-    // Pancake has to add hidden dummy pools inorder to alter the emission,
-    // here we make it simple and transparent to all.
+    /// @notice simple and transparent to emission update.
     function updateEmissionRate(uint256 _hermesPerSec) public onlyOwner {
         massUpdatePools();
         hermesPerSec = _hermesPerSec;
@@ -1694,5 +1639,69 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
         devFeeStage = _devFees;
+    }
+
+    /// @dev This function execute withdraw fee logic, the rule for withdraw is:
+    /// before 1 day = 1% withdraw fee
+    /// before 1 week = 0.2% withdraw fee
+    /// before 2 weeks = 0.05% withdraw fee
+
+    function _withdraw(uint256 _pid, uint256 _amount) internal {
+        if (_amount == 0) return;
+        PoolInfo storage pool = poolInfo[_pid];
+        UserInfo storage user = userInfo[_pid][msg.sender];
+        // get detail, ie how many blocks before last withdraw
+        if (user.lastWithdrawBlock > 0) {
+            user.blockdelta = block.timestamp - user.lastWithdrawBlock;
+        } else {
+            user.blockdelta = block.timestamp - user.firstDepositBlock;
+        }
+
+        if (user.blockdelta <= 604800) {
+            // 1% <= 1 week
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[0]).div(100)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.sub(_amount.mul(userFeeStage[0]).div(100))
+            );
+        } else if (
+            // 0.2% >= 1 week
+            user.blockdelta >= 604800 && user.blockdelta <= 1209600
+        ) {
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[1]).div(1000)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.mul(devFeeStage[1]).div(1000)
+            );
+        } else {
+            pool.lpToken.safeTransfer(
+                address(msg.sender),
+                _amount.mul(userFeeStage[2]).div(10000)
+            );
+            pool.lpToken.safeTransfer(
+                address(treasuryAddr),
+                _amount.mul(devFeeStage[2]).div(10000)
+            );
+        }
+        user.lastWithdrawBlock = block.timestamp;
+    }
+
+    event hermesTransfer(address to, uint request, uint sent);
+    // Safe hermes transfer function, just in case if rounding error causes pool to not have enough HERMES.
+    function _safeHermesTransfer(address _to, uint256 _amount) internal {
+        uint256 hermesBal = hermes.balanceOf(address(this));
+        // console.log('HRMS transfer %s %s %s', _to, _amount/1e18, hermesBal/1e18);
+        if (_amount > hermesBal) {
+            emit hermesTransfer(_to, _amount, hermesBal);
+            hermes.transfer(_to, hermesBal);
+        } else {
+            hermes.transfer(_to, _amount);
+        }
     }
 }

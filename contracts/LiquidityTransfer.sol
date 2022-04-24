@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.6.12;
 
-import "hardhat/console.sol";
+// import "hardhat/console.sol";
 import "./hermesswap/interfaces/IHermesERC20.sol";
 import "./hermesswap/interfaces/IHermesPair.sol";
 import "./hermesswap/interfaces/IHermesRouter02.sol";

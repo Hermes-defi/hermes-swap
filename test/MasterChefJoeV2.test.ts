@@ -309,6 +309,12 @@ describe("MasterChefHermesV2", function () {
 
       await this.chef.connect(this.bob).deposit(0, "100")
 
+      await advanceTimeAndBlock(40) // t-11, b=23
+      const userInfo = await this.chef.userInfo(0, this.bob.address);
+      const pendingTokens = await this.chef.pendingTokens('0', this.bob.address);
+      console.log('userInfo', userInfo);
+      console.log('pendingTokens', pendingTokens);
+
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
       await this.chef.connect(this.bob).emergencyWithdraw(0)

@@ -1263,7 +1263,7 @@ pragma solidity >=0.8.0 <0.9.0;
 contract Hermes is
     Ownable,
     ERC20("Hermes", "HRMS"),
-    ERC20Capped(30000000 ether),
+    ERC20Capped(30000000 gwei),
     AccessControl
 {
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");

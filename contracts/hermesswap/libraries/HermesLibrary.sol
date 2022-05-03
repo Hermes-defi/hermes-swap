@@ -30,8 +30,7 @@ library HermesLibrary {
                         hex"ff",
                         factory,
                         keccak256(abi.encodePacked(token0, token1)),
-                        // 940641180a2372e7a7d08779b9f0bad6a0e31179658a16260fcffc13a3af986d
-                        hex"2b5c1f92763cc808d46f799ed176bc720efdf2600b6b6ba91296a61afd2aa00b" // init code fuji
+                        hex"03c9640d9393b1b682a303babdafdc02f951d2fbb496894041dd62c9704a2663" // init code fuji
                     )
                 )
             )

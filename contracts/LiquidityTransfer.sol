@@ -7,18 +7,26 @@ import "./hermesswap/interfaces/IHermesPair.sol";
 import "./hermesswap/interfaces/IHermesRouter02.sol";
 import "./hermesswap/interfaces/IHermesFactory.sol";
 
+import './libraries/Babylonian.sol';
+import './libraries/FullMath.sol';
+import './libraries/SafeMath.sol';
+import './hermesswap/libraries/HermesLibrary.sol';
+
 contract LiquidityTransferService {
+    using SafeMath for uint256;
     IHermesRouter02 public routerSrc;
     IHermesRouter02 public routerDst;
     address public srcPair;
     address public dstPair;
     address public tokenA;
     address public tokenB;
+    uint public slippageBps = 50; // 0.5%
+    address public admin;
     constructor(
         address _routerSrc, address _routerDst,
         address _tokenA, address _tokenB
     ) public {
-
+        admin = msg.sender;
         routerSrc = IHermesRouter02(_routerSrc);
         routerDst = IHermesRouter02(_routerDst);
 
@@ -37,8 +45,13 @@ contract LiquidityTransferService {
     }
 
     event OnRemoveLiquidity(address user, address pair, uint amountA, uint amountB, uint liquidity);
-
     event OnAddLiquidity(address user, address pair, uint amountA, uint amountB, uint liquidity);
+    event onSlippageBps(uint oldPoints, uint newPoints);
+    function setSlippageBps(uint points) external{
+        require(msg.sender == admin, "error, no admin");
+        emit onSlippageBps(slippageBps, points);
+        slippageBps = points;
+    }
 
     function run() external {
 
@@ -51,10 +64,25 @@ contract LiquidityTransferService {
         srcPairCtx.transferFrom(msg.sender, address(this), liquidity);
 
         liquidity = srcPairCtx.balanceOf(address(this));
+
+        (uint256 tokenAAmount, uint256 tokenBAmount) = getLiquidityValue(srcPairCtx,liquidity);
+
         srcPairCtx.approve(address(routerSrc), liquidity);
         (uint amountA, uint amountB) = routerSrc.removeLiquidity(
-            tokenA, tokenB, liquidity,
-            9990, 9990, address(this), block.timestamp + 60);
+                tokenA,
+                tokenB,
+                liquidity,
+                tokenAAmount * (10000 - slippageBps) / 10000,
+                tokenBAmount * (10000 - slippageBps) / 10000,
+                address(this), block.timestamp + 60);
+
+        /*
+        console.log('amountA=%s amountB=%s', amountA, amountB);
+        console.log('tokenAAmount=%s tokenBAmount=%s', tokenAAmount, tokenBAmount);
+        console.log('tokenAAmount=%s tokenBAmount=%s',
+            tokenAAmount * (10000 - slippageBps) / 10000,
+            tokenBAmount * (10000 - slippageBps) / 10000);
+        */
 
         emit OnRemoveLiquidity(msg.sender, srcPair, amountA, amountB, liquidity);
 
@@ -68,10 +96,48 @@ contract LiquidityTransferService {
         tokenBCtx.approve(address(routerDst), amountB);
 
         (uint _amountA, uint _amountB, uint _liquidity) =
-        routerDst.addLiquidity(tokenA, tokenB, amountA, amountB, 0, 0, msg.sender, block.timestamp + 60);
+        routerDst.addLiquidity(tokenA, tokenB,
+            amountA,
+            amountB,
+            amountA * (10000 - slippageBps) / 10000,
+            amountB * (10000 - slippageBps) / 10000,
+            msg.sender, block.timestamp + 60);
 
         emit OnAddLiquidity(msg.sender, srcPair, _amountA, _amountB, _liquidity);
 
     }
 
+    function getLiquidityValue(
+        IHermesPair pair,
+        uint256 liquidityAmount
+    ) internal view returns (uint256 tokenAAmount, uint256 tokenBAmount) {
+        (uint256 reservesA, uint256 reservesB) = HermesLibrary.getReserves(routerSrc.factory(), pair.token0(), pair.token1());
+        bool feeOn = IHermesFactory(routerSrc.factory()).feeTo() != address(0);
+        uint kLast = feeOn ? pair.kLast() : 0;
+        uint totalSupply = pair.totalSupply();
+        return computeLiquidityValue(reservesA, reservesB, totalSupply, liquidityAmount, feeOn, kLast);
+    }
+
+    // computes liquidity value given all the parameters of the pair
+    function computeLiquidityValue(
+        uint256 reservesA,
+        uint256 reservesB,
+        uint256 totalSupply,
+        uint256 liquidityAmount,
+        bool feeOn,
+        uint kLast
+    ) internal pure returns (uint256 tokenAAmount, uint256 tokenBAmount) {
+        if (feeOn && kLast > 0) {
+            uint rootK = Babylonian.sqrt(reservesA.mul(reservesB));
+            uint rootKLast = Babylonian.sqrt(kLast);
+            if (rootK > rootKLast) {
+                uint numerator1 = totalSupply;
+                uint numerator2 = rootK.sub(rootKLast);
+                uint denominator = rootK.mul(5).add(rootKLast);
+                uint feeLiquidity = FullMath.mulDiv(numerator1, numerator2, denominator);
+                totalSupply = totalSupply.add(feeLiquidity);
+            }
+        }
+        return (reservesA.mul(liquidityAmount) / totalSupply, reservesB.mul(liquidityAmount) / totalSupply);
+    }
 }

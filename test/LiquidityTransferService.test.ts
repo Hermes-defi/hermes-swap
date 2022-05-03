@@ -31,7 +31,7 @@ describe("LiquidityTransfer", function () {
         await this.routerB.deployed()
 
         const pairCodeHash = await this.factoryA.pairCodeHash();
-        expect(pairCodeHash).to.be.eq('0x83bc7bb34b67d17e1f2fc8ad5d7a0f8a374a52474546c4ecbfb368acdc0ff2e1');
+        expect(pairCodeHash).to.be.eq('0x03c9640d9393b1b682a303babdafdc02f951d2fbb496894041dd62c9704a2663');
 
     })
 

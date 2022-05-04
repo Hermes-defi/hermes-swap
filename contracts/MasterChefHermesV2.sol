@@ -260,7 +260,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     // View function to see pending HERMESs on frontend.
     function pendingTokens(uint256 _pid, address _user)
-        external
+        external validatePoolByPid(_pid)
         view
         returns (
             uint256 pendingHermes,
@@ -305,6 +305,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     // Get bonus token info from the rewarder contract for a given pool, if it is a double reward farm
     function rewarderBonusTokenInfo(uint256 _pid)
         public
+        validatePoolByPid(_pid)
         view
         returns (address bonusTokenAddress, string memory bonusTokenSymbol)
     {
@@ -324,7 +325,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // Update reward variables of the given pool to be up-to-date.
-    function updatePool(uint256 _pid) public {
+    function updatePool(uint256 _pid) public validatePoolByPid(_pid) {
         PoolInfo storage pool = poolInfo[_pid];
         if (block.timestamp <= pool.lastRewardTimestamp) {
             return;
@@ -366,7 +367,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // Deposit LP tokens to MasterChef for HERMES allocation.
-    function deposit(uint256 _pid, uint256 _amount) external nonReentrant {
+    function deposit(uint256 _pid, uint256 _amount) external nonReentrant validatePoolByPid(_pid) {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         updatePool(_pid);
@@ -414,7 +415,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // Withdraw LP tokens from MasterChef.
-    function withdraw(uint256 _pid, uint256 _amount) external nonReentrant {
+    function withdraw(uint256 _pid, uint256 _amount) external nonReentrant validatePoolByPid(_pid) {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         require(user.amount >= _amount, "withdraw: not good");
@@ -444,6 +445,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     function userDelta(uint256 _pid, address _user)
         public
+        validatePoolByPid(_pid)
         view
         returns (uint256)
     {
@@ -458,7 +460,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     }
 
     // Withdraw without caring about rewards. EMERGENCY ONLY. This has the same 1% fee as same block withdrawals to prevent abuse of this function.
-    function emergencyWithdraw(uint256 _pid) public {
+    function emergencyWithdraw(uint256 _pid) public validatePoolByPid(_pid) {
         PoolInfo storage pool = poolInfo[_pid];
         UserInfo storage user = userInfo[_pid][msg.sender];
         //reordered from Sushi function to prevent risk of reentrancy

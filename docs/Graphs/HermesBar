@@ -1,0 +1,533 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="603pt" height="2453pt" viewBox="0.00 0.00 602.91 2453.00">
+<g id="graph0" class="graph" transform="translate(4,2449) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-2449 598.91,-2449 598.91,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIERC20">
+
+<path fill="#445773" stroke="#445773" d="M228.2,-1050C228.2,-1050 343.1,-1050 343.1,-1050 349.1,-1050 355.1,-1056 355.1,-1062 355.1,-1062 355.1,-1385 355.1,-1385 355.1,-1391 349.1,-1397 343.1,-1397 343.1,-1397 228.2,-1397 228.2,-1397 222.2,-1397 216.2,-1391 216.2,-1385 216.2,-1385 216.2,-1062 216.2,-1062 216.2,-1056 222.2,-1050 228.2,-1050" style=""/>
+<text text-anchor="middle" x="285.65" y="-1380.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterContext">
+
+<path fill="#445773" stroke="#445773" d="M47.32,-1598C47.32,-1598 156.88,-1598 156.88,-1598 162.88,-1598 168.88,-1604 168.88,-1610 168.88,-1610 168.88,-1717 168.88,-1717 168.88,-1723 162.88,-1729 156.88,-1729 156.88,-1729 47.32,-1729 47.32,-1729 41.32,-1729 35.32,-1723 35.32,-1717 35.32,-1717 35.32,-1610 35.32,-1610 35.32,-1604 41.32,-1598 47.32,-1598" style=""/>
+<text text-anchor="middle" x="102.1" y="-1712.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Context</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-147C20,-147 574.91,-147 574.91,-147 580.91,-147 586.91,-153 586.91,-159 586.91,-159 586.91,-860 586.91,-860 586.91,-866 580.91,-872 574.91,-872 574.91,-872 20,-872 20,-872 14,-872 8,-866 8,-860 8,-860 8,-159 8,-159 8,-153 14,-147 20,-147" style=""/>
+<text text-anchor="middle" x="297.45" y="-855.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ERC20</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterSafeMath">
+
+<path fill="#445773" stroke="#445773" d="M64.09,-1737C64.09,-1737 141.11,-1737 141.11,-1737 147.11,-1737 153.11,-1743 153.11,-1749 153.11,-1749 153.11,-2288 153.11,-2288 153.11,-2294 147.11,-2300 141.11,-2300 141.11,-2300 64.09,-2300 64.09,-2300 58.09,-2300 52.09,-2294 52.09,-2288 52.09,-2288 52.09,-1749 52.09,-1749 52.09,-1743 58.09,-1737 64.09,-1737" style=""/>
+<text text-anchor="middle" x="102.6" y="-2283.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SafeMath  (lib)</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterHermesBar">
+
+<path fill="#445773" stroke="#445773" d="M38.57,-1405C38.57,-1405 337.22,-1405 337.22,-1405 343.22,-1405 349.22,-1411 349.22,-1417 349.22,-1417 349.22,-1578 349.22,-1578 349.22,-1584 343.22,-1590 337.22,-1590 337.22,-1590 38.57,-1590 38.57,-1590 32.57,-1590 26.57,-1584 26.57,-1578 26.57,-1578 26.57,-1417 26.57,-1417 26.57,-1411 32.57,-1405 38.57,-1405" style=""/>
+<text text-anchor="middle" x="187.9" y="-1573.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesBar</text>
+</g>
+<g id="clust6" class="cluster" data-name="cluster_totalSupply">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M450.01,-8C450.01,-8 513.01,-8 513.01,-8 519.01,-8 525.01,-14 525.01,-20 525.01,-20 525.01,-127 525.01,-127 525.01,-133 519.01,-139 513.01,-139 513.01,-139 450.01,-139 450.01,-139 444.01,-139 438.01,-133 438.01,-127 438.01,-127 438.01,-20 438.01,-20 438.01,-14 444.01,-8 450.01,-8" style=""/>
+<text text-anchor="middle" x="481.51" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">_totalSupply</text>
+</g>
+<g id="clust7" class="cluster" data-name="cluster_amount">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M262.65,-965C262.65,-965 308.65,-965 308.65,-965 314.65,-965 320.65,-971 320.65,-977 320.65,-977 320.65,-1030 320.65,-1030 320.65,-1036 314.65,-1042 308.65,-1042 308.65,-1042 262.65,-1042 262.65,-1042 256.65,-1042 250.65,-1036 250.65,-1030 250.65,-1030 250.65,-977 250.65,-977 250.65,-971 256.65,-965 262.65,-965" style=""/>
+<text text-anchor="middle" x="285.65" y="-1025.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">_amount</text>
+</g>
+<g id="clust8" class="cluster" data-name="cluster_share">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M262.65,-880C262.65,-880 308.65,-880 308.65,-880 314.65,-880 320.65,-886 320.65,-892 320.65,-892 320.65,-945 320.65,-945 320.65,-951 314.65,-957 308.65,-957 308.65,-957 262.65,-957 262.65,-957 256.65,-957 250.65,-951 250.65,-945 250.65,-945 250.65,-892 250.65,-892 250.65,-886 256.65,-880 262.65,-880" style=""/>
+<text text-anchor="middle" x="285.65" y="-940.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">_share</text>
+</g>
+<g id="clust9" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="29.1,-2308 29.1,-2437 320.65,-2437 320.65,-2308 29.1,-2308" style=""/>
+<text text-anchor="middle" x="174.88" y="-2420.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IERC20.totalSupply -->
+<g id="node1" class="node" pointer-events="visible" data-name="IERC20.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="285.65" cy="-1346" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1341.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IERC20.balanceOf -->
+<g id="node2" class="node" pointer-events="visible" data-name="IERC20.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-1238" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1233.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IERC20.transfer -->
+<g id="node3" class="node" pointer-events="visible" data-name="IERC20.transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-1292" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1287.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IERC20.allowance -->
+<g id="node4" class="node" pointer-events="visible" data-name="IERC20.allowance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="285.65" cy="-1184" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1179.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IERC20.approve -->
+<g id="node5" class="node" pointer-events="visible" data-name="IERC20.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="285.65" cy="-1130" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1125.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- IERC20.transferFrom -->
+<g id="node6" class="node" pointer-events="visible" data-name="IERC20.transferFrom">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-1076" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1071.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- Context._msgSender -->
+<g id="node7" class="node" pointer-events="visible" data-name="Context._msgSender">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1678" rx="58.56" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1673.8" font-family="Times,serif" font-size="14.00" style="">_msgSender</text>
+</g>
+<!-- Context._msgData -->
+<g id="node8" class="node" pointer-events="visible" data-name="Context._msgData">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1624" rx="50.39" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1619.8" font-family="Times,serif" font-size="14.00" style="">_msgData</text>
+</g>
+<!-- ERC20.&lt;Constructor&gt; -->
+<g id="node9" class="node" pointer-events="visible" data-name="ERC20.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-821" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-816.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- ERC20.name -->
+<g id="node10" class="node" pointer-events="visible" data-name="ERC20.name">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-767" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-762.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- ERC20.symbol -->
+<g id="node11" class="node" pointer-events="visible" data-name="ERC20.symbol">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-713" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-708.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- ERC20.decimals -->
+<g id="node12" class="node" pointer-events="visible" data-name="ERC20.decimals">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-659" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-654.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- ERC20.totalSupply -->
+<g id="node13" class="node" pointer-events="visible" data-name="ERC20.totalSupply">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-605" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-600.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- ERC20.balanceOf -->
+<g id="node14" class="node" pointer-events="visible" data-name="ERC20.balanceOf">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-551" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-546.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- ERC20.transfer -->
+<g id="node15" class="node" pointer-events="visible" data-name="ERC20.transfer">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-497" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-492.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- ERC20._transfer -->
+<g id="node21" class="node" pointer-events="visible" data-name="ERC20._transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-497" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-492.8" font-family="Times,serif" font-size="14.00" style="">_transfer</text>
+</g>
+<!-- ERC20.transfer&#45;&gt;ERC20._transfer -->
+<g id="edge1" class="edge" data-name="ERC20.transfer-&gt;ERC20._transfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M142.94,-497C168.51,-497 202.04,-497 230.07,-497" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="230.12,-500.5 240.12,-497 230.12,-493.5 230.12,-500.5" style=""/>
+</g>
+<!-- ERC20._msgSender -->
+<g id="node27" class="node" pointer-events="visible" data-name="ERC20._msgSender">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-335" rx="58.56" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-330.8" font-family="Times,serif" font-size="14.00" style="">_msgSender</text>
+</g>
+<!-- ERC20.transfer&#45;&gt;ERC20._msgSender -->
+<g id="edge2" class="edge" data-name="ERC20.transfer-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M140.26,-490.67C156.12,-486.66 174.16,-480.21 188.2,-470 227.09,-441.72 256.27,-392.92 271.87,-362.38" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="275.14,-363.67 276.45,-353.16 268.87,-360.56 275.14,-363.67" style=""/>
+</g>
+<!-- ERC20.allowance -->
+<g id="node16" class="node" pointer-events="visible" data-name="ERC20.allowance">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-443" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-438.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- ERC20.approve -->
+<g id="node17" class="node" pointer-events="visible" data-name="ERC20.approve">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-227" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-222.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- ERC20._approve -->
+<g id="node24" class="node" pointer-events="visible" data-name="ERC20._approve">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-281" rx="46.93" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-276.8" font-family="Times,serif" font-size="14.00" style="">_approve</text>
+</g>
+<!-- ERC20.approve&#45;&gt;ERC20._approve -->
+<g id="edge3" class="edge" data-name="ERC20.approve-&gt;ERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M137.25,-237.16C165.8,-245.65 206.78,-257.84 238.29,-267.21" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="237.58,-270.65 248.16,-270.15 239.58,-263.94 237.58,-270.65" style=""/>
+</g>
+<!-- ERC20.approve&#45;&gt;ERC20._msgSender -->
+<g id="edge4" class="edge" data-name="ERC20.approve-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M142.27,-232.72C157.93,-236.61 175.28,-243.12 188.2,-254 208.88,-271.41 196.13,-289.89 216.2,-308 220.87,-312.21 226.27,-315.8 231.95,-318.85" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="230.52,-322.05 241.05,-323.22 233.55,-315.74 230.52,-322.05" style=""/>
+</g>
+<!-- ERC20.transferFrom -->
+<g id="node18" class="node" pointer-events="visible" data-name="ERC20.transferFrom">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-389" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-384.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- ERC20.transferFrom&#45;&gt;ERC20._transfer -->
+<g id="edge5" class="edge" data-name="ERC20.transferFrom-&gt;ERC20._transfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M150.39,-400.41C163.08,-404.42 176.52,-409.58 188.2,-416 215.86,-431.22 243,-455.03 261.41,-472.91" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="259.17,-475.62 268.74,-480.16 264.09,-470.64 259.17,-475.62" style=""/>
+</g>
+<!-- ERC20.transferFrom&#45;&gt;ERC20._approve -->
+<g id="edge6" class="edge" data-name="ERC20.transferFrom-&gt;ERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M155.01,-379.59C166.85,-375.62 178.71,-369.99 188.2,-362 208.88,-344.59 196.13,-326.11 216.2,-308 222.13,-302.64 229.26,-298.29 236.64,-294.78" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="238.22,-297.9 246.04,-290.76 235.47,-291.47 238.22,-297.9" style=""/>
+</g>
+<!-- ERC20.transferFrom&#45;&gt;ERC20._msgSender -->
+<g id="edge7" class="edge" data-name="ERC20.transferFrom-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M135.98,-373.88C160.58,-365.15 194.92,-354.59 224.41,-346.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.45,-349.86 234.2,-343.89 223.63,-343.1 225.45,-349.86" style=""/>
+</g>
+<!-- ERC20.transferFrom&#45;&gt;ERC20._msgSender -->
+<g id="edge8" class="edge" data-name="ERC20.transferFrom-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M155.12,-379.7C182.91,-372.32 216.65,-362.15 242.73,-353.26" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="244.02,-356.52 252.32,-349.93 241.72,-349.91 244.02,-356.52" style=""/>
+</g>
+<!-- ERC20.increaseAllowance -->
+<g id="node19" class="node" pointer-events="visible" data-name="ERC20.increaseAllowance">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-335" rx="84.49" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-330.8" font-family="Times,serif" font-size="14.00" style="">increaseAllowance</text>
+</g>
+<!-- ERC20.increaseAllowance&#45;&gt;ERC20._approve -->
+<g id="edge9" class="edge" data-name="ERC20.increaseAllowance-&gt;ERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M152.23,-320.39C179.05,-312.41 212.06,-302.59 238.41,-294.75" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="239.57,-298.06 248.16,-291.85 237.57,-291.35 239.57,-298.06" style=""/>
+</g>
+<!-- ERC20.increaseAllowance&#45;&gt;ERC20._msgSender -->
+<g id="edge10" class="edge" data-name="ERC20.increaseAllowance-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M180.62,-328.31C193.85,-328.19 207.47,-328.25 220.31,-328.51" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="220.34,-332.01 230.42,-328.76 220.51,-325.01 220.34,-332.01" style=""/>
+</g>
+<!-- ERC20.increaseAllowance&#45;&gt;ERC20._msgSender -->
+<g id="edge11" class="edge" data-name="ERC20.increaseAllowance-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M180.62,-341.69C193.85,-341.81 207.47,-341.75 220.31,-341.49" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="220.51,-344.99 230.42,-341.24 220.34,-337.99 220.51,-344.99" style=""/>
+</g>
+<!-- ERC20.decreaseAllowance -->
+<g id="node20" class="node" pointer-events="visible" data-name="ERC20.decreaseAllowance">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-281" rx="86.2" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-276.8" font-family="Times,serif" font-size="14.00" style="">decreaseAllowance</text>
+</g>
+<!-- ERC20.decreaseAllowance&#45;&gt;ERC20._approve -->
+<g id="edge12" class="edge" data-name="ERC20.decreaseAllowance-&gt;ERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M188.29,-281C201.83,-281 215.52,-281 228.18,-281" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="228.54,-284.5 238.54,-281 228.54,-277.5 228.54,-284.5" style=""/>
+</g>
+<!-- ERC20.decreaseAllowance&#45;&gt;ERC20._msgSender -->
+<g id="edge13" class="edge" data-name="ERC20.decreaseAllowance-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M165.83,-293.2C191.19,-300.2 219.78,-308.92 242.56,-316.68" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="241.67,-320.08 252.27,-320.06 243.97,-313.47 241.67,-320.08" style=""/>
+</g>
+<!-- ERC20.decreaseAllowance&#45;&gt;ERC20._msgSender -->
+<g id="edge14" class="edge" data-name="ERC20.decreaseAllowance-&gt;ERC20._msgSender">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139.4,-297.32C163.75,-305.82 196.39,-315.82 224.56,-323.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="223.75,-326.93 234.32,-326.14 225.57,-320.17 223.75,-326.93" style=""/>
+</g>
+<!-- ERC20._beforeTokenTransfer -->
+<g id="node26" class="node" pointer-events="visible" data-name="ERC20._beforeTokenTransfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="481.01" cy="-659" rx="97.8" ry="18" style=""/>
+<text text-anchor="middle" x="481.01" y="-654.8" font-family="Times,serif" font-size="14.00" style="">_beforeTokenTransfer</text>
+</g>
+<!-- ERC20._transfer&#45;&gt;ERC20._beforeTokenTransfer -->
+<g id="edge15" class="edge" data-name="ERC20._transfer-&gt;ERC20._beforeTokenTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M305.9,-513.13C339.95,-541.65 410.97,-601.16 450.99,-634.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="448.88,-637.49 458.79,-641.23 453.37,-632.12 448.88,-637.49" style=""/>
+</g>
+<!-- ERC20._mint -->
+<g id="node22" class="node" pointer-events="visible" data-name="ERC20._mint">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="285.65" cy="-659" rx="33.64" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-654.8" font-family="Times,serif" font-size="14.00" style="">_mint</text>
+</g>
+<!-- ERC20._mint&#45;&gt;ERC20._beforeTokenTransfer -->
+<g id="edge16" class="edge" data-name="ERC20._mint-&gt;ERC20._beforeTokenTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M319.45,-659C334.5,-659 353.28,-659 372.65,-659" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="372.81,-662.5 382.81,-659 372.81,-655.5 372.81,-662.5" style=""/>
+</g>
+<!-- _totalSupply.add -->
+<g id="node42" class="node" pointer-events="visible" data-name="_totalSupply.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="481.01" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="481.01" y="-29.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- ERC20._mint&#45;&gt;_totalSupply.add -->
+<g id="edge17" class="edge" data-name="ERC20._mint-&gt;_totalSupply.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M298.16,-642.03C314.23,-617.31 342.79,-569.4 355.1,-524 368.59,-474.26 350.71,-101.08 383.1,-61 397.47,-43.22 422.48,-36.57 443.49,-34.3" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="444.03,-37.77 453.73,-33.5 443.48,-30.79 444.03,-37.77" style=""/>
+</g>
+<!-- ERC20._burn -->
+<g id="node23" class="node" pointer-events="visible" data-name="ERC20._burn">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="285.65" cy="-713" rx="33.63" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-708.8" font-family="Times,serif" font-size="14.00" style="">_burn</text>
+</g>
+<!-- ERC20._burn&#45;&gt;ERC20._beforeTokenTransfer -->
+<g id="edge18" class="edge" data-name="ERC20._burn-&gt;ERC20._beforeTokenTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M316.02,-704.8C342.56,-697.39 382.53,-686.22 416.36,-676.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="417.5,-680.09 426.19,-674.03 415.61,-673.35 417.5,-680.09" style=""/>
+</g>
+<!-- _totalSupply.sub -->
+<g id="node43" class="node" pointer-events="visible" data-name="_totalSupply.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="481.01" cy="-88" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="481.01" y="-83.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- ERC20._burn&#45;&gt;_totalSupply.sub -->
+<g id="edge19" class="edge" data-name="ERC20._burn-&gt;_totalSupply.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M318.27,-708.31C331.84,-704.59 346.53,-697.93 355.1,-686 425.63,-587.89 319.64,-245.82 383.1,-143 397.11,-120.3 424.14,-106.1 446.1,-97.83" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="447.49,-101.05 455.77,-94.43 445.18,-94.44 447.49,-101.05" style=""/>
+</g>
+<!-- ERC20._setupDecimals -->
+<g id="node25" class="node" pointer-events="visible" data-name="ERC20._setupDecimals">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-173" rx="72.94" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-168.8" font-family="Times,serif" font-size="14.00" style="">_setupDecimals</text>
+</g>
+<!-- SafeMath.tryAdd -->
+<g id="node28" class="node" pointer-events="visible" data-name="SafeMath.tryAdd">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-2249" rx="38.29" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-2244.8" font-family="Times,serif" font-size="14.00" style="">tryAdd</text>
+</g>
+<!-- SafeMath.trySub -->
+<g id="node29" class="node" pointer-events="visible" data-name="SafeMath.trySub">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-2195" rx="36.58" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-2190.8" font-family="Times,serif" font-size="14.00" style="">trySub</text>
+</g>
+<!-- SafeMath.tryMul -->
+<g id="node30" class="node" pointer-events="visible" data-name="SafeMath.tryMul">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-2141" rx="37.72" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-2136.8" font-family="Times,serif" font-size="14.00" style="">tryMul</text>
+</g>
+<!-- SafeMath.tryDiv -->
+<g id="node31" class="node" pointer-events="visible" data-name="SafeMath.tryDiv">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-2087" rx="36.5" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-2082.8" font-family="Times,serif" font-size="14.00" style="">tryDiv</text>
+</g>
+<!-- SafeMath.tryMod -->
+<g id="node32" class="node" pointer-events="visible" data-name="SafeMath.tryMod">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-2033" rx="40.01" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-2028.8" font-family="Times,serif" font-size="14.00" style="">tryMod</text>
+</g>
+<!-- SafeMath.add -->
+<g id="node33" class="node" pointer-events="visible" data-name="SafeMath.add">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1979" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1974.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SafeMath.sub -->
+<g id="node34" class="node" pointer-events="visible" data-name="SafeMath.sub">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1925" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1920.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- SafeMath.mul -->
+<g id="node35" class="node" pointer-events="visible" data-name="SafeMath.mul">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1871" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1866.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- SafeMath.div -->
+<g id="node36" class="node" pointer-events="visible" data-name="SafeMath.div">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1817" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1812.8" font-family="Times,serif" font-size="14.00" style="">div</text>
+</g>
+<!-- SafeMath.mod -->
+<g id="node37" class="node" pointer-events="visible" data-name="SafeMath.mod">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="102.1" cy="-1763" rx="28.41" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1758.8" font-family="Times,serif" font-size="14.00" style="">mod</text>
+</g>
+<!-- HermesBar.&lt;Constructor&gt; -->
+<g id="node38" class="node" pointer-events="visible" data-name="HermesBar.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-1539" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1534.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- HermesBar.enter -->
+<g id="node39" class="node" pointer-events="visible" data-name="HermesBar.enter">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-1431" rx="30.17" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1426.8" font-family="Times,serif" font-size="14.00" style="">enter</text>
+</g>
+<!-- HermesBar.enter&#45;&gt;IERC20.balanceOf -->
+<g id="edge20" class="edge" data-name="HermesBar.enter-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M110.61,-1413.68C125.84,-1380.41 163.48,-1307.13 216.2,-1265 222.03,-1260.34 228.77,-1256.4 235.69,-1253.09" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="237.4,-1256.17 245.18,-1248.97 234.62,-1249.75 237.4,-1256.17" style=""/>
+</g>
+<!-- HermesBar.enter&#45;&gt;IERC20.transferFrom -->
+<g id="edge25" class="edge" data-name="HermesBar.enter-&gt;IERC20.transferFrom">
+
+<path fill="none" stroke="white" stroke-width="2" d="M104.21,-1412.67C108.47,-1358.1 128.31,-1194.81 216.2,-1103 220.06,-1098.96 224.61,-1095.52 229.48,-1092.58" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="231.32,-1095.57 238.55,-1087.82 228.07,-1089.37 231.32,-1095.57" style=""/>
+</g>
+<!-- HermesBar.enter&#45;&gt;ERC20._mint -->
+<g id="edge22" class="edge" data-name="HermesBar.enter-&gt;ERC20._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M105.43,-1412.9C115.47,-1342.38 155.95,-1081.48 188.2,-867 194.54,-824.8 189.67,-710.43 216.2,-677 222.94,-668.51 232.73,-662.68 242.82,-659.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="243.89,-662.34 252.48,-656.13 241.9,-655.63 243.89,-662.34" style=""/>
+</g>
+<!-- HermesBar.enter&#45;&gt;ERC20._mint -->
+<g id="edge24" class="edge" data-name="HermesBar.enter-&gt;ERC20._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M106.47,-1412.95C118.01,-1344.01 156.97,-1092.74 188.2,-885 194.54,-842.8 189.67,-728.43 216.2,-695 224.47,-684.58 237.34,-678.17 249.7,-673.62" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="251.06,-676.86 259.41,-670.34 248.81,-670.23 251.06,-676.86" style=""/>
+</g>
+<!-- HermesBar.totalSupply -->
+<g id="node41" class="node" pointer-events="visible" data-name="HermesBar.totalSupply">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-1458" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-1453.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- HermesBar.enter&#45;&gt;HermesBar.totalSupply -->
+<g id="edge21" class="edge" data-name="HermesBar.enter-&gt;HermesBar.totalSupply">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M131.87,-1435.28C156.77,-1438.98 193.59,-1444.46 224.85,-1449.11" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="224.38,-1452.57 234.78,-1450.58 225.41,-1445.65 224.38,-1452.57" style=""/>
+</g>
+<!-- _amount.mul -->
+<g id="node44" class="node" pointer-events="visible" data-name="_amount.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-991" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-986.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesBar.enter&#45;&gt;_amount.mul -->
+<g id="edge23" class="edge" data-name="HermesBar.enter-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M104.58,-1412.91C110.07,-1354.82 133.47,-1169.6 216.2,-1046 226.35,-1030.83 241.99,-1017.81 255.76,-1008.26" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="258.05,-1010.93 264.45,-1002.49 254.19,-1005.1 258.05,-1010.93" style=""/>
+</g>
+<!-- HermesBar.leave -->
+<g id="node40" class="node" pointer-events="visible" data-name="HermesBar.leave">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="102.1" cy="-1485" rx="31.31" ry="18" style=""/>
+<text text-anchor="middle" x="102.1" y="-1480.8" font-family="Times,serif" font-size="14.00" style="">leave</text>
+</g>
+<!-- HermesBar.leave&#45;&gt;IERC20.balanceOf -->
+<g id="edge28" class="edge" data-name="HermesBar.leave-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M133.5,-1483.24C152.07,-1480.49 174.76,-1473.83 188.2,-1458 244.29,-1391.92 162.4,-1332.96 216.2,-1265 220.57,-1259.48 226.23,-1255.09 232.42,-1251.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="234.29,-1254.57 241.78,-1247.08 231.25,-1248.27 234.29,-1254.57" style=""/>
+</g>
+<!-- HermesBar.leave&#45;&gt;IERC20.transfer -->
+<g id="edge30" class="edge" data-name="HermesBar.leave-&gt;IERC20.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M133.62,-1482.92C152,-1480.03 174.43,-1473.35 188.2,-1458 230.28,-1411.09 175.75,-1367.32 216.2,-1319 222.16,-1311.88 230.26,-1306.62 238.79,-1302.75" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="240.13,-1305.99 248.15,-1299.07 237.57,-1299.47 240.13,-1305.99" style=""/>
+</g>
+<!-- HermesBar.leave&#45;&gt;ERC20._burn -->
+<g id="edge29" class="edge" data-name="HermesBar.leave-&gt;ERC20._burn">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M133.61,-1483.72C152.47,-1481.19 175.44,-1474.58 188.2,-1458 227.68,-1406.69 201.89,-939.14 216.2,-876 227.63,-825.54 253.69,-770.86 270.15,-739.4" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="273.33,-740.88 274.93,-730.41 267.14,-737.6 273.33,-740.88" style=""/>
+</g>
+<!-- HermesBar.leave&#45;&gt;HermesBar.totalSupply -->
+<g id="edge26" class="edge" data-name="HermesBar.leave-&gt;HermesBar.totalSupply">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M132.67,-1480.6C157.5,-1476.91 193.75,-1471.52 224.63,-1466.93" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.49,-1470.34 234.87,-1465.4 224.46,-1463.41 225.49,-1470.34" style=""/>
+</g>
+<!-- _share.mul -->
+<g id="node45" class="node" pointer-events="visible" data-name="_share.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="285.65" cy="-906" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="285.65" y="-901.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesBar.leave&#45;&gt;_share.mul -->
+<g id="edge27" class="edge" data-name="HermesBar.leave-&gt;_share.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M133.56,-1483.69C152.41,-1481.14 175.37,-1474.53 188.2,-1458 256.01,-1370.61 165.6,-1059.37 216.2,-961 224.69,-944.5 240.58,-931.25 254.92,-921.9" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="256.88,-924.8 263.57,-916.58 253.21,-918.84 256.88,-924.8" style=""/>
+</g>
+<!-- key -->
+<g id="node46" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="167.1,-2404 37.1,-2404 37.1,-2316 167.1,-2316 167.1,-2404" style=""/>
+<text text-anchor="start" x="86.74" y="-2385.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="82.85" y="-2365.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="60.3" y="-2345.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="46.7" y="-2325.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node47" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="312.65,-2404 258.65,-2404 258.65,-2316 312.65,-2316 312.65,-2404" style=""/>
+<text text-anchor="start" x="275.65" y="-2385.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="275.65" y="-2365.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="273.65,-2340 273.65,-2360 298.65,-2360 298.65,-2340 273.65,-2340" style=""/>
+<text text-anchor="start" x="275.65" y="-2345.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="275.65,-2322 275.65,-2338 296.65,-2338 296.65,-2322 275.65,-2322" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge31" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M160.1,-2390C206.61,-2390 220.68,-2390 262.63,-2390" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="262.65,-2393.5 272.65,-2390 262.65,-2386.5 262.65,-2393.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge32" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M160.1,-2370C206.61,-2370 220.68,-2370 262.63,-2370" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="262.65,-2373.5 272.65,-2370 262.65,-2366.5 262.65,-2373.5" style=""/>
+</g>
+</g>
+</svg>

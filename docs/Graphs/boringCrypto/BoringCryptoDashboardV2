@@ -1,0 +1,524 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="663pt" height="2341pt" viewBox="0.00 0.00 663.20 2341.00">
+<g id="graph0" class="graph" transform="translate(4,2337) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-2337 659.2,-2337 659.2,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIERC20">
+
+<path fill="#445773" stroke="#445773" d="M324.36,-8C324.36,-8 439.26,-8 439.26,-8 445.26,-8 451.26,-14 451.26,-20 451.26,-20 451.26,-613 451.26,-613 451.26,-619 445.26,-625 439.26,-625 439.26,-625 324.36,-625 324.36,-625 318.36,-625 312.36,-619 312.36,-613 312.36,-613 312.36,-20 312.36,-20 312.36,-14 318.36,-8 324.36,-8" style=""/>
+<text text-anchor="middle" x="381.81" y="-608.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterBoringERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-633C20,-633 464.47,-633 464.47,-633 470.47,-633 476.47,-639 476.47,-645 476.47,-645 476.47,-914 476.47,-914 476.47,-920 470.47,-926 464.47,-926 464.47,-926 20,-926 20,-926 14,-926 8,-920 8,-914 8,-914 8,-645 8,-645 8,-639 14,-633 20,-633" style=""/>
+<text text-anchor="middle" x="242.24" y="-909.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoringERC20  (lib)</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterIMasterChef">
+
+<path fill="#445773" stroke="#445773" d="M279.81,-1324C279.81,-1324 483.81,-1324 483.81,-1324 489.81,-1324 495.81,-1330 495.81,-1336 495.81,-1336 495.81,-1929 495.81,-1929 495.81,-1935 489.81,-1941 483.81,-1941 483.81,-1941 279.81,-1941 279.81,-1941 273.81,-1941 267.81,-1935 267.81,-1929 267.81,-1929 267.81,-1336 267.81,-1336 267.81,-1330 273.81,-1324 279.81,-1324" style=""/>
+<text text-anchor="middle" x="381.81" y="-1924.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IMasterChef  (iface)</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterIPair">
+
+<path fill="#445773" stroke="#445773" d="M527.81,-948C527.81,-948 635.2,-948 635.2,-948 641.2,-948 647.2,-954 647.2,-960 647.2,-960 647.2,-1283 647.2,-1283 647.2,-1289 641.2,-1295 635.2,-1295 635.2,-1295 527.81,-1295 527.81,-1295 521.81,-1295 515.81,-1289 515.81,-1283 515.81,-1283 515.81,-960 515.81,-960 515.81,-954 521.81,-948 527.81,-948" style=""/>
+<text text-anchor="middle" x="581.5" y="-1278.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IPair  (iface)</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterBoringCryptoDashboardV2">
+
+<path fill="#445773" stroke="#445773" d="M74.19,-1949C74.19,-1949 621.25,-1949 621.25,-1949 627.25,-1949 633.25,-1955 633.25,-1961 633.25,-1961 633.25,-2176 633.25,-2176 633.25,-2182 627.25,-2188 621.25,-2188 621.25,-2188 74.19,-2188 74.19,-2188 68.19,-2188 62.19,-2182 62.19,-2176 62.19,-2176 62.19,-1961 62.19,-1961 62.19,-1955 68.19,-1949 74.19,-1949" style=""/>
+<text text-anchor="middle" x="347.72" y="-2171.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoringCryptoDashboardV2</text>
+</g>
+<g id="clust6" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="54.91,-2196 54.91,-2325 416.81,-2325 416.81,-2196 54.91,-2196" style=""/>
+<text text-anchor="middle" x="235.86" y="-2308.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IERC20.name -->
+<g id="node1" class="node" pointer-events="visible" data-name="IERC20.name">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-574" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-569.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- IERC20.symbol -->
+<g id="node2" class="node" pointer-events="visible" data-name="IERC20.symbol">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-520" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-515.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- IERC20.decimals -->
+<g id="node3" class="node" pointer-events="visible" data-name="IERC20.decimals">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-466" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-461.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- IERC20.totalSupply -->
+<g id="node4" class="node" pointer-events="visible" data-name="IERC20.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-412" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-407.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IERC20.balanceOf -->
+<g id="node5" class="node" pointer-events="visible" data-name="IERC20.balanceOf">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-358" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-353.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IERC20.transfer -->
+<g id="node6" class="node" pointer-events="visible" data-name="IERC20.transfer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-304" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-299.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IERC20.allowance -->
+<g id="node7" class="node" pointer-events="visible" data-name="IERC20.allowance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-250" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-245.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IERC20.approve -->
+<g id="node8" class="node" pointer-events="visible" data-name="IERC20.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-196" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-191.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- IERC20.transferFrom -->
+<g id="node9" class="node" pointer-events="visible" data-name="IERC20.transferFrom">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-142" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-137.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- IERC20.owner -->
+<g id="node10" class="node" pointer-events="visible" data-name="IERC20.owner">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-88" rx="35.34" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-83.8" font-family="Times,serif" font-size="14.00" style="">owner</text>
+</g>
+<!-- IERC20.staticcall -->
+<g id="node11" class="node" pointer-events="visible" data-name="IERC20.staticcall">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-34" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-29.8" font-family="Times,serif" font-size="14.00" style="">staticcall</text>
+</g>
+<!-- BoringERC20.returnDataToString -->
+<g id="node12" class="node" pointer-events="visible" data-name="BoringERC20.returnDataToString">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-848" rx="86.82" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-843.8" font-family="Times,serif" font-size="14.00" style="">returnDataToString</text>
+</g>
+<!-- BoringERC20.symbol -->
+<g id="node13" class="node" pointer-events="visible" data-name="BoringERC20.symbol">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="127.91" cy="-821" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-816.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- BoringERC20.symbol&#45;&gt;IERC20.staticcall -->
+<g id="edge1" class="edge" data-name="BoringERC20.symbol-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M167.38,-822.55C192.08,-821.28 222.63,-815.02 239.81,-794 291.38,-730.89 216.11,-124 267.81,-61 281.95,-43.77 304.94,-36.39 326.5,-33.55" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="327,-37.02 336.6,-32.53 326.29,-30.06 327,-37.02" style=""/>
+</g>
+<!-- BoringERC20.symbol&#45;&gt;BoringERC20.returnDataToString -->
+<g id="edge2" class="edge" data-name="BoringERC20.symbol-&gt;BoringERC20.returnDataToString">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M166.62,-825.04C200.3,-828.65 250.89,-834.08 294.46,-838.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.18,-842.23 304.5,-839.82 294.93,-835.27 294.18,-842.23" style=""/>
+</g>
+<!-- BoringERC20.name -->
+<g id="node14" class="node" pointer-events="visible" data-name="BoringERC20.name">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="127.91" cy="-875" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-870.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- BoringERC20.name&#45;&gt;IERC20.staticcall -->
+<g id="edge3" class="edge" data-name="BoringERC20.name-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M159.78,-876.81C185.49,-876.46 220.85,-871.27 239.81,-848 295.09,-780.17 212.39,-128.71 267.81,-61 281.93,-43.75 304.91,-36.36 326.48,-33.54" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="326.98,-37 336.58,-32.52 326.27,-30.04 326.98,-37" style=""/>
+</g>
+<!-- BoringERC20.name&#45;&gt;BoringERC20.returnDataToString -->
+<g id="edge4" class="edge" data-name="BoringERC20.name-&gt;BoringERC20.returnDataToString">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M159.79,-871.69C193.15,-868.11 247.76,-862.26 294.36,-857.27" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="294.9,-860.73 304.47,-856.18 294.16,-853.77 294.9,-860.73" style=""/>
+</g>
+<!-- BoringERC20.decimals -->
+<g id="node15" class="node" pointer-events="visible" data-name="BoringERC20.decimals">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="127.91" cy="-767" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-762.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- BoringERC20.decimals&#45;&gt;IERC20.staticcall -->
+<g id="edge5" class="edge" data-name="BoringERC20.decimals-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M173.41,-768.12C196.87,-766.15 223.98,-759.31 239.81,-740 287.68,-681.6 219.82,-119.3 267.81,-61 281.92,-43.86 304.79,-36.47 326.27,-33.61" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="326.75,-37.08 336.33,-32.57 326.03,-30.12 326.75,-37.08" style=""/>
+</g>
+<!-- BoringERC20.DOMAIN_SEPARATOR -->
+<g id="node16" class="node" pointer-events="visible" data-name="BoringERC20.DOMAIN_SEPARATOR">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="127.91" cy="-713" rx="111.81" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-708.8" font-family="Times,serif" font-size="14.00" style="">DOMAIN_SEPARATOR</text>
+</g>
+<!-- BoringERC20.nonces -->
+<g id="node17" class="node" pointer-events="visible" data-name="BoringERC20.nonces">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="127.91" cy="-659" rx="37.71" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-654.8" font-family="Times,serif" font-size="14.00" style="">nonces</text>
+</g>
+<!-- IMasterChef.BONUS_MULTIPLIER -->
+<g id="node18" class="node" pointer-events="visible" data-name="IMasterChef.BONUS_MULTIPLIER">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1890" rx="106" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1885.8" font-family="Times,serif" font-size="14.00" style="">BONUS_MULTIPLIER</text>
+</g>
+<!-- IMasterChef.devaddr -->
+<g id="node19" class="node" pointer-events="visible" data-name="IMasterChef.devaddr">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1836" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1831.8" font-family="Times,serif" font-size="14.00" style="">devaddr</text>
+</g>
+<!-- IMasterChef.owner -->
+<g id="node20" class="node" pointer-events="visible" data-name="IMasterChef.owner">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1782" rx="35.34" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1777.8" font-family="Times,serif" font-size="14.00" style="">owner</text>
+</g>
+<!-- IMasterChef.startTimestamp -->
+<g id="node21" class="node" pointer-events="visible" data-name="IMasterChef.startTimestamp">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1728" rx="71.22" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1723.8" font-family="Times,serif" font-size="14.00" style="">startTimestamp</text>
+</g>
+<!-- IMasterChef.hermes -->
+<g id="node22" class="node" pointer-events="visible" data-name="IMasterChef.hermes">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1674" rx="38.85" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1669.8" font-family="Times,serif" font-size="14.00" style="">hermes</text>
+</g>
+<!-- IMasterChef.hermesPerSec -->
+<g id="node23" class="node" pointer-events="visible" data-name="IMasterChef.hermesPerSec">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="381.81" cy="-1620" rx="65.98" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1615.8" font-family="Times,serif" font-size="14.00" style="">hermesPerSec</text>
+</g>
+<!-- IMasterChef.totalAllocPoint -->
+<g id="node24" class="node" pointer-events="visible" data-name="IMasterChef.totalAllocPoint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-1512" rx="70.1" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1507.8" font-family="Times,serif" font-size="14.00" style="">totalAllocPoint</text>
+</g>
+<!-- IMasterChef.poolLength -->
+<g id="node25" class="node" pointer-events="visible" data-name="IMasterChef.poolLength">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-1404" rx="55.62" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1399.8" font-family="Times,serif" font-size="14.00" style="">poolLength</text>
+</g>
+<!-- IMasterChef.poolInfo -->
+<g id="node26" class="node" pointer-events="visible" data-name="IMasterChef.poolInfo">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-1458" rx="44.09" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1453.8" font-family="Times,serif" font-size="14.00" style="">poolInfo</text>
+</g>
+<!-- IMasterChef.userInfo -->
+<g id="node27" class="node" pointer-events="visible" data-name="IMasterChef.userInfo">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-1566" rx="43.43" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1561.8" font-family="Times,serif" font-size="14.00" style="">userInfo</text>
+</g>
+<!-- IMasterChef.pendingTokens -->
+<g id="node28" class="node" pointer-events="visible" data-name="IMasterChef.pendingTokens">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="381.81" cy="-1350" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1345.8" font-family="Times,serif" font-size="14.00" style="">pendingTokens</text>
+</g>
+<!-- IPair.token0 -->
+<g id="node29" class="node" pointer-events="visible" data-name="IPair.token0">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-1190" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1185.8" font-family="Times,serif" font-size="14.00" style="">token0</text>
+</g>
+<!-- IPair.token1 -->
+<g id="node30" class="node" pointer-events="visible" data-name="IPair.token1">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-1136" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1131.8" font-family="Times,serif" font-size="14.00" style="">token1</text>
+</g>
+<!-- IPair.getReserves -->
+<g id="node31" class="node" pointer-events="visible" data-name="IPair.getReserves">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-1244" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1239.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- IPair.balanceOf -->
+<g id="node32" class="node" pointer-events="visible" data-name="IPair.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-1082" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1077.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IPair.allowance -->
+<g id="node33" class="node" pointer-events="visible" data-name="IPair.allowance">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-1028" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1023.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IPair.totalSupply -->
+<g id="node34" class="node" pointer-events="visible" data-name="IPair.totalSupply">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-974" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-969.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- BoringCryptoDashboardV2.getPairsFull -->
+<g id="node35" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.getPairsFull">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="127.91" cy="-2137" rx="57.93" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-2132.8" font-family="Times,serif" font-size="14.00" style="">getPairsFull</text>
+</g>
+<!-- BoringCryptoDashboardV2.&lt;Constructor&gt; -->
+<g id="node36" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="381.81" cy="-2029" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-2024.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- BoringCryptoDashboardV2.IFactory -->
+<g id="node41" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.IFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="581.5" cy="-2002" rx="43.5" ry="18" style=""/>
+<text text-anchor="middle" x="581.5" y="-1997.8" font-family="Times,serif" font-size="14.00" style="">IFactory</text>
+</g>
+<!-- BoringCryptoDashboardV2.&lt;Constructor&gt;&#45;&gt;BoringCryptoDashboardV2.IFactory -->
+<g id="edge6" class="edge" data-name="BoringCryptoDashboardV2.&lt;Constructor&gt;-&gt;BoringCryptoDashboardV2.IFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M430.92,-2016.54C460.06,-2011.48 497.26,-2006.33 527.28,-2003.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="527.97,-2006.65 537.57,-2002.18 527.28,-1999.69 527.97,-2006.65" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.&lt;Constructor&gt;&#45;&gt;BoringCryptoDashboardV2.IFactory -->
+<g id="edge7" class="edge" data-name="BoringCryptoDashboardV2.&lt;Constructor&gt;-&gt;BoringCryptoDashboardV2.IFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M448.64,-2026.41C476.97,-2023.16 509.39,-2018.53 535,-2014" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="535.96,-2017.38 545.17,-2012.14 534.7,-2010.5 535.96,-2017.38" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getPools -->
+<g id="node37" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.getPools">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="127.91" cy="-2029" rx="44.11" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-2024.8" font-family="Times,serif" font-size="14.00" style="">getPools</text>
+</g>
+<!-- BoringCryptoDashboardV2.getPools&#45;&gt;IMasterChef.totalAllocPoint -->
+<g id="edge8" class="edge" data-name="BoringCryptoDashboardV2.getPools-&gt;IMasterChef.totalAllocPoint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.16,-2030.1C195.82,-2028.21 223.55,-2021.46 239.81,-2002 305.92,-1922.91 201.54,-1617.95 267.81,-1539 276.79,-1528.31 289.17,-1521.43 302.45,-1517.07" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="303.57,-1520.39 312.26,-1514.33 301.68,-1513.65 303.57,-1520.39" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getPools&#45;&gt;IMasterChef.poolLength -->
+<g id="edge9" class="edge" data-name="BoringCryptoDashboardV2.getPools-&gt;IMasterChef.poolLength">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.24,-2030.17C195.93,-2028.31 223.66,-2021.56 239.81,-2002 320.73,-1904.06 186.69,-1528.77 267.81,-1431 279.71,-1416.66 297.74,-1409.15 315.92,-1405.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="316.73,-1408.83 326,-1403.71 315.56,-1401.93 316.73,-1408.83" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getPools&#45;&gt;IMasterChef.poolInfo -->
+<g id="edge10" class="edge" data-name="BoringCryptoDashboardV2.getPools-&gt;IMasterChef.poolInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.21,-2030.14C195.88,-2028.26 223.61,-2021.51 239.81,-2002 313.32,-1913.49 194.12,-1573.36 267.81,-1485 282.26,-1467.68 305.63,-1460.34 327.39,-1457.57" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="327.95,-1461.03 337.56,-1456.57 327.27,-1454.06 327.95,-1461.03" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getPools&#45;&gt;IPair.token0 -->
+<g id="edge11" class="edge" data-name="BoringCryptoDashboardV2.getPools-&gt;IPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.31,-2030.22C196.03,-2028.38 223.75,-2021.63 239.81,-2002 289.94,-1940.72 219.88,-1353.01 267.81,-1290 330.83,-1207.16 463.07,-1191.62 533.7,-1189.52" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="534.15,-1193.01 544.07,-1189.29 533.99,-1186.01 534.15,-1193.01" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getPools&#45;&gt;IPair.token1 -->
+<g id="edge12" class="edge" data-name="BoringCryptoDashboardV2.getPools-&gt;IPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.35,-2030.26C196.08,-2028.43 223.8,-2021.68 239.81,-2002 297.76,-1930.77 205.98,-1243.89 267.81,-1176 285.44,-1156.65 451.36,-1143.88 534.08,-1138.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="534.45,-1142.15 544.22,-1138.04 534.02,-1135.16 534.45,-1142.15" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.findPools -->
+<g id="node38" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.findPools">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="127.91" cy="-2083" rx="48.12" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-2078.8" font-family="Times,serif" font-size="14.00" style="">findPools</text>
+</g>
+<!-- BoringCryptoDashboardV2.findPools&#45;&gt;IMasterChef.poolInfo -->
+<g id="edge15" class="edge" data-name="BoringCryptoDashboardV2.findPools-&gt;IMasterChef.poolInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M176.16,-2083.82C198.93,-2081.53 224.54,-2074.49 239.81,-2056 320.73,-1958.06 186.69,-1582.77 267.81,-1485 282.21,-1467.65 305.58,-1460.3 327.35,-1457.53" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="327.91,-1460.99 337.52,-1456.54 327.23,-1454.03 327.91,-1460.99" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.findPools&#45;&gt;IMasterChef.userInfo -->
+<g id="edge13" class="edge" data-name="BoringCryptoDashboardV2.findPools-&gt;IMasterChef.userInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M172.44,-2076.19C196.04,-2073.16 223.61,-2066.39 239.81,-2047 305.92,-1967.91 201.54,-1662.95 267.81,-1584 283.85,-1564.89 310.77,-1557.94 334.32,-1556.88" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="334.54,-1560.38 344.5,-1556.78 334.46,-1553.38 334.54,-1560.38" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.findPools&#45;&gt;IMasterChef.userInfo -->
+<g id="edge14" class="edge" data-name="BoringCryptoDashboardV2.findPools-&gt;IMasterChef.userInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M169.68,-2092.03C193.86,-2091.67 222.97,-2085.15 239.81,-2065 305.92,-1985.91 201.54,-1680.95 267.81,-1602 283.05,-1583.85 308.11,-1576.67 330.76,-1573.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="331.47,-1576.79 340.95,-1572.07 330.59,-1569.84 331.47,-1576.79" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.findPools&#45;&gt;IPair.token0 -->
+<g id="edge16" class="edge" data-name="BoringCryptoDashboardV2.findPools-&gt;IPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M175.96,-2083.91C198.82,-2081.67 224.58,-2074.65 239.81,-2056 291.59,-1992.62 217.28,-1384.37 267.81,-1320 332.88,-1237.12 414.01,-1321.42 495.81,-1255 510.62,-1242.97 501.73,-1229.88 515.81,-1217 522.46,-1210.91 530.69,-1206.09 539.01,-1202.3" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="540.46,-1205.49 548.38,-1198.46 537.8,-1199.02 540.46,-1205.49" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.findPools&#45;&gt;IPair.token1 -->
+<g id="edge17" class="edge" data-name="BoringCryptoDashboardV2.findPools-&gt;IPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M175.99,-2083.93C198.86,-2081.7 224.61,-2074.67 239.81,-2056 296.32,-1986.6 214.65,-1323 267.81,-1251 331.51,-1164.73 396.15,-1211.6 495.81,-1172 504.87,-1168.4 506.87,-1166.88 515.81,-1163 524.58,-1159.2 534.07,-1155.18 543,-1151.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="544.52,-1154.6 552.41,-1147.53 541.83,-1148.14 544.52,-1154.6" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate -->
+<g id="node39" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.getONERate">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="381.81" cy="-1975" rx="60.26" ry="18" style=""/>
+<text text-anchor="middle" x="381.81" y="-1970.8" font-family="Times,serif" font-size="14.00" style="">getONERate</text>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;IPair.token0 -->
+<g id="edge22" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;IPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M434.71,-1966.2C457.05,-1962.22 481.33,-1954.3 495.81,-1936 546.02,-1872.54 470.02,-1274.72 515.81,-1208 520.46,-1201.23 527.15,-1196.15 534.49,-1192.51" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="536.07,-1195.64 544.03,-1188.64 533.44,-1189.15 536.07,-1195.64" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;IPair.token0 -->
+<g id="edge23" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;IPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M437.04,-1982.3C458.73,-1979.65 481.83,-1971.67 495.81,-1954 546.02,-1890.54 470.02,-1292.72 515.81,-1226 522.47,-1216.3 533.32,-1210.07 544.26,-1205.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="545.62,-1208.83 553.78,-1202.07 543.19,-1202.26 545.62,-1208.83" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;IPair.getReserves -->
+<g id="edge20" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;IPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M433.66,-1965.62C455.92,-1961.52 480.43,-1953.69 495.81,-1936 540.41,-1884.71 571.3,-1396.06 578.76,-1272.29" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="582.27,-1272.29 579.37,-1262.1 575.28,-1271.87 582.27,-1272.29" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;IPair.getReserves -->
+<g id="edge21" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;IPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M438.31,-1981.38C459.27,-1978.39 481.49,-1970.46 495.81,-1954 541.14,-1901.87 572.31,-1397.97 579.11,-1272.23" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="582.6,-1272.39 579.64,-1262.21 575.61,-1272.02 582.6,-1272.39" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;BoringCryptoDashboardV2.IFactory -->
+<g id="edge18" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;BoringCryptoDashboardV2.IFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M442.12,-1976.86C471.88,-1980.12 507.35,-1985.11 534.93,-1989.99" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="534.62,-1993.49 545.08,-1991.84 535.88,-1986.6 534.62,-1993.49" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.getONERate&#45;&gt;BoringCryptoDashboardV2.IFactory -->
+<g id="edge19" class="edge" data-name="BoringCryptoDashboardV2.getONERate-&gt;BoringCryptoDashboardV2.IFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M427.67,-1986.89C457.25,-1992.14 496.13,-1997.55 527.28,-2000.8" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="527.22,-2004.31 537.52,-2001.81 527.91,-1997.34 527.22,-2004.31" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools -->
+<g id="node40" class="node" pointer-events="visible" data-name="BoringCryptoDashboardV2.pollPools">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="127.91" cy="-1975" rx="47.56" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1970.8" font-family="Times,serif" font-size="14.00" style="">pollPools</text>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IMasterChef.poolInfo -->
+<g id="edge26" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IMasterChef.poolInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M131.57,-1956.89C143.71,-1876.57 196.42,-1553.47 267.81,-1485 283.64,-1469.82 306.4,-1462.67 327.35,-1459.46" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="327.97,-1462.9 337.45,-1458.18 327.09,-1455.96 327.97,-1462.9" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IMasterChef.userInfo -->
+<g id="edge24" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IMasterChef.userInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M129.71,-1956.94C133.47,-1895.72 154.32,-1694.22 267.81,-1593 284.31,-1578.29 307.38,-1571.23 328.38,-1567.96" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="329.02,-1571.4 338.49,-1566.64 328.12,-1564.46 329.02,-1571.4" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IMasterChef.pendingTokens -->
+<g id="edge25" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IMasterChef.pendingTokens">
+
+<path fill="none" stroke="white" stroke-width="2" d="M130.57,-1957.02C139.28,-1866.63 182.54,-1462.81 267.81,-1377 277.48,-1367.27 289.98,-1360.81 303.13,-1356.56" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="304.12,-1359.92 312.79,-1353.84 302.22,-1353.18 304.12,-1359.92" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.token0 -->
+<g id="edge32" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M129.57,-1956.93C133.76,-1853.84 159.86,-1341.05 267.81,-1237 340.04,-1167.39 468.46,-1173.21 536.07,-1182.24" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="535.98,-1185.76 546.37,-1183.7 536.97,-1178.83 535.98,-1185.76" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.token1 -->
+<g id="edge34" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M129.22,-1956.73C131.51,-1847.74 149.04,-1284.23 267.81,-1172 340.77,-1103.07 470,-1114.52 537.2,-1126.49" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="536.96,-1130.01 547.43,-1128.4 538.25,-1123.13 536.96,-1130.01" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.getReserves -->
+<g id="edge35" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M130.19,-1956.93C137.35,-1861.33 175.4,-1415.18 267.81,-1320 331.98,-1253.91 443.22,-1241.43 514.26,-1240.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="514.44,-1244.41 524.44,-1240.92 514.44,-1237.41 514.44,-1244.41" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.balanceOf -->
+<g id="edge27" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M128.95,-1956.83C129.59,-1842.45 138.92,-1225.27 267.81,-1104 340.94,-1035.2 470.54,-1049.3 537.62,-1066.01" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="536.88,-1069.43 547.44,-1068.59 538.66,-1062.66 536.88,-1069.43" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.balanceOf -->
+<g id="edge29" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M128.98,-1956.67C129.88,-1843.37 140.71,-1241.58 267.81,-1122 335.88,-1057.96 452.89,-1065.75 522.85,-1075.21" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="522.42,-1078.69 532.81,-1076.61 523.4,-1071.76 522.42,-1078.69" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.allowance -->
+<g id="edge28" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.allowance">
+
+<path fill="none" stroke="white" stroke-width="2" d="M128.75,-1956.82C128.15,-1839.03 131.06,-1184.69 267.81,-1056 338.22,-989.74 461.2,-1001.86 530.08,-1015.56" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="529.74,-1019.06 540.25,-1017.67 531.17,-1012.21 529.74,-1019.06" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;IPair.totalSupply -->
+<g id="edge30" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;IPair.totalSupply">
+
+<path fill="none" stroke="white" stroke-width="2" d="M128.57,-1956.9C126.72,-1835.22 122.59,-1136.96 267.81,-1000 337.41,-934.37 458.67,-946.54 527.96,-960.67" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="527.28,-964.1 537.79,-962.75 528.74,-957.25 527.28,-964.1" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;BoringCryptoDashboardV2.getONERate -->
+<g id="edge31" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;BoringCryptoDashboardV2.getONERate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M173.36,-1969.71C212.41,-1968.05 269.77,-1967.81 314.29,-1968.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="314.34,-1972.47 324.44,-1969.26 314.55,-1965.47 314.34,-1972.47" style=""/>
+</g>
+<!-- BoringCryptoDashboardV2.pollPools&#45;&gt;BoringCryptoDashboardV2.getONERate -->
+<g id="edge33" class="edge" data-name="BoringCryptoDashboardV2.pollPools-&gt;BoringCryptoDashboardV2.getONERate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M173.36,-1980.29C212.41,-1981.95 269.77,-1982.19 314.29,-1981.03" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="314.55,-1984.53 324.44,-1980.74 314.34,-1977.53 314.55,-1984.53" style=""/>
+</g>
+<!-- key -->
+<g id="node42" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="192.91,-2292 62.91,-2292 62.91,-2204 192.91,-2204 192.91,-2292" style=""/>
+<text text-anchor="start" x="112.54" y="-2273.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="108.65" y="-2253.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="86.11" y="-2233.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="72.51" y="-2213.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node43" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="408.81,-2292 354.81,-2292 354.81,-2204 408.81,-2204 408.81,-2292" style=""/>
+<text text-anchor="start" x="371.81" y="-2273.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="371.81" y="-2253.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="369.81,-2228 369.81,-2248 394.81,-2248 394.81,-2228 369.81,-2228" style=""/>
+<text text-anchor="start" x="371.81" y="-2233.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="371.81,-2210 371.81,-2226 392.81,-2226 392.81,-2210 371.81,-2210" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge36" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M185.91,-2278C263.7,-2278 285.66,-2278 358.66,-2278" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="358.81,-2281.5 368.81,-2278 358.81,-2274.5 358.81,-2281.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge37" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M185.91,-2258C263.7,-2258 285.66,-2258 358.66,-2258" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="358.81,-2261.5 368.81,-2258 358.81,-2254.5 358.81,-2261.5" style=""/>
+</g>
+</g>
+</svg>

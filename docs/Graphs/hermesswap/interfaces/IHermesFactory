@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268pt" height="616pt" viewBox="0.00 0.00 267.92 616.00">
+<g id="graph0" class="graph" transform="translate(4,612) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-612 263.92,-612 263.92,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIHermesFactory">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 149.92,-8 149.92,-8 155.92,-8 161.92,-14 161.92,-20 161.92,-20 161.92,-451 161.92,-451 161.92,-457 155.92,-463 149.92,-463 149.92,-463 20,-463 20,-463 14,-463 8,-457 8,-451 8,-451 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="84.96" y="-446.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesFactory  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="11.96,-471 11.96,-600 251.92,-600 251.92,-471 11.96,-471" style=""/>
+<text text-anchor="middle" x="131.94" y="-583.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IHermesFactory.feeTo -->
+<g id="node1" class="node" pointer-events="visible" data-name="IHermesFactory.feeTo">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-412" rx="33.6" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-407.8" font-family="Times,serif" font-size="14.00" style="">feeTo</text>
+</g>
+<!-- IHermesFactory.feeToSetter -->
+<g id="node2" class="node" pointer-events="visible" data-name="IHermesFactory.feeToSetter">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-358" rx="56.15" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-353.8" font-family="Times,serif" font-size="14.00" style="">feeToSetter</text>
+</g>
+<!-- IHermesFactory.getPair -->
+<g id="node3" class="node" pointer-events="visible" data-name="IHermesFactory.getPair">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-304" rx="38.28" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-299.8" font-family="Times,serif" font-size="14.00" style="">getPair</text>
+</g>
+<!-- IHermesFactory.allPairs -->
+<g id="node4" class="node" pointer-events="visible" data-name="IHermesFactory.allPairs">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-250" rx="40.01" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-245.8" font-family="Times,serif" font-size="14.00" style="">allPairs</text>
+</g>
+<!-- IHermesFactory.allPairsLength -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesFactory.allPairsLength">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-196" rx="67.21" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-191.8" font-family="Times,serif" font-size="14.00" style="">allPairsLength</text>
+</g>
+<!-- IHermesFactory.createPair -->
+<g id="node6" class="node" pointer-events="visible" data-name="IHermesFactory.createPair">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-142" rx="49.77" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-137.8" font-family="Times,serif" font-size="14.00" style="">createPair</text>
+</g>
+<!-- IHermesFactory.setFeeTo -->
+<g id="node7" class="node" pointer-events="visible" data-name="IHermesFactory.setFeeTo">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-88" rx="46.37" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-83.8" font-family="Times,serif" font-size="14.00" style="">setFeeTo</text>
+</g>
+<!-- IHermesFactory.setFeeToSetter -->
+<g id="node8" class="node" pointer-events="visible" data-name="IHermesFactory.setFeeToSetter">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-34" rx="68.92" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-29.8" font-family="Times,serif" font-size="14.00" style="">setFeeToSetter</text>
+</g>
+<!-- key -->
+<g id="node9" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="149.96,-567 19.96,-567 19.96,-479 149.96,-479 149.96,-567" style=""/>
+<text text-anchor="start" x="69.6" y="-548.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="65.71" y="-528.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="43.16" y="-508.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="29.56" y="-488.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node10" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="243.92,-567 189.92,-567 189.92,-479 243.92,-479 243.92,-567" style=""/>
+<text text-anchor="start" x="206.92" y="-548.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="206.92" y="-528.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="204.92,-503 204.92,-523 229.92,-523 229.92,-503 204.92,-503" style=""/>
+<text text-anchor="start" x="206.92" y="-508.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="206.92,-485 206.92,-501 227.92,-501 227.92,-485 206.92,-485" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M142.96,-553C166.35,-553 174.59,-553 193.84,-553" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="193.92,-556.5 203.92,-553 193.92,-549.5 193.92,-556.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M142.96,-533C166.35,-533 174.59,-533 193.84,-533" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="193.92,-536.5 203.92,-533 193.92,-529.5 193.92,-536.5" style=""/>
+</g>
+</g>
+</svg>

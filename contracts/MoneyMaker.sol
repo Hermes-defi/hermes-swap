@@ -56,6 +56,10 @@ contract MoneyMaker is Ownable {
         uint256 amountTOKEN
     );
 
+    event OnAddAuth(address indexed _auth);    
+    event OnRevokeAuth(address indexed _auth);    
+    event OnAnyAuthChanged(bool indexed access);
+
     /// @notice Constructor
     /// @param _factory The address of HermesFactory
     /// @param _bar The address of HermesBar
@@ -81,12 +85,14 @@ contract MoneyMaker is Ownable {
     function addAuth(address _auth) external onlyOwner {
         isAuth[_auth] = true;
         authorized.push(_auth);
+        emit OnAddAuth(_auth);
     }
 
     /// @notice Remove a user of authorized addresses
     /// @param _auth The address to remove
     function revokeAuth(address _auth) external onlyOwner {
         isAuth[_auth] = false;
+        emit OnRevokeAuth(_auth);
     }
 
     /// @notice Setting anyAuth to true allows anyone to call functions protected by onlyAuth
@@ -94,6 +100,7 @@ contract MoneyMaker is Ownable {
     /// addresses
     function setAnyAuth(bool access) external onlyOwner {
         anyAuth = access;
+        emit OnAnyAuthChanged(access);
     }
 
     /// @notice Force using `pair/bridge` pair to convert `token`

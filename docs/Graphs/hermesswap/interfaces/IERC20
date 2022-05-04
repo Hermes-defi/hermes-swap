@@ -1,0 +1,102 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="265pt" height="670pt" viewBox="0.00 0.00 265.00 670.00">
+<g id="graph0" class="graph" transform="translate(4,666) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-666 261,-666 261,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIERC20Hermes">
+
+<path fill="#445773" stroke="#445773" d="M18.55,-8C18.55,-8 143.45,-8 143.45,-8 149.45,-8 155.45,-14 155.45,-20 155.45,-20 155.45,-505 155.45,-505 155.45,-511 149.45,-517 143.45,-517 143.45,-517 18.55,-517 18.55,-517 12.55,-517 6.55,-511 6.55,-505 6.55,-505 6.55,-20 6.55,-20 6.55,-14 12.55,-8 18.55,-8" style=""/>
+<text text-anchor="middle" x="81" y="-500.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20Hermes  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-525 8,-654 249,-654 249,-525 8,-525" style=""/>
+<text text-anchor="middle" x="128.5" y="-637.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IERC20Hermes.name -->
+<g id="node1" class="node" pointer-events="visible" data-name="IERC20Hermes.name">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-466" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-461.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- IERC20Hermes.symbol -->
+<g id="node2" class="node" pointer-events="visible" data-name="IERC20Hermes.symbol">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-412" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-407.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- IERC20Hermes.decimals -->
+<g id="node3" class="node" pointer-events="visible" data-name="IERC20Hermes.decimals">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-358" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-353.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- IERC20Hermes.totalSupply -->
+<g id="node4" class="node" pointer-events="visible" data-name="IERC20Hermes.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-304" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-299.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IERC20Hermes.balanceOf -->
+<g id="node5" class="node" pointer-events="visible" data-name="IERC20Hermes.balanceOf">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-250" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-245.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IERC20Hermes.allowance -->
+<g id="node6" class="node" pointer-events="visible" data-name="IERC20Hermes.allowance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-196" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-191.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IERC20Hermes.approve -->
+<g id="node7" class="node" pointer-events="visible" data-name="IERC20Hermes.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-142" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-137.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- IERC20Hermes.transfer -->
+<g id="node8" class="node" pointer-events="visible" data-name="IERC20Hermes.transfer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-88" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-83.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IERC20Hermes.transferFrom -->
+<g id="node9" class="node" pointer-events="visible" data-name="IERC20Hermes.transferFrom">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-34" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-29.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- key -->
+<g id="node10" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-621 16,-621 16,-533 146,-533 146,-621" style=""/>
+<text text-anchor="start" x="65.64" y="-602.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-582.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-562.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-542.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node11" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="241,-621 187,-621 187,-533 241,-533 241,-621" style=""/>
+<text text-anchor="start" x="204" y="-602.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="204" y="-582.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="202,-557 202,-577 227,-577 227,-557 202,-557" style=""/>
+<text text-anchor="start" x="204" y="-562.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="204,-539 204,-555 225,-555 225,-539 204,-539" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-607C162.79,-607 171.17,-607 190.75,-607" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="191,-610.5 201,-607 191,-603.5 191,-610.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-587C162.79,-587 171.17,-587 190.75,-587" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="191,-590.5 201,-587 191,-583.5 191,-590.5" style=""/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,536 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="741pt" height="1141pt" viewBox="0.00 0.00 740.52 1141.00">
+<g id="graph0" class="graph" transform="translate(4,1137) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1137 736.52,-1137 736.52,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterLiquidityTransferService">
+
+<path fill="#445773" stroke="#445773" d="M20,-749C20,-749 595.43,-749 595.43,-749 601.43,-749 607.43,-755 607.43,-761 607.43,-761 607.43,-976 607.43,-976 607.43,-982 601.43,-988 595.43,-988 595.43,-988 20,-988 20,-988 14,-988 8,-982 8,-976 8,-976 8,-761 8,-761 8,-755 14,-749 20,-749" style=""/>
+<text text-anchor="middle" x="307.71" y="-971.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">LiquidityTransferService</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIHermesRouter02">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M424.2,-471C424.2,-471 568.08,-471 568.08,-471 574.08,-471 580.08,-477 580.08,-483 580.08,-483 580.08,-644 580.08,-644 580.08,-650 574.08,-656 568.08,-656 568.08,-656 424.2,-656 424.2,-656 418.2,-656 412.2,-650 412.2,-644 412.2,-644 412.2,-483 412.2,-483 412.2,-477 418.2,-471 424.2,-471" style=""/>
+<text text-anchor="middle" x="496.14" y="-639.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesRouter02</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterIHermesPair">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M438.68,-8C438.68,-8 553.59,-8 553.59,-8 559.59,-8 565.59,-14 565.59,-20 565.59,-20 565.59,-451 565.59,-451 565.59,-457 559.59,-463 553.59,-463 553.59,-463 438.68,-463 438.68,-463 432.68,-463 426.68,-457 426.68,-451 426.68,-451 426.68,-20 426.68,-20 426.68,-14 432.68,-8 438.68,-8" style=""/>
+<text text-anchor="middle" x="496.14" y="-446.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesPair</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterIHermesERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M228.3,-372C228.3,-372 321.72,-372 321.72,-372 327.72,-372 333.72,-378 333.72,-384 333.72,-384 333.72,-491 333.72,-491 333.72,-497 327.72,-503 321.72,-503 321.72,-503 228.3,-503 228.3,-503 222.3,-503 216.3,-497 216.3,-491 216.3,-491 216.3,-384 216.3,-384 216.3,-378 222.3,-372 228.3,-372" style=""/>
+<text text-anchor="middle" x="275.01" y="-486.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesERC20</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterHermesLibrary">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M442.44,-664C442.44,-664 549.83,-664 549.83,-664 555.83,-664 561.83,-670 561.83,-676 561.83,-676 561.83,-729 561.83,-729 561.83,-735 555.83,-741 549.83,-741 549.83,-741 442.44,-741 442.44,-741 436.44,-741 430.44,-735 430.44,-729 430.44,-729 430.44,-676 430.44,-676 430.44,-670 436.44,-664 442.44,-664" style=""/>
+<text text-anchor="middle" x="496.14" y="-724.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesLibrary</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterBabylonian">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M647.97,-973C647.97,-973 703.97,-973 703.97,-973 709.97,-973 715.97,-979 715.97,-985 715.97,-985 715.97,-1038 715.97,-1038 715.97,-1044 709.97,-1050 703.97,-1050 703.97,-1050 647.97,-1050 647.97,-1050 641.97,-1050 635.97,-1044 635.97,-1038 635.97,-1038 635.97,-985 635.97,-985 635.97,-979 641.97,-973 647.97,-973" style=""/>
+<text text-anchor="middle" x="675.97" y="-1033.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Babylonian</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterreservesA">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M652.97,-888C652.97,-888 699.97,-888 699.97,-888 705.97,-888 711.97,-894 711.97,-900 711.97,-900 711.97,-953 711.97,-953 711.97,-959 705.97,-965 699.97,-965 699.97,-965 652.97,-965 652.97,-965 646.97,-965 640.97,-959 640.97,-953 640.97,-953 640.97,-900 640.97,-900 640.97,-894 646.97,-888 652.97,-888" style=""/>
+<text text-anchor="middle" x="676.47" y="-948.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reservesA</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusterrootK">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M652.97,-749C652.97,-749 698.97,-749 698.97,-749 704.97,-749 710.97,-755 710.97,-761 710.97,-761 710.97,-868 710.97,-868 710.97,-874 704.97,-880 698.97,-880 698.97,-880 652.97,-880 652.97,-880 646.97,-880 640.97,-874 640.97,-868 640.97,-868 640.97,-761 640.97,-761 640.97,-755 646.97,-749 652.97,-749" style=""/>
+<text text-anchor="middle" x="675.97" y="-863.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">rootK</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusterFullMath">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M639.43,-664C639.43,-664 712.52,-664 712.52,-664 718.52,-664 724.52,-670 724.52,-676 724.52,-676 724.52,-729 724.52,-729 724.52,-735 718.52,-741 712.52,-741 712.52,-741 639.43,-741 639.43,-741 633.43,-741 627.43,-735 627.43,-729 627.43,-729 627.43,-676 627.43,-676 627.43,-670 633.43,-664 639.43,-664" style=""/>
+<text text-anchor="middle" x="675.97" y="-724.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">FullMath</text>
+</g>
+<g id="clust10" class="cluster" data-name="clustertotalSupply">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M647.97,-579C647.97,-579 703.97,-579 703.97,-579 709.97,-579 715.97,-585 715.97,-591 715.97,-591 715.97,-644 715.97,-644 715.97,-650 709.97,-656 703.97,-656 703.97,-656 647.97,-656 647.97,-656 641.97,-656 635.97,-650 635.97,-644 635.97,-644 635.97,-591 635.97,-591 635.97,-585 641.97,-579 647.97,-579" style=""/>
+<text text-anchor="middle" x="675.97" y="-639.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">totalSupply</text>
+</g>
+<g id="clust11" class="cluster" data-name="clusterreservesB">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M652.97,-494C652.97,-494 699.97,-494 699.97,-494 705.97,-494 711.97,-500 711.97,-506 711.97,-506 711.97,-559 711.97,-559 711.97,-565 705.97,-571 699.97,-571 699.97,-571 652.97,-571 652.97,-571 646.97,-571 640.97,-565 640.97,-559 640.97,-559 640.97,-506 640.97,-506 640.97,-500 646.97,-494 652.97,-494" style=""/>
+<text text-anchor="middle" x="676.47" y="-554.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reservesB</text>
+</g>
+<g id="clust12" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="13.59,-996 13.59,-1125 310.01,-1125 310.01,-996 13.59,-996" style=""/>
+<text text-anchor="middle" x="161.8" y="-1108.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="LiquidityTransferService.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="275.01" cy="-937" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-932.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- LiquidityTransferService.IHermesRouter02 -->
+<g id="node6" class="node" pointer-events="visible" data-name="LiquidityTransferService.IHermesRouter02">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-937" rx="80.45" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-932.8" font-family="Times,serif" font-size="14.00" style="">IHermesRouter02</text>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesRouter02 -->
+<g id="edge1" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesRouter02">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M338.51,-930.84C360.98,-930.24 386.71,-930.1 410.73,-930.41" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="410.86,-933.91 420.91,-930.57 410.97,-926.91 410.86,-933.91" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesRouter02 -->
+<g id="edge2" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesRouter02">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M338.51,-943.16C360.98,-943.76 386.71,-943.9 410.73,-943.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="410.97,-947.09 420.91,-943.43 410.86,-940.09 410.97,-947.09" style=""/>
+</g>
+<!-- LiquidityTransferService.IHermesFactory -->
+<g id="node7" class="node" pointer-events="visible" data-name="LiquidityTransferService.IHermesFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-883" rx="73.57" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-878.8" font-family="Times,serif" font-size="14.00" style="">IHermesFactory</text>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesFactory -->
+<g id="edge3" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M295.84,-919.87C322.08,-906.68 369.94,-892.4 412.19,-883.73" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="413.09,-887.12 422.22,-881.76 411.74,-880.25 413.09,-887.12" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesFactory -->
+<g id="edge5" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M314.18,-922.33C343.99,-913.51 386.3,-902.71 422.51,-894.5" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="423.55,-897.86 432.55,-892.26 422.02,-891.02 423.55,-897.86" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesFactory -->
+<g id="edge7" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M334.73,-928.59C369.43,-921.05 412.86,-910.25 445.78,-900.91" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="447,-904.2 455.64,-898.06 445.06,-897.47 447,-904.2" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;LiquidityTransferService.IHermesFactory -->
+<g id="edge9" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;LiquidityTransferService.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M342.05,-939.48C383.16,-932.32 434.04,-918.32 465.54,-904.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="467.06,-907.82 474.67,-900.45 464.12,-901.47 467.06,-907.82" style=""/>
+</g>
+<!-- IHermesRouter02.factory -->
+<g id="node10" class="node" pointer-events="visible" data-name="IHermesRouter02.factory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-605" rx="38.26" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-600.8" font-family="Times,serif" font-size="14.00" style="">factory</text>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;IHermesRouter02.factory -->
+<g id="edge4" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M288.34,-919.24C306.38,-908.54 339.68,-903.56 356.85,-883 428.8,-796.83 328.52,-725 392.85,-633 409.28,-609.5 439.02,-595.14 462.22,-591.64" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="462.66,-595.11 472.34,-590.8 462.09,-588.14 462.66,-595.11" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;IHermesRouter02.factory -->
+<g id="edge6" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M319.33,-923.2C333.24,-918.83 347.46,-912.24 356.85,-901 428.8,-814.83 328.52,-743 392.85,-651 406.21,-631.89 428.39,-618.81 448.68,-611.06" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="449.84,-614.36 458.13,-607.77 447.54,-607.75 449.84,-614.36" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;IHermesRouter02.factory -->
+<g id="edge8" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M340.37,-932.23C346.61,-928.81 352.29,-924.45 356.85,-919 428.8,-832.83 328.52,-761 392.85,-669 408.82,-646.16 437.37,-631.94 460.26,-622.29" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="461.75,-625.46 469.67,-618.42 459.09,-618.98 461.75,-625.46" style=""/>
+</g>
+<!-- LiquidityTransferService.&lt;Constructor&gt;&#45;&gt;IHermesRouter02.factory -->
+<g id="edge10" class="edge" data-name="LiquidityTransferService.&lt;Constructor&gt;-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M289.56,-954.69C307.84,-962.31 340.06,-957.1 356.85,-937 428.8,-850.83 328.52,-779 392.85,-687 412.93,-658.28 452.89,-643.21 476.48,-628.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="478.55,-630.86 484.65,-622.19 474.48,-625.17 478.55,-630.86" style=""/>
+</g>
+<!-- LiquidityTransferService.setSlippageBps -->
+<g id="node2" class="node" pointer-events="visible" data-name="LiquidityTransferService.setSlippageBps">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="86.59" cy="-883" rx="70.67" ry="18" style=""/>
+<text text-anchor="middle" x="86.59" y="-878.8" font-family="Times,serif" font-size="14.00" style="">setSlippageBps</text>
+</g>
+<!-- LiquidityTransferService.run -->
+<g id="node3" class="node" pointer-events="visible" data-name="LiquidityTransferService.run">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="86.59" cy="-775" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="86.59" y="-770.8" font-family="Times,serif" font-size="14.00" style="">run</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue -->
+<g id="node4" class="node" pointer-events="visible" data-name="LiquidityTransferService.getLiquidityValue">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="275.01" cy="-883" rx="81.67" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-878.8" font-family="Times,serif" font-size="14.00" style="">getLiquidityValue</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;LiquidityTransferService.getLiquidityValue -->
+<g id="edge16" class="edge" data-name="LiquidityTransferService.run-&gt;LiquidityTransferService.getLiquidityValue">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M102.9,-789.42C122.48,-807.2 158.08,-837.36 193.17,-856 199.64,-859.44 206.63,-862.55 213.7,-865.35" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="212.75,-868.73 223.34,-868.95 215.2,-862.17 212.75,-868.73" style=""/>
+</g>
+<!-- LiquidityTransferService.IHermesPair -->
+<g id="node8" class="node" pointer-events="visible" data-name="LiquidityTransferService.IHermesPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="275.01" cy="-775" rx="59.68" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-770.8" font-family="Times,serif" font-size="14.00" style="">IHermesPair</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;LiquidityTransferService.IHermesPair -->
+<g id="edge11" class="edge" data-name="LiquidityTransferService.run-&gt;LiquidityTransferService.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M113.9,-775C137.45,-775 173.03,-775 204.68,-775" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="204.8,-778.5 214.8,-775 204.8,-771.5 204.8,-778.5" style=""/>
+</g>
+<!-- LiquidityTransferService.IHermesERC20 -->
+<g id="node9" class="node" pointer-events="visible" data-name="LiquidityTransferService.IHermesERC20">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="275.01" cy="-829" rx="72.94" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-824.8" font-family="Times,serif" font-size="14.00" style="">IHermesERC20</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;LiquidityTransferService.IHermesERC20 -->
+<g id="edge19" class="edge" data-name="LiquidityTransferService.run-&gt;LiquidityTransferService.IHermesERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M113.51,-777.66C143.32,-784.17 192.8,-798.16 228.95,-810.07" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="228.17,-813.5 238.77,-813.37 230.4,-806.87 228.17,-813.5" style=""/>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;LiquidityTransferService.IHermesERC20 -->
+<g id="edge20" class="edge" data-name="LiquidityTransferService.run-&gt;LiquidityTransferService.IHermesERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M108.61,-785.55C132.1,-794.35 171.34,-806.41 205.71,-815.75" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="205.16,-819.22 215.72,-818.43 206.97,-812.46 205.16,-819.22" style=""/>
+</g>
+<!-- IHermesRouter02.removeLiquidity -->
+<g id="node11" class="node" pointer-events="visible" data-name="IHermesRouter02.removeLiquidity">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-551" rx="75.88" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-546.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidity</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesRouter02.removeLiquidity -->
+<g id="edge18" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesRouter02.removeLiquidity">
+
+<path fill="none" stroke="white" stroke-width="2" d="M112.32,-768.66C178.67,-751.62 355.72,-706.1 356.85,-705 398.78,-663.97 350.99,-619.11 392.85,-578 399.8,-571.17 408.27,-566.01 417.32,-562.13" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="418.8,-565.31 426.93,-558.52 416.34,-558.76 418.8,-565.31" style=""/>
+</g>
+<!-- IHermesRouter02.addLiquidity -->
+<g id="node12" class="node" pointer-events="visible" data-name="IHermesRouter02.addLiquidity">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-497" rx="60.85" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-492.8" font-family="Times,serif" font-size="14.00" style="">addLiquidity</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesRouter02.addLiquidity -->
+<g id="edge25" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesRouter02.addLiquidity">
+
+<path fill="none" stroke="white" stroke-width="2" d="M104.41,-761.05C124.37,-745.2 159.24,-719.62 193.17,-705 261.76,-675.45 303.55,-719.32 356.85,-667 403.62,-621.09 346.77,-570.61 392.85,-524 402.16,-514.58 414.34,-508.33 427.04,-504.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="428.14,-507.53 436.81,-501.44 426.24,-500.79 428.14,-507.53" style=""/>
+</g>
+<!-- IHermesPair.balanceOf -->
+<g id="node13" class="node" pointer-events="visible" data-name="IHermesPair.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-88" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-83.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesPair.balanceOf -->
+<g id="edge12" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M91.63,-757.06C102.42,-718.7 135.07,-629.93 193.17,-582 252.48,-533.08 309.51,-586.58 356.85,-526 414.53,-452.19 332.56,-177.7 392.85,-106 404.46,-92.19 422.22,-85 439.7,-81.9" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="440.46,-85.33 449.91,-80.52 439.53,-78.39 440.46,-85.33" style=""/>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesPair.balanceOf -->
+<g id="edge15" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M94.67,-757.71C107.85,-722.64 139.76,-644.06 193.17,-600 252.48,-551.08 309.51,-604.58 356.85,-544 414.53,-470.19 332.56,-195.7 392.85,-124 404.81,-109.77 423.32,-102.57 441.31,-98.51" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="442.08,-101.93 451.21,-96.55 440.72,-95.06 442.08,-101.93" style=""/>
+</g>
+<!-- IHermesPair.allowance -->
+<g id="node14" class="node" pointer-events="visible" data-name="IHermesPair.allowance">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-34" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-29.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesPair.allowance -->
+<g id="edge13" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesPair.allowance">
+
+<path fill="none" stroke="white" stroke-width="2" d="M89.73,-757.06C96.16,-711.78 119.62,-592.43 193.17,-535 251.34,-489.58 307.03,-561.45 356.85,-507 423.96,-433.64 329.05,-137.27 392.85,-61 403.58,-48.17 419.63,-41.05 435.85,-37.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="436.79,-40.58 445.92,-35.21 435.43,-33.72 436.79,-40.58" style=""/>
+</g>
+<!-- IHermesPair.transferFrom -->
+<g id="node15" class="node" pointer-events="visible" data-name="IHermesPair.transferFrom">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-196" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-191.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesPair.transferFrom -->
+<g id="edge14" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesPair.transferFrom">
+
+<path fill="none" stroke="white" stroke-width="2" d="M98.81,-758.61C116.15,-734.62 151.81,-690.27 193.17,-667 258.26,-630.39 307.85,-685.36 356.85,-629 416.27,-560.64 334.45,-292.24 392.85,-223 401.38,-212.87 413.23,-206.31 425.84,-202.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="426.93,-205.43 435.59,-199.33 425.02,-198.7 426.93,-205.43" style=""/>
+</g>
+<!-- IHermesPair.approve -->
+<g id="node16" class="node" pointer-events="visible" data-name="IHermesPair.approve">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-142" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-137.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesPair.approve -->
+<g id="edge17" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesPair.approve">
+
+<path fill="none" stroke="white" stroke-width="2" d="M95.15,-757.45C109.48,-726.38 143.67,-661.89 193.17,-629 255.37,-587.68 307.95,-647.44 356.85,-591 418.47,-519.86 332.29,-241.05 392.85,-169 405.37,-154.1 425.05,-146.91 443.81,-143.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="444.4,-147.05 453.8,-142.17 443.4,-140.12 444.4,-147.05" style=""/>
+</g>
+<!-- IHermesERC20.balanceOf -->
+<g id="node21" class="node" pointer-events="visible" data-name="IHermesERC20.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="275.01" cy="-452" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-447.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesERC20.balanceOf -->
+<g id="edge21" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M90.06,-757.09C98.14,-709.65 127.13,-580.62 193.17,-498 202.3,-486.58 214.43,-476.63 226.51,-468.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="228.54,-471.64 235.26,-463.45 224.9,-465.66 228.54,-471.64" style=""/>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesERC20.balanceOf -->
+<g id="edge22" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M91.79,-757.05C101.85,-711.96 131.19,-593.54 193.17,-516 207.07,-498.61 227.94,-484.61 245,-473.87" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="246.88,-476.82 253.51,-468.55 243.17,-470.88 246.88,-476.82" style=""/>
+</g>
+<!-- IHermesERC20.approve -->
+<g id="node22" class="node" pointer-events="visible" data-name="IHermesERC20.approve">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="275.01" cy="-398" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="275.01" y="-393.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesERC20.approve -->
+<g id="edge23" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesERC20.approve">
+
+<path fill="none" stroke="white" stroke-width="2" d="M87.51,-756.87C88.03,-698.43 97,-515.03 193.17,-416 201.38,-407.54 212.31,-401.74 223.47,-398.02" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="224.59,-401.34 233.28,-395.27 222.7,-394.6 224.59,-401.34" style=""/>
+</g>
+<!-- LiquidityTransferService.run&#45;&gt;IHermesERC20.approve -->
+<g id="edge24" class="edge" data-name="LiquidityTransferService.run-&gt;IHermesERC20.approve">
+
+<path fill="none" stroke="white" stroke-width="2" d="M87.63,-756.86C88.98,-700.57 101.2,-528.71 193.17,-434 203.64,-423.22 218.53,-416.74 232.68,-412.29" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="233.66,-415.65 242.29,-409.5 231.71,-408.93 233.66,-415.65" style=""/>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue -->
+<g id="node5" class="node" pointer-events="visible" data-name="LiquidityTransferService.computeLiquidityValue">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-829" rx="103.08" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-824.8" font-family="Times,serif" font-size="14.00" style="">computeLiquidityValue</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;LiquidityTransferService.computeLiquidityValue -->
+<g id="edge34" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;LiquidityTransferService.computeLiquidityValue">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M330.18,-869.65C359.11,-862.52 395.04,-853.67 425.97,-846.04" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="426.95,-849.41 435.82,-843.62 425.28,-842.61 426.95,-849.41" style=""/>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;LiquidityTransferService.IHermesFactory -->
+<g id="edge30" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;LiquidityTransferService.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M356.98,-883C374.9,-883 393.92,-883 411.92,-883" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="412.1,-886.5 422.1,-883 412.1,-879.5 412.1,-886.5" style=""/>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesRouter02.factory -->
+<g id="edge27" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M321.62,-868.17C334.69,-863.79 347.82,-857.39 356.85,-847 414.92,-780.13 340.7,-722.59 392.85,-651 406.47,-632.3 428.42,-619.32 448.51,-611.49" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="449.92,-614.7 458.17,-608.06 447.58,-608.11 449.92,-614.7" style=""/>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesRouter02.factory -->
+<g id="edge31" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesRouter02.factory">
+
+<path fill="none" stroke="white" stroke-width="2" d="M346.61,-874.1C350.37,-871.48 353.84,-868.46 356.85,-865 414.92,-798.13 340.7,-740.59 392.85,-669 409.36,-646.33 438.14,-632.05 460.97,-622.3" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="462.46,-625.47 470.34,-618.39 459.76,-619.01 462.46,-625.47" style=""/>
+</g>
+<!-- IHermesPair.token0 -->
+<g id="node17" class="node" pointer-events="visible" data-name="IHermesPair.token0">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-304" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-299.8" font-family="Times,serif" font-size="14.00" style="">token0</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesPair.token0 -->
+<g id="edge28" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M337.65,-871.31C345.06,-867.53 351.78,-862.55 356.85,-856 428.4,-763.51 318.35,-421.15 392.85,-331 406.36,-314.65 428.5,-307.56 448.73,-304.69" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="449.21,-308.16 458.77,-303.58 448.44,-301.2 449.21,-308.16" style=""/>
+</g>
+<!-- IHermesPair.token1 -->
+<g id="node18" class="node" pointer-events="visible" data-name="IHermesPair.token1">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-250" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-245.8" font-family="Times,serif" font-size="14.00" style="">token1</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesPair.token1 -->
+<g id="edge29" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M337.69,-871.34C345.09,-867.56 351.8,-862.57 356.85,-856 435.4,-753.79 311.04,-376.64 392.85,-277 406.31,-260.61 428.44,-253.51 448.68,-250.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="449.17,-254.12 458.73,-249.55 448.4,-247.17 449.17,-254.12" style=""/>
+</g>
+<!-- IHermesPair.kLast -->
+<g id="node19" class="node" pointer-events="visible" data-name="IHermesPair.kLast">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-412" rx="32.48" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-407.8" font-family="Times,serif" font-size="14.00" style="">kLast</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesPair.kLast -->
+<g id="edge32" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesPair.kLast">
+
+<path fill="none" stroke="white" stroke-width="2" d="M337.51,-871.2C344.93,-867.44 351.7,-862.49 356.85,-856 410.78,-787.97 344.92,-539.38 392.85,-467 407.49,-444.89 434.09,-430.98 456.49,-422.68" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="457.8,-425.93 466.11,-419.36 455.52,-419.31 457.8,-425.93" style=""/>
+</g>
+<!-- IHermesPair.totalSupply -->
+<g id="node20" class="node" pointer-events="visible" data-name="IHermesPair.totalSupply">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-358" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-353.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;IHermesPair.totalSupply -->
+<g id="edge33" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;IHermesPair.totalSupply">
+
+<path fill="none" stroke="white" stroke-width="2" d="M337.6,-871.27C345.02,-867.5 351.75,-862.53 356.85,-856 421.4,-773.23 325.66,-465.66 392.85,-385 402.44,-373.48 416.33,-366.56 430.78,-362.48" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="431.92,-365.8 440.84,-360.08 430.3,-358.99 431.92,-365.8" style=""/>
+</g>
+<!-- HermesLibrary.getReserves -->
+<g id="node23" class="node" pointer-events="visible" data-name="HermesLibrary.getReserves">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="496.14" cy="-690" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="496.14" y="-685.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- LiquidityTransferService.getLiquidityValue&#45;&gt;HermesLibrary.getReserves -->
+<g id="edge26" class="edge" data-name="LiquidityTransferService.getLiquidityValue-&gt;HermesLibrary.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M335.03,-870.66C343.09,-866.98 350.7,-862.2 356.85,-856 393.36,-819.17 359.61,-784.82 392.85,-745 406.89,-728.17 427.45,-715.72 446.47,-706.96" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="447.88,-710.16 455.64,-702.95 445.08,-703.75 447.88,-710.16" style=""/>
+</g>
+<!-- Babylonian.sqrt -->
+<g id="node24" class="node" pointer-events="visible" data-name="Babylonian.sqrt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-999" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-994.8" font-family="Times,serif" font-size="14.00" style="">sqrt</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;Babylonian.sqrt -->
+<g id="edge35" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;Babylonian.sqrt">
+
+<path fill="none" stroke="white" stroke-width="2" d="M593.03,-835.44C598.31,-838.64 603.18,-842.47 607.43,-847 642.3,-884.22 598.99,-917.66 627.43,-960 632.86,-968.09 641.3,-974.44 649.56,-979.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="647.94,-982.81 658.31,-985.02 651.58,-976.83 647.94,-982.81" style=""/>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;Babylonian.sqrt -->
+<g id="edge37" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;Babylonian.sqrt">
+
+<path fill="none" stroke="white" stroke-width="2" d="M566.84,-842.23C582.02,-846.63 596.71,-853.56 607.43,-865 642.3,-902.22 598.99,-935.66 627.43,-978 630.85,-983.09 635.45,-987.48 640.44,-991.09" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="638.74,-994.15 649.09,-996.39 642.4,-988.18 638.74,-994.15" style=""/>
+</g>
+<!-- reservesA.mul -->
+<g id="node25" class="node" pointer-events="visible" data-name="reservesA.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-914" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-909.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;reservesA.mul -->
+<g id="edge36" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;reservesA.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M589.04,-837C595.5,-839.82 601.72,-843.13 607.43,-847 620.09,-855.58 616.31,-864.5 627.43,-875 634.62,-881.79 643.57,-887.91 651.76,-893.38" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="649.97,-896.39 660.22,-899.06 653.87,-890.58 649.97,-896.39" style=""/>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;reservesA.mul -->
+<g id="edge42" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;reservesA.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M555.31,-843.82C573.14,-848.21 592.09,-854.61 607.43,-865 620.09,-873.58 616.31,-882.5 627.43,-893 631.51,-896.85 636.16,-900.49 640.91,-903.71" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="639.13,-906.72 649.47,-909.01 642.81,-900.77 639.13,-906.72" style=""/>
+</g>
+<!-- rootK.sub -->
+<g id="node26" class="node" pointer-events="visible" data-name="rootK.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-829" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-824.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;rootK.sub -->
+<g id="edge38" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;rootK.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M599.55,-829C613.51,-829 627,-829 638.63,-829" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="638.74,-832.5 648.74,-829 638.74,-825.5 638.74,-832.5" style=""/>
+</g>
+<!-- rootK.mul -->
+<g id="node27" class="node" pointer-events="visible" data-name="rootK.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-775" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-770.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;rootK.mul -->
+<g id="edge39" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;rootK.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M548.57,-813.38C578.28,-804.36 614.81,-793.27 640.95,-785.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="642.22,-788.6 650.77,-782.35 640.18,-781.91 642.22,-788.6" style=""/>
+</g>
+<!-- FullMath.mulDiv -->
+<g id="node28" class="node" pointer-events="visible" data-name="FullMath.mulDiv">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-690" rx="40.59" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-685.8" font-family="Times,serif" font-size="14.00" style="">mulDiv</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;FullMath.mulDiv -->
+<g id="edge40" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;FullMath.mulDiv">
+
+<path fill="none" stroke="white" stroke-width="2" d="M520.97,-811.2C543.43,-794.34 577.93,-768.23 607.43,-745 620.85,-734.43 635.57,-722.48 647.84,-712.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="650.39,-714.87 655.89,-705.81 645.94,-709.46 650.39,-714.87" style=""/>
+</g>
+<!-- totalSupply.add -->
+<g id="node29" class="node" pointer-events="visible" data-name="totalSupply.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-605" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-600.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;totalSupply.add -->
+<g id="edge41" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;totalSupply.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M530.39,-811.98C555.35,-797.5 588.37,-774.38 607.43,-745 628.55,-712.44 609.78,-694.57 627.43,-660 633.62,-647.88 643.02,-636.21 651.84,-626.77" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="654.56,-629 659.03,-619.4 649.54,-624.11 654.56,-629" style=""/>
+</g>
+<!-- reservesB.mul -->
+<g id="node30" class="node" pointer-events="visible" data-name="reservesB.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="675.97" cy="-520" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="675.97" y="-515.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- LiquidityTransferService.computeLiquidityValue&#45;&gt;reservesB.mul -->
+<g id="edge43" class="edge" data-name="LiquidityTransferService.computeLiquidityValue-&gt;reservesB.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M532.13,-812.12C557.5,-797.92 590.25,-775.1 607.43,-745 645.13,-678.92 596.76,-644.62 627.43,-575 632.91,-562.55 642.21,-550.83 651.14,-541.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="653.86,-543.67 658.46,-534.12 648.91,-538.71 653.86,-543.67" style=""/>
+</g>
+<!-- key -->
+<g id="node31" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="151.59,-1092 21.59,-1092 21.59,-1004 151.59,-1004 151.59,-1092" style=""/>
+<text text-anchor="start" x="71.22" y="-1073.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="67.33" y="-1053.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="44.79" y="-1033.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="31.19" y="-1013.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node32" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="302.01,-1092 248.01,-1092 248.01,-1004 302.01,-1004 302.01,-1092" style=""/>
+<text text-anchor="start" x="265.01" y="-1073.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="265.01" y="-1053.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="263.01,-1028 263.01,-1048 288.01,-1048 288.01,-1028 263.01,-1028" style=""/>
+<text text-anchor="start" x="265.01" y="-1033.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="265.01,-1010 265.01,-1026 286.01,-1026 286.01,-1010 265.01,-1010" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge44" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M144.59,-1078C193.21,-1078 207.85,-1078 251.83,-1078" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="252.01,-1081.5 262.01,-1078 252.01,-1074.5 252.01,-1081.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge45" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M144.59,-1058C193.21,-1058 207.85,-1058 251.83,-1058" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="252.01,-1061.5 262.01,-1058 252.01,-1054.5 252.01,-1061.5" style=""/>
+</g>
+</g>
+</svg>

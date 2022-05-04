@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="260pt" height="292pt" viewBox="0.00 0.00 260.00 292.00">
+<g id="graph0" class="graph" transform="translate(4,288) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-288 256,-288 256,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIBar">
+
+<path fill="#445773" stroke="#445773" d="M29.43,-8C29.43,-8 132.57,-8 132.57,-8 138.57,-8 144.57,-14 144.57,-20 144.57,-20 144.57,-127 144.57,-127 144.57,-133 138.57,-139 132.57,-139 132.57,-139 29.43,-139 29.43,-139 23.43,-139 17.43,-133 17.43,-127 17.43,-127 17.43,-20 17.43,-20 17.43,-14 23.43,-8 29.43,-8" style=""/>
+<text text-anchor="middle" x="81" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IBar  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-147 8,-276 244,-276 244,-147 8,-147" style=""/>
+<text text-anchor="middle" x="126" y="-259.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IBar.totalSupply -->
+<g id="node1" class="node" pointer-events="visible" data-name="IBar.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-88" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-83.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IBar.balanceOf -->
+<g id="node2" class="node" pointer-events="visible" data-name="IBar.balanceOf">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="81" cy="-34" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-29.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- key -->
+<g id="node3" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-243 16,-243 16,-155 146,-155 146,-243" style=""/>
+<text text-anchor="start" x="65.64" y="-224.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-204.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-184.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-164.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node4" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="236,-243 182,-243 182,-155 236,-155 236,-243" style=""/>
+<text text-anchor="start" x="199" y="-224.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="199" y="-204.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="197,-179 197,-199 222,-199 222,-179 197,-179" style=""/>
+<text text-anchor="start" x="199" y="-184.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="199,-161 199,-177 220,-177 220,-161 199,-161" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-229C160.57,-229 168.37,-229 185.85,-229" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="186,-232.5 196,-229 186,-225.5 186,-232.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-209C160.57,-209 168.37,-209 185.85,-209" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="186,-212.5 196,-209 186,-205.5 186,-212.5" style=""/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,698 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="899pt" height="1919pt" viewBox="0.00 0.00 899.48 1918.78">
+<g id="graph0" class="graph" transform="translate(4,1914.780029296875) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1914.78 895.48,-1914.78 895.48,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIRewarder">
+
+<path fill="#445773" stroke="#445773" d="M515.65,-1663.78C515.65,-1663.78 669.16,-1663.78 669.16,-1663.78 675.16,-1663.78 681.16,-1669.78 681.16,-1675.78 681.16,-1675.78 681.16,-1890.78 681.16,-1890.78 681.16,-1896.78 675.16,-1902.78 669.16,-1902.78 669.16,-1902.78 515.65,-1902.78 515.65,-1902.78 509.65,-1902.78 503.65,-1896.78 503.65,-1890.78 503.65,-1890.78 503.65,-1675.78 503.65,-1675.78 503.65,-1669.78 509.65,-1663.78 515.65,-1663.78" style=""/>
+<text text-anchor="middle" x="592.41" y="-1886.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IRewarder  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIHermesToken">
+
+<path fill="#445773" stroke="#445773" d="M726.56,-1121.78C726.56,-1121.78 871.48,-1121.78 871.48,-1121.78 877.48,-1121.78 883.48,-1127.78 883.48,-1133.78 883.48,-1133.78 883.48,-1348.78 883.48,-1348.78 883.48,-1354.78 877.48,-1360.78 871.48,-1360.78 871.48,-1360.78 726.56,-1360.78 726.56,-1360.78 720.56,-1360.78 714.56,-1354.78 714.56,-1348.78 714.56,-1348.78 714.56,-1133.78 714.56,-1133.78 714.56,-1127.78 720.56,-1121.78 726.56,-1121.78" style=""/>
+<text text-anchor="middle" x="799.02" y="-1344.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesToken  (iface)</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterMasterChefHermesV2">
+
+<path fill="#445773" stroke="#445773" d="M20,-598.78C20,-598.78 682.56,-598.78 682.56,-598.78 688.56,-598.78 694.56,-604.78 694.56,-610.78 694.56,-610.78 694.56,-1643.78 694.56,-1643.78 694.56,-1649.78 688.56,-1655.78 682.56,-1655.78 682.56,-1655.78 20,-1655.78 20,-1655.78 14,-1655.78 8,-1649.78 8,-1643.78 8,-1643.78 8,-610.78 8,-610.78 8,-604.78 14,-598.78 20,-598.78" style=""/>
+<text text-anchor="middle" x="351.28" y="-1639.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">MasterChefHermesV2</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterAddress">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M304.74,-513.78C304.74,-513.78 398.2,-513.78 398.2,-513.78 404.2,-513.78 410.2,-519.78 410.2,-525.78 410.2,-525.78 410.2,-578.78 410.2,-578.78 410.2,-584.78 404.2,-590.78 398.2,-590.78 398.2,-590.78 304.74,-590.78 304.74,-590.78 298.74,-590.78 292.74,-584.78 292.74,-578.78 292.74,-578.78 292.74,-525.78 292.74,-525.78 292.74,-519.78 298.74,-513.78 304.74,-513.78" style=""/>
+<text text-anchor="middle" x="351.47" y="-574.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Address</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterIERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M304.76,-428.78C304.76,-428.78 398.18,-428.78 398.18,-428.78 404.18,-428.78 410.18,-434.78 410.18,-440.78 410.18,-440.78 410.18,-493.78 410.18,-493.78 410.18,-499.78 404.18,-505.78 398.18,-505.78 398.18,-505.78 304.76,-505.78 304.76,-505.78 298.76,-505.78 292.76,-499.78 292.76,-493.78 292.76,-493.78 292.76,-440.78 292.76,-440.78 292.76,-434.78 298.76,-428.78 304.76,-428.78" style=""/>
+<text text-anchor="middle" x="351.47" y="-489.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterEnumerableSet.AddressSet">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M279.25,-289.78C279.25,-289.78 423.69,-289.78 423.69,-289.78 429.69,-289.78 435.69,-295.78 435.69,-301.78 435.69,-301.78 435.69,-408.78 435.69,-408.78 435.69,-414.78 429.69,-420.78 423.69,-420.78 423.69,-420.78 279.25,-420.78 279.25,-420.78 273.25,-420.78 267.25,-414.78 267.25,-408.78 267.25,-408.78 267.25,-301.78 267.25,-301.78 267.25,-295.78 273.25,-289.78 279.25,-289.78" style=""/>
+<text text-anchor="middle" x="351.47" y="-404.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">EnumerableSet.AddressSet</text>
+</g>
+<g id="clust7" class="cluster" data-name="clustertotalAllocPoint">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M313.47,-150.78C313.47,-150.78 390.47,-150.78 390.47,-150.78 396.47,-150.78 402.47,-156.78 402.47,-162.78 402.47,-162.78 402.47,-269.78 402.47,-269.78 402.47,-275.78 396.47,-281.78 390.47,-281.78 390.47,-281.78 313.47,-281.78 313.47,-281.78 307.47,-281.78 301.47,-275.78 301.47,-269.78 301.47,-269.78 301.47,-162.78 301.47,-162.78 301.47,-156.78 307.47,-150.78 313.47,-150.78" style=""/>
+<text text-anchor="middle" x="351.97" y="-265.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">totalAllocPoint</text>
+</g>
+<g id="clust8" class="cluster" data-name="clustermultiplier">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M776.02,-647.78C776.02,-647.78 823.02,-647.78 823.02,-647.78 829.02,-647.78 835.02,-653.78 835.02,-659.78 835.02,-659.78 835.02,-712.78 835.02,-712.78 835.02,-718.78 829.02,-724.78 823.02,-724.78 823.02,-724.78 776.02,-724.78 776.02,-724.78 770.02,-724.78 764.02,-718.78 764.02,-712.78 764.02,-712.78 764.02,-659.78 764.02,-659.78 764.02,-653.78 770.02,-647.78 776.02,-647.78" style=""/>
+<text text-anchor="middle" x="799.52" y="-708.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">multiplier</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusteraccHermesPerShare">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M299.47,-35.78C299.47,-35.78 403.47,-35.78 403.47,-35.78 409.47,-35.78 415.47,-41.78 415.47,-47.78 415.47,-47.78 415.47,-100.78 415.47,-100.78 415.47,-106.78 409.47,-112.78 403.47,-112.78 403.47,-112.78 299.47,-112.78 299.47,-112.78 293.47,-112.78 287.47,-106.78 287.47,-100.78 287.47,-100.78 287.47,-47.78 287.47,-47.78 287.47,-41.78 293.47,-35.78 299.47,-35.78" style=""/>
+<text text-anchor="middle" x="351.47" y="-96.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">accHermesPerShare</text>
+</g>
+<g id="clust10" class="cluster" data-name="clusterhermesReward">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M762.02,-1036.78C762.02,-1036.78 837.02,-1036.78 837.02,-1036.78 843.02,-1036.78 849.02,-1042.78 849.02,-1048.78 849.02,-1048.78 849.02,-1101.78 849.02,-1101.78 849.02,-1107.78 843.02,-1113.78 837.02,-1113.78 837.02,-1113.78 762.02,-1113.78 762.02,-1113.78 756.02,-1113.78 750.02,-1107.78 750.02,-1101.78 750.02,-1101.78 750.02,-1048.78 750.02,-1048.78 750.02,-1042.78 756.02,-1036.78 762.02,-1036.78" style=""/>
+<text text-anchor="middle" x="799.52" y="-1097.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">hermesReward</text>
+</g>
+<g id="clust11" class="cluster" data-name="clusterbalanceAfter">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M560.41,-513.78C560.41,-513.78 624.41,-513.78 624.41,-513.78 630.41,-513.78 636.41,-519.78 636.41,-525.78 636.41,-525.78 636.41,-578.78 636.41,-578.78 636.41,-584.78 630.41,-590.78 624.41,-590.78 624.41,-590.78 560.41,-590.78 560.41,-590.78 554.41,-590.78 548.41,-584.78 548.41,-578.78 548.41,-578.78 548.41,-525.78 548.41,-525.78 548.41,-519.78 554.41,-513.78 560.41,-513.78" style=""/>
+<text text-anchor="middle" x="592.41" y="-574.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">balanceAfter</text>
+</g>
+<g id="clust12" class="cluster" data-name="cluster_amount">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M776.02,-1368.78C776.02,-1368.78 822.02,-1368.78 822.02,-1368.78 828.02,-1368.78 834.02,-1374.78 834.02,-1380.78 834.02,-1380.78 834.02,-1487.78 834.02,-1487.78 834.02,-1493.78 828.02,-1499.78 822.02,-1499.78 822.02,-1499.78 776.02,-1499.78 776.02,-1499.78 770.02,-1499.78 764.02,-1493.78 764.02,-1487.78 764.02,-1487.78 764.02,-1380.78 764.02,-1380.78 764.02,-1374.78 770.02,-1368.78 776.02,-1368.78" style=""/>
+<text text-anchor="middle" x="799.02" y="-1483.18" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">_amount</text>
+</g>
+<g id="clust13" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="37.34,-1718.78 37.34,-1847.78 386.47,-1847.78 386.47,-1718.78 37.34,-1718.78" style=""/>
+<text text-anchor="middle" x="211.9" y="-1831.18" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IRewarder.onHermesReward -->
+<g id="node1" class="node" pointer-events="visible" data-name="IRewarder.onHermesReward">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-1851.78" rx="80.51" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1847.58" font-family="Times,serif" font-size="14.00" style="">onHermesReward</text>
+</g>
+<!-- IRewarder.pendingTokens -->
+<g id="node2" class="node" pointer-events="visible" data-name="IRewarder.pendingTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="592.41" cy="-1797.78" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1793.58" font-family="Times,serif" font-size="14.00" style="">pendingTokens</text>
+</g>
+<!-- IRewarder.rewardToken -->
+<g id="node3" class="node" pointer-events="visible" data-name="IRewarder.rewardToken">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="592.41" cy="-1743.78" rx="62.53" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1739.58" font-family="Times,serif" font-size="14.00" style="">rewardToken</text>
+</g>
+<!-- IRewarder.isEmissionValid -->
+<g id="node4" class="node" pointer-events="visible" data-name="IRewarder.isEmissionValid">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-1689.78" rx="74.76" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1685.58" font-family="Times,serif" font-size="14.00" style="">isEmissionValid</text>
+</g>
+<!-- IHermesToken.balanceOf -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesToken.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1255.78" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1251.58" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IHermesToken.mint -->
+<g id="node6" class="node" pointer-events="visible" data-name="IHermesToken.mint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1201.78" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1197.58" font-family="Times,serif" font-size="14.00" style="">mint</text>
+</g>
+<!-- IHermesToken.transfer -->
+<g id="node7" class="node" pointer-events="visible" data-name="IHermesToken.transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1309.78" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1305.58" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IHermesToken.maxCapReached -->
+<g id="node8" class="node" pointer-events="visible" data-name="IHermesToken.maxCapReached">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1147.78" rx="76.42" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1143.58" font-family="Times,serif" font-size="14.00" style="">maxCapReached</text>
+</g>
+<!-- MasterChefHermesV2.&lt;Constructor&gt; -->
+<g id="node9" class="node" pointer-events="visible" data-name="MasterChefHermesV2.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1604.78" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1600.58" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- MasterChefHermesV2.poolLength -->
+<g id="node10" class="node" pointer-events="visible" data-name="MasterChefHermesV2.poolLength">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="110.34" cy="-1550.78" rx="55.62" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1546.58" font-family="Times,serif" font-size="14.00" style="">poolLength</text>
+</g>
+<!-- MasterChefHermesV2.validatePoolByPid -->
+<g id="node11" class="node" pointer-events="visible" data-name="MasterChefHermesV2.validatePoolByPid">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="200.53,-1485.32 200.53,-1500.23 147.7,-1510.78 72.98,-1510.78 20.15,-1500.23 20.15,-1485.32 72.98,-1474.78 147.7,-1474.78 200.53,-1485.32" style=""/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="204.52,-1482.04 204.52,-1503.52 148.09,-1514.78 72.59,-1514.78 16.16,-1503.52 16.16,-1482.04 72.59,-1470.78 148.09,-1470.78 204.52,-1482.04" style=""/>
+<text text-anchor="middle" x="110.34" y="-1488.58" font-family="Times,serif" font-size="14.00" style="">validatePoolByPid</text>
+</g>
+<!-- MasterChefHermesV2.add -->
+<g id="node12" class="node" pointer-events="visible" data-name="MasterChefHermesV2.add">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-678.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-674.58" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- MasterChefHermesV2.massUpdatePools -->
+<g id="node16" class="node" pointer-events="visible" data-name="MasterChefHermesV2.massUpdatePools">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-942.78" rx="79.91" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-938.58" font-family="Times,serif" font-size="14.00" style="">massUpdatePools</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;MasterChefHermesV2.massUpdatePools -->
+<g id="edge5" class="edge" data-name="MasterChefHermesV2.add-&gt;MasterChefHermesV2.massUpdatePools">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M137.37,-681.19C157.48,-684.18 185.08,-690.86 204.68,-705.78 277.9,-761.49 322.86,-865.48 341.09,-915.08" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="337.91,-916.57 344.57,-924.8 344.5,-914.21 337.91,-916.57" style=""/>
+</g>
+<!-- Address.isContract -->
+<g id="node37" class="node" pointer-events="visible" data-name="Address.isContract">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-539.78" rx="50.96" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-535.58" font-family="Times,serif" font-size="14.00" style="">isContract</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;Address.isContract -->
+<g id="edge1" class="edge" data-name="MasterChefHermesV2.add-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M134.1,-669.73C154.35,-664.99 183.91,-658.39 204.68,-642.78 228.63,-624.78 218.47,-605.89 240.68,-585.78 256.7,-571.27 277.25,-559.63 296.22,-551.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="297.75,-554.57 305.68,-547.55 295.1,-548.09 297.75,-554.57" style=""/>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;Address.isContract -->
+<g id="edge2" class="edge" data-name="MasterChefHermesV2.add-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M136.51,-683.69C156.64,-682.46 184.72,-675.78 204.68,-660.78 228.63,-642.78 218.47,-623.89 240.68,-603.78 262.35,-584.16 292.3,-569.78 315.44,-559.27" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="316.91,-562.45 324.58,-555.14 314.03,-556.07 316.91,-562.45" style=""/>
+</g>
+<!-- IERC20.balanceOf -->
+<g id="node38" class="node" pointer-events="visible" data-name="IERC20.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-454.78" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-450.58" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;IERC20.balanceOf -->
+<g id="edge3" class="edge" data-name="MasterChefHermesV2.add-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.47,-678.04C158.45,-676.03 187.21,-669.84 204.68,-651.78 249.95,-604.98 199.88,-560.51 240.68,-509.78 255.97,-490.76 279.54,-477.76 300.93,-469.19" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="302.44,-472.36 310.56,-465.55 299.97,-465.81 302.44,-472.36" style=""/>
+</g>
+<!-- EnumerableSet.AddressSet.contains -->
+<g id="node39" class="node" pointer-events="visible" data-name="EnumerableSet.AddressSet.contains">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-369.78" rx="43.44" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-365.58" font-family="Times,serif" font-size="14.00" style="">contains</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;EnumerableSet.AddressSet.contains -->
+<g id="edge4" class="edge" data-name="MasterChefHermesV2.add-&gt;EnumerableSet.AddressSet.contains">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.48,-678.48C158.77,-676.76 187.93,-670.75 204.68,-651.78 272.29,-575.2 180.35,-507.21 240.68,-424.78 256.05,-403.78 281.72,-390.3 304.38,-381.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="305.55,-385.24 313.87,-378.67 303.27,-378.63 305.55,-385.24" style=""/>
+</g>
+<!-- EnumerableSet.AddressSet.add -->
+<g id="node40" class="node" pointer-events="visible" data-name="EnumerableSet.AddressSet.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-315.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-311.58" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;EnumerableSet.AddressSet.add -->
+<g id="edge7" class="edge" data-name="MasterChefHermesV2.add-&gt;EnumerableSet.AddressSet.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.69,-678.66C159.09,-677.04 188.33,-671.09 204.68,-651.78 294.03,-546.26 149.22,-446.47 240.68,-342.78 258.86,-322.17 289.99,-316.03 314.47,-314.69" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="314.61,-318.19 324.5,-314.38 314.39,-311.19 314.61,-318.19" style=""/>
+</g>
+<!-- totalAllocPoint.add -->
+<g id="node41" class="node" pointer-events="visible" data-name="totalAllocPoint.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-176.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-172.58" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- MasterChefHermesV2.add&#45;&gt;totalAllocPoint.add -->
+<g id="edge6" class="edge" data-name="MasterChefHermesV2.add-&gt;totalAllocPoint.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.44,-678.84C158.99,-677.36 188.57,-671.51 204.68,-651.78 267.85,-574.41 175.96,-279.85 240.68,-203.78 258.49,-182.85 289.65,-176.73 314.24,-175.49" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="314.41,-178.99 324.32,-175.23 314.23,-171.99 314.41,-178.99" style=""/>
+</g>
+<!-- MasterChefHermesV2.set -->
+<g id="node13" class="node" pointer-events="visible" data-name="MasterChefHermesV2.set">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-840.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-836.58" font-family="Times,serif" font-size="14.00" style="">set</text>
+</g>
+<!-- MasterChefHermesV2.set&#45;&gt;MasterChefHermesV2.massUpdatePools -->
+<g id="edge9" class="edge" data-name="MasterChefHermesV2.set-&gt;MasterChefHermesV2.massUpdatePools">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M135.95,-846.51C155.02,-851.28 181.95,-858.74 204.68,-867.78 242.75,-882.91 284.09,-904.73 313,-920.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="311.5,-924.11 321.92,-925.99 314.94,-918.02 311.5,-924.11" style=""/>
+</g>
+<!-- MasterChefHermesV2.set&#45;&gt;Address.isContract -->
+<g id="edge8" class="edge" data-name="MasterChefHermesV2.set-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.46,-840.46C158.72,-838.72 187.88,-832.7 204.68,-813.78 270.17,-740.02 182.2,-674.21 240.68,-594.78 255.16,-575.11 278.66,-562.03 300.22,-553.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="301.44,-556.86 309.62,-550.13 299.03,-550.29 301.44,-556.86" style=""/>
+</g>
+<!-- totalAllocPoint.sub -->
+<g id="node42" class="node" pointer-events="visible" data-name="totalAllocPoint.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-230.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-226.58" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- MasterChefHermesV2.set&#45;&gt;totalAllocPoint.sub -->
+<g id="edge10" class="edge" data-name="MasterChefHermesV2.set-&gt;totalAllocPoint.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M137.5,-840.88C159.09,-839.44 188.69,-833.61 204.68,-813.78 278.51,-722.23 175.52,-383.68 240.68,-285.78 257.6,-260.35 289.97,-246.16 315.19,-238.59" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="316.45,-241.87 325.15,-235.83 314.58,-235.13 316.45,-241.87" style=""/>
+</g>
+<!-- MasterChefHermesV2.pendingTokens -->
+<g id="node14" class="node" pointer-events="visible" data-name="MasterChefHermesV2.pendingTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="110.34" cy="-624.78" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-620.58" font-family="Times,serif" font-size="14.00" style="">pendingTokens</text>
+</g>
+<!-- MasterChefHermesV2.pendingTokens&#45;&gt;IHermesToken.maxCapReached -->
+<g id="edge11" class="edge" data-name="MasterChefHermesV2.pendingTokens-&gt;IHermesToken.maxCapReached">
+
+<path fill="none" stroke="white" stroke-width="2" d="M180.35,-627.09C269.6,-628.7 418.77,-626.33 462.26,-594.78 495.46,-570.68 464.06,-532.44 498.26,-509.78 570.99,-461.6 631.86,-449.11 694.56,-509.78 743.13,-556.78 674.77,-1063.13 714.56,-1117.78 718.63,-1123.38 723.86,-1127.94 729.7,-1131.65" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="728.18,-1134.81 738.64,-1136.5 731.52,-1128.66 728.18,-1134.81" style=""/>
+</g>
+<!-- MasterChefHermesV2.rewarderBonusTokenInfo -->
+<g id="node15" class="node" pointer-events="visible" data-name="MasterChefHermesV2.rewarderBonusTokenInfo">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-654.78" rx="110.58" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-650.58" font-family="Times,serif" font-size="14.00" style="">rewarderBonusTokenInfo</text>
+</g>
+<!-- MasterChefHermesV2.pendingTokens&#45;&gt;MasterChefHermesV2.rewarderBonusTokenInfo -->
+<g id="edge15" class="edge" data-name="MasterChefHermesV2.pendingTokens-&gt;MasterChefHermesV2.rewarderBonusTokenInfo">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M174.17,-632.66C198.34,-635.69 226.54,-639.23 253.21,-642.58" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="252.98,-646.08 263.34,-643.85 253.85,-639.13 252.98,-646.08" style=""/>
+</g>
+<!-- multiplier.mul -->
+<g id="node43" class="node" pointer-events="visible" data-name="multiplier.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-673.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-669.58" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- MasterChefHermesV2.pendingTokens&#45;&gt;multiplier.mul -->
+<g id="edge12" class="edge" data-name="MasterChefHermesV2.pendingTokens-&gt;multiplier.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M112.36,-606.56C117.88,-515.03 147.54,-106.8 240.68,-31.78 317.38,29.99 365.29,-14.59 462.26,-31.78 570.51,-50.96 623.58,-32.82 694.56,-116.78 763.63,-198.49 790.03,-543.64 796.39,-645.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="792.91,-645.78 797.01,-655.55 799.89,-645.35 792.91,-645.78" style=""/>
+</g>
+<!-- accHermesPerShare.add -->
+<g id="node44" class="node" pointer-events="visible" data-name="accHermesPerShare.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-61.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-57.58" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- MasterChefHermesV2.pendingTokens&#45;&gt;accHermesPerShare.add -->
+<g id="edge13" class="edge" data-name="MasterChefHermesV2.pendingTokens-&gt;accHermesPerShare.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M110.85,-606.72C109.85,-535.81 115.12,-272.73 240.68,-116.78 259.72,-93.13 291.54,-78.78 316.04,-70.69" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="317.18,-74 325.69,-67.7 315.1,-67.32 317.18,-74" style=""/>
+</g>
+<!-- hermesReward.mul -->
+<g id="node45" class="node" pointer-events="visible" data-name="hermesReward.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1062.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1058.58" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- MasterChefHermesV2.pendingTokens&#45;&gt;hermesReward.mul -->
+<g id="edge14" class="edge" data-name="MasterChefHermesV2.pendingTokens-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M113.34,-606.71C122.63,-526.66 164.3,-205.23 240.68,-146.78 279.78,-116.85 418.6,-124 462.26,-146.78 622.25,-230.24 633.59,-309.94 694.56,-479.78 732.06,-584.27 696.59,-619.22 714.56,-728.78 733.54,-844.55 772.48,-979.14 789.61,-1035.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="786.28,-1036.71 792.55,-1045.25 792.97,-1034.66 786.28,-1036.71" style=""/>
+</g>
+<!-- MasterChefHermesV2.IERC20 -->
+<g id="node36" class="node" pointer-events="visible" data-name="MasterChefHermesV2.IERC20">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-654.78" rx="42.88" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-650.58" font-family="Times,serif" font-size="14.00" style="">IERC20</text>
+</g>
+<!-- MasterChefHermesV2.rewarderBonusTokenInfo&#45;&gt;MasterChefHermesV2.IERC20 -->
+<g id="edge16" class="edge" data-name="MasterChefHermesV2.rewarderBonusTokenInfo-&gt;MasterChefHermesV2.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M462.5,-654.78C489.37,-654.78 516.88,-654.78 539.55,-654.78" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="539.61,-658.28 549.61,-654.78 539.61,-651.28 539.61,-658.28" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool -->
+<g id="node17" class="node" pointer-events="visible" data-name="MasterChefHermesV2.updatePool">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-1147.78" rx="54.48" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1143.58" font-family="Times,serif" font-size="14.00" style="">updatePool</text>
+</g>
+<!-- MasterChefHermesV2.massUpdatePools&#45;&gt;MasterChefHermesV2.updatePool -->
+<g id="edge17" class="edge" data-name="MasterChefHermesV2.massUpdatePools-&gt;MasterChefHermesV2.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M372.84,-960.26C415.73,-997.05 515.36,-1082.53 563.87,-1124.15" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="561.89,-1127.07 571.76,-1130.92 566.45,-1121.75 561.89,-1127.07" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;IHermesToken.mint -->
+<g id="edge20" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;IHermesToken.mint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M645.57,-1143.63C686.99,-1150.36 742.97,-1166.6 774.28,-1181.97" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="772.7,-1185.09 783.17,-1186.71 775.99,-1178.91 772.7,-1185.09" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;IHermesToken.mint -->
+<g id="edge22" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;IHermesToken.mint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M642.68,-1154.91C680.83,-1163.59 732.58,-1177.5 765.64,-1188.15" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="764.67,-1191.51 775.27,-1191.34 766.87,-1184.87 764.67,-1191.51" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;IHermesToken.mint -->
+<g id="edge24" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;IHermesToken.mint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M627.19,-1161.86C663.82,-1173.57 722.12,-1189.02 760.24,-1197.18" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="759.92,-1200.69 770.42,-1199.28 761.33,-1193.84 759.92,-1200.69" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;IHermesToken.mint -->
+<g id="edge26" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;IHermesToken.mint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M611.56,-1164.71C645.36,-1183.04 718.45,-1203.55 762.41,-1208.18" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="762.41,-1211.69 772.65,-1208.99 762.96,-1204.71 762.41,-1211.69" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;IHermesToken.maxCapReached -->
+<g id="edge18" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;IHermesToken.maxCapReached">
+
+<path fill="none" stroke="white" stroke-width="2" d="M646.9,-1147.78C666.92,-1147.78 690.2,-1147.78 712.4,-1147.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="712.51,-1151.28 722.51,-1147.78 712.51,-1144.28 712.51,-1151.28" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;multiplier.mul -->
+<g id="edge19" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;multiplier.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M601.18,-1129.78C632.42,-1057.39 749.01,-787.31 786.4,-700.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="789.71,-701.86 790.46,-691.29 783.28,-699.09 789.71,-701.86" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;hermesReward.mul -->
+<g id="edge21" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M604.41,-1130.16C634.27,-1102.12 717.77,-1064.94 764.78,-1056.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="765.41,-1059.49 774.78,-1054.53 764.36,-1052.57 765.41,-1059.49" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;hermesReward.mul -->
+<g id="edge23" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M613.4,-1131.05C647.84,-1110.78 718.83,-1080.58 762.05,-1067.15" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="763.27,-1070.44 771.88,-1064.26 761.3,-1063.73 763.27,-1070.44" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;hermesReward.mul -->
+<g id="edge25" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M627.19,-1133.74C665.75,-1117.73 728.32,-1091.73 766.08,-1076.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="767.69,-1079.17 775.58,-1072.1 765,-1072.7 767.69,-1079.17" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;hermesReward.mul -->
+<g id="edge27" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M641.12,-1139.58C682.39,-1125.58 740.43,-1100.66 773.11,-1082.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="775.15,-1085.19 782,-1077.11 771.61,-1079.15 775.15,-1085.19" style=""/>
+</g>
+<!-- MasterChefHermesV2.updatePool&#45;&gt;hermesReward.mul -->
+<g id="edge28" class="edge" data-name="MasterChefHermesV2.updatePool-&gt;hermesReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M646.63,-1149.69C690.82,-1137.14 751.01,-1109.45 780.41,-1086.08" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="782.94,-1088.51 788.17,-1079.3 778.33,-1083.24 782.94,-1088.51" style=""/>
+</g>
+<!-- MasterChefHermesV2.deposit -->
+<g id="node18" class="node" pointer-events="visible" data-name="MasterChefHermesV2.deposit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="351.47" cy="-1331.78" rx="38.86" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-1327.58" font-family="Times,serif" font-size="14.00" style="">deposit</text>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;IRewarder.onHermesReward -->
+<g id="edge32" class="edge" data-name="MasterChefHermesV2.deposit-&gt;IRewarder.onHermesReward">
+
+<path fill="none" stroke="white" stroke-width="2" d="M383.29,-1342.22C409.09,-1352.71 444.45,-1371.56 462.26,-1400.78 511.46,-1481.53 438.31,-1751.65 498.26,-1824.78 502.63,-1830.11 507.99,-1834.43 513.91,-1837.93" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="512.43,-1841.1 522.94,-1842.47 515.58,-1834.85 512.43,-1841.1" style=""/>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;IRewarder.isEmissionValid -->
+<g id="edge31" class="edge" data-name="MasterChefHermesV2.deposit-&gt;IRewarder.isEmissionValid">
+
+<path fill="none" stroke="white" stroke-width="2" d="M382.91,-1342.46C408.46,-1353.1 443.68,-1372.04 462.26,-1400.78 525.35,-1498.38 423.51,-1570.79 498.26,-1659.78 503.97,-1666.58 511.24,-1671.86 519.19,-1675.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="517.85,-1679.18 528.41,-1680.08 520.72,-1672.8 517.85,-1679.18" style=""/>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;MasterChefHermesV2.updatePool -->
+<g id="edge29" class="edge" data-name="MasterChefHermesV2.deposit-&gt;MasterChefHermesV2.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M384.36,-1321.85C407.47,-1317.31 438.67,-1310.63 462.26,-1295.78 511.81,-1264.59 551.38,-1207.89 573.09,-1174.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="576.29,-1175.78 578.73,-1165.47 570.4,-1172 576.29,-1175.78" style=""/>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;MasterChefHermesV2.updatePool -->
+<g id="edge33" class="edge" data-name="MasterChefHermesV2.deposit-&gt;MasterChefHermesV2.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M389.1,-1336.41C411.61,-1334.38 440.25,-1327.63 462.26,-1313.78 517.37,-1279.09 560.13,-1212.85 579.71,-1175.18" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="583.05,-1176.32 584.4,-1165.82 576.79,-1173.19 583.05,-1176.32" style=""/>
+</g>
+<!-- MasterChefHermesV2._safeHermesTransfer -->
+<g id="node35" class="node" pointer-events="visible" data-name="MasterChefHermesV2._safeHermesTransfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-1309.78" rx="94.3" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1305.58" font-family="Times,serif" font-size="14.00" style="">_safeHermesTransfer</text>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;MasterChefHermesV2._safeHermesTransfer -->
+<g id="edge30" class="edge" data-name="MasterChefHermesV2.deposit-&gt;MasterChefHermesV2._safeHermesTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M389.8,-1328.34C418.6,-1325.69 459.73,-1321.9 497.35,-1318.44" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="497.7,-1321.92 507.33,-1317.52 497.06,-1314.95 497.7,-1321.92" style=""/>
+</g>
+<!-- balanceAfter.sub -->
+<g id="node46" class="node" pointer-events="visible" data-name="balanceAfter.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-539.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-535.58" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- MasterChefHermesV2.deposit&#45;&gt;balanceAfter.sub -->
+<g id="edge34" class="edge" data-name="MasterChefHermesV2.deposit-&gt;balanceAfter.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M390.49,-1333.14C414.9,-1331.79 445.14,-1325.51 462.26,-1304.78 512.55,-1243.87 457.37,-662.36 498.26,-594.78 511.43,-573 536.77,-558.86 557.69,-550.38" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="559.12,-553.59 567.24,-546.77 556.65,-547.04 559.12,-553.59" style=""/>
+</g>
+<!-- MasterChefHermesV2.withdraw -->
+<g id="node19" class="node" pointer-events="visible" data-name="MasterChefHermesV2.withdraw">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="351.47" cy="-1427.78" rx="47.52" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-1423.58" font-family="Times,serif" font-size="14.00" style="">withdraw</text>
+</g>
+<!-- MasterChefHermesV2.withdraw&#45;&gt;IRewarder.onHermesReward -->
+<g id="edge37" class="edge" data-name="MasterChefHermesV2.withdraw-&gt;IRewarder.onHermesReward">
+
+<path fill="none" stroke="white" stroke-width="2" d="M359.72,-1445.8C377.76,-1490.86 425.88,-1612.21 462.26,-1714.78 479.45,-1763.26 461.27,-1789.03 498.26,-1824.78 503.5,-1829.85 509.64,-1833.97 516.21,-1837.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="514.85,-1840.56 525.41,-1841.45 517.72,-1834.17 514.85,-1840.56" style=""/>
+</g>
+<!-- MasterChefHermesV2.withdraw&#45;&gt;MasterChefHermesV2.updatePool -->
+<g id="edge35" class="edge" data-name="MasterChefHermesV2.withdraw-&gt;MasterChefHermesV2.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M383.28,-1414.36C407.35,-1402.6 440.29,-1383.53 462.26,-1358.78 487.07,-1330.83 479.58,-1315.15 498.26,-1282.78 521.11,-1243.16 551.95,-1200.11 571.77,-1173.54" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="574.59,-1175.61 577.79,-1165.51 568.99,-1171.41 574.59,-1175.61" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw -->
+<g id="node34" class="node" pointer-events="visible" data-name="MasterChefHermesV2._withdraw">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="592.41" cy="-1448.78" rx="52.18" ry="18" style=""/>
+<text text-anchor="middle" x="592.41" y="-1444.58" font-family="Times,serif" font-size="14.00" style="">_withdraw</text>
+</g>
+<!-- MasterChefHermesV2.withdraw&#45;&gt;MasterChefHermesV2._withdraw -->
+<g id="edge38" class="edge" data-name="MasterChefHermesV2.withdraw-&gt;MasterChefHermesV2._withdraw">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M397.97,-1431.78C435.88,-1435.11 490.15,-1439.88 531.57,-1443.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="531.27,-1447.01 541.53,-1444.39 531.88,-1440.03 531.27,-1447.01" style=""/>
+</g>
+<!-- MasterChefHermesV2.withdraw&#45;&gt;MasterChefHermesV2._safeHermesTransfer -->
+<g id="edge36" class="edge" data-name="MasterChefHermesV2.withdraw-&gt;MasterChefHermesV2._safeHermesTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M381.29,-1413.54C422.92,-1392.99 500.17,-1354.84 548.51,-1330.96" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="550.06,-1334.1 557.48,-1326.53 546.96,-1327.82 550.06,-1334.1" style=""/>
+</g>
+<!-- MasterChefHermesV2.userDelta -->
+<g id="node20" class="node" pointer-events="visible" data-name="MasterChefHermesV2.userDelta">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1272.78" rx="48.08" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1268.58" font-family="Times,serif" font-size="14.00" style="">userDelta</text>
+</g>
+<!-- MasterChefHermesV2.emergencyWithdraw -->
+<g id="node21" class="node" pointer-events="visible" data-name="MasterChefHermesV2.emergencyWithdraw">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1218.78" rx="92.02" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1214.58" font-family="Times,serif" font-size="14.00" style="">emergencyWithdraw</text>
+</g>
+<!-- MasterChefHermesV2.dev -->
+<g id="node22" class="node" pointer-events="visible" data-name="MasterChefHermesV2.dev">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1164.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1160.58" font-family="Times,serif" font-size="14.00" style="">dev</text>
+</g>
+<!-- MasterChefHermesV2.setDevPercent -->
+<g id="node23" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setDevPercent">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1110.78" rx="66.62" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1106.58" font-family="Times,serif" font-size="14.00" style="">setDevPercent</text>
+</g>
+<!-- MasterChefHermesV2.setTreasuryAddr -->
+<g id="node24" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setTreasuryAddr">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1056.78" rx="75.86" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1052.58" font-family="Times,serif" font-size="14.00" style="">setTreasuryAddr</text>
+</g>
+<!-- MasterChefHermesV2.setTreasuryPercent -->
+<g id="node25" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setTreasuryPercent">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1002.78" rx="85.08" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-998.58" font-family="Times,serif" font-size="14.00" style="">setTreasuryPercent</text>
+</g>
+<!-- MasterChefHermesV2.setInvestorAddr -->
+<g id="node26" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setInvestorAddr">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-948.78" rx="73.01" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-944.58" font-family="Times,serif" font-size="14.00" style="">setInvestorAddr</text>
+</g>
+<!-- MasterChefHermesV2.setInvestorPercent -->
+<g id="node27" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setInvestorPercent">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-894.78" rx="82.23" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-890.58" font-family="Times,serif" font-size="14.00" style="">setInvestorPercent</text>
+</g>
+<!-- MasterChefHermesV2.updateEmissionRate -->
+<g id="node28" class="node" pointer-events="visible" data-name="MasterChefHermesV2.updateEmissionRate">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1326.78" rx="90.35" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1322.58" font-family="Times,serif" font-size="14.00" style="">updateEmissionRate</text>
+</g>
+<!-- MasterChefHermesV2.updateEmissionRate&#45;&gt;MasterChefHermesV2.massUpdatePools -->
+<g id="edge39" class="edge" data-name="MasterChefHermesV2.updateEmissionRate-&gt;MasterChefHermesV2.massUpdatePools">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M179.42,-1315.05C188.63,-1311.28 197.41,-1306.32 204.68,-1299.78 256.51,-1253.18 320.47,-1046.23 342.54,-970.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="345.95,-971.39 345.37,-960.82 339.23,-969.45 345.95,-971.39" style=""/>
+</g>
+<!-- MasterChefHermesV2.setStageStarts -->
+<g id="node29" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setStageStarts">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-786.78" rx="65.43" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-782.58" font-family="Times,serif" font-size="14.00" style="">setStageStarts</text>
+</g>
+<!-- MasterChefHermesV2.setStageEnds -->
+<g id="node30" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setStageEnds">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-732.78" rx="62.56" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-728.58" font-family="Times,serif" font-size="14.00" style="">setStageEnds</text>
+</g>
+<!-- MasterChefHermesV2.setUserFeeStage -->
+<g id="node31" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setUserFeeStage">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1380.78" rx="75.29" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1376.58" font-family="Times,serif" font-size="14.00" style="">setUserFeeStage</text>
+</g>
+<!-- MasterChefHermesV2.checkFees -->
+<g id="node33" class="node" pointer-events="visible" data-name="MasterChefHermesV2.checkFees">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="351.47" cy="-1277.78" rx="51.01" ry="18" style=""/>
+<text text-anchor="middle" x="351.47" y="-1273.58" font-family="Times,serif" font-size="14.00" style="">checkFees</text>
+</g>
+<!-- MasterChefHermesV2.setUserFeeStage&#45;&gt;MasterChefHermesV2.checkFees -->
+<g id="edge40" class="edge" data-name="MasterChefHermesV2.setUserFeeStage-&gt;MasterChefHermesV2.checkFees">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M170.76,-1369.92C182.65,-1366.05 194.58,-1360.83 204.68,-1353.78 226.84,-1338.31 218.21,-1319.79 240.68,-1304.78 255.76,-1294.7 274.24,-1288.38 291.72,-1284.42" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="292.77,-1287.78 301.86,-1282.35 291.37,-1280.92 292.77,-1287.78" style=""/>
+</g>
+<!-- MasterChefHermesV2.setDevFeeStage -->
+<g id="node32" class="node" pointer-events="visible" data-name="MasterChefHermesV2.setDevFeeStage">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="110.34" cy="-1434.78" rx="73" ry="18" style=""/>
+<text text-anchor="middle" x="110.34" y="-1430.58" font-family="Times,serif" font-size="14.00" style="">setDevFeeStage</text>
+</g>
+<!-- MasterChefHermesV2.setDevFeeStage&#45;&gt;MasterChefHermesV2.checkFees -->
+<g id="edge41" class="edge" data-name="MasterChefHermesV2.setDevFeeStage-&gt;MasterChefHermesV2.checkFees">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M173.98,-1425.59C185.24,-1421.59 196.11,-1415.9 204.68,-1407.78 239.89,-1374.44 204.8,-1337.4 240.68,-1304.78 254.22,-1292.47 272.45,-1285.55 290.17,-1281.72" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="291.3,-1285.07 300.5,-1279.8 290.03,-1278.18 291.3,-1285.07" style=""/>
+</g>
+<!-- _amount.mul -->
+<g id="node47" class="node" pointer-events="visible" data-name="_amount.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1448.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1444.58" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge42" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M606.21,-1431.34C640.71,-1410.92 735.87,-1409.67 777.76,-1427.61" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="776.27,-1430.78 786.75,-1432.29 779.5,-1424.57 776.27,-1430.78" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge44" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M622.72,-1434.08C661.71,-1426.66 730.21,-1426.68 769.03,-1434.14" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="768.62,-1437.63 779.14,-1436.44 770.17,-1430.81 768.62,-1437.63" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge45" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M642.16,-1442.93C679.17,-1441.56 729.2,-1441.75 762.49,-1443.52" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="762.47,-1447.02 772.67,-1444.15 762.9,-1440.04 762.47,-1447.02" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge46" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M642.16,-1454.63C679.17,-1456 729.2,-1455.8 762.49,-1454.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="762.9,-1457.52 772.67,-1453.41 762.47,-1450.53 762.9,-1457.52" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge47" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M622.72,-1463.48C661.71,-1470.9 730.21,-1470.88 769.03,-1463.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="770.17,-1466.75 779.14,-1461.12 768.62,-1459.92 770.17,-1466.75" style=""/>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.mul -->
+<g id="edge48" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M606.21,-1466.21C640.71,-1486.64 735.87,-1487.89 777.76,-1469.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="779.5,-1472.99 786.75,-1465.26 776.27,-1466.78 779.5,-1472.99" style=""/>
+</g>
+<!-- _amount.sub -->
+<g id="node48" class="node" pointer-events="visible" data-name="_amount.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="799.02" cy="-1394.78" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="799.02" y="-1390.58" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- MasterChefHermesV2._withdraw&#45;&gt;_amount.sub -->
+<g id="edge43" class="edge" data-name="MasterChefHermesV2._withdraw-&gt;_amount.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M634.32,-1437.98C672.21,-1427.98 727.94,-1413.27 763.6,-1403.86" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="764.76,-1407.17 773.54,-1401.24 762.98,-1400.41 764.76,-1407.17" style=""/>
+</g>
+<!-- MasterChefHermesV2._safeHermesTransfer&#45;&gt;IHermesToken.balanceOf -->
+<g id="edge49" class="edge" data-name="MasterChefHermesV2._safeHermesTransfer-&gt;IHermesToken.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M648.51,-1295.24C679.45,-1287.07 717.78,-1276.95 747.88,-1269.01" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="748.97,-1272.34 757.75,-1266.41 747.19,-1265.57 748.97,-1272.34" style=""/>
+</g>
+<!-- MasterChefHermesV2._safeHermesTransfer&#45;&gt;IHermesToken.transfer -->
+<g id="edge50" class="edge" data-name="MasterChefHermesV2._safeHermesTransfer-&gt;IHermesToken.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M679.88,-1303.1C703.86,-1302.88 729.03,-1303.16 749.94,-1303.95" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="750.01,-1307.46 760.15,-1304.4 750.32,-1300.47 750.01,-1307.46" style=""/>
+</g>
+<!-- MasterChefHermesV2._safeHermesTransfer&#45;&gt;IHermesToken.transfer -->
+<g id="edge51" class="edge" data-name="MasterChefHermesV2._safeHermesTransfer-&gt;IHermesToken.transfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M679.88,-1316.46C703.86,-1316.68 729.03,-1316.39 749.94,-1315.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="750.32,-1319.09 760.15,-1315.16 750.01,-1312.1 750.32,-1319.09" style=""/>
+</g>
+<!-- key -->
+<g id="node49" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="175.34,-1814.78 45.34,-1814.78 45.34,-1726.78 175.34,-1726.78 175.34,-1814.78" style=""/>
+<text text-anchor="start" x="94.98" y="-1796.18" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="91.09" y="-1776.18" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="68.54" y="-1756.18" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="54.94" y="-1736.18" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node50" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="378.47,-1814.78 324.47,-1814.78 324.47,-1726.78 378.47,-1726.78 378.47,-1814.78" style=""/>
+<text text-anchor="start" x="341.47" y="-1796.18" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="341.47" y="-1776.18" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="339.47,-1750.78 339.47,-1770.78 364.47,-1770.78 364.47,-1750.78 339.47,-1750.78" style=""/>
+<text text-anchor="start" x="341.47" y="-1756.18" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="341.47,-1732.78 341.47,-1748.78 362.47,-1748.78 362.47,-1732.78 341.47,-1732.78" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge52" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M168.34,-1800.78C240.41,-1800.78 260.96,-1800.78 328.2,-1800.78" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="328.47,-1804.28 338.47,-1800.78 328.47,-1797.28 328.47,-1804.28" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge53" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M168.34,-1780.78C240.41,-1780.78 260.96,-1780.78 328.2,-1780.78" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="328.47,-1784.28 338.47,-1780.78 328.47,-1777.28 328.47,-1784.28" style=""/>
+</g>
+</g>
+</svg>

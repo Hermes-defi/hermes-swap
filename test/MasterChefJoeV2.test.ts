@@ -312,8 +312,8 @@ describe("MasterChefHermesV2", function () {
       await advanceTimeAndBlock(40) // t-11, b=23
       const userInfo = await this.chef.userInfo(0, this.bob.address);
       const pendingTokens = await this.chef.pendingTokens('0', this.bob.address);
-      console.log('userInfo', userInfo);
-      console.log('pendingTokens', pendingTokens);
+      //console.log('userInfo', userInfo);
+      //console.log('pendingTokens', pendingTokens);
 
       expect(await this.lp.balanceOf(this.bob.address)).to.equal("900")
 
@@ -1231,7 +1231,7 @@ describe("MasterChefHermesV2", function () {
       //   - 20 + 20*10 = 220 (+10) PartnerToken
       const bobBalFinal = await this.bob.getBalance()
       const b = bobBalFinal.sub(bobBalAfter)
-      console.log(b.toString())
+      //console.log(b.toString())
       expect(bobBalFinal.sub(bobBalAfter)).to.gt(ethers.utils.parseEther("190"))
       expect(bobBalFinal.sub(bobBalAfter)).to.lt(ethers.utils.parseEther("210"))
     })
@@ -1886,14 +1886,14 @@ describe("MasterChefHermesV2", function () {
       const mcToken = await this.hermes.balanceOf(this.chef.address);
 
       const pending = (await this.chef.pendingTokens(0, this.alice.address)).pendingHermes;
-      console.log('pending', pending.toString()/1e18);
-      console.log('mcToken', mcToken.toString()/1e18);
-      console.log('cap', cap.toString()/1e18);
+      // console.log('pending', pending.toString()/1e18);
+      // console.log('mcToken', mcToken.toString()/1e18);
+      // console.log('cap', cap.toString()/1e18);
 
       await this.chef.connect(this.alice).withdraw(0, "10", { from: this.alice.address })
 
-      const aliceTokens = await this.hermes.balanceOf(this.alice.address);
-      console.log('aliceTokens', aliceTokens.toString()/1e18);
+      //const aliceTokens = await this.hermes.balanceOf(this.alice.address);
+      //console.log('aliceTokens', aliceTokens.toString()/1e18);
 
       // expect((await this.chef.pendingTokens(0, this.alice.address)).pendingHermes).to.be.within(5000, 5050)
     })

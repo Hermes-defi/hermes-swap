@@ -138,7 +138,7 @@ describe("LiquidityTransfer", function () {
 
         let devOneBalanceBefore = (await this.main.provider.getBalance(this.dev.address)).toString();
         let tokenABalanceBefore = (await this.tokenA.balanceOf(this.dev.address)).toString();
-        expect(devOneBalanceBefore).to.be.eq('9998956949418497639830')
+        expect(devOneBalanceBefore).to.be.eq('9998955788554538112304')
         expect(tokenABalanceBefore).to.be.eq('0')
 
         await this.dstPair.approve(this.routerB.address, dstBalanceOfLpDev);
@@ -152,7 +152,7 @@ describe("LiquidityTransfer", function () {
         console.log('devOneBalanceBefore', devOneBalanceBefore);
         console.log('tokenABalanceBefore', tokenABalanceBefore);
 
-        expect(devOneBalanceBefore).to.be.eq('9999956685876794013058')
+        expect(devOneBalanceBefore).to.be.eq('9999955524822264678870')
         expect(tokenABalanceBefore).to.be.eq('999999998')
 
     })

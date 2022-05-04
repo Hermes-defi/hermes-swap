@@ -392,11 +392,14 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         if (user.firstDepositBlock > 0) {} else {
             user.firstDepositBlock = block.timestamp;
         }
-        pool.lpToken.safeTransferFrom(
-            address(msg.sender),
-            address(this),
-            _amount
-        );
+
+        // prevent deflationary attack
+        uint balanceBefore = pool.lpToken.balanceOf(address(this));
+        pool.lpToken.safeTransferFrom(address(msg.sender), address(this), _amount);
+        uint balanceAfter = pool.lpToken.balanceOf(address(this));
+        uint totalDeposited = balanceAfter.sub(balanceBefore);
+        require( totalDeposited == _amount, "invalid amount transferred");
+
         emit Deposit(msg.sender, _pid, _amount);
         user.lastDepositBlock = block.number;
     }
@@ -531,10 +534,21 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     function setUserFeeStage(uint256[] memory _userFees) public onlyOwner {
         userFeeStage = _userFees;
+        checkFees();
     }
 
     function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
         devFeeStage = _devFees;
+        checkFees();
+    }
+
+    function checkFees() internal{
+        for( uint i = 0 ; i < userFeeStage.length; i++ ){
+            uint v1 = userFeeStage[i];
+            uint v2 = devFeeStage[i];
+            require( v1+v2 == 100, "fees values not 100%" );
+            require( v2 <= 5, "dev fee should not be more than 5%" );
+        }
     }
 
     /// @dev This function execute withdraw fee logic, the rule for withdraw is:

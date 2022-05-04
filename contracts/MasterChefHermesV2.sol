@@ -186,13 +186,18 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         return poolInfo.length;
     }
 
+    modifier validatePoolByPid(uint256 _pid) {
+        require (_pid < poolInfo.length , "Pool does not exist") ;
+        _;
+    }
+
     // Add a new lp to the pool. Can only be called by the owner.
     // XXX DO NOT add the same LP token more than once. Rewards will be messed up if you do.
     function add(
         uint256 _allocPoint,
         IERC20 _lpToken,
         IRewarder _rewarder
-    ) public onlyOwner {
+    ) public onlyOwner  {
         require(
             Address.isContract(address(_lpToken)),
             "add: LP token must be a valid contract"
@@ -202,6 +207,10 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
                 address(_rewarder) == address(0),
             "add: rewarder must be contract or zero"
         );
+
+        // prevent adding a non erc20 contract
+        _lpToken.balanceOf(address(this));
+
         require(!lpTokens.contains(address(_lpToken)), "add: LP already added");
         massUpdatePools();
         uint256 lastRewardTimestamp = block.timestamp > startTimestamp
@@ -227,7 +236,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         uint256 _allocPoint,
         IRewarder _rewarder,
         bool overwrite
-    ) public onlyOwner {
+    ) public onlyOwner validatePoolByPid(_pid) {
         require(
             Address.isContract(address(_rewarder)) ||
                 address(_rewarder) == address(0),

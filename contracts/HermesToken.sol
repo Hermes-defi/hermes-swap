@@ -849,9 +849,7 @@ pragma solidity ^0.8.0;
  * @dev Extension of {ERC20} that adds a cap to the supply of tokens.
  */
 abstract contract ERC20Capped is ERC20 {
-    uint256 private _cap;
-    address public maxCapManager;
-    event MaxCap(uint _cap);
+    uint256 private immutable _cap;
     /**
      * @dev Sets the value of the `cap`. This value is immutable, it can only be
      * set once during construction.
@@ -860,7 +858,6 @@ abstract contract ERC20Capped is ERC20 {
         maxCapManager = msg.sender;
         require(cap_ > 0, "ERC20Capped: cap is 0");
         _cap = cap_;
-        emit MaxCap(cap_);
     }
 
     /**
@@ -873,13 +870,17 @@ abstract contract ERC20Capped is ERC20 {
         // allow mc contract to know if we reached maxcap
         return ERC20.totalSupply() >= cap();
     }
+    function maxCapReached(uint amount) public view virtual returns (bool) {
+        // allow mc contract to know if we reached maxcap
+        return ERC20.totalSupply() + amount >= cap();
+    }
     /**
      * @dev See {ERC20-_mint}.
      */
     function _mint(address account, uint256 amount) internal virtual override returns(bool) {
         // console.log('cap(%s) mint(%s)', cap()/1e18, amount/1e18 );
         // - prevent contract to revert on mint request
-        if( maxCapReached() == false){
+        if( maxCapReached(amount) == false){
             ERC20._mint(account, amount);
             // console.log(' - mint to %s %s %s', account, amount/1e18, balanceOf(account)/1e18 );
             return true;
@@ -887,11 +888,6 @@ abstract contract ERC20Capped is ERC20 {
             // console.log(' - mint ignore %s',amount/1e18);
             return false;
         }
-    }
-    function setMaxCap( uint cap_ ) public{
-        require( maxCapManager == msg.sender, "!maxCapManager");
-        _cap = cap_;
-        emit MaxCap(_cap);
     }
 }
 

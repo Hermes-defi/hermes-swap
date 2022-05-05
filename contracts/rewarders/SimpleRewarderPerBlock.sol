@@ -188,7 +188,7 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
     /// withdrawal of remaining tokens.
     function emergencyWithdraw() public onlyOwner {
 
-        emit OnEmergencyWithdraw(rewardToken.balanceOf(address(this);        
+        emit OnEmergencyWithdraw(rewardToken.balanceOf(address(this)));
         rewardToken.safeTransfer(address(msg.sender), rewardToken.balanceOf(address(this)));
     }
 }

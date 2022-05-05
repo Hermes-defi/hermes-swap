@@ -75,8 +75,7 @@ contract HermesERC20 {
     }
 
     function transfer(address to, uint256 value) external returns (bool) {
-        require(to != address(0))
-
+        require(to != address(0), "Invalid destination address");
         _transfer(msg.sender, to, value);
         return true;
     }
@@ -87,8 +86,8 @@ contract HermesERC20 {
         uint256 value
     ) external returns (bool) {
 
-        require(to != address(0))
-        
+        require(to != address(0), "Invalid destination address");
+
         if (allowance[from][msg.sender] != uint256(-1)) {
             allowance[from][msg.sender] = allowance[from][msg.sender].sub(value);
         }

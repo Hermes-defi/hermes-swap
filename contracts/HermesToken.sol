@@ -855,7 +855,6 @@ abstract contract ERC20Capped is ERC20 {
      * set once during construction.
      */
     constructor(uint256 cap_) {
-        maxCapManager = msg.sender;
         require(cap_ > 0, "ERC20Capped: cap is 0");
         _cap = cap_;
     }

@@ -1,0 +1,125 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="327pt" height="454pt" viewBox="0.00 0.00 327.14 454.00">
+<g id="graph0" class="graph" transform="translate(4,450) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-450 323.14,-450 323.14,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSafeERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 172.43,-8 172.43,-8 178.43,-8 184.43,-14 184.43,-20 184.43,-20 184.43,-289 184.43,-289 184.43,-295 178.43,-301 172.43,-301 172.43,-301 20,-301 20,-301 14,-301 8,-295 8,-289 8,-289 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="96.21" y="-284.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SafeERC20  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M216.43,-62C216.43,-62 299.14,-62 299.14,-62 305.14,-62 311.14,-68 311.14,-74 311.14,-74 311.14,-181 311.14,-181 311.14,-187 305.14,-193 299.14,-193 299.14,-193 216.43,-193 216.43,-193 210.43,-193 204.43,-187 204.43,-181 204.43,-181 204.43,-74 204.43,-74 204.43,-68 210.43,-62 216.43,-62" style=""/>
+<text text-anchor="middle" x="257.78" y="-176.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="23.21,-309 23.21,-438 292.78,-438 292.78,-309 23.21,-309" style=""/>
+<text text-anchor="middle" x="158" y="-421.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- SafeERC20.safeSymbol -->
+<g id="node1" class="node" pointer-events="visible" data-name="SafeERC20.safeSymbol">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-250" rx="56.77" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-245.8" font-family="Times,serif" font-size="14.00" style="">safeSymbol</text>
+</g>
+<!-- IERC20.staticcall -->
+<g id="node6" class="node" pointer-events="visible" data-name="IERC20.staticcall">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="257.78" cy="-142" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="257.78" y="-137.8" font-family="Times,serif" font-size="14.00" style="">staticcall</text>
+</g>
+<!-- SafeERC20.safeSymbol&#45;&gt;IERC20.staticcall -->
+<g id="edge1" class="edge" data-name="SafeERC20.safeSymbol-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M144.53,-240.39C158.08,-236.34 172.43,-230.71 184.43,-223 206.79,-208.64 226.46,-185.54 239.62,-167.68" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="242.58,-169.56 245.55,-159.39 236.88,-165.49 242.58,-169.56" style=""/>
+</g>
+<!-- SafeERC20.safeName -->
+<g id="node2" class="node" pointer-events="visible" data-name="SafeERC20.safeName">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-196" rx="49.78" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-191.8" font-family="Times,serif" font-size="14.00" style="">safeName</text>
+</g>
+<!-- SafeERC20.safeName&#45;&gt;IERC20.staticcall -->
+<g id="edge2" class="edge" data-name="SafeERC20.safeName-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M135.14,-184.77C150.51,-180.09 168.38,-174.47 184.43,-169 194.33,-165.62 204.91,-161.8 214.84,-158.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="216.37,-161.28 224.51,-154.49 213.92,-154.72 216.37,-161.28" style=""/>
+</g>
+<!-- SafeERC20.safeDecimals -->
+<g id="node3" class="node" pointer-events="visible" data-name="SafeERC20.safeDecimals">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="96.21" cy="-142" rx="63.1" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-137.8" font-family="Times,serif" font-size="14.00" style="">safeDecimals</text>
+</g>
+<!-- SafeERC20.safeDecimals&#45;&gt;IERC20.staticcall -->
+<g id="edge3" class="edge" data-name="SafeERC20.safeDecimals-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M159.37,-142C173.45,-142 188.31,-142 202.06,-142" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="202.33,-145.5 212.33,-142 202.33,-138.5 202.33,-145.5" style=""/>
+</g>
+<!-- SafeERC20.safeTransfer -->
+<g id="node4" class="node" pointer-events="visible" data-name="SafeERC20.safeTransfer">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-88" rx="59.08" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-83.8" font-family="Times,serif" font-size="14.00" style="">safeTransfer</text>
+</g>
+<!-- IERC20.call -->
+<g id="node7" class="node" pointer-events="visible" data-name="IERC20.call">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="257.78" cy="-88" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="257.78" y="-83.8" font-family="Times,serif" font-size="14.00" style="">call</text>
+</g>
+<!-- SafeERC20.safeTransfer&#45;&gt;IERC20.call -->
+<g id="edge4" class="edge" data-name="SafeERC20.safeTransfer-&gt;IERC20.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M155.73,-88C177.34,-88 201.2,-88 220.31,-88" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="220.39,-91.5 230.39,-88 220.39,-84.5 220.39,-91.5" style=""/>
+</g>
+<!-- SafeERC20.safeTransferFrom -->
+<g id="node5" class="node" pointer-events="visible" data-name="SafeERC20.safeTransferFrom">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-34" rx="80.43" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-29.8" font-family="Times,serif" font-size="14.00" style="">safeTransferFrom</text>
+</g>
+<!-- SafeERC20.safeTransferFrom&#45;&gt;IERC20.call -->
+<g id="edge5" class="edge" data-name="SafeERC20.safeTransferFrom-&gt;IERC20.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M145.36,-48.37C158.11,-52.32 171.83,-56.7 184.43,-61 197.65,-65.51 212.09,-70.82 224.57,-75.53" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="223.5,-78.87 234.09,-79.15 225.99,-72.33 223.5,-78.87" style=""/>
+</g>
+<!-- key -->
+<g id="node8" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="161.21,-405 31.21,-405 31.21,-317 161.21,-317 161.21,-405" style=""/>
+<text text-anchor="start" x="80.85" y="-386.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="76.96" y="-366.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="54.42" y="-346.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="40.82" y="-326.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node9" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="284.78,-405 230.78,-405 230.78,-317 284.78,-317 284.78,-405" style=""/>
+<text text-anchor="start" x="247.78" y="-386.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="247.78" y="-366.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="245.78,-341 245.78,-361 270.78,-361 270.78,-341 245.78,-341" style=""/>
+<text text-anchor="start" x="247.78" y="-346.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="247.78,-323 247.78,-339 268.78,-339 268.78,-323 247.78,-323" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge6" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M154.21,-391C190.85,-391 202.48,-391 234.62,-391" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="234.78,-394.5 244.78,-391 234.78,-387.5 234.78,-394.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge7" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M154.21,-371C190.85,-371 202.48,-371 234.62,-371" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="234.78,-374.5 244.78,-371 234.78,-367.5 234.78,-374.5" style=""/>
+</g>
+</g>
+</svg>

@@ -143,6 +143,16 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
     event SetDevAddress(address indexed oldAddress, address indexed newAddress);
     event UpdateEmissionRate(address indexed user, uint256 _hermesPerSec);
 
+    event OnDevPercentChanged(uint256 indexed _newPercent);
+    event OnTreasuryAddrChanged(address indexed _treasuryAddr);
+    event OnTreasuryPercentChanged(uint256 indexed _newPercent);
+    event OnInvestorAddrChanged(address indexed _investorAddr);
+    event OnInvestorPercentChanged(uint256 indexed _newInvestorPercent);
+    event OnBlockDeltaStartStageChanged(uint256[] indexed _blockStarts);
+    event OnBlockDeltaEndStageChanged(uint256[] indexed _blockEnds);
+    event OnUserFeeStageChanged(uint256[] indexed _userFees);
+    event OnDevFeeStageChanged(uint256[] indexed _devFees);
+
     constructor(
         IHermesToken _hermes,
         address _devAddr,
@@ -490,12 +500,14 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             "setDevPercent: total percent over max"
         );
         devPercent = _newDevPercent;
+        emit OnDevPercentChanged(_newDevPercent);
     }
 
     // Update treasury address by the previous treasury.
     function setTreasuryAddr(address _treasuryAddr) public {
         require(msg.sender == treasuryAddr, "setTreasuryAddr: wut?");
         treasuryAddr = _treasuryAddr;
+        emit OnTreasuryAddrChanged(_treasuryAddr);
     }
 
     function setTreasuryPercent(uint256 _newTreasuryPercent) public onlyOwner {
@@ -508,12 +520,14 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             "setTreasuryPercent: total percent over max"
         );
         treasuryPercent = _newTreasuryPercent;
+        emit OnTreasuryPercentChanged(_newTreasuryPercent);
     }
 
     // Update the investor address by the previous investor.
     function setInvestorAddr(address _investorAddr) public {
         require(msg.sender == investorAddr, "setInvestorAddr: wut?");
         investorAddr = _investorAddr;
+        emit OnInvestorAddrChanged(_investorAddr);
     }
 
     function setInvestorPercent(uint256 _newInvestorPercent) public onlyOwner {
@@ -526,6 +540,7 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
             "setInvestorPercent: total percent over max"
         );
         investorPercent = _newInvestorPercent;
+        emit OnInvestorPercentChanged(_newInvestorPercent);
     }
 
     /// @notice simple and transparent to emission update.
@@ -537,19 +552,23 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
 
     function setStageStarts(uint256[] memory _blockStarts) public onlyOwner {
         blockDeltaStartStage = _blockStarts;
+        emit OnBlockDeltaStartStageChanged(_blockStarts);
     }
 
     function setStageEnds(uint256[] memory _blockEnds) public onlyOwner {
         blockDeltaEndStage = _blockEnds;
+        emit OnBlockDeltaEndStageChanged(_blockEnds);
     }
 
     function setUserFeeStage(uint256[] memory _userFees) public onlyOwner {
         userFeeStage = _userFees;
+        emit OnUserFeeStageChanged(_userFees);
         checkFees();
     }
 
     function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
         devFeeStage = _devFees;
+        emit OnDevFeeStageChanged(_devFees);
         checkFees();
     }
 

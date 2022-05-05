@@ -83,6 +83,8 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
     event OnReward(address indexed user, uint256 amount);
     event RewardRateUpdated(uint256 oldRate, uint256 newRate);
 
+    event OnEmergencyWithdraw(uint256 indexed amount);
+
     modifier onlyMCV2() {
         require(msg.sender == address(MC_V2), "onlyMCV2: only MasterChef V2 can call this function");
         _;
@@ -185,6 +187,8 @@ contract SimpleRewarderPerBlock is IRewarder, BoringOwnable {
     /// @notice In case rewarder is stopped before emissions finished, this function allows
     /// withdrawal of remaining tokens.
     function emergencyWithdraw() public onlyOwner {
+
+        emit OnEmergencyWithdraw(rewardToken.balanceOf(address(this);        
         rewardToken.safeTransfer(address(msg.sender), rewardToken.balanceOf(address(this)));
     }
 }

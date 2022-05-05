@@ -1,0 +1,155 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305pt" height="701pt" viewBox="0.00 0.00 304.99 701.00">
+<g id="graph0" class="graph" transform="translate(4,697) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-697 300.99,-697 300.99,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterHermesERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-147C20,-147 276.99,-147 276.99,-147 282.99,-147 288.99,-153 288.99,-159 288.99,-159 288.99,-536 288.99,-536 288.99,-542 282.99,-548 276.99,-548 276.99,-548 20,-548 20,-548 14,-548 8,-542 8,-536 8,-536 8,-159 8,-159 8,-153 14,-147 20,-147" style=""/>
+<text text-anchor="middle" x="148.49" y="-531.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesERC20</text>
+</g>
+<g id="clust2" class="cluster" data-name="clustertotalSupply">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M206.02,-8C206.02,-8 262.02,-8 262.02,-8 268.02,-8 274.02,-14 274.02,-20 274.02,-20 274.02,-127 274.02,-127 274.02,-133 268.02,-139 262.02,-139 262.02,-139 206.02,-139 206.02,-139 200.02,-139 194.02,-133 194.02,-127 194.02,-127 194.02,-20 194.02,-20 194.02,-14 200.02,-8 206.02,-8" style=""/>
+<text text-anchor="middle" x="234.02" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">totalSupply</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="10.53,-556 10.53,-685 269.02,-685 269.02,-556 10.53,-556" style=""/>
+<text text-anchor="middle" x="139.77" y="-668.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- HermesERC20.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="HermesERC20.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="83.53" cy="-497" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-492.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- HermesERC20._mint -->
+<g id="node2" class="node" pointer-events="visible" data-name="HermesERC20._mint">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="83.53" cy="-227" rx="33.64" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-222.8" font-family="Times,serif" font-size="14.00" style="">_mint</text>
+</g>
+<!-- totalSupply.add -->
+<g id="node10" class="node" pointer-events="visible" data-name="totalSupply.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="234.02" cy="-88" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="234.02" y="-83.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- HermesERC20._mint&#45;&gt;totalSupply.add -->
+<g id="edge1" class="edge" data-name="HermesERC20._mint-&gt;totalSupply.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M114.16,-219.37C126.52,-215.13 140.44,-208.88 151.05,-200 174.04,-180.78 169.41,-167.22 187.05,-143 194.95,-132.16 204.35,-120.69 212.59,-111.05" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="215.28,-113.29 219.17,-103.44 209.98,-108.71 215.28,-113.29" style=""/>
+</g>
+<!-- HermesERC20._burn -->
+<g id="node3" class="node" pointer-events="visible" data-name="HermesERC20._burn">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="83.53" cy="-173" rx="33.63" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-168.8" font-family="Times,serif" font-size="14.00" style="">_burn</text>
+</g>
+<!-- totalSupply.sub -->
+<g id="node11" class="node" pointer-events="visible" data-name="totalSupply.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="234.02" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="234.02" y="-29.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- HermesERC20._burn&#45;&gt;totalSupply.sub -->
+<g id="edge2" class="edge" data-name="HermesERC20._burn-&gt;totalSupply.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M97.12,-156.36C115.26,-133.13 150.57,-90.52 187.05,-61 192.06,-56.95 197.74,-53.11 203.35,-49.66" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="205.16,-52.66 212.02,-44.59 201.62,-46.62 205.16,-52.66" style=""/>
+</g>
+<!-- HermesERC20._approve -->
+<g id="node4" class="node" pointer-events="visible" data-name="HermesERC20._approve">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="234.02" cy="-308" rx="46.93" ry="18" style=""/>
+<text text-anchor="middle" x="234.02" y="-303.8" font-family="Times,serif" font-size="14.00" style="">_approve</text>
+</g>
+<!-- HermesERC20._transfer -->
+<g id="node5" class="node" pointer-events="visible" data-name="HermesERC20._transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="234.02" cy="-416" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="234.02" y="-411.8" font-family="Times,serif" font-size="14.00" style="">_transfer</text>
+</g>
+<!-- HermesERC20.approve -->
+<g id="node6" class="node" pointer-events="visible" data-name="HermesERC20.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="83.53" cy="-335" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-330.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- HermesERC20.approve&#45;&gt;HermesERC20._approve -->
+<g id="edge3" class="edge" data-name="HermesERC20.approve-&gt;HermesERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M122.77,-328.05C140.62,-324.8 162.14,-320.89 181.41,-317.38" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="182.04,-320.83 191.25,-315.59 180.79,-313.94 182.04,-320.83" style=""/>
+</g>
+<!-- HermesERC20.transfer -->
+<g id="node7" class="node" pointer-events="visible" data-name="HermesERC20.transfer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="83.53" cy="-443" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-438.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- HermesERC20.transfer&#45;&gt;HermesERC20._transfer -->
+<g id="edge4" class="edge" data-name="HermesERC20.transfer-&gt;HermesERC20._transfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M121.23,-436.33C139.75,-432.96 162.49,-428.82 182.61,-425.16" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="183.35,-428.59 192.56,-423.36 182.09,-421.7 183.35,-428.59" style=""/>
+</g>
+<!-- HermesERC20.transferFrom -->
+<g id="node8" class="node" pointer-events="visible" data-name="HermesERC20.transferFrom">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="83.53" cy="-389" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-384.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- HermesERC20.transferFrom&#45;&gt;HermesERC20._transfer -->
+<g id="edge5" class="edge" data-name="HermesERC20.transferFrom-&gt;HermesERC20._transfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M136.04,-398.37C151.02,-401.09 167.36,-404.06 182.28,-406.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="181.89,-410.26 192.35,-408.61 183.14,-403.37 181.89,-410.26" style=""/>
+</g>
+<!-- HermesERC20.permit -->
+<g id="node9" class="node" pointer-events="visible" data-name="HermesERC20.permit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="83.53" cy="-281" rx="36.49" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-276.8" font-family="Times,serif" font-size="14.00" style="">permit</text>
+</g>
+<!-- HermesERC20.permit&#45;&gt;HermesERC20._approve -->
+<g id="edge6" class="edge" data-name="HermesERC20.permit-&gt;HermesERC20._approve">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M117.85,-287.06C136.52,-290.45 160.2,-294.76 181.23,-298.58" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="180.84,-302.07 191.3,-300.42 182.09,-295.18 180.84,-302.07" style=""/>
+</g>
+<!-- key -->
+<g id="node12" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="148.53,-652 18.53,-652 18.53,-564 148.53,-564 148.53,-652" style=""/>
+<text text-anchor="start" x="68.16" y="-633.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="64.27" y="-613.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="41.73" y="-593.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="28.13" y="-573.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node13" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="261.02,-652 207.02,-652 207.02,-564 261.02,-564 261.02,-652" style=""/>
+<text text-anchor="start" x="224.02" y="-633.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="224.02" y="-613.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="222.02,-588 222.02,-608 247.02,-608 247.02,-588 222.02,-588" style=""/>
+<text text-anchor="start" x="224.02" y="-593.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="224.02,-570 224.02,-586 245.02,-586 245.02,-570 224.02,-570" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge7" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M141.53,-638C173.27,-638 183.62,-638 211.02,-638" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="211.02,-641.5 221.02,-638 211.02,-634.5 211.02,-641.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge8" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M141.53,-618C173.27,-618 183.62,-618 211.02,-618" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="211.02,-621.5 221.02,-618 211.02,-614.5 211.02,-621.5" style=""/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,645 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1343pt" height="1225pt" viewBox="0.00 0.00 1342.70 1225.00">
+<g id="graph0" class="graph" transform="translate(4,1221) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1221 1338.7,-1221 1338.7,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIMasterChef">
+
+<path fill="#445773" stroke="#445773" d="M387.14,-854C387.14,-854 519.24,-854 519.24,-854 525.24,-854 531.24,-860 531.24,-866 531.24,-866 531.24,-1081 531.24,-1081 531.24,-1087 525.24,-1093 519.24,-1093 519.24,-1093 387.14,-1093 387.14,-1093 381.14,-1093 375.14,-1087 375.14,-1081 375.14,-1081 375.14,-866 375.14,-866 375.14,-860 381.14,-854 387.14,-854" style=""/>
+<text text-anchor="middle" x="453.19" y="-1076.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IMasterChef  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterFarmLens">
+
+<path fill="#445773" stroke="#445773" d="M20,-635C20,-635 1314.7,-635 1314.7,-635 1320.7,-635 1326.7,-641 1326.7,-647 1326.7,-647 1326.7,-834 1326.7,-834 1326.7,-840 1320.7,-846 1314.7,-846 1314.7,-846 20,-846 20,-846 14,-846 8,-840 8,-834 8,-834 8,-647 8,-647 8,-641 14,-635 20,-635" style=""/>
+<text text-anchor="middle" x="667.35" y="-829.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">FarmLens</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterpriceFromWoneUsdt">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M751.94,-465C751.94,-465 861.94,-465 861.94,-465 867.94,-465 873.94,-471 873.94,-477 873.94,-477 873.94,-530 873.94,-530 873.94,-536 867.94,-542 861.94,-542 861.94,-542 751.94,-542 751.94,-542 745.94,-542 739.94,-536 739.94,-530 739.94,-530 739.94,-477 739.94,-477 739.94,-471 745.94,-465 751.94,-465" style=""/>
+<text text-anchor="middle" x="806.94" y="-525.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">priceFromWoneUsdt</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterIHermesPair">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M970.61,-162C970.61,-162 1078,-162 1078,-162 1084,-162 1090,-168 1090,-174 1090,-174 1090,-443 1090,-443 1090,-449 1084,-455 1078,-455 1078,-455 970.61,-455 970.61,-455 964.61,-455 958.61,-449 958.61,-443 958.61,-443 958.61,-174 958.61,-174 958.61,-168 964.61,-162 970.61,-162" style=""/>
+<text text-anchor="middle" x="1024.31" y="-438.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesPair</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterreserve1">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M1001.31,-939C1001.31,-939 1047.31,-939 1047.31,-939 1053.31,-939 1059.31,-945 1059.31,-951 1059.31,-951 1059.31,-1004 1059.31,-1004 1059.31,-1010 1053.31,-1016 1047.31,-1016 1047.31,-1016 1001.31,-1016 1001.31,-1016 995.31,-1016 989.31,-1010 989.31,-1004 989.31,-1004 989.31,-951 989.31,-951 989.31,-945 995.31,-939 1001.31,-939" style=""/>
+<text text-anchor="middle" x="1024.31" y="-999.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserve1</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterreserve0">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M1001.31,-854C1001.31,-854 1047.31,-854 1047.31,-854 1053.31,-854 1059.31,-860 1059.31,-866 1059.31,-866 1059.31,-919 1059.31,-919 1059.31,-925 1053.31,-931 1047.31,-931 1047.31,-931 1001.31,-931 1001.31,-931 995.31,-931 989.31,-925 989.31,-919 989.31,-919 989.31,-866 989.31,-866 989.31,-860 995.31,-854 1001.31,-854" style=""/>
+<text text-anchor="middle" x="1024.31" y="-914.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserve0</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterIHermesFactory">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M765.55,-550C765.55,-550 848.33,-550 848.33,-550 854.33,-550 860.33,-556 860.33,-562 860.33,-562 860.33,-615 860.33,-615 860.33,-621 854.33,-627 848.33,-627 848.33,-627 765.55,-627 765.55,-627 759.55,-627 753.55,-621 753.55,-615 753.55,-615 753.55,-562 753.55,-562 753.55,-556 759.55,-550 765.55,-550" style=""/>
+<text text-anchor="middle" x="806.94" y="-610.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesFactory</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusterreserve0Avax">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M596.88,-1132C596.88,-1132 665.88,-1132 665.88,-1132 671.88,-1132 677.88,-1138 677.88,-1144 677.88,-1144 677.88,-1197 677.88,-1197 677.88,-1203 671.88,-1209 665.88,-1209 665.88,-1209 596.88,-1209 596.88,-1209 590.88,-1209 584.88,-1203 584.88,-1197 584.88,-1197 584.88,-1144 584.88,-1144 584.88,-1138 590.88,-1132 596.88,-1132" style=""/>
+<text text-anchor="middle" x="631.38" y="-1192.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserve0Avax</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusterreserveAvax">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M599.88,-1047C599.88,-1047 661.88,-1047 661.88,-1047 667.88,-1047 673.88,-1053 673.88,-1059 673.88,-1059 673.88,-1112 673.88,-1112 673.88,-1118 667.88,-1124 661.88,-1124 661.88,-1124 599.88,-1124 599.88,-1124 593.88,-1124 587.88,-1118 587.88,-1112 587.88,-1112 587.88,-1059 587.88,-1059 587.88,-1053 593.88,-1047 599.88,-1047" style=""/>
+<text text-anchor="middle" x="630.88" y="-1107.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserveAvax</text>
+</g>
+<g id="clust10" class="cluster" data-name="clusterbalance">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M430.19,-8C430.19,-8 476.19,-8 476.19,-8 482.19,-8 488.19,-14 488.19,-20 488.19,-20 488.19,-73 488.19,-73 488.19,-79 482.19,-85 476.19,-85 476.19,-85 430.19,-85 430.19,-85 424.19,-85 418.19,-79 418.19,-73 418.19,-73 418.19,-20 418.19,-20 418.19,-14 424.19,-8 430.19,-8" style=""/>
+<text text-anchor="middle" x="453.19" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">balance</text>
+</g>
+<g id="clust11" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="16.79,-967 16.79,-1096 308.36,-1096 308.36,-967 16.79,-967" style=""/>
+<text text-anchor="middle" x="162.57" y="-1079.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IMasterChef.poolLength -->
+<g id="node1" class="node" pointer-events="visible" data-name="IMasterChef.poolLength">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="453.19" cy="-1042" rx="55.62" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-1037.8" font-family="Times,serif" font-size="14.00" style="">poolLength</text>
+</g>
+<!-- IMasterChef.poolInfo -->
+<g id="node2" class="node" pointer-events="visible" data-name="IMasterChef.poolInfo">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="453.19" cy="-988" rx="44.09" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-983.8" font-family="Times,serif" font-size="14.00" style="">poolInfo</text>
+</g>
+<!-- IMasterChef.totalAllocPoint -->
+<g id="node3" class="node" pointer-events="visible" data-name="IMasterChef.totalAllocPoint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="453.19" cy="-934" rx="70.1" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-929.8" font-family="Times,serif" font-size="14.00" style="">totalAllocPoint</text>
+</g>
+<!-- IMasterChef.hermesPerSec -->
+<g id="node4" class="node" pointer-events="visible" data-name="IMasterChef.hermesPerSec">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="453.19" cy="-880" rx="65.98" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-875.8" font-family="Times,serif" font-size="14.00" style="">hermesPerSec</text>
+</g>
+<!-- FarmLens.&lt;Constructor&gt; -->
+<g id="node5" class="node" pointer-events="visible" data-name="FarmLens.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="89.79" cy="-780" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="89.79" y="-775.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- FarmLens.IHermesFactory -->
+<g id="node14" class="node" pointer-events="visible" data-name="FarmLens.IHermesFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="273.36" cy="-780" rx="73.57" ry="18" style=""/>
+<text text-anchor="middle" x="273.36" y="-775.8" font-family="Times,serif" font-size="14.00" style="">IHermesFactory</text>
+</g>
+<!-- FarmLens.&lt;Constructor&gt;&#45;&gt;FarmLens.IHermesFactory -->
+<g id="edge1" class="edge" data-name="FarmLens.&lt;Constructor&gt;-&gt;FarmLens.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M157.37,-780C167.72,-780 178.53,-780 189.2,-780" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="189.36,-783.5 199.36,-780 189.36,-776.5 189.36,-783.5" style=""/>
+</g>
+<!-- FarmLens.getAvaxPrice -->
+<g id="node6" class="node" pointer-events="visible" data-name="FarmLens.getAvaxPrice">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="630.88" cy="-701" rx="63.69" ry="18" style=""/>
+<text text-anchor="middle" x="630.88" y="-696.8" font-family="Times,serif" font-size="14.00" style="">getAvaxPrice</text>
+</g>
+<!-- FarmLens._getAvaxPrice -->
+<g id="node7" class="node" pointer-events="visible" data-name="FarmLens._getAvaxPrice">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="806.94" cy="-701" rx="68.34" ry="18" style=""/>
+<text text-anchor="middle" x="806.94" y="-696.8" font-family="Times,serif" font-size="14.00" style="">_getAvaxPrice</text>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens._getAvaxPrice -->
+<g id="edge2" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens._getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M678.06,-688.92C699.11,-687.34 724.28,-687.08 746.7,-688.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="746.6,-691.63 756.79,-688.71 747,-684.64 746.6,-691.63" style=""/>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens._getAvaxPrice -->
+<g id="edge4" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens._getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M694.72,-701C705.6,-701 717.03,-701 728.26,-701" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="728.48,-704.5 738.48,-701 728.48,-697.5 728.48,-704.5" style=""/>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens._getAvaxPrice -->
+<g id="edge6" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens._getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M678.06,-713.08C699.11,-714.66 724.28,-714.92 746.7,-713.87" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="747,-717.36 756.79,-713.29 746.6,-710.37 747,-717.36" style=""/>
+</g>
+<!-- FarmLens.IHermesPair -->
+<g id="node15" class="node" pointer-events="visible" data-name="FarmLens.IHermesPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="806.94" cy="-755" rx="59.68" ry="18" style=""/>
+<text text-anchor="middle" x="806.94" y="-750.8" font-family="Times,serif" font-size="14.00" style="">IHermesPair</text>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens.IHermesPair -->
+<g id="edge3" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M691.78,-706.68C719.31,-713.97 750.87,-724.48 773.82,-734.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="772.53,-737.54 783.09,-738.44 775.39,-731.16 772.53,-737.54" style=""/>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens.IHermesPair -->
+<g id="edge5" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M674.46,-714.21C698.71,-721.74 729.27,-731.21 754.81,-739.14" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="754.11,-742.59 764.7,-742.21 756.18,-735.9 754.11,-742.59" style=""/>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;FarmLens.IHermesPair -->
+<g id="edge7" class="edge" data-name="FarmLens.getAvaxPrice-&gt;FarmLens.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M654.99,-717.69C676.43,-727.75 709.39,-739.2 739.05,-747.42" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="738.4,-750.87 748.96,-750.08 740.21,-744.11 738.4,-750.87" style=""/>
+</g>
+<!-- priceFromWoneUsdt.add -->
+<g id="node17" class="node" pointer-events="visible" data-name="priceFromWoneUsdt.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="806.94" cy="-491" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="806.94" y="-486.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- FarmLens.getAvaxPrice&#45;&gt;priceFromWoneUsdt.add -->
+<g id="edge8" class="edge" data-name="FarmLens.getAvaxPrice-&gt;priceFromWoneUsdt.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M641.92,-683.08C659.3,-652.92 697.12,-590.92 738.51,-546 750.77,-532.7 766.32,-519.8 779.39,-509.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="781.64,-512.54 787.57,-503.75 777.46,-506.92 781.64,-512.54" style=""/>
+</g>
+<!-- FarmLens._tokenDecimalsMultiplier -->
+<g id="node10" class="node" pointer-events="visible" data-name="FarmLens._tokenDecimalsMultiplier">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-701" rx="112.9" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-696.8" font-family="Times,serif" font-size="14.00" style="">_tokenDecimalsMultiplier</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge12" class="edge" data-name="FarmLens._getAvaxPrice-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M871.39,-694.78C883.45,-694.48 896.41,-694.3 909.49,-694.26" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="909.51,-697.76 919.5,-694.25 909.5,-690.76 909.51,-697.76" style=""/>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge16" class="edge" data-name="FarmLens._getAvaxPrice-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M871.39,-707.22C883.45,-707.52 896.41,-707.7 909.49,-707.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="909.5,-711.24 919.5,-707.75 909.51,-704.24 909.5,-711.24" style=""/>
+</g>
+<!-- IHermesPair.getReserves -->
+<g id="node18" class="node" pointer-events="visible" data-name="IHermesPair.getReserves">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-404" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-399.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;IHermesPair.getReserves -->
+<g id="edge9" class="edge" data-name="FarmLens._getAvaxPrice-&gt;IHermesPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M826.38,-683.73C840.52,-670.06 860.12,-650.14 875.36,-631 929.66,-562.76 982.91,-474.3 1008.14,-430.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="1011.28,-432.27 1013.24,-421.86 1005.21,-428.78 1011.28,-432.27" style=""/>
+</g>
+<!-- IHermesPair.token0 -->
+<g id="node19" class="node" pointer-events="visible" data-name="IHermesPair.token0">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-350" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-345.8" font-family="Times,serif" font-size="14.00" style="">token0</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;IHermesPair.token0 -->
+<g id="edge10" class="edge" data-name="FarmLens._getAvaxPrice-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M823.1,-683.38C838.97,-668.6 863.23,-646.87 875.36,-622 925.33,-519.52 834.69,-452.39 911.36,-368 928.81,-348.79 957.34,-342.12 981.23,-341.38" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="981.47,-344.89 991.48,-341.43 981.5,-337.89 981.47,-344.89" style=""/>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;IHermesPair.token0 -->
+<g id="edge17" class="edge" data-name="FarmLens._getAvaxPrice-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M838.68,-685.04C852.13,-673.61 866.78,-657.59 875.36,-640 925.33,-537.52 834.69,-470.39 911.36,-386 928.28,-367.37 955.63,-360.54 979.05,-357.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="979.64,-360.78 989.15,-356.12 978.8,-353.83 979.64,-360.78" style=""/>
+</g>
+<!-- IHermesPair.token1 -->
+<g id="node20" class="node" pointer-events="visible" data-name="IHermesPair.token1">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-296" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-291.8" font-family="Times,serif" font-size="14.00" style="">token1</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;IHermesPair.token1 -->
+<g id="edge13" class="edge" data-name="FarmLens._getAvaxPrice-&gt;IHermesPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M830.7,-684.06C846.05,-671.29 865.26,-652.36 875.36,-631 904.8,-568.7 865.65,-374.57 911.36,-323 927.52,-304.77 953.65,-297.78 976.61,-295.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="977.17,-298.92 986.88,-294.69 976.65,-291.94 977.17,-298.92" style=""/>
+</g>
+<!-- reserve1.mul -->
+<g id="node23" class="node" pointer-events="visible" data-name="reserve1.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-965" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-960.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;reserve1.mul -->
+<g id="edge11" class="edge" data-name="FarmLens._getAvaxPrice-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M866.02,-710.2C869.49,-712.75 872.66,-715.67 875.36,-719 934.15,-791.55 848.35,-857.08 911.36,-926 930.72,-947.18 963.26,-954.07 988.28,-957.58" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="988.11,-961.09 998.48,-958.91 989.01,-954.15 988.11,-961.09" style=""/>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;reserve1.mul -->
+<g id="edge14" class="edge" data-name="FarmLens._getAvaxPrice-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M843.34,-716.27C855.15,-720.82 867.34,-727.11 875.36,-737 934.15,-809.55 848.35,-875.08 911.36,-944 930.96,-965.44 964.06,-972.24 989.19,-972.48" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="989.52,-975.97 999.42,-972.2 989.33,-968.97 989.52,-975.97" style=""/>
+</g>
+<!-- reserve0.mul -->
+<g id="node24" class="node" pointer-events="visible" data-name="reserve0.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-880" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-875.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;reserve0.mul -->
+<g id="edge15" class="edge" data-name="FarmLens._getAvaxPrice-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M865.6,-710.57C869.16,-713.03 872.47,-715.83 875.36,-719 913.41,-760.81 870.88,-801.53 911.36,-841 931.9,-861.04 964.3,-868.06 988.97,-871.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="988.61,-875.39 999.01,-873.39 989.63,-868.46 988.61,-875.39" style=""/>
+</g>
+<!-- FarmLens._getAvaxPrice&#45;&gt;reserve0.mul -->
+<g id="edge18" class="edge" data-name="FarmLens._getAvaxPrice-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M842.03,-716.53C853.99,-721.15 866.62,-727.4 875.36,-737 913.41,-778.81 870.88,-819.53 911.36,-859 931.9,-879.04 964.3,-886.06 988.97,-886.79" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="989.03,-890.29 999.01,-886.74 989,-883.29 989.03,-890.29" style=""/>
+</g>
+<!-- FarmLens.getPriceInUsd -->
+<g id="node8" class="node" pointer-events="visible" data-name="FarmLens.getPriceInUsd">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="453.19" cy="-741" rx="66.06" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-736.8" font-family="Times,serif" font-size="14.00" style="">getPriceInUsd</text>
+</g>
+<!-- FarmLens.getPriceInUsd&#45;&gt;FarmLens.getAvaxPrice -->
+<g id="edge19" class="edge" data-name="FarmLens.getPriceInUsd-&gt;FarmLens.getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M504.53,-729.54C525.19,-724.83 549.26,-719.36 570.75,-714.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="571.76,-717.82 580.74,-712.19 570.21,-711 571.76,-717.82" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax -->
+<g id="node9" class="node" pointer-events="visible" data-name="FarmLens.getPriceInAvax">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="630.88" cy="-795" rx="71.78" ry="18" style=""/>
+<text text-anchor="middle" x="630.88" y="-790.8" font-family="Times,serif" font-size="14.00" style="">getPriceInAvax</text>
+</g>
+<!-- FarmLens.getPriceInUsd&#45;&gt;FarmLens.getPriceInAvax -->
+<g id="edge20" class="edge" data-name="FarmLens.getPriceInUsd-&gt;FarmLens.getPriceInAvax">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M498.07,-754.49C521.4,-761.66 550.3,-770.54 575.09,-778.16" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="574.14,-781.53 584.72,-781.12 576.19,-774.84 574.14,-781.53" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge27" class="edge" data-name="FarmLens.getPriceInAvax-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M701.06,-798.64C750.63,-802.61 818.41,-804.86 875.36,-788 918.06,-775.36 960,-746.09 988.26,-724.82" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="990.73,-727.34 996.57,-718.51 986.49,-721.77 990.73,-727.34" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge30" class="edge" data-name="FarmLens.getPriceInAvax-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M675.15,-809.32C724.68,-819.08 807.67,-826.04 875.36,-806 926.13,-790.97 975.82,-752.44 1002.72,-726.24" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1005.46,-728.45 1010,-718.88 1000.48,-723.53 1005.46,-728.45" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;FarmLens.IHermesPair -->
+<g id="edge21" class="edge" data-name="FarmLens.getPriceInAvax-&gt;FarmLens.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M684.57,-782.89C704.87,-778.23 728.12,-772.88 748.82,-768.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="749.78,-771.5 758.74,-765.85 748.21,-764.67 749.78,-771.5" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;IHermesPair.getReserves -->
+<g id="edge23" class="edge" data-name="FarmLens.getPriceInAvax-&gt;IHermesPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M656.99,-778.13C672.76,-766.09 692.04,-748.46 702.51,-728 757.05,-621.4 656.58,-548.31 738.51,-461 753.64,-444.88 881.7,-424.1 960.86,-412.6" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="961.81,-416 971.21,-411.11 960.81,-409.07 961.81,-416" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;IHermesPair.token0 -->
+<g id="edge24" class="edge" data-name="FarmLens.getPriceInAvax-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M657.1,-778.18C672.92,-766.18 692.22,-748.55 702.51,-728 763.85,-605.57 648.57,-525.26 738.51,-422 798.17,-353.52 912.64,-345.47 976.8,-346.92" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="976.92,-350.42 987.03,-347.24 977.14,-343.43 976.92,-350.42" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;IHermesPair.token1 -->
+<g id="edge25" class="edge" data-name="FarmLens.getPriceInAvax-&gt;IHermesPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M657.25,-778.26C673.14,-766.28 692.44,-748.66 702.51,-728 739.39,-652.35 681.92,-413.28 738.51,-351 799.15,-284.28 914.26,-283.98 978,-289.83" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="977.85,-293.33 988.15,-290.86 978.55,-286.37 977.85,-293.33" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;reserve1.mul -->
+<g id="edge26" class="edge" data-name="FarmLens.getPriceInAvax-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M670.41,-810.12C690.47,-820.94 715.55,-835.22 738.51,-847 813.66,-885.56 831.88,-897.41 911.36,-926 938.45,-935.74 970.23,-943.97 992.99,-950.9" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="992.18,-954.31 1002.77,-953.99 994.29,-947.64 992.18,-954.31" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;reserve1.mul -->
+<g id="edge31" class="edge" data-name="FarmLens.getPriceInAvax-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M650.09,-812.6C671.1,-827.73 706.82,-848.74 738.51,-865 813.66,-903.56 831.88,-915.41 911.36,-944 936.2,-952.94 964.99,-960.59 987.15,-964.72" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="986.7,-968.2 997.14,-966.41 987.86,-961.29 986.7,-968.2" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;reserve0.mul -->
+<g id="edge28" class="edge" data-name="FarmLens.getPriceInAvax-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M694.33,-803.46C778.54,-819.21 925.42,-851.5 990.58,-868.94" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="989.74,-872.34 1000.31,-871.61 991.59,-865.59 989.74,-872.34" style=""/>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;reserve0.mul -->
+<g id="edge29" class="edge" data-name="FarmLens.getPriceInAvax-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M676.02,-809.05C754.15,-829.18 915.32,-864.06 987.26,-876.28" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="986.77,-879.75 997.21,-877.92 987.91,-872.84 986.77,-879.75" style=""/>
+</g>
+<!-- IHermesFactory.getPair -->
+<g id="node25" class="node" pointer-events="visible" data-name="IHermesFactory.getPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="806.94" cy="-576" rx="38.28" ry="18" style=""/>
+<text text-anchor="middle" x="806.94" y="-571.8" font-family="Times,serif" font-size="14.00" style="">getPair</text>
+</g>
+<!-- FarmLens.getPriceInAvax&#45;&gt;IHermesFactory.getPair -->
+<g id="edge22" class="edge" data-name="FarmLens.getPriceInAvax-&gt;IHermesFactory.getPair">
+
+<path fill="none" stroke="white" stroke-width="2" d="M654.87,-777.82C670.14,-765.41 689.66,-747.46 702.51,-728 727.85,-689.63 711.76,-668.4 738.51,-631 748.15,-617.52 761.91,-605.5 774.49,-596.16" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="776.83,-598.78 782.94,-590.13 772.76,-593.08 776.83,-598.78" style=""/>
+</g>
+<!-- FarmLens.IHermesERC20 -->
+<g id="node16" class="node" pointer-events="visible" data-name="FarmLens.IHermesERC20">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1245.98" cy="-661" rx="72.94" ry="18" style=""/>
+<text text-anchor="middle" x="1245.98" y="-656.8" font-family="Times,serif" font-size="14.00" style="">IHermesERC20</text>
+</g>
+<!-- FarmLens._tokenDecimalsMultiplier&#45;&gt;FarmLens.IHermesERC20 -->
+<g id="edge32" class="edge" data-name="FarmLens._tokenDecimalsMultiplier-&gt;FarmLens.IHermesERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M1099.37,-687.51C1124.44,-682.95 1152.3,-677.88 1176.88,-673.4" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1177.63,-676.82 1186.84,-671.59 1176.38,-669.93 1177.63,-676.82" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd -->
+<g id="node11" class="node" pointer-events="visible" data-name="FarmLens.getReserveUsd">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="453.19" cy="-795" rx="69.49" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-790.8" font-family="Times,serif" font-size="14.00" style="">getReserveUsd</text>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;FarmLens.getAvaxPrice -->
+<g id="edge46" class="edge" data-name="FarmLens.getReserveUsd-&gt;FarmLens.getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M499.42,-781.35C510.07,-777.54 521.24,-773.04 531.24,-768 555.77,-755.64 581.36,-738.09 600.34,-724.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="602.66,-726.69 608.56,-717.89 598.46,-721.09 602.66,-726.69" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;FarmLens.getPriceInAvax -->
+<g id="edge40" class="edge" data-name="FarmLens.getReserveUsd-&gt;FarmLens.getPriceInAvax">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M518.11,-788.48C529.65,-788.25 541.78,-788.19 553.62,-788.3" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="553.89,-791.81 563.93,-788.44 553.98,-784.81 553.89,-791.81" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;FarmLens.getPriceInAvax -->
+<g id="edge41" class="edge" data-name="FarmLens.getReserveUsd-&gt;FarmLens.getPriceInAvax">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M518.11,-801.52C529.65,-801.75 541.78,-801.81 553.62,-801.7" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="553.98,-805.19 563.93,-801.56 553.89,-798.19 553.98,-805.19" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge37" class="edge" data-name="FarmLens.getReserveUsd-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M481.91,-778.41C502.88,-770.41 532.52,-762.38 559.24,-759 622.41,-751.01 639.93,-747.26 702.51,-759 719.39,-762.17 721.64,-769.83 738.51,-773 798.29,-784.21 816.44,-788.07 875.36,-773 913.88,-763.14 953.17,-740.95 981.57,-723.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="983.71,-726.42 990.39,-718.19 980.04,-720.46 983.71,-726.42" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge39" class="edge" data-name="FarmLens.getReserveUsd-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M513.13,-785.8C528.03,-782.32 544.11,-778.91 559.24,-777 622.41,-769.01 639.93,-765.26 702.51,-777 719.39,-780.17 721.64,-787.83 738.51,-791 798.29,-802.21 816.44,-806.07 875.36,-791 922.66,-778.9 971.11,-748.19 999.15,-725.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1001.71,-728.19 1007.17,-719.11 997.24,-722.81 1001.71,-728.19" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;IHermesPair.getReserves -->
+<g id="edge35" class="edge" data-name="FarmLens.getReserveUsd-&gt;IHermesPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M507.85,-783.65C516.53,-779.84 524.78,-774.77 531.24,-768 561.32,-736.45 540.12,-713.18 559.24,-674 619.51,-550.47 618.41,-488.83 738.51,-422 808.39,-383.12 903.37,-386.11 964.02,-393.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="963.81,-397.13 974.19,-394.97 964.73,-390.2 963.81,-397.13" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;IHermesPair.token0 -->
+<g id="edge33" class="edge" data-name="FarmLens.getReserveUsd-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M509.82,-784.32C518.09,-780.44 525.68,-775.17 531.24,-768 576.06,-710.18 518.08,-500.48 559.24,-440 651.57,-304.33 882.8,-325.7 979.61,-341.55" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="979.2,-345.03 989.64,-343.25 980.37,-338.13 979.2,-345.03" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;IHermesPair.token1 -->
+<g id="edge34" class="edge" data-name="FarmLens.getReserveUsd-&gt;IHermesPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M509.94,-784.41C518.19,-780.52 525.75,-775.22 531.24,-768 588.37,-692.82 501.01,-418.34 559.24,-344 647.27,-231.61 732.66,-282.66 875.36,-287 909.38,-288.03 947.73,-290.4 976.87,-292.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="976.93,-295.96 987.16,-293.19 977.43,-288.98 976.93,-295.96" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserve1.mul -->
+<g id="edge38" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M496.58,-809.21C551.32,-832.07 650.07,-875.86 738.51,-902 827.42,-928.28 935.84,-944.7 989.66,-955.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="989.18,-958.67 999.67,-957.22 990.56,-951.81 989.18,-958.67" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserve1.mul -->
+<g id="edge43" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M478.32,-811.83C526.61,-838.92 639.07,-890.61 738.51,-920 826.06,-945.88 932.54,-962.19 987.16,-966.31" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="987.16,-969.81 997.37,-966.96 987.61,-962.83 987.16,-969.81" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserve0.mul -->
+<g id="edge36" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M515.97,-802.82C530.14,-806.19 545.18,-809.86 559.24,-813 638.39,-830.66 658.16,-836.02 738.51,-847 828.39,-859.28 935.13,-866.26 988.82,-872.52" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="988.48,-876.01 998.83,-873.77 989.34,-869.06 988.48,-876.01" style=""/>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserve0.mul -->
+<g id="edge42" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M484.86,-811.06C505.75,-818.05 534.06,-825.38 559.24,-831 638.39,-848.66 658.16,-854.02 738.51,-865 827.7,-877.18 933.49,-884.15 987.57,-883.97" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="987.73,-887.47 997.68,-883.84 987.64,-880.47 987.73,-887.47" style=""/>
+</g>
+<!-- reserve0Avax.add -->
+<g id="node26" class="node" pointer-events="visible" data-name="reserve0Avax.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="630.88" cy="-1158" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="630.88" y="-1153.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserve0Avax.add -->
+<g id="edge44" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserve0Avax.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M487.94,-810.63C503.8,-819.79 521.34,-832.94 531.24,-850 593.55,-957.42 485.6,-1028.01 559.24,-1128 567.68,-1139.46 581.36,-1146.57 594.46,-1150.98" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="593.67,-1154.4 604.25,-1153.85 595.64,-1147.68 593.67,-1154.4" style=""/>
+</g>
+<!-- reserveAvax.mul -->
+<g id="node27" class="node" pointer-events="visible" data-name="reserveAvax.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="630.88" cy="-1073" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="630.88" y="-1068.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- FarmLens.getReserveUsd&#45;&gt;reserveAvax.mul -->
+<g id="edge45" class="edge" data-name="FarmLens.getReserveUsd-&gt;reserveAvax.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M487.62,-810.82C503.39,-820.03 520.96,-833.17 531.24,-850 575.95,-923.22 507.62,-972.47 559.24,-1041 567.95,-1052.57 581.82,-1060.07 594.96,-1064.87" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="594.19,-1068.3 604.78,-1068.04 596.34,-1061.64 594.19,-1068.3" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs -->
+<g id="node12" class="node" pointer-events="visible" data-name="FarmLens.getFarmPairs">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="273.36" cy="-661" rx="62.56" ry="18" style=""/>
+<text text-anchor="middle" x="273.36" y="-656.8" font-family="Times,serif" font-size="14.00" style="">getFarmPairs</text>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IMasterChef.poolInfo -->
+<g id="edge47" class="edge" data-name="FarmLens.getFarmPairs-&gt;IMasterChef.poolInfo">
+
+<path fill="none" stroke="white" stroke-width="2" d="M292.99,-678.43C310.1,-695.63 334.64,-723.57 347.14,-753 383.6,-838.86 316.22,-888.69 375.14,-961 381.86,-969.24 391.26,-974.97 401.19,-978.96" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="400.21,-982.32 410.8,-982.26 402.48,-975.7 400.21,-982.32" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IMasterChef.totalAllocPoint -->
+<g id="edge59" class="edge" data-name="FarmLens.getFarmPairs-&gt;IMasterChef.totalAllocPoint">
+
+<path fill="none" stroke="white" stroke-width="2" d="M292.36,-678.23C309.27,-695.51 333.89,-723.68 347.14,-753 375.8,-816.39 329.97,-854.1 375.14,-907 378.97,-911.49 383.6,-915.23 388.66,-918.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="387.04,-921.45 397.51,-923.04 390.31,-915.27 387.04,-921.45" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IMasterChef.hermesPerSec -->
+<g id="edge60" class="edge" data-name="FarmLens.getFarmPairs-&gt;IMasterChef.hermesPerSec">
+
+<path fill="none" stroke="white" stroke-width="2" d="M291.72,-678.54C308.15,-696.05 332.42,-724.39 347.14,-753 367.67,-792.9 344.88,-816.87 375.14,-850 380.2,-855.54 386.4,-860.06 393.07,-863.76" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="391.87,-867.07 402.4,-868.31 394.94,-860.78 391.87,-867.07" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge55" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M331.3,-654.01C438.24,-647.57 676.26,-644.81 875.36,-665 908.01,-668.31 944.26,-674.88 972.7,-681.77" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="971.87,-685.17 982.42,-684.22 973.58,-678.38 971.87,-685.17" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens._tokenDecimalsMultiplier -->
+<g id="edge58" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens._tokenDecimalsMultiplier">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M335.12,-664.49C443.82,-665.51 678.6,-663.05 875.36,-683 890.27,-684.51 905.94,-686.71 921.27,-689.09" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="920.86,-692.57 931.29,-690.69 921.96,-685.66 920.86,-692.57" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens.getReserveUsd -->
+<g id="edge53" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens.getReserveUsd">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M286.7,-678.65C303.97,-702.13 337.48,-743.53 375.14,-768 381.19,-771.93 387.87,-775.36 394.71,-778.34" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="393.49,-781.62 404.07,-782.13 396.11,-775.13 393.49,-781.62" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens.IHermesPair -->
+<g id="edge48" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M330.6,-668.3C383.41,-676.15 464.12,-690.74 531.24,-714 544.39,-718.56 545.89,-724.07 559.24,-728 617.63,-745.19 686.7,-751.63 736.88,-753.95" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="736.84,-757.45 746.97,-754.37 737.13,-750.46 736.84,-757.45" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens.IHermesERC20 -->
+<g id="edge51" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens.IHermesERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M318.98,-648.66C336.48,-646.59 356.74,-645.05 375.14,-644 488.24,-637.52 516.59,-635 629.88,-635 629.88,-635 629.88,-635 807.94,-635 937.45,-635 1088.39,-642.55 1174.71,-650.25" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1174.64,-653.75 1184.92,-651.18 1175.28,-646.78 1174.64,-653.75" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;FarmLens.IHermesERC20 -->
+<g id="edge52" class="edge" data-name="FarmLens.getFarmPairs-&gt;FarmLens.IHermesERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M334.82,-664.54C348.09,-663.74 362.09,-662.75 375.14,-662 488.24,-655.52 516.59,-653 629.88,-653 629.88,-653 629.88,-653 807.94,-653 931.92,-653 1075.54,-659.92 1163.31,-662.59" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="1163.37,-666.09 1173.47,-662.89 1163.58,-659.1 1163.37,-666.09" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IHermesPair.token0 -->
+<g id="edge49" class="edge" data-name="FarmLens.getFarmPairs-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M283.89,-643.24C314.87,-587.53 418.88,-415.68 559.24,-344 684.59,-279.99 735.1,-313.23 875.36,-325 910.89,-327.98 950.71,-334.92 980.09,-340.73" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="979.52,-344.19 990.02,-342.73 980.9,-337.33 979.52,-344.19" style=""/>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IHermesPair.token1 -->
+<g id="edge50" class="edge" data-name="FarmLens.getFarmPairs-&gt;IHermesPair.token1">
+
+<path fill="none" stroke="white" stroke-width="2" d="M274.95,-642.76C277.65,-590.75 292.57,-440.19 375.14,-359 543.19,-193.76 867.34,-255.85 981.93,-284.62" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="981.17,-288.03 991.73,-287.12 982.91,-281.25 981.17,-288.03" style=""/>
+</g>
+<!-- IHermesPair.totalSupply -->
+<g id="node21" class="node" pointer-events="visible" data-name="IHermesPair.totalSupply">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-242" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-237.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IHermesPair.totalSupply -->
+<g id="edge54" class="edge" data-name="FarmLens.getFarmPairs-&gt;IHermesPair.totalSupply">
+
+<path fill="none" stroke="white" stroke-width="2" d="M276.31,-642.85C284.28,-572.38 316.73,-318.19 375.14,-267 460.95,-191.8 817.02,-219.98 961.74,-235" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="961.48,-238.49 971.79,-236.06 962.21,-231.53 961.48,-238.49" style=""/>
+</g>
+<!-- IHermesPair.balanceOf -->
+<g id="node22" class="node" pointer-events="visible" data-name="IHermesPair.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="1024.31" cy="-188" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="1024.31" y="-183.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;IHermesPair.balanceOf -->
+<g id="edge56" class="edge" data-name="FarmLens.getFarmPairs-&gt;IHermesPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M275.65,-642.86C281.46,-566.72 307.92,-274.24 375.14,-218 551.65,-70.33 859.23,-139.24 976.27,-173.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="975.43,-176.51 986.01,-175.97 977.4,-169.79 975.43,-176.51" style=""/>
+</g>
+<!-- balance.mul -->
+<g id="node28" class="node" pointer-events="visible" data-name="balance.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="453.19" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="453.19" y="-29.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- FarmLens.getFarmPairs&#45;&gt;balance.mul -->
+<g id="edge57" class="edge" data-name="FarmLens.getFarmPairs-&gt;balance.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M275.7,-642.96C282.42,-556.56 314.43,-185.27 375.14,-89 386.13,-71.57 404.84,-58.02 421.07,-48.73" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="423.13,-51.59 430.26,-43.75 419.8,-45.44 423.13,-51.59" style=""/>
+</g>
+<!-- FarmLens.getAllFarmData -->
+<g id="node13" class="node" pointer-events="visible" data-name="FarmLens.getAllFarmData">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="89.79" cy="-679" rx="73.58" ry="18" style=""/>
+<text text-anchor="middle" x="89.79" y="-674.8" font-family="Times,serif" font-size="14.00" style="">getAllFarmData</text>
+</g>
+<!-- FarmLens.getAllFarmData&#45;&gt;FarmLens.getAvaxPrice -->
+<g id="edge61" class="edge" data-name="FarmLens.getAllFarmData-&gt;FarmLens.getAvaxPrice">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M159.23,-685.21C172.6,-686.27 186.52,-687.26 199.58,-688 325.06,-695.08 471.36,-698.47 556.99,-699.96" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="557.06,-703.46 567.12,-700.13 557.18,-696.46 557.06,-703.46" style=""/>
+</g>
+<!-- FarmLens.getAllFarmData&#45;&gt;FarmLens.getPriceInUsd -->
+<g id="edge62" class="edge" data-name="FarmLens.getAllFarmData-&gt;FarmLens.getPriceInUsd">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M143.48,-691.38C161.25,-695.35 181.22,-699.6 199.58,-703 261.28,-714.43 331.95,-724.84 382.82,-731.86" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="382.66,-735.37 393.05,-733.26 383.62,-728.43 382.66,-735.37" style=""/>
+</g>
+<!-- FarmLens.getAllFarmData&#45;&gt;FarmLens.getFarmPairs -->
+<g id="edge63" class="edge" data-name="FarmLens.getAllFarmData-&gt;FarmLens.getFarmPairs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M146.25,-667.23C163.33,-665.05 182.39,-663.05 200.41,-661.51" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="200.9,-664.99 210.58,-660.69 200.33,-658.01 200.9,-664.99" style=""/>
+</g>
+<!-- FarmLens.getAllFarmData&#45;&gt;FarmLens.getFarmPairs -->
+<g id="edge64" class="edge" data-name="FarmLens.getAllFarmData-&gt;FarmLens.getFarmPairs">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M163.59,-678.41C180.1,-677 197.44,-675.19 213.3,-673.22" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="214.01,-676.66 223.48,-671.91 213.12,-669.72 214.01,-676.66" style=""/>
+</g>
+<!-- key -->
+<g id="node29" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="154.79,-1063 24.79,-1063 24.79,-975 154.79,-975 154.79,-1063" style=""/>
+<text text-anchor="start" x="74.43" y="-1044.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="70.54" y="-1024.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="47.99" y="-1004.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="34.39" y="-984.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node30" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="300.36,-1063 246.36,-1063 246.36,-975 300.36,-975 300.36,-1063" style=""/>
+<text text-anchor="start" x="263.36" y="-1044.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="263.36" y="-1024.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="261.36,-999 261.36,-1019 286.36,-1019 286.36,-999 261.36,-999" style=""/>
+<text text-anchor="start" x="263.36" y="-1004.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="263.36,-981 263.36,-997 284.36,-997 284.36,-981 263.36,-981" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge65" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M147.79,-1049C194.3,-1049 208.38,-1049 250.34,-1049" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="250.36,-1052.5 260.36,-1049 250.36,-1045.5 250.36,-1052.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge66" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.79,-1029C194.3,-1029 208.38,-1029 250.34,-1029" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="250.36,-1032.5 260.36,-1029 250.36,-1025.5 250.36,-1032.5" style=""/>
+</g>
+</g>
+</svg>

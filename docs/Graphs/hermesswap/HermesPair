@@ -1,0 +1,636 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="555pt" height="1480pt" viewBox="0.00 0.00 554.75 1480.00">
+<g id="graph0" class="graph" transform="translate(4,1476) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1476 550.75,-1476 550.75,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIMigrator">
+
+<path fill="#445773" stroke="#445773" d="M20,-393C20,-393 161.74,-393 161.74,-393 167.74,-393 173.74,-399 173.74,-405 173.74,-405 173.74,-458 173.74,-458 173.74,-464 167.74,-470 161.74,-470 161.74,-470 20,-470 20,-470 14,-470 8,-464 8,-458 8,-458 8,-405 8,-405 8,-399 14,-393 20,-393" style=""/>
+<text text-anchor="middle" x="90.87" y="-453.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IMigrator  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterHermesPair">
+
+<path fill="#445773" stroke="#445773" d="M27.34,-864C27.34,-864 526.75,-864 526.75,-864 532.75,-864 538.75,-870 538.75,-876 538.75,-876 538.75,-1315 538.75,-1315 538.75,-1321 532.75,-1327 526.75,-1327 526.75,-1327 27.34,-1327 27.34,-1327 21.34,-1327 15.34,-1321 15.34,-1315 15.34,-1315 15.34,-876 15.34,-876 15.34,-870 21.34,-864 27.34,-864" style=""/>
+<text text-anchor="middle" x="277.04" y="-1310.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesPair</text>
+</g>
+<g id="clust3" class="cluster" data-name="clustertoken">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M433.96,-779C433.96,-779 479.96,-779 479.96,-779 485.96,-779 491.96,-785 491.96,-791 491.96,-791 491.96,-844 491.96,-844 491.96,-850 485.96,-856 479.96,-856 479.96,-856 433.96,-856 433.96,-856 427.96,-856 421.96,-850 421.96,-844 421.96,-844 421.96,-791 421.96,-791 421.96,-785 427.96,-779 433.96,-779" style=""/>
+<text text-anchor="middle" x="456.96" y="-839.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">token</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterMath">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M433.96,-416C433.96,-416 479.96,-416 479.96,-416 485.96,-416 491.96,-422 491.96,-428 491.96,-428 491.96,-535 491.96,-535 491.96,-541 485.96,-547 479.96,-547 479.96,-547 433.96,-547 433.96,-547 427.96,-547 421.96,-541 421.96,-535 421.96,-535 421.96,-428 421.96,-428 421.96,-422 427.96,-416 433.96,-416" style=""/>
+<text text-anchor="middle" x="456.96" y="-530.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Math</text>
+</g>
+<g id="clust5" class="cluster" data-name="clustertotalSupply">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M428.96,-694C428.96,-694 484.96,-694 484.96,-694 490.96,-694 496.96,-700 496.96,-706 496.96,-706 496.96,-759 496.96,-759 496.96,-765 490.96,-771 484.96,-771 484.96,-771 428.96,-771 428.96,-771 422.96,-771 416.96,-765 416.96,-759 416.96,-759 416.96,-706 416.96,-706 416.96,-700 422.96,-694 428.96,-694" style=""/>
+<text text-anchor="middle" x="456.96" y="-754.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">totalSupply</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterrootK">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M433.96,-555C433.96,-555 479.96,-555 479.96,-555 485.96,-555 491.96,-561 491.96,-567 491.96,-567 491.96,-674 491.96,-674 491.96,-680 485.96,-686 479.96,-686 479.96,-686 433.96,-686 433.96,-686 427.96,-686 421.96,-680 421.96,-674 421.96,-674 421.96,-567 421.96,-567 421.96,-561 427.96,-555 433.96,-555" style=""/>
+<text text-anchor="middle" x="456.96" y="-669.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">rootK</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterbalance0">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M251.46,-657C251.46,-657 297.46,-657 297.46,-657 303.46,-657 309.46,-663 309.46,-669 309.46,-669 309.46,-776 309.46,-776 309.46,-782 303.46,-788 297.46,-788 297.46,-788 251.46,-788 251.46,-788 245.46,-788 239.46,-782 239.46,-776 239.46,-776 239.46,-669 239.46,-669 239.46,-663 245.46,-657 251.46,-657" style=""/>
+<text text-anchor="middle" x="274.46" y="-771.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">balance0</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusterbalance1">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M251.46,-518C251.46,-518 297.46,-518 297.46,-518 303.46,-518 309.46,-524 309.46,-530 309.46,-530 309.46,-637 309.46,-637 309.46,-643 303.46,-649 297.46,-649 297.46,-649 251.46,-649 251.46,-649 245.46,-649 239.46,-643 239.46,-637 239.46,-637 239.46,-530 239.46,-530 239.46,-524 245.46,-518 251.46,-518" style=""/>
+<text text-anchor="middle" x="274.46" y="-632.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">balance1</text>
+</g>
+<g id="clust9" class="cluster" data-name="clusteramount0">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M251.46,-433C251.46,-433 297.46,-433 297.46,-433 303.46,-433 309.46,-439 309.46,-445 309.46,-445 309.46,-498 309.46,-498 309.46,-504 303.46,-510 297.46,-510 297.46,-510 251.46,-510 251.46,-510 245.46,-510 239.46,-504 239.46,-498 239.46,-498 239.46,-445 239.46,-445 239.46,-439 245.46,-433 251.46,-433" style=""/>
+<text text-anchor="middle" x="274.46" y="-493.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount0</text>
+</g>
+<g id="clust10" class="cluster" data-name="clusteramount1">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M251.46,-348C251.46,-348 297.46,-348 297.46,-348 303.46,-348 309.46,-354 309.46,-360 309.46,-360 309.46,-413 309.46,-413 309.46,-419 303.46,-425 297.46,-425 297.46,-425 251.46,-425 251.46,-425 245.46,-425 239.46,-419 239.46,-413 239.46,-413 239.46,-360 239.46,-360 239.46,-354 245.46,-348 251.46,-348" style=""/>
+<text text-anchor="middle" x="274.46" y="-408.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount1</text>
+</g>
+<g id="clust11" class="cluster" data-name="clusterliquidity">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M251.46,-263C251.46,-263 297.46,-263 297.46,-263 303.46,-263 309.46,-269 309.46,-275 309.46,-275 309.46,-328 309.46,-328 309.46,-334 303.46,-340 297.46,-340 297.46,-340 251.46,-340 251.46,-340 245.46,-340 239.46,-334 239.46,-328 239.46,-328 239.46,-275 239.46,-275 239.46,-269 245.46,-263 251.46,-263" style=""/>
+<text text-anchor="middle" x="274.46" y="-323.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">liquidity</text>
+</g>
+<g id="clust12" class="cluster" data-name="clusteramount0In">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M248.46,-178C248.46,-178 300.46,-178 300.46,-178 306.46,-178 312.46,-184 312.46,-190 312.46,-190 312.46,-243 312.46,-243 312.46,-249 306.46,-255 300.46,-255 300.46,-255 248.46,-255 248.46,-255 242.46,-255 236.46,-249 236.46,-243 236.46,-243 236.46,-190 236.46,-190 236.46,-184 242.46,-178 248.46,-178" style=""/>
+<text text-anchor="middle" x="274.46" y="-238.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount0In</text>
+</g>
+<g id="clust13" class="cluster" data-name="clusteramount1In">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M248.46,-93C248.46,-93 300.46,-93 300.46,-93 306.46,-93 312.46,-99 312.46,-105 312.46,-105 312.46,-158 312.46,-158 312.46,-164 306.46,-170 300.46,-170 300.46,-170 248.46,-170 248.46,-170 242.46,-170 236.46,-164 236.46,-158 236.46,-158 236.46,-105 236.46,-105 236.46,-99 242.46,-93 248.46,-93" style=""/>
+<text text-anchor="middle" x="274.46" y="-153.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount1In</text>
+</g>
+<g id="clust14" class="cluster" data-name="clusterbalance0Adjusted">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M228.46,-8C228.46,-8 320.46,-8 320.46,-8 326.46,-8 332.46,-14 332.46,-20 332.46,-20 332.46,-73 332.46,-73 332.46,-79 326.46,-85 320.46,-85 320.46,-85 228.46,-85 228.46,-85 222.46,-85 216.46,-79 216.46,-73 216.46,-73 216.46,-20 216.46,-20 216.46,-14 222.46,-8 228.46,-8" style=""/>
+<text text-anchor="middle" x="274.46" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">balance0Adjusted</text>
+</g>
+<g id="clust15" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="17.87,-1335 17.87,-1464 309.46,-1464 309.46,-1335 17.87,-1335" style=""/>
+<text text-anchor="middle" x="163.66" y="-1447.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IMigrator.desiredLiquidity -->
+<g id="node1" class="node" pointer-events="visible" data-name="IMigrator.desiredLiquidity">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-419" rx="74.74" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-414.8" font-family="Times,serif" font-size="14.00" style="">desiredLiquidity</text>
+</g>
+<!-- HermesPair.lock -->
+<g id="node2" class="node" pointer-events="visible" data-name="HermesPair.lock">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="120.76,-1264.54 120.76,-1279.46 103.25,-1290 78.49,-1290 60.98,-1279.46 60.98,-1264.54 78.49,-1254 103.25,-1254 120.76,-1264.54" style=""/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="124.75,-1262.28 124.75,-1281.72 104.36,-1294 77.38,-1294 56.98,-1281.72 56.98,-1262.28 77.38,-1250 104.36,-1250 124.75,-1262.28" style=""/>
+<text text-anchor="middle" x="90.87" y="-1267.8" font-family="Times,serif" font-size="14.00" style="">lock</text>
+</g>
+<!-- HermesPair.getReserves -->
+<g id="node3" class="node" pointer-events="visible" data-name="HermesPair.getReserves">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-1018" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-1013.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- HermesPair._safeTransfer -->
+<g id="node4" class="node" pointer-events="visible" data-name="HermesPair._safeTransfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-1180" rx="64.23" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-1175.8" font-family="Times,serif" font-size="14.00" style="">_safeTransfer</text>
+</g>
+<!-- token.call -->
+<g id="node19" class="node" pointer-events="visible" data-name="token.call">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-805" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-800.8" font-family="Times,serif" font-size="14.00" style="">call</text>
+</g>
+<!-- HermesPair._safeTransfer&#45;&gt;token.call -->
+<g id="edge1" class="edge" data-name="HermesPair._safeTransfer-&gt;token.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M326,-1169.04C334.13,-1165.19 341.67,-1160.01 347.18,-1153 428.29,-1049.88 317.65,-973.67 383.18,-860 392.97,-843.02 410.29,-829.61 425.58,-820.28" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="427.37,-823.29 434.28,-815.26 423.87,-817.23 427.37,-823.29" style=""/>
+</g>
+<!-- HermesPair.&lt;Constructor&gt; -->
+<g id="node5" class="node" pointer-events="visible" data-name="HermesPair.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="90.87" cy="-1214" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-1209.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- HermesPair.initialize -->
+<g id="node6" class="node" pointer-events="visible" data-name="HermesPair.initialize">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-1160" rx="44.64" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-1155.8" font-family="Times,serif" font-size="14.00" style="">initialize</text>
+</g>
+<!-- HermesPair._update -->
+<g id="node7" class="node" pointer-events="visible" data-name="HermesPair._update">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-1072" rx="41.71" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-1067.8" font-family="Times,serif" font-size="14.00" style="">_update</text>
+</g>
+<!-- HermesPair._mintFee -->
+<g id="node8" class="node" pointer-events="visible" data-name="HermesPair._mintFee">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-890" rx="47.53" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-885.8" font-family="Times,serif" font-size="14.00" style="">_mintFee</text>
+</g>
+<!-- HermesPair.IHermesFactory -->
+<g id="node14" class="node" pointer-events="visible" data-name="HermesPair.IHermesFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-890" rx="73.57" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-885.8" font-family="Times,serif" font-size="14.00" style="">IHermesFactory</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;HermesPair.IHermesFactory -->
+<g id="edge2" class="edge" data-name="HermesPair._mintFee-&gt;HermesPair.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M322.41,-890C337.87,-890 355.54,-890 372.87,-890" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="373,-893.5 383,-890 373,-886.5 373,-893.5" style=""/>
+</g>
+<!-- HermesPair._mint -->
+<g id="node15" class="node" pointer-events="visible" data-name="HermesPair._mint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-944" rx="33.64" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-939.8" font-family="Times,serif" font-size="14.00" style="">_mint</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;HermesPair._mint -->
+<g id="edge8" class="edge" data-name="HermesPair._mintFee-&gt;HermesPair._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M312.42,-901.06C343.13,-910.25 386.67,-923.27 417.73,-932.56" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="416.76,-935.93 427.35,-935.44 418.77,-929.22 416.76,-935.93" style=""/>
+</g>
+<!-- Math.sqrt -->
+<g id="node20" class="node" pointer-events="visible" data-name="Math.sqrt">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-496" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-491.8" font-family="Times,serif" font-size="14.00" style="">sqrt</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;Math.sqrt -->
+<g id="edge3" class="edge" data-name="HermesPair._mintFee-&gt;Math.sqrt">
+
+<path fill="none" stroke="white" stroke-width="2" d="M305.01,-876.14C320.02,-870.56 337.16,-862.62 347.18,-849 428.55,-738.31 314.89,-661.21 383.18,-542 392.09,-526.44 407.35,-513.89 421.61,-505.5" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="423.59,-508.41 430.75,-500.61 420.28,-502.24 423.59,-508.41" style=""/>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;Math.sqrt -->
+<g id="edge4" class="edge" data-name="HermesPair._mintFee-&gt;Math.sqrt">
+
+<path fill="none" stroke="white" stroke-width="2" d="M321.38,-886.61C331.29,-882.21 340.72,-875.79 347.18,-867 428.55,-756.31 314.89,-679.21 383.18,-560 394.07,-540.98 414.45,-526.46 430.89,-515.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="433.03,-518.48 439.52,-510.11 429.22,-512.6 433.03,-518.48" style=""/>
+</g>
+<!-- totalSupply.mul -->
+<g id="node22" class="node" pointer-events="visible" data-name="totalSupply.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-720" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-715.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;totalSupply.mul -->
+<g id="edge5" class="edge" data-name="HermesPair._mintFee-&gt;totalSupply.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M312.95,-879.33C325.07,-874.41 337.78,-867.5 347.18,-858 375.46,-829.42 358.32,-806.61 383.18,-775 395.18,-759.74 412.37,-746.49 427.03,-736.82" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="429.2,-739.58 435.77,-731.27 425.45,-733.68 429.2,-739.58" style=""/>
+</g>
+<!-- rootK.sub -->
+<g id="node23" class="node" pointer-events="visible" data-name="rootK.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-635" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-630.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;rootK.sub -->
+<g id="edge6" class="edge" data-name="HermesPair._mintFee-&gt;rootK.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M314.45,-880.19C326.54,-875.36 338.85,-868.27 347.18,-858 395.26,-798.68 342.14,-754.4 383.18,-690 393.61,-673.63 410.74,-660.33 425.76,-650.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="427.95,-653.67 434.76,-645.55 424.37,-647.66 427.95,-653.67" style=""/>
+</g>
+<!-- rootK.mul -->
+<g id="node24" class="node" pointer-events="visible" data-name="rootK.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-581" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-576.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair._mintFee&#45;&gt;rootK.mul -->
+<g id="edge7" class="edge" data-name="HermesPair._mintFee-&gt;rootK.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M314.86,-880.51C326.98,-875.7 339.21,-868.55 347.18,-858 414.85,-768.44 312.65,-695.34 383.18,-608 392.29,-596.72 406.59,-590.15 420.12,-586.33" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="421.31,-589.64 430.21,-583.91 419.67,-582.84 421.31,-589.64" style=""/>
+</g>
+<!-- HermesPair.mint -->
+<g id="node9" class="node" pointer-events="visible" data-name="HermesPair.mint">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-890" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-885.8" font-family="Times,serif" font-size="14.00" style="">mint</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair.getReserves -->
+<g id="edge9" class="edge" data-name="HermesPair.mint-&gt;HermesPair.getReserves">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.28,-892.96C136.85,-896.18 159.04,-902.92 173.74,-917 199.13,-941.32 176.85,-966.16 201.74,-991 206.54,-995.8 212.29,-999.76 218.4,-1003.02" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="217.02,-1006.24 227.56,-1007.32 219.99,-999.9 217.02,-1006.24" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair._update -->
+<g id="edge22" class="edge" data-name="HermesPair.mint-&gt;HermesPair._update">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.59,-892.21C137.52,-895.11 160,-901.77 173.74,-917 212.73,-960.25 163.64,-1000.95 201.74,-1045 208.19,-1052.47 216.94,-1057.88 226.1,-1061.79" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.12,-1065.16 235.71,-1065.35 227.55,-1058.6 225.12,-1065.16" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair._mintFee -->
+<g id="edge14" class="edge" data-name="HermesPair.mint-&gt;HermesPair._mintFee">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.84,-890C145.52,-890 184.34,-890 216.53,-890" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="216.72,-893.5 226.72,-890 216.72,-886.5 216.72,-893.5" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair._mint -->
+<g id="edge17" class="edge" data-name="HermesPair.mint-&gt;HermesPair._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.64,-890.6C141.73,-894.97 173.49,-903.05 201.74,-908 276.84,-921.15 365.62,-928.81 415.91,-935.15" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="415.66,-938.64 426.03,-936.48 416.58,-931.7 415.66,-938.64" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair._mint -->
+<g id="edge21" class="edge" data-name="HermesPair.mint-&gt;HermesPair._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M111.94,-902.44C133.84,-910.92 170.01,-920.44 201.74,-926 275.82,-938.98 363.21,-946.6 413.84,-947.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="414.02,-951.17 424.06,-947.79 414.11,-944.17 414.02,-951.17" style=""/>
+</g>
+<!-- HermesPair.IERC20Hermes -->
+<g id="node16" class="node" pointer-events="visible" data-name="HermesPair.IERC20Hermes">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-1126" rx="72.94" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-1121.8" font-family="Times,serif" font-size="14.00" style="">IERC20Hermes</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge10" class="edge" data-name="HermesPair.mint-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.33,-884.2C136.65,-885.34 160.1,-891.89 173.74,-908 226.61,-970.47 150.17,-1026.45 201.74,-1090 207.83,-1097.51 216.26,-1102.94 225.19,-1107.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="224.03,-1110.37 234.61,-1110.92 226.68,-1103.89 224.03,-1110.37" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge11" class="edge" data-name="HermesPair.mint-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M116.4,-898.76C134.98,-902.89 159.62,-909.32 173.74,-926 226.61,-988.47 150.17,-1044.45 201.74,-1108 202.34,-1108.75 202.97,-1109.47 203.62,-1110.18" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="201.49,-1112.97 211.3,-1116.97 206.13,-1107.73 201.49,-1112.97" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;Math.sqrt -->
+<g id="edge15" class="edge" data-name="HermesPair.mint-&gt;Math.sqrt">
+
+<path fill="none" stroke="white" stroke-width="2" d="M118.24,-883.6C181.92,-868.04 339.47,-828.83 347.18,-820 426.54,-729.17 322.37,-655.17 383.18,-551 393.06,-534.08 410.39,-520.67 425.66,-511.32" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="427.44,-514.34 434.34,-506.3 423.93,-508.28 427.44,-514.34" style=""/>
+</g>
+<!-- Math.min -->
+<g id="node21" class="node" pointer-events="visible" data-name="Math.min">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="456.96" cy="-442" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="456.96" y="-437.8" font-family="Times,serif" font-size="14.00" style="">min</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;Math.min -->
+<g id="edge18" class="edge" data-name="HermesPair.mint-&gt;Math.min">
+
+<path fill="none" stroke="white" stroke-width="2" d="M109.37,-875.85C130.15,-859.8 166.43,-834.05 201.74,-820 262.9,-795.66 302.51,-840.35 347.18,-792 445.19,-685.9 294.24,-582.82 383.18,-469 392.11,-457.58 406.38,-450.98 419.94,-447.18" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="421.14,-450.5 430.06,-444.78 419.52,-443.68 421.14,-450.5" style=""/>
+</g>
+<!-- balance0.sub -->
+<g id="node25" class="node" pointer-events="visible" data-name="balance0.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-683" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-678.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;balance0.sub -->
+<g id="edge12" class="edge" data-name="HermesPair.mint-&gt;balance0.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M98.03,-872.51C111.42,-836.96 146.46,-755.75 201.74,-710 212.33,-701.23 226.06,-695.14 238.67,-691" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="239.88,-694.29 248.46,-688.08 237.88,-687.58 239.88,-694.29" style=""/>
+</g>
+<!-- balance1.sub -->
+<g id="node27" class="node" pointer-events="visible" data-name="balance1.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-544" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-539.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;balance1.sub -->
+<g id="edge13" class="edge" data-name="HermesPair.mint-&gt;balance1.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M92.9,-871.73C96.9,-818.11 115.79,-659.41 201.74,-571 211.39,-561.06 225.07,-554.74 237.89,-550.74" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="239.17,-554.02 247.89,-548 237.32,-547.27 239.17,-554.02" style=""/>
+</g>
+<!-- amount0.mul -->
+<g id="node29" class="node" pointer-events="visible" data-name="amount0.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-459" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-454.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;amount0.mul -->
+<g id="edge16" class="edge" data-name="HermesPair.mint-&gt;amount0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M92.9,-871.85C97.29,-813.12 118.16,-627.04 201.74,-505 211.55,-490.66 226.3,-478.44 239.87,-469.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="241.68,-472.91 248.56,-464.85 238.15,-466.86 241.68,-472.91" style=""/>
+</g>
+<!-- HermesPair.mint&#45;&gt;amount0.mul -->
+<g id="edge19" class="edge" data-name="HermesPair.mint-&gt;amount0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M93.58,-871.78C99.23,-814.99 121.81,-639.71 201.74,-523 214.08,-504.98 234.21,-490.29 250,-479.19" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="252.08,-482.01 258.26,-473.4 248.06,-476.28 252.08,-482.01" style=""/>
+</g>
+<!-- amount1.mul -->
+<g id="node30" class="node" pointer-events="visible" data-name="amount1.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-374" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-369.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.mint&#45;&gt;amount1.mul -->
+<g id="edge20" class="edge" data-name="HermesPair.mint-&gt;amount1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M91.98,-871.59C93.2,-805.88 104.6,-578.8 201.74,-429 212.2,-412.86 229.08,-399.57 243.84,-390.1" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="245.97,-392.9 252.68,-384.7 242.32,-386.93 245.97,-392.9" style=""/>
+</g>
+<!-- HermesPair.burn -->
+<g id="node10" class="node" pointer-events="visible" data-name="HermesPair.burn">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-998" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-993.8" font-family="Times,serif" font-size="14.00" style="">burn</text>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair.getReserves -->
+<g id="edge23" class="edge" data-name="HermesPair.burn-&gt;HermesPair.getReserves">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.45,-1001.04C143.25,-1003.66 178.55,-1007.55 209.36,-1010.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="209.29,-1014.45 219.61,-1012.07 210.05,-1007.5 209.29,-1014.45" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge30" class="edge" data-name="HermesPair.burn-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.42,-992.49C136.53,-993.82 159.7,-1000.44 173.74,-1016 212.73,-1059.25 163.64,-1099.95 201.74,-1144 208.53,-1151.85 217.85,-1157.43 227.52,-1161.64" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="226.24,-1164.9 236.83,-1165.29 228.8,-1158.38 226.24,-1164.9" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge31" class="edge" data-name="HermesPair.burn-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M116.12,-1007.01C134.53,-1011.27 159.1,-1017.77 173.74,-1034 212.73,-1077.25 163.64,-1117.95 201.74,-1162 203.26,-1163.76 204.9,-1165.4 206.65,-1166.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="204.76,-1169.89 214.9,-1172.97 208.9,-1164.24 204.76,-1169.89" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair._update -->
+<g id="edge34" class="edge" data-name="HermesPair.burn-&gt;HermesPair._update">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.11,-1004.47C134.58,-1009.06 155.98,-1016 173.74,-1025 187.37,-1031.92 188.24,-1037.8 201.74,-1045 210.8,-1049.84 220.93,-1054.22 230.65,-1057.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="229.59,-1061.31 240.18,-1061.51 232.02,-1054.75 229.59,-1061.31" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair._mintFee -->
+<g id="edge26" class="edge" data-name="HermesPair.burn-&gt;HermesPair._mintFee">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.65,-993.17C135.53,-989.19 157.19,-982.33 173.74,-971 189.89,-959.94 187.16,-950.07 201.74,-937 212.79,-927.08 226.13,-917.76 238.28,-910.07" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="240.2,-913 246.88,-904.77 236.53,-907.04 240.2,-913" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge24" class="edge" data-name="HermesPair.burn-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M103.22,-981.58C120.62,-973.4 153.96,-979.06 173.74,-998 199.13,-1022.32 176.85,-1047.16 201.74,-1072 216.22,-1086.46 239.19,-1093.29 255.22,-1102.3" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="253.47,-1105.33 263.74,-1107.92 257.33,-1099.49 253.47,-1105.33" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge25" class="edge" data-name="HermesPair.burn-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.89,-993.26C136.52,-995.08 158.93,-1001.82 173.74,-1016 199.13,-1040.32 176.85,-1065.16 201.74,-1090 208.94,-1097.19 218.24,-1102.5 227.75,-1106.64" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="226.66,-1109.97 237.25,-1110.42 229.25,-1103.47 226.66,-1109.97" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge32" class="edge" data-name="HermesPair.burn-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M115.48,-1007.63C133.55,-1012.23 157.95,-1018.89 173.74,-1034 199.13,-1058.32 176.85,-1083.16 201.74,-1108 202.54,-1108.8 203.36,-1109.57 204.21,-1110.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="202.32,-1113.28 212.42,-1116.49 206.52,-1107.69 202.32,-1113.28" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge33" class="edge" data-name="HermesPair.burn-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M101.83,-1014.89C118.79,-1027.1 153.42,-1032.54 173.74,-1052 196.36,-1073.67 181.14,-1095.75 195.16,-1117.88" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="192.45,-1120.1 201.45,-1125.71 197.91,-1115.72 192.45,-1120.1" style=""/>
+</g>
+<!-- HermesPair._burn -->
+<g id="node17" class="node" pointer-events="visible" data-name="HermesPair._burn">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-1234" rx="33.63" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-1229.8" font-family="Times,serif" font-size="14.00" style="">_burn</text>
+</g>
+<!-- HermesPair.burn&#45;&gt;HermesPair._burn -->
+<g id="edge29" class="edge" data-name="HermesPair.burn-&gt;HermesPair._burn">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.51,-999.87C137.64,-1002.62 160.39,-1009.24 173.74,-1025 226.61,-1087.47 150.17,-1143.45 201.74,-1207 209.32,-1216.35 220.51,-1222.46 231.8,-1226.46" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="231.07,-1229.9 241.66,-1229.45 233.11,-1223.2 231.07,-1229.9" style=""/>
+</g>
+<!-- liquidity.mul -->
+<g id="node31" class="node" pointer-events="visible" data-name="liquidity.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-289" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-284.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.burn&#45;&gt;liquidity.mul -->
+<g id="edge27" class="edge" data-name="HermesPair.burn-&gt;liquidity.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M116.53,-989.72C135.43,-985.83 160.45,-979.53 173.74,-962 215.85,-906.42 169.49,-396.84 201.74,-335 209.95,-319.25 224.92,-306.67 239.07,-298.32" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="241,-301.26 248.17,-293.46 237.7,-295.09 241,-301.26" style=""/>
+</g>
+<!-- HermesPair.burn&#45;&gt;liquidity.mul -->
+<g id="edge28" class="edge" data-name="HermesPair.burn-&gt;liquidity.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M118.08,-1004.26C136.78,-1003.48 160.81,-997.06 173.74,-980 215.85,-924.42 169.49,-414.84 201.74,-353 211.77,-333.75 231.92,-319.24 248.3,-308.55" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="250.42,-311.35 256.94,-303 246.63,-305.46 250.42,-311.35" style=""/>
+</g>
+<!-- HermesPair.swap -->
+<g id="node11" class="node" pointer-events="visible" data-name="HermesPair.swap">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-944" rx="30.77" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-939.8" font-family="Times,serif" font-size="14.00" style="">swap</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair.getReserves -->
+<g id="edge35" class="edge" data-name="HermesPair.swap-&gt;HermesPair.getReserves">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.61,-950.89C135.86,-955.48 156.52,-962.27 173.74,-971 187.37,-977.92 188.24,-983.8 201.74,-991 208.75,-994.74 216.4,-998.21 224,-1001.33" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="222.97,-1004.68 233.56,-1005.08 225.53,-998.17 222.97,-1004.68" style=""/>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge36" class="edge" data-name="HermesPair.swap-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M120.3,-938.34C138.3,-939.82 160.58,-946.46 173.74,-962 226.61,-1024.47 150.17,-1080.45 201.74,-1144 208.15,-1151.9 217.13,-1157.49 226.58,-1161.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.52,-1165.03 236.1,-1165.45 228.09,-1158.52 225.52,-1165.03" style=""/>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge37" class="edge" data-name="HermesPair.swap-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M117.94,-953.11C136.32,-957.25 160,-963.78 173.74,-980 226.61,-1042.47 150.17,-1098.45 201.74,-1162 203.2,-1163.8 204.8,-1165.49 206.51,-1167.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="204.53,-1169.95 214.61,-1173.21 208.76,-1164.38 204.53,-1169.95" style=""/>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair._update -->
+<g id="edge46" class="edge" data-name="HermesPair.swap-&gt;HermesPair._update">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M121.24,-947.33C138.47,-950.69 159.58,-957.44 173.74,-971 199.13,-995.32 176.85,-1020.16 201.74,-1045 208.72,-1051.98 217.69,-1057.18 226.9,-1061.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.91,-1064.41 236.51,-1064.61 228.35,-1057.85 225.91,-1064.41" style=""/>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge39" class="edge" data-name="HermesPair.swap-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M120.38,-938.66C138.18,-940.31 160.2,-947 173.74,-962 212.73,-1005.25 163.64,-1045.95 201.74,-1090 208.13,-1097.39 216.76,-1102.77 225.82,-1106.89" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="224.76,-1110.23 235.34,-1110.75 227.39,-1103.75 224.76,-1110.23" style=""/>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge40" class="edge" data-name="HermesPair.swap-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M117.65,-953.37C135.87,-957.64 159.5,-964.22 173.74,-980 212.73,-1023.25 163.64,-1063.95 201.74,-1108 202.36,-1108.73 203.01,-1109.43 203.68,-1110.12" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="201.65,-1112.98 211.54,-1116.77 206.17,-1107.64 201.65,-1112.98" style=""/>
+</g>
+<!-- HermesPair.IHermesCallee -->
+<g id="node18" class="node" pointer-events="visible" data-name="HermesPair.IHermesCallee">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-964" rx="68.9" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-959.8" font-family="Times,serif" font-size="14.00" style="">IHermesCallee</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;HermesPair.IHermesCallee -->
+<g id="edge38" class="edge" data-name="HermesPair.swap-&gt;HermesPair.IHermesCallee">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M121.45,-947.26C142.93,-949.62 172.97,-952.93 200.68,-955.98" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="200.43,-959.48 210.76,-957.09 201.2,-952.52 200.43,-959.48" style=""/>
+</g>
+<!-- balance0.mul -->
+<g id="node26" class="node" pointer-events="visible" data-name="balance0.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-737" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-732.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;balance0.mul -->
+<g id="edge41" class="edge" data-name="HermesPair.swap-&gt;balance0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M121.18,-940.1C138.18,-936.54 159.06,-929.78 173.74,-917 195.02,-898.47 188.4,-884.87 201.74,-860 220.17,-825.62 243.14,-786.88 258.04,-762.22" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="261.14,-763.86 263.33,-753.5 255.15,-760.23 261.14,-763.86" style=""/>
+</g>
+<!-- balance1.mul -->
+<g id="node28" class="node" pointer-events="visible" data-name="balance1.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-598" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-593.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;balance1.mul -->
+<g id="edge43" class="edge" data-name="HermesPair.swap-&gt;balance1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M121.75,-942.02C139.63,-939.17 161.24,-932.49 173.74,-917 247.83,-825.18 144.02,-755.91 201.74,-653 211.14,-636.23 227.98,-622.91 242.98,-613.58" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="245.14,-616.37 252,-608.29 241.6,-610.33 245.14,-616.37" style=""/>
+</g>
+<!-- amount0In.mul -->
+<g id="node32" class="node" pointer-events="visible" data-name="amount0In.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-204" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-199.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;amount0In.mul -->
+<g id="edge42" class="edge" data-name="HermesPair.swap-&gt;amount0In.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M121.68,-942.35C139.78,-939.64 161.64,-933 173.74,-917 217.87,-858.63 167.97,-323.92 201.74,-259 210.69,-241.78 227.74,-228.35 242.97,-219.08" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="244.72,-222.12 251.65,-214.11 241.24,-216.04 244.72,-222.12" style=""/>
+</g>
+<!-- amount1In.mul -->
+<g id="node33" class="node" pointer-events="visible" data-name="amount1In.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-119" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-114.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;amount1In.mul -->
+<g id="edge44" class="edge" data-name="HermesPair.swap-&gt;amount1In.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M121.71,-942.37C139.81,-939.67 161.68,-933.03 173.74,-917 223.4,-850.98 163.8,-247.39 201.74,-174 210.65,-156.75 227.7,-143.33 242.94,-134.07" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="244.69,-137.1 251.63,-129.09 241.21,-131.02 244.69,-137.1" style=""/>
+</g>
+<!-- balance0Adjusted.mul -->
+<g id="node34" class="node" pointer-events="visible" data-name="balance0Adjusted.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="274.46" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="274.46" y="-29.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesPair.swap&#45;&gt;balance0Adjusted.mul -->
+<g id="edge45" class="edge" data-name="HermesPair.swap-&gt;balance0Adjusted.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M121.73,-942.38C139.84,-939.69 161.71,-933.05 173.74,-917 228.93,-843.33 159.62,-170.85 201.74,-89 210.62,-71.74 227.67,-58.31 242.91,-49.05" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="244.66,-52.08 251.61,-44.08 241.19,-46.01 244.66,-52.08" style=""/>
+</g>
+<!-- HermesPair.skim -->
+<g id="node12" class="node" pointer-events="visible" data-name="HermesPair.skim">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-1106" rx="29.64" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-1101.8" font-family="Times,serif" font-size="14.00" style="">skim</text>
+</g>
+<!-- HermesPair.skim&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge47" class="edge" data-name="HermesPair.skim-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M120.75,-1105.29C136.82,-1108.8 156.92,-1115.47 173.74,-1124 187.37,-1130.92 188.24,-1136.8 201.74,-1144 212.83,-1149.92 225.51,-1155.15 237.1,-1159.85" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="235.92,-1163.15 246.51,-1163.67 238.56,-1156.66 235.92,-1163.15" style=""/>
+</g>
+<!-- HermesPair.skim&#45;&gt;HermesPair._safeTransfer -->
+<g id="edge49" class="edge" data-name="HermesPair.skim-&gt;HermesPair._safeTransfer">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M112.74,-1118.27C129.71,-1124.52 153.98,-1131.98 173.74,-1142 187.37,-1148.92 188.24,-1154.8 201.74,-1162 204.61,-1163.53 207.59,-1165.02 210.64,-1166.45" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="209.33,-1169.7 219.89,-1170.55 212.16,-1163.3 209.33,-1169.7" style=""/>
+</g>
+<!-- HermesPair.skim&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge48" class="edge" data-name="HermesPair.skim-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M120.64,-1104.08C144.63,-1105.16 179.69,-1108.56 210.17,-1112.56" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="209.93,-1116.06 220.31,-1113.94 210.88,-1109.13 209.93,-1116.06" style=""/>
+</g>
+<!-- HermesPair.skim&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge50" class="edge" data-name="HermesPair.skim-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M117.88,-1113.77C137.28,-1117.29 164.89,-1120.94 191.49,-1123.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="191.32,-1127.19 201.62,-1124.71 192.01,-1120.23 191.32,-1127.19" style=""/>
+</g>
+<!-- HermesPair.sync -->
+<g id="node13" class="node" pointer-events="visible" data-name="HermesPair.sync">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.87" cy="-1052" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="90.87" y="-1047.8" font-family="Times,serif" font-size="14.00" style="">sync</text>
+</g>
+<!-- HermesPair.sync&#45;&gt;HermesPair._update -->
+<g id="edge51" class="edge" data-name="HermesPair.sync-&gt;HermesPair._update">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.45,-1055.04C147.05,-1058.08 190.13,-1062.82 223.72,-1066.52" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="223.49,-1070.02 233.81,-1067.63 224.25,-1063.06 223.49,-1070.02" style=""/>
+</g>
+<!-- HermesPair.sync&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge52" class="edge" data-name="HermesPair.sync-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.61,-1051.05C135.86,-1054.48 156.52,-1061.27 173.74,-1070 187.37,-1076.92 188.24,-1082.8 201.74,-1090 212.65,-1095.82 225.09,-1100.98 236.52,-1105.61" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="235.24,-1108.87 245.82,-1109.39 237.87,-1102.38 235.24,-1108.87" style=""/>
+</g>
+<!-- HermesPair.sync&#45;&gt;HermesPair.IERC20Hermes -->
+<g id="edge53" class="edge" data-name="HermesPair.sync-&gt;HermesPair.IERC20Hermes">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M112.4,-1064.15C129.38,-1070.42 153.85,-1077.91 173.74,-1088 187.37,-1094.92 188.24,-1100.8 201.74,-1108 203.5,-1108.94 205.3,-1109.86 207.13,-1110.76" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="205.92,-1114.06 216.47,-1115.09 208.86,-1107.71 205.92,-1114.06" style=""/>
+</g>
+<!-- key -->
+<g id="node35" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="155.87,-1431 25.87,-1431 25.87,-1343 155.87,-1343 155.87,-1431" style=""/>
+<text text-anchor="start" x="75.51" y="-1412.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="71.62" y="-1392.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="49.07" y="-1372.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="35.47" y="-1352.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node36" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="301.46,-1431 247.46,-1431 247.46,-1343 301.46,-1343 301.46,-1431" style=""/>
+<text text-anchor="start" x="264.46" y="-1412.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="264.46" y="-1392.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="262.46,-1367 262.46,-1387 287.46,-1387 287.46,-1367 262.46,-1367" style=""/>
+<text text-anchor="start" x="264.46" y="-1372.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="264.46,-1349 264.46,-1365 285.46,-1365 285.46,-1349 264.46,-1349" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge54" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.87,-1417C195.39,-1417 209.47,-1417 251.43,-1417" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="251.46,-1420.5 261.46,-1417 251.46,-1413.5 251.46,-1420.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge55" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M148.87,-1397C195.39,-1397 209.47,-1397 251.43,-1397" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="251.46,-1400.5 261.46,-1397 251.46,-1393.5 251.46,-1400.5" style=""/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,101 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="290pt" height="400pt" viewBox="0.00 0.00 290.43 400.00">
+<g id="graph0" class="graph" transform="translate(4,396) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-396 286.43,-396 286.43,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterTransferHelper">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 172.43,-8 172.43,-8 178.43,-8 184.43,-14 184.43,-20 184.43,-20 184.43,-235 184.43,-235 184.43,-241 178.43,-247 172.43,-247 172.43,-247 20,-247 20,-247 14,-247 8,-241 8,-235 8,-235 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="96.21" y="-230.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">TransferHelper  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clustertoken">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M216.43,-116C216.43,-116 262.43,-116 262.43,-116 268.43,-116 274.43,-122 274.43,-128 274.43,-128 274.43,-181 274.43,-181 274.43,-187 268.43,-193 262.43,-193 262.43,-193 216.43,-193 216.43,-193 210.43,-193 204.43,-187 204.43,-181 204.43,-181 204.43,-128 204.43,-128 204.43,-122 210.43,-116 216.43,-116" style=""/>
+<text text-anchor="middle" x="239.43" y="-176.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">token</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="23.21,-255 23.21,-384 274.43,-384 274.43,-255 23.21,-255" style=""/>
+<text text-anchor="middle" x="148.82" y="-367.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- TransferHelper.safeApprove -->
+<g id="node1" class="node" pointer-events="visible" data-name="TransferHelper.safeApprove">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-196" rx="60.25" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-191.8" font-family="Times,serif" font-size="14.00" style="">safeApprove</text>
+</g>
+<!-- token.call -->
+<g id="node5" class="node" pointer-events="visible" data-name="token.call">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="239.43" cy="-142" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="239.43" y="-137.8" font-family="Times,serif" font-size="14.00" style="">call</text>
+</g>
+<!-- TransferHelper.safeApprove&#45;&gt;token.call -->
+<g id="edge1" class="edge" data-name="TransferHelper.safeApprove-&gt;token.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M141.18,-183.92C155.17,-179.67 170.6,-174.55 184.43,-169 192.52,-165.75 201.05,-161.76 208.89,-157.86" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="210.71,-160.86 218.02,-153.19 207.52,-154.62 210.71,-160.86" style=""/>
+</g>
+<!-- TransferHelper.safeTransfer -->
+<g id="node2" class="node" pointer-events="visible" data-name="TransferHelper.safeTransfer">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-142" rx="59.08" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-137.8" font-family="Times,serif" font-size="14.00" style="">safeTransfer</text>
+</g>
+<!-- TransferHelper.safeTransfer&#45;&gt;token.call -->
+<g id="edge2" class="edge" data-name="TransferHelper.safeTransfer-&gt;token.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M155.88,-142C171.46,-142 187.83,-142 201.86,-142" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="202.07,-145.5 212.07,-142 202.07,-138.5 202.07,-145.5" style=""/>
+</g>
+<!-- TransferHelper.safeTransferFrom -->
+<g id="node3" class="node" pointer-events="visible" data-name="TransferHelper.safeTransferFrom">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-88" rx="80.43" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-83.8" font-family="Times,serif" font-size="14.00" style="">safeTransferFrom</text>
+</g>
+<!-- TransferHelper.safeTransferFrom&#45;&gt;token.call -->
+<g id="edge3" class="edge" data-name="TransferHelper.safeTransferFrom-&gt;token.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.52,-102.04C159.73,-105.86 172.66,-110.27 184.43,-115 192.52,-118.25 201.05,-122.24 208.89,-126.14" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="207.52,-129.38 218.02,-130.81 210.71,-123.14 207.52,-129.38" style=""/>
+</g>
+<!-- TransferHelper.safeTransferONE -->
+<g id="node4" class="node" pointer-events="visible" data-name="TransferHelper.safeTransferONE">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-34" rx="79.27" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-29.8" font-family="Times,serif" font-size="14.00" style="">safeTransferONE</text>
+</g>
+<!-- key -->
+<g id="node6" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="161.21,-351 31.21,-351 31.21,-263 161.21,-263 161.21,-351" style=""/>
+<text text-anchor="start" x="80.85" y="-332.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="76.96" y="-312.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="54.42" y="-292.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="40.82" y="-272.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node7" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="266.43,-351 212.43,-351 212.43,-263 266.43,-263 266.43,-351" style=""/>
+<text text-anchor="start" x="229.43" y="-332.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="229.43" y="-312.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="227.43,-287 227.43,-307 252.43,-307 252.43,-287 227.43,-287" style=""/>
+<text text-anchor="start" x="229.43" y="-292.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="229.43,-269 229.43,-285 250.43,-285 250.43,-269 229.43,-269" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge4" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M154.21,-337C182.67,-337 192.21,-337 216.38,-337" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="216.43,-340.5 226.43,-337 216.43,-333.5 216.43,-340.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge5" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M154.21,-317C182.67,-317 192.21,-317 216.38,-317" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="216.43,-320.5 226.43,-317 216.43,-313.5 216.43,-320.5" style=""/>
+</g>
+</g>
+</svg>

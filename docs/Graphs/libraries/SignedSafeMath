@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="264pt" height="454pt" viewBox="0.00 0.00 264.00 454.00">
+<g id="graph0" class="graph" transform="translate(4,450) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-450 260,-450 260,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSignedSafeMath">
+
+<path fill="#445773" stroke="#445773" d="M23.27,-8C23.27,-8 138.73,-8 138.73,-8 144.73,-8 150.73,-14 150.73,-20 150.73,-20 150.73,-289 150.73,-289 150.73,-295 144.73,-301 138.73,-301 138.73,-301 23.27,-301 23.27,-301 17.27,-301 11.27,-295 11.27,-289 11.27,-289 11.27,-20 11.27,-20 11.27,-14 17.27,-8 23.27,-8" style=""/>
+<text text-anchor="middle" x="81" y="-284.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SignedSafeMath  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-309 8,-438 248,-438 248,-309 8,-309" style=""/>
+<text text-anchor="middle" x="128" y="-421.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- SignedSafeMath.mul -->
+<g id="node1" class="node" pointer-events="visible" data-name="SignedSafeMath.mul">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-250" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-245.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- SignedSafeMath.div -->
+<g id="node2" class="node" pointer-events="visible" data-name="SignedSafeMath.div">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-196" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-191.8" font-family="Times,serif" font-size="14.00" style="">div</text>
+</g>
+<!-- SignedSafeMath.sub -->
+<g id="node3" class="node" pointer-events="visible" data-name="SignedSafeMath.sub">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-142" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-137.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- SignedSafeMath.add -->
+<g id="node4" class="node" pointer-events="visible" data-name="SignedSafeMath.add">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-88" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-83.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SignedSafeMath.toUInt256 -->
+<g id="node5" class="node" pointer-events="visible" data-name="SignedSafeMath.toUInt256">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-34" rx="50.97" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-29.8" font-family="Times,serif" font-size="14.00" style="">toUInt256</text>
+</g>
+<!-- key -->
+<g id="node6" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-405 16,-405 16,-317 146,-317 146,-405" style=""/>
+<text text-anchor="start" x="65.64" y="-386.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-366.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-346.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-326.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node7" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="240,-405 186,-405 186,-317 240,-317 240,-405" style=""/>
+<text text-anchor="start" x="203" y="-386.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="203" y="-366.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="201,-341 201,-361 226,-361 226,-341 201,-341" style=""/>
+<text text-anchor="start" x="203" y="-346.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="203,-323 203,-339 224,-339 224,-323 203,-323" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-391C162.4,-391 170.66,-391 189.92,-391" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="190,-394.5 200,-391 190,-387.5 190,-394.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-371C162.4,-371 170.66,-371 189.92,-371" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="190,-374.5 200,-371 190,-367.5 190,-374.5" style=""/>
+</g>
+</g>
+</svg>

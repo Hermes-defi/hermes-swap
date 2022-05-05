@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="278pt" height="238pt" viewBox="0.00 0.00 278.19 238.00">
+<g id="graph0" class="graph" transform="translate(4,234) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-234 274.19,-234 274.19,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterERC20Mock">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 250.19,-8 250.19,-8 256.19,-8 262.19,-14 262.19,-20 262.19,-20 262.19,-73 262.19,-73 262.19,-79 256.19,-85 250.19,-85 250.19,-85 20,-85 20,-85 14,-85 8,-79 8,-73 8,-73 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="135.1" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">ERC20Mock</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="10.53,-93 10.53,-222 255.62,-222 255.62,-93 10.53,-93" style=""/>
+<text text-anchor="middle" x="133.07" y="-205.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- ERC20Mock.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="ERC20Mock.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="83.53" cy="-34" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="83.53" y="-29.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- ERC20Mock._mint -->
+<g id="node2" class="node" pointer-events="visible" data-name="ERC20Mock._mint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="220.62" cy="-34" rx="33.64" ry="18" style=""/>
+<text text-anchor="middle" x="220.62" y="-29.8" font-family="Times,serif" font-size="14.00" style="">_mint</text>
+</g>
+<!-- ERC20Mock.&lt;Constructor&gt;&#45;&gt;ERC20Mock._mint -->
+<g id="edge1" class="edge" data-name="ERC20Mock.&lt;Constructor&gt;-&gt;ERC20Mock._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M151.28,-34C159.88,-34 168.49,-34 176.57,-34" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="176.83,-37.5 186.83,-34 176.83,-30.5 176.83,-37.5" style=""/>
+</g>
+<!-- key -->
+<g id="node3" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="148.53,-189 18.53,-189 18.53,-101 148.53,-101 148.53,-189" style=""/>
+<text text-anchor="start" x="68.16" y="-170.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="64.27" y="-150.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="41.73" y="-130.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="28.13" y="-110.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node4" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="247.62,-189 193.62,-189 193.62,-101 247.62,-101 247.62,-189" style=""/>
+<text text-anchor="start" x="210.62" y="-170.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="210.62" y="-150.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="208.62,-125 208.62,-145 233.62,-145 233.62,-125 208.62,-125" style=""/>
+<text text-anchor="start" x="210.62" y="-130.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="210.62,-107 210.62,-123 231.62,-123 231.62,-107 210.62,-107" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M141.53,-175C167.23,-175 176.07,-175 197.55,-175" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="197.62,-178.5 207.62,-175 197.62,-171.5 197.62,-178.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge3" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M141.53,-155C167.23,-155 176.07,-155 197.55,-155" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="197.62,-158.5 207.62,-155 197.62,-151.5 197.62,-158.5" style=""/>
+</g>
+</g>
+</svg>

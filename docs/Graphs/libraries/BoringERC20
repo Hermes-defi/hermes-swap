@@ -1,0 +1,143 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="410pt" height="593pt" viewBox="0.00 0.00 409.75 593.00">
+<g id="graph0" class="graph" transform="translate(4,589) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-589 405.75,-589 405.75,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterBoringERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-147C20,-147 381.75,-147 381.75,-147 387.75,-147 393.75,-153 393.75,-159 393.75,-159 393.75,-428 393.75,-428 393.75,-434 387.75,-440 381.75,-440 381.75,-440 20,-440 20,-440 14,-440 8,-434 8,-428 8,-428 8,-159 8,-159 8,-153 14,-147 20,-147" style=""/>
+<text text-anchor="middle" x="200.88" y="-423.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoringERC20  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M257.74,-8C257.74,-8 340.44,-8 340.44,-8 346.44,-8 352.44,-14 352.44,-20 352.44,-20 352.44,-127 352.44,-127 352.44,-133 346.44,-139 340.44,-139 340.44,-139 257.74,-139 257.74,-139 251.74,-139 245.74,-133 245.74,-127 245.74,-127 245.74,-20 245.74,-20 245.74,-14 251.74,-8 257.74,-8" style=""/>
+<text text-anchor="middle" x="299.09" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="23.21,-448 23.21,-577 334.09,-577 334.09,-448 23.21,-448" style=""/>
+<text text-anchor="middle" x="178.65" y="-560.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- BoringERC20.returnDataToString -->
+<g id="node1" class="node" pointer-events="visible" data-name="BoringERC20.returnDataToString">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="299.09" cy="-362" rx="86.82" ry="18" style=""/>
+<text text-anchor="middle" x="299.09" y="-357.8" font-family="Times,serif" font-size="14.00" style="">returnDataToString</text>
+</g>
+<!-- BoringERC20.safeSymbol -->
+<g id="node2" class="node" pointer-events="visible" data-name="BoringERC20.safeSymbol">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-389" rx="56.77" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-384.8" font-family="Times,serif" font-size="14.00" style="">safeSymbol</text>
+</g>
+<!-- BoringERC20.safeSymbol&#45;&gt;BoringERC20.returnDataToString -->
+<g id="edge2" class="edge" data-name="BoringERC20.safeSymbol-&gt;BoringERC20.returnDataToString">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.68,-382.08C169.14,-379.33 193.18,-376.1 215.93,-373.04" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="216.48,-376.5 225.93,-371.7 215.55,-369.56 216.48,-376.5" style=""/>
+</g>
+<!-- IERC20.staticcall -->
+<g id="node7" class="node" pointer-events="visible" data-name="IERC20.staticcall">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="299.09" cy="-88" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="299.09" y="-83.8" font-family="Times,serif" font-size="14.00" style="">staticcall</text>
+</g>
+<!-- BoringERC20.safeSymbol&#45;&gt;IERC20.staticcall -->
+<g id="edge1" class="edge" data-name="BoringERC20.safeSymbol-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M146.99,-380.99C158.1,-376.98 168.82,-370.98 176.43,-362 240.17,-286.72 158.25,-225.43 212.43,-143 223.24,-126.55 240.86,-114 257.31,-105.08" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="258.98,-108.16 266.29,-100.49 255.79,-101.93 258.98,-108.16" style=""/>
+</g>
+<!-- BoringERC20.safeName -->
+<g id="node3" class="node" pointer-events="visible" data-name="BoringERC20.safeName">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-335" rx="49.78" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-330.8" font-family="Times,serif" font-size="14.00" style="">safeName</text>
+</g>
+<!-- BoringERC20.safeName&#45;&gt;BoringERC20.returnDataToString -->
+<g id="edge4" class="edge" data-name="BoringERC20.safeName-&gt;BoringERC20.returnDataToString">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M143.05,-341.16C164.52,-344.05 190.78,-347.58 215.54,-350.9" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="215.29,-354.4 225.67,-352.27 216.23,-347.47 215.29,-354.4" style=""/>
+</g>
+<!-- BoringERC20.safeName&#45;&gt;IERC20.staticcall -->
+<g id="edge3" class="edge" data-name="BoringERC20.safeName-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M142.55,-328.1C155.07,-324.13 167.63,-317.87 176.43,-308 226.4,-252 169.59,-204.63 212.43,-143 223.66,-126.84 241.34,-114.33 257.72,-105.35" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="259.37,-108.44 266.64,-100.73 256.15,-102.22 259.37,-108.44" style=""/>
+</g>
+<!-- BoringERC20.safeDecimals -->
+<g id="node4" class="node" pointer-events="visible" data-name="BoringERC20.safeDecimals">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-281" rx="63.1" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-276.8" font-family="Times,serif" font-size="14.00" style="">safeDecimals</text>
+</g>
+<!-- BoringERC20.safeDecimals&#45;&gt;IERC20.staticcall -->
+<g id="edge5" class="edge" data-name="BoringERC20.safeDecimals-&gt;IERC20.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M148.96,-271.08C159.08,-267.15 168.88,-261.66 176.43,-254 212.83,-217.06 180.76,-184.07 212.43,-143 224.54,-127.29 242.49,-114.79 258.84,-105.7" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="260.51,-108.77 267.71,-101 257.23,-102.59 260.51,-108.77" style=""/>
+</g>
+<!-- BoringERC20.safeTransfer -->
+<g id="node5" class="node" pointer-events="visible" data-name="BoringERC20.safeTransfer">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-173" rx="59.08" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-168.8" font-family="Times,serif" font-size="14.00" style="">safeTransfer</text>
+</g>
+<!-- IERC20.call -->
+<g id="node8" class="node" pointer-events="visible" data-name="IERC20.call">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="299.09" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="299.09" y="-29.8" font-family="Times,serif" font-size="14.00" style="">call</text>
+</g>
+<!-- BoringERC20.safeTransfer&#45;&gt;IERC20.call -->
+<g id="edge6" class="edge" data-name="BoringERC20.safeTransfer-&gt;IERC20.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M110.91,-155.23C130.75,-130.66 169.8,-86.46 212.43,-61 227.8,-51.82 246.62,-45.44 262.7,-41.2" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="263.94,-44.5 272.81,-38.71 262.26,-37.7 263.94,-44.5" style=""/>
+</g>
+<!-- BoringERC20.safeTransferFrom -->
+<g id="node6" class="node" pointer-events="visible" data-name="BoringERC20.safeTransferFrom">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="96.21" cy="-227" rx="80.43" ry="18" style=""/>
+<text text-anchor="middle" x="96.21" y="-222.8" font-family="Times,serif" font-size="14.00" style="">safeTransferFrom</text>
+</g>
+<!-- BoringERC20.safeTransferFrom&#45;&gt;IERC20.call -->
+<g id="edge7" class="edge" data-name="BoringERC20.safeTransferFrom-&gt;IERC20.call">
+
+<path fill="none" stroke="white" stroke-width="2" d="M155.39,-214.81C163.25,-211.11 170.6,-206.28 176.43,-200 219.83,-153.21 168.49,-107.28 212.43,-61 225.23,-47.51 244.69,-40.73 261.83,-37.34" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="262.83,-40.72 272.13,-35.63 261.69,-33.81 262.83,-40.72" style=""/>
+</g>
+<!-- key -->
+<g id="node9" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="161.21,-544 31.21,-544 31.21,-456 161.21,-456 161.21,-544" style=""/>
+<text text-anchor="start" x="80.85" y="-525.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="76.96" y="-505.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="54.42" y="-485.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="40.82" y="-465.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node10" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="326.09,-544 272.09,-544 272.09,-456 326.09,-456 326.09,-544" style=""/>
+<text text-anchor="start" x="289.09" y="-525.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="289.09" y="-505.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="287.09,-480 287.09,-500 312.09,-500 312.09,-480 287.09,-480" style=""/>
+<text text-anchor="start" x="289.09" y="-485.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="289.09,-462 289.09,-478 310.09,-478 310.09,-462 289.09,-462" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge8" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M154.21,-530C209.28,-530 225.54,-530 275.91,-530" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="276.09,-533.5 286.09,-530 276.09,-526.5 276.09,-533.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge9" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M154.21,-510C209.28,-510 225.54,-510 275.91,-510" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="276.09,-513.5 286.09,-510 276.09,-506.5 276.09,-513.5" style=""/>
+</g>
+</g>
+</svg>

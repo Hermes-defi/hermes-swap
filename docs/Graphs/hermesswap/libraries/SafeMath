@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="268pt" height="346pt" viewBox="0.00 0.00 268.00 346.00">
+<g id="graph0" class="graph" transform="translate(4,342) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-342 264,-342 264,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSafeMathHermes">
+
+<path fill="#445773" stroke="#445773" d="M21,-8C21,-8 142,-8 142,-8 148,-8 154,-14 154,-20 154,-20 154,-181 154,-181 154,-187 148,-193 142,-193 142,-193 21,-193 21,-193 15,-193 9,-187 9,-181 9,-181 9,-20 9,-20 9,-14 15,-8 21,-8" style=""/>
+<text text-anchor="middle" x="81.5" y="-176.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SafeMathHermes  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-201 8,-330 252,-330 252,-201 8,-201" style=""/>
+<text text-anchor="middle" x="130" y="-313.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- SafeMathHermes.add -->
+<g id="node1" class="node" pointer-events="visible" data-name="SafeMathHermes.add">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-142" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-137.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SafeMathHermes.sub -->
+<g id="node2" class="node" pointer-events="visible" data-name="SafeMathHermes.sub">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-88" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-83.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- SafeMathHermes.mul -->
+<g id="node3" class="node" pointer-events="visible" data-name="SafeMathHermes.mul">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-29.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- key -->
+<g id="node4" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-297 16,-297 16,-209 146,-209 146,-297" style=""/>
+<text text-anchor="start" x="65.64" y="-278.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-258.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-238.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-218.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node5" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="244,-297 190,-297 190,-209 244,-209 244,-297" style=""/>
+<text text-anchor="start" x="207" y="-278.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="207" y="-258.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="205,-233 205,-253 230,-253 230,-233 205,-233" style=""/>
+<text text-anchor="start" x="207" y="-238.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="207,-215 207,-231 228,-231 228,-215 207,-215" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-283C164.16,-283 172.89,-283 193.82,-283" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="194,-286.5 204,-283 194,-279.5 194,-286.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-263C164.16,-263 172.89,-263 193.82,-263" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="194,-266.5 204,-263 194,-259.5 194,-266.5" style=""/>
+</g>
+</g>
+</svg>

@@ -14,6 +14,9 @@ contract HermesFactory is IHermesFactory {
 
     event PairCreated(address indexed token0, address indexed token1, address pair, uint256);
 
+    event OnFeeToChanged(address indexed _feeTo);
+    event OnFeeToSetterChanged(address indexed _feeToSetter);
+
     constructor(address _feeToSetter) public {
         feeToSetter = _feeToSetter;
     }
@@ -46,10 +49,12 @@ contract HermesFactory is IHermesFactory {
     function setFeeTo(address _feeTo) external override {
         require(msg.sender == feeToSetter, "Hermes: FORBIDDEN");
         feeTo = _feeTo;
+        emit OnFeeToChanged(_feeTo);
     }
 
     function setFeeToSetter(address _feeToSetter) external override {
         require(msg.sender == feeToSetter, "Hermes: FORBIDDEN");
         feeToSetter = _feeToSetter;
+        emit OnFeeToSetterChanged(_feeToSetter);
     }
 }

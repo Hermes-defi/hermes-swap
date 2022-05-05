@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="671pt" height="454pt" viewBox="0.00 0.00 671.29 454.00">
+<g id="graph0" class="graph" transform="translate(4,450) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-450 667.29,-450 667.29,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIHermesRouter02">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 553.29,-8 553.29,-8 559.29,-8 565.29,-14 565.29,-20 565.29,-20 565.29,-289 565.29,-289 565.29,-295 559.29,-301 553.29,-301 553.29,-301 20,-301 20,-301 14,-301 8,-295 8,-289 8,-289 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="286.65" y="-284.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesRouter02  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="213.65,-309 213.65,-438 655.29,-438 655.29,-309 213.65,-309" style=""/>
+<text text-anchor="middle" x="434.47" y="-421.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IHermesRouter02.removeLiquidityONESupportingFeeOnTransferTokens -->
+<g id="node1" class="node" pointer-events="visible" data-name="IHermesRouter02.removeLiquidityONESupportingFeeOnTransferTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="286.65" cy="-250" rx="225.68" ry="18" style=""/>
+<text text-anchor="middle" x="286.65" y="-245.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidityONESupportingFeeOnTransferTokens</text>
+</g>
+<!-- IHermesRouter02.removeLiquidityONEWithPermitSupportingFeeOnTransferTokens -->
+<g id="node2" class="node" pointer-events="visible" data-name="IHermesRouter02.removeLiquidityONEWithPermitSupportingFeeOnTransferTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="286.65" cy="-196" rx="270.79" ry="18" style=""/>
+<text text-anchor="middle" x="286.65" y="-191.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidityONEWithPermitSupportingFeeOnTransferTokens</text>
+</g>
+<!-- IHermesRouter02.swapExactTokensForTokensSupportingFeeOnTransferTokens -->
+<g id="node3" class="node" pointer-events="visible" data-name="IHermesRouter02.swapExactTokensForTokensSupportingFeeOnTransferTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="286.65" cy="-142" rx="252.88" ry="18" style=""/>
+<text text-anchor="middle" x="286.65" y="-137.8" font-family="Times,serif" font-size="14.00" style="">swapExactTokensForTokensSupportingFeeOnTransferTokens</text>
+</g>
+<!-- IHermesRouter02.swapExactONEForTokensSupportingFeeOnTransferTokens -->
+<g id="node4" class="node" pointer-events="visible" data-name="IHermesRouter02.swapExactONEForTokensSupportingFeeOnTransferTokens">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="286.65" cy="-88" rx="244.22" ry="18" style=""/>
+<text text-anchor="middle" x="286.65" y="-83.8" font-family="Times,serif" font-size="14.00" style="">swapExactONEForTokensSupportingFeeOnTransferTokens</text>
+</g>
+<!-- IHermesRouter02.swapExactTokensForONESupportingFeeOnTransferTokens -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesRouter02.swapExactTokensForONESupportingFeeOnTransferTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="286.65" cy="-34" rx="244.22" ry="18" style=""/>
+<text text-anchor="middle" x="286.65" y="-29.8" font-family="Times,serif" font-size="14.00" style="">swapExactTokensForONESupportingFeeOnTransferTokens</text>
+</g>
+<!-- key -->
+<g id="node6" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="351.65,-405 221.65,-405 221.65,-317 351.65,-317 351.65,-405" style=""/>
+<text text-anchor="start" x="271.28" y="-386.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="267.4" y="-366.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="244.85" y="-346.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="231.25" y="-326.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node7" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="647.29,-405 593.29,-405 593.29,-317 647.29,-317 647.29,-405" style=""/>
+<text text-anchor="start" x="610.29" y="-386.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="610.29" y="-366.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="608.29,-341 608.29,-361 633.29,-361 633.29,-341 608.29,-341" style=""/>
+<text text-anchor="start" x="610.29" y="-346.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="610.29,-323 610.29,-339 631.29,-339 631.29,-323 610.29,-323" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M344.65,-391C457.96,-391 488.78,-391 597.26,-391" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="597.29,-394.5 607.29,-391 597.29,-387.5 597.29,-394.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M344.65,-371C457.96,-371 488.78,-371 597.26,-371" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="597.29,-374.5 607.29,-371 597.29,-367.5 597.29,-374.5" style=""/>
+</g>
+</g>
+</svg>

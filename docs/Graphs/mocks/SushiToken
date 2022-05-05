@@ -1,0 +1,232 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="825pt" height="624pt" viewBox="0.00 0.00 825.34 624.00">
+<g id="graph0" class="graph" transform="translate(4,620) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-620 821.34,-620 821.34,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterSushiToken">
+
+<path fill="#445773" stroke="#445773" d="M20,-178C20,-178 797.34,-178 797.34,-178 803.34,-178 809.34,-184 809.34,-190 809.34,-190 809.34,-459 809.34,-459 809.34,-465 803.34,-471 797.34,-471 797.34,-471 20,-471 20,-471 14,-471 8,-465 8,-459 8,-459 8,-190 8,-190 8,-184 14,-178 20,-178" style=""/>
+<text text-anchor="middle" x="408.67" y="-454.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SushiToken</text>
+</g>
+<g id="clust2" class="cluster" data-name="clustersrcRepOld">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M587.63,-93C587.63,-93 638.63,-93 638.63,-93 644.63,-93 650.63,-99 650.63,-105 650.63,-105 650.63,-158 650.63,-158 650.63,-164 644.63,-170 638.63,-170 638.63,-170 587.63,-170 587.63,-170 581.63,-170 575.63,-164 575.63,-158 575.63,-158 575.63,-105 575.63,-105 575.63,-99 581.63,-93 587.63,-93" style=""/>
+<text text-anchor="middle" x="613.13" y="-153.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">srcRepOld</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterdstRepOld">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M587.63,-8C587.63,-8 638.63,-8 638.63,-8 644.63,-8 650.63,-14 650.63,-20 650.63,-20 650.63,-73 650.63,-73 650.63,-79 644.63,-85 638.63,-85 638.63,-85 587.63,-85 587.63,-85 581.63,-85 575.63,-79 575.63,-73 575.63,-73 575.63,-20 575.63,-20 575.63,-14 581.63,-8 587.63,-8" style=""/>
+<text text-anchor="middle" x="613.13" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">dstRepOld</text>
+</g>
+<g id="clust4" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="17.86,-479 17.86,-608 290.67,-608 290.67,-479 17.86,-479" style=""/>
+<text text-anchor="middle" x="154.27" y="-591.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- SushiToken.mint -->
+<g id="node1" class="node" pointer-events="visible" data-name="SushiToken.mint">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="255.67" cy="-393" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="255.67" y="-388.8" font-family="Times,serif" font-size="14.00" style="">mint</text>
+</g>
+<!-- SushiToken._moveDelegates -->
+<g id="node8" class="node" pointer-events="visible" data-name="SushiToken._moveDelegates">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="421.01" cy="-339" rx="75.28" ry="18" style=""/>
+<text text-anchor="middle" x="421.01" y="-334.8" font-family="Times,serif" font-size="14.00" style="">_moveDelegates</text>
+</g>
+<!-- SushiToken.mint&#45;&gt;SushiToken._moveDelegates -->
+<g id="edge2" class="edge" data-name="SushiToken.mint-&gt;SushiToken._moveDelegates">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M281.48,-384.8C304.01,-377.35 338,-366.11 366.68,-356.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="367.78,-359.95 376.17,-353.49 365.58,-353.31 367.78,-359.95" style=""/>
+</g>
+<!-- SushiToken._mint -->
+<g id="node12" class="node" pointer-events="visible" data-name="SushiToken._mint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="421.01" cy="-393" rx="33.64" ry="18" style=""/>
+<text text-anchor="middle" x="421.01" y="-388.8" font-family="Times,serif" font-size="14.00" style="">_mint</text>
+</g>
+<!-- SushiToken.mint&#45;&gt;SushiToken._mint -->
+<g id="edge1" class="edge" data-name="SushiToken.mint-&gt;SushiToken._mint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M284.75,-393C310.1,-393 347.77,-393 376.93,-393" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="377.24,-396.5 387.24,-393 377.24,-389.5 377.24,-396.5" style=""/>
+</g>
+<!-- SushiToken.delegates -->
+<g id="node2" class="node" pointer-events="visible" data-name="SushiToken.delegates">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.86" cy="-420" rx="46.92" ry="18" style=""/>
+<text text-anchor="middle" x="90.86" y="-415.8" font-family="Times,serif" font-size="14.00" style="">delegates</text>
+</g>
+<!-- SushiToken.delegate -->
+<g id="node3" class="node" pointer-events="visible" data-name="SushiToken.delegate">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.86" cy="-366" rx="43.41" ry="18" style=""/>
+<text text-anchor="middle" x="90.86" y="-361.8" font-family="Times,serif" font-size="14.00" style="">delegate</text>
+</g>
+<!-- SushiToken._delegate -->
+<g id="node7" class="node" pointer-events="visible" data-name="SushiToken._delegate">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="255.67" cy="-339" rx="48.07" ry="18" style=""/>
+<text text-anchor="middle" x="255.67" y="-334.8" font-family="Times,serif" font-size="14.00" style="">_delegate</text>
+</g>
+<!-- SushiToken.delegate&#45;&gt;SushiToken._delegate -->
+<g id="edge3" class="edge" data-name="SushiToken.delegate-&gt;SushiToken._delegate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M131.27,-359.46C152.34,-355.97 178.58,-351.62 201.44,-347.83" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="202.04,-351.28 211.33,-346.19 200.89,-344.37 202.04,-351.28" style=""/>
+</g>
+<!-- SushiToken.delegateBySig -->
+<g id="node4" class="node" pointer-events="visible" data-name="SushiToken.delegateBySig">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.86" cy="-312" rx="67.21" ry="18" style=""/>
+<text text-anchor="middle" x="90.86" y="-307.8" font-family="Times,serif" font-size="14.00" style="">delegateBySig</text>
+</g>
+<!-- SushiToken.delegateBySig&#45;&gt;SushiToken._delegate -->
+<g id="edge6" class="edge" data-name="SushiToken.delegateBySig-&gt;SushiToken._delegate">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.81,-321.44C165.82,-324.26 184.4,-327.35 201.18,-330.13" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="200.92,-333.63 211.36,-331.82 202.07,-326.73 200.92,-333.63" style=""/>
+</g>
+<!-- SushiToken.getChainId -->
+<g id="node11" class="node" pointer-events="visible" data-name="SushiToken.getChainId">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="255.67" cy="-285" rx="53.89" ry="18" style=""/>
+<text text-anchor="middle" x="255.67" y="-280.8" font-family="Times,serif" font-size="14.00" style="">getChainId</text>
+</g>
+<!-- SushiToken.delegateBySig&#45;&gt;SushiToken.getChainId -->
+<g id="edge5" class="edge" data-name="SushiToken.delegateBySig-&gt;SushiToken.getChainId">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.81,-302.56C164.38,-299.97 181.26,-297.17 196.88,-294.58" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="197.64,-298.01 206.93,-292.92 196.5,-291.1 197.64,-298.01" style=""/>
+</g>
+<!-- SushiToken.name -->
+<g id="node13" class="node" pointer-events="visible" data-name="SushiToken.name">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="255.67" cy="-231" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="255.67" y="-226.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- SushiToken.delegateBySig&#45;&gt;SushiToken.name -->
+<g id="edge4" class="edge" data-name="SushiToken.delegateBySig-&gt;SushiToken.name">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M135.76,-298.36C145.85,-294.57 156.36,-290.08 165.73,-285 183.31,-275.46 184.75,-268.58 201.73,-258 207.84,-254.19 214.57,-250.44 221.11,-247.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="223.15,-249.9 230.47,-242.25 219.97,-243.67 223.15,-249.9" style=""/>
+</g>
+<!-- SushiToken.getCurrentVotes -->
+<g id="node5" class="node" pointer-events="visible" data-name="SushiToken.getCurrentVotes">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.86" cy="-258" rx="74.73" ry="18" style=""/>
+<text text-anchor="middle" x="90.86" y="-253.8" font-family="Times,serif" font-size="14.00" style="">getCurrentVotes</text>
+</g>
+<!-- SushiToken.getPriorVotes -->
+<g id="node6" class="node" pointer-events="visible" data-name="SushiToken.getPriorVotes">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="90.86" cy="-204" rx="64.86" ry="18" style=""/>
+<text text-anchor="middle" x="90.86" y="-199.8" font-family="Times,serif" font-size="14.00" style="">getPriorVotes</text>
+</g>
+<!-- SushiToken._delegate&#45;&gt;SushiToken._moveDelegates -->
+<g id="edge8" class="edge" data-name="SushiToken._delegate-&gt;SushiToken._moveDelegates">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M303.92,-339C313.77,-339 324.44,-339 335.18,-339" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="335.48,-342.5 345.48,-339 335.48,-335.5 335.48,-342.5" style=""/>
+</g>
+<!-- SushiToken.balanceOf -->
+<g id="node14" class="node" pointer-events="visible" data-name="SushiToken.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="421.01" cy="-285" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="421.01" y="-280.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- SushiToken._delegate&#45;&gt;SushiToken.balanceOf -->
+<g id="edge7" class="edge" data-name="SushiToken._delegate-&gt;SushiToken.balanceOf">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M292.52,-327.15C316.41,-319.25 348.05,-308.79 373.83,-300.27" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="375,-303.57 383.4,-297.1 372.81,-296.92 375,-303.57" style=""/>
+</g>
+<!-- SushiToken._writeCheckpoint -->
+<g id="node9" class="node" pointer-events="visible" data-name="SushiToken._writeCheckpoint">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="612.63" cy="-339" rx="80.46" ry="18" style=""/>
+<text text-anchor="middle" x="612.63" y="-334.8" font-family="Times,serif" font-size="14.00" style="">_writeCheckpoint</text>
+</g>
+<!-- SushiToken._moveDelegates&#45;&gt;SushiToken._writeCheckpoint -->
+<g id="edge10" class="edge" data-name="SushiToken._moveDelegates-&gt;SushiToken._writeCheckpoint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M491.27,-332.47C503.09,-332.26 515.48,-332.2 527.63,-332.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="527.73,-335.79 537.77,-332.4 527.8,-328.79 527.73,-335.79" style=""/>
+</g>
+<!-- SushiToken._moveDelegates&#45;&gt;SushiToken._writeCheckpoint -->
+<g id="edge12" class="edge" data-name="SushiToken._moveDelegates-&gt;SushiToken._writeCheckpoint">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M491.27,-345.53C503.09,-345.74 515.48,-345.8 527.63,-345.71" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="527.8,-349.21 537.77,-345.6 527.73,-342.21 527.8,-349.21" style=""/>
+</g>
+<!-- srcRepOld.sub -->
+<g id="node15" class="node" pointer-events="visible" data-name="srcRepOld.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="612.63" cy="-119" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="612.63" y="-114.8" font-family="Times,serif" font-size="14.00" style="">sub</text>
+</g>
+<!-- SushiToken._moveDelegates&#45;&gt;srcRepOld.sub -->
+<g id="edge9" class="edge" data-name="SushiToken._moveDelegates-&gt;srcRepOld.sub">
+
+<path fill="none" stroke="white" stroke-width="2" d="M475.92,-326.65C483.58,-322.97 490.75,-318.2 496.4,-312 539.09,-265.14 496.11,-225.97 532.4,-174 544.61,-156.51 564.29,-142.81 580.98,-133.45" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="582.71,-136.5 589.88,-128.71 579.41,-130.32 582.71,-136.5" style=""/>
+</g>
+<!-- dstRepOld.add -->
+<g id="node16" class="node" pointer-events="visible" data-name="dstRepOld.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="612.63" cy="-34" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="612.63" y="-29.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SushiToken._moveDelegates&#45;&gt;dstRepOld.add -->
+<g id="edge11" class="edge" data-name="SushiToken._moveDelegates-&gt;dstRepOld.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M477.18,-326.74C484.49,-323.05 491.23,-318.24 496.4,-312 560.41,-234.66 478.9,-173.95 532.4,-89 543.77,-70.95 563.44,-57.24 580.34,-48.03" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="582.09,-51.06 589.38,-43.37 578.88,-44.84 582.09,-51.06" style=""/>
+</g>
+<!-- SushiToken.safe32 -->
+<g id="node10" class="node" pointer-events="visible" data-name="SushiToken.safe32">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="765.1" cy="-339" rx="36.48" ry="18" style=""/>
+<text text-anchor="middle" x="765.1" y="-334.8" font-family="Times,serif" font-size="14.00" style="">safe32</text>
+</g>
+<!-- SushiToken._writeCheckpoint&#45;&gt;SushiToken.safe32 -->
+<g id="edge13" class="edge" data-name="SushiToken._writeCheckpoint-&gt;SushiToken.safe32">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M693.27,-339C701.9,-339 710.44,-339 718.46,-339" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="718.65,-342.5 728.65,-339 718.65,-335.5 718.65,-342.5" style=""/>
+</g>
+<!-- key -->
+<g id="node17" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="155.86,-575 25.86,-575 25.86,-487 155.86,-487 155.86,-575" style=""/>
+<text text-anchor="start" x="75.5" y="-556.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="71.61" y="-536.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="49.07" y="-516.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="35.46" y="-496.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node18" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="282.67,-575 228.67,-575 228.67,-487 282.67,-487 282.67,-575" style=""/>
+<text text-anchor="start" x="245.67" y="-556.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="245.67" y="-536.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="243.67,-511 243.67,-531 268.67,-531 268.67,-511 243.67,-511" style=""/>
+<text text-anchor="start" x="245.67" y="-516.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="245.67,-493 245.67,-509 266.67,-509 266.67,-493 245.67,-493" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge14" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M148.86,-561C186.97,-561 198.96,-561 232.58,-561" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="232.67,-564.5 242.67,-561 232.67,-557.5 232.67,-564.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge15" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M148.86,-541C186.97,-541 198.96,-541 232.58,-541" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="232.67,-544.5 242.67,-541 232.67,-537.5 232.67,-544.5" style=""/>
+</g>
+</g>
+</svg>

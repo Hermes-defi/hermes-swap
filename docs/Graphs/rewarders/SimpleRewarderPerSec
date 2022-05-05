@@ -1,0 +1,342 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="742pt" height="1024pt" viewBox="0.00 0.00 741.51 1024.14">
+<g id="graph0" class="graph" transform="translate(4,1020.1400146484375) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1020.14 737.51,-1020.14 737.51,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIRewarder">
+
+<path fill="#445773" stroke="#445773" d="M31.25,-61.14C31.25,-61.14 184.76,-61.14 184.76,-61.14 190.76,-61.14 196.76,-67.14 196.76,-73.14 196.76,-73.14 196.76,-234.14 196.76,-234.14 196.76,-240.14 190.76,-246.14 184.76,-246.14 184.76,-246.14 31.25,-246.14 31.25,-246.14 25.25,-246.14 19.25,-240.14 19.25,-234.14 19.25,-234.14 19.25,-73.14 19.25,-73.14 19.25,-67.14 25.25,-61.14 31.25,-61.14" style=""/>
+<text text-anchor="middle" x="108.01" y="-229.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IRewarder  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIMasterChefHermes">
+
+<path fill="#445773" stroke="#445773" d="M33.96,-261.14C33.96,-261.14 183.06,-261.14 183.06,-261.14 189.06,-261.14 195.06,-267.14 195.06,-273.14 195.06,-273.14 195.06,-434.14 195.06,-434.14 195.06,-440.14 189.06,-446.14 183.06,-446.14 183.06,-446.14 33.96,-446.14 33.96,-446.14 27.96,-446.14 21.96,-440.14 21.96,-434.14 21.96,-434.14 21.96,-273.14 21.96,-273.14 21.96,-267.14 27.96,-261.14 33.96,-261.14" style=""/>
+<text text-anchor="middle" x="108.51" y="-429.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IMasterChefHermes  (iface)</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterSimpleRewarderPerSec">
+
+<path fill="#445773" stroke="#445773" d="M20,-462.14C20,-462.14 558.93,-462.14 558.93,-462.14 564.93,-462.14 570.93,-468.14 570.93,-474.14 570.93,-474.14 570.93,-859.14 570.93,-859.14 570.93,-865.14 564.93,-871.14 558.93,-871.14 558.93,-871.14 20,-871.14 20,-871.14 14,-871.14 8,-865.14 8,-859.14 8,-859.14 8,-474.14 8,-474.14 8,-468.14 14,-462.14 20,-462.14" style=""/>
+<text text-anchor="middle" x="289.47" y="-854.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">SimpleRewarderPerSec</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusterAddress">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M259.86,-377.14C259.86,-377.14 353.32,-377.14 353.32,-377.14 359.32,-377.14 365.32,-383.14 365.32,-389.14 365.32,-389.14 365.32,-442.14 365.32,-442.14 365.32,-448.14 359.32,-454.14 353.32,-454.14 353.32,-454.14 259.86,-454.14 259.86,-454.14 253.86,-454.14 247.86,-448.14 247.86,-442.14 247.86,-442.14 247.86,-389.14 247.86,-389.14 247.86,-383.14 253.86,-377.14 259.86,-377.14" style=""/>
+<text text-anchor="middle" x="306.59" y="-437.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Address</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusterIERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M602.93,-46.14C602.93,-46.14 713.51,-46.14 713.51,-46.14 719.51,-46.14 725.51,-52.14 725.51,-58.14 725.51,-58.14 725.51,-165.14 725.51,-165.14 725.51,-171.14 719.51,-177.14 713.51,-177.14 713.51,-177.14 602.93,-177.14 602.93,-177.14 596.93,-177.14 590.93,-171.14 590.93,-165.14 590.93,-165.14 590.93,-58.14 590.93,-58.14 590.93,-52.14 596.93,-46.14 602.93,-46.14" style=""/>
+<text text-anchor="middle" x="658.22" y="-160.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust6" class="cluster" data-name="clustertimeElapsed">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M458.05,-377.14C458.05,-377.14 519.05,-377.14 519.05,-377.14 525.05,-377.14 531.05,-383.14 531.05,-389.14 531.05,-389.14 531.05,-442.14 531.05,-442.14 531.05,-448.14 525.05,-454.14 519.05,-454.14 519.05,-454.14 458.05,-454.14 458.05,-454.14 452.05,-454.14 446.05,-448.14 446.05,-442.14 446.05,-442.14 446.05,-389.14 446.05,-389.14 446.05,-383.14 452.05,-377.14 458.05,-377.14" style=""/>
+<text text-anchor="middle" x="488.55" y="-437.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">timeElapsed</text>
+</g>
+<g id="clust7" class="cluster" data-name="clustertokenReward">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M455.05,-292.14C455.05,-292.14 521.05,-292.14 521.05,-292.14 527.05,-292.14 533.05,-298.14 533.05,-304.14 533.05,-304.14 533.05,-357.14 533.05,-357.14 533.05,-363.14 527.05,-369.14 521.05,-369.14 521.05,-369.14 455.05,-369.14 455.05,-369.14 449.05,-369.14 443.05,-363.14 443.05,-357.14 443.05,-357.14 443.05,-304.14 443.05,-304.14 443.05,-298.14 449.05,-292.14 455.05,-292.14" style=""/>
+<text text-anchor="middle" x="488.05" y="-352.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">tokenReward</text>
+</g>
+<g id="clust8" class="cluster" data-name="clusteraccTokenPerShare">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M440.05,-177.14C440.05,-177.14 536.05,-177.14 536.05,-177.14 542.05,-177.14 548.05,-183.14 548.05,-189.14 548.05,-189.14 548.05,-242.14 548.05,-242.14 548.05,-248.14 542.05,-254.14 536.05,-254.14 536.05,-254.14 440.05,-254.14 440.05,-254.14 434.05,-254.14 428.05,-248.14 428.05,-242.14 428.05,-242.14 428.05,-189.14 428.05,-189.14 428.05,-183.14 434.05,-177.14 440.05,-177.14" style=""/>
+<text text-anchor="middle" x="488.05" y="-237.54" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">accTokenPerShare</text>
+</g>
+<g id="clust9" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="35.01,-879.14 35.01,-1008.14 341.59,-1008.14 341.59,-879.14 35.01,-879.14" style=""/>
+<text text-anchor="middle" x="188.3" y="-991.54" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IRewarder.onHermesReward -->
+<g id="node1" class="node" pointer-events="visible" data-name="IRewarder.onHermesReward">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-195.14" rx="80.51" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-190.94" font-family="Times,serif" font-size="14.00" style="">onHermesReward</text>
+</g>
+<!-- IRewarder.pendingTokens -->
+<g id="node2" class="node" pointer-events="visible" data-name="IRewarder.pendingTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-141.14" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-136.94" font-family="Times,serif" font-size="14.00" style="">pendingTokens</text>
+</g>
+<!-- IRewarder.rewardToken -->
+<g id="node3" class="node" pointer-events="visible" data-name="IRewarder.rewardToken">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-87.14" rx="62.53" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-82.94" font-family="Times,serif" font-size="14.00" style="">rewardToken</text>
+</g>
+<!-- IMasterChefHermes.poolInfo -->
+<g id="node4" class="node" pointer-events="visible" data-name="IMasterChefHermes.poolInfo">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-395.14" rx="44.09" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-390.94" font-family="Times,serif" font-size="14.00" style="">poolInfo</text>
+</g>
+<!-- IMasterChefHermes.totalAllocPoint -->
+<g id="node5" class="node" pointer-events="visible" data-name="IMasterChefHermes.totalAllocPoint">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-341.14" rx="70.1" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-336.94" font-family="Times,serif" font-size="14.00" style="">totalAllocPoint</text>
+</g>
+<!-- IMasterChefHermes.deposit -->
+<g id="node6" class="node" pointer-events="visible" data-name="IMasterChefHermes.deposit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-287.14" rx="38.86" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-282.94" font-family="Times,serif" font-size="14.00" style="">deposit</text>
+</g>
+<!-- SimpleRewarderPerSec.onlyMCJ -->
+<g id="node7" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.onlyMCJ">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="158.74,-808.69 158.74,-823.6 129.02,-834.14 86.99,-834.14 57.27,-823.6 57.27,-808.69 86.99,-798.14 129.02,-798.14 158.74,-808.69" style=""/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="162.73,-805.86 162.73,-826.43 129.71,-838.14 86.31,-838.14 53.28,-826.43 53.28,-805.86 86.31,-794.14 129.71,-794.14 162.73,-805.86" style=""/>
+<text text-anchor="middle" x="108.01" y="-811.94" font-family="Times,serif" font-size="14.00" style="">onlyMCJ</text>
+</g>
+<!-- SimpleRewarderPerSec.&lt;Constructor&gt; -->
+<g id="node8" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.01" cy="-704.14" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-699.94" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- Address.isContract -->
+<g id="node17" class="node" pointer-events="visible" data-name="Address.isContract">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="306.59" cy="-403.14" rx="50.96" ry="18" style=""/>
+<text text-anchor="middle" x="306.59" y="-398.94" font-family="Times,serif" font-size="14.00" style="">isContract</text>
+</g>
+<!-- SimpleRewarderPerSec.&lt;Constructor&gt;&#45;&gt;Address.isContract -->
+<g id="edge1" class="edge" data-name="SimpleRewarderPerSec.&lt;Constructor&gt;-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139.17,-688.03C159.34,-682.81 184.86,-676.32 200.02,-659.14 265.25,-585.16 185.95,-525.13 236.02,-440.14 240.78,-432.06 247.22,-424.7 254.27,-418.43" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="256.54,-421.09 262.1,-412.07 252.13,-415.66 256.54,-421.09" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.&lt;Constructor&gt;&#45;&gt;Address.isContract -->
+<g id="edge2" class="edge" data-name="SimpleRewarderPerSec.&lt;Constructor&gt;-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M169.37,-696.48C180.94,-692.4 191.95,-686.29 200.02,-677.14 265.25,-603.16 185.95,-543.13 236.02,-458.14 244.08,-444.45 256.95,-432.86 269.44,-423.91" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="271.64,-426.64 277.96,-418.13 267.72,-420.84 271.64,-426.64" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.&lt;Constructor&gt;&#45;&gt;Address.isContract -->
+<g id="edge3" class="edge" data-name="SimpleRewarderPerSec.&lt;Constructor&gt;-&gt;Address.isContract">
+
+<path fill="none" stroke="white" stroke-width="2" d="M153.29,-717.54C170.21,-715.38 188.24,-708.49 200.02,-695.14 265.25,-621.16 185.95,-561.13 236.02,-476.14 247.86,-456.03 270.07,-440.46 286.22,-427.36" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="288.67,-429.87 294.03,-420.72 284.14,-424.53 288.67,-429.87" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.updatePool -->
+<g id="node9" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.updatePool">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="306.59" cy="-542.14" rx="54.48" ry="18" style=""/>
+<text text-anchor="middle" x="306.59" y="-537.94" font-family="Times,serif" font-size="14.00" style="">updatePool</text>
+</g>
+<!-- SimpleRewarderPerSec.isEmissionValid -->
+<g id="node15" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.isEmissionValid">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="488.05" cy="-518.14" rx="74.76" ry="18" style=""/>
+<text text-anchor="middle" x="488.05" y="-513.94" font-family="Times,serif" font-size="14.00" style="">isEmissionValid</text>
+</g>
+<!-- SimpleRewarderPerSec.updatePool&#45;&gt;SimpleRewarderPerSec.isEmissionValid -->
+<g id="edge5" class="edge" data-name="SimpleRewarderPerSec.updatePool-&gt;SimpleRewarderPerSec.isEmissionValid">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M357.58,-535.46C374.47,-533.2 393.71,-530.63 412.1,-528.17" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="412.76,-531.61 422.21,-526.81 411.84,-524.67 412.76,-531.61" style=""/>
+</g>
+<!-- IERC20.balanceOf -->
+<g id="node18" class="node" pointer-events="visible" data-name="IERC20.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="658.22" cy="-126.14" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="658.22" y="-121.94" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- SimpleRewarderPerSec.updatePool&#45;&gt;IERC20.balanceOf -->
+<g id="edge4" class="edge" data-name="SimpleRewarderPerSec.updatePool-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M345.08,-529.31C355.67,-525.23 367.05,-520.4 377.17,-515.14 394.23,-506.28 395.44,-498.58 413.17,-491.14 479.23,-463.44 519.08,-507.56 570.93,-458.14 615.32,-415.84 644.13,-226.77 653.7,-154.42" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="657.21,-154.61 655.02,-144.24 650.27,-153.71 657.21,-154.61" style=""/>
+</g>
+<!-- timeElapsed.mul -->
+<g id="node20" class="node" pointer-events="visible" data-name="timeElapsed.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="488.05" cy="-403.14" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="488.05" y="-398.94" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- SimpleRewarderPerSec.updatePool&#45;&gt;timeElapsed.mul -->
+<g id="edge6" class="edge" data-name="SimpleRewarderPerSec.updatePool-&gt;timeElapsed.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M349.32,-530.89C359.13,-526.97 369.07,-521.81 377.17,-515.14 400.3,-496.1 392.81,-480.13 413.17,-458.14 426.49,-443.76 443.99,-430.55 458.61,-420.67" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="460.85,-423.39 467.28,-414.98 457,-417.54 460.85,-423.39" style=""/>
+</g>
+<!-- tokenReward.mul -->
+<g id="node21" class="node" pointer-events="visible" data-name="tokenReward.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="488.05" cy="-318.14" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="488.05" y="-313.94" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- SimpleRewarderPerSec.updatePool&#45;&gt;tokenReward.mul -->
+<g id="edge7" class="edge" data-name="SimpleRewarderPerSec.updatePool-&gt;tokenReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M352.01,-532.11C361.4,-528.17 370.47,-522.71 377.17,-515.14 420.32,-466.39 376.97,-427.26 413.17,-373.14 424.17,-356.7 441.79,-343.3 457.07,-333.85" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="458.89,-336.84 465.72,-328.75 455.33,-330.81 458.89,-336.84" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.setRewardRate -->
+<g id="node10" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.setRewardRate">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-758.14" rx="69.48" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-753.94" font-family="Times,serif" font-size="14.00" style="">setRewardRate</text>
+</g>
+<!-- SimpleRewarderPerSec.setRewardRate&#45;&gt;SimpleRewarderPerSec.updatePool -->
+<g id="edge8" class="edge" data-name="SimpleRewarderPerSec.setRewardRate-&gt;SimpleRewarderPerSec.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M166.69,-748.32C178.56,-744.38 190.36,-738.87 200.02,-731.14 253.31,-688.49 284.12,-611.24 297.53,-569.94" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="300.91,-570.85 300.57,-560.26 294.23,-568.75 300.91,-570.85" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.onHermesReward -->
+<g id="node11" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.onHermesReward">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-596.14" rx="80.51" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-591.94" font-family="Times,serif" font-size="14.00" style="">onHermesReward</text>
+</g>
+<!-- SimpleRewarderPerSec.onHermesReward&#45;&gt;SimpleRewarderPerSec.updatePool -->
+<g id="edge9" class="edge" data-name="SimpleRewarderPerSec.onHermesReward-&gt;SimpleRewarderPerSec.updatePool">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M159.63,-582.24C188.64,-574.27 224.94,-564.3 254.09,-556.29" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="255.36,-559.57 264.08,-553.55 253.51,-552.82 255.36,-559.57" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.onHermesReward&#45;&gt;IERC20.balanceOf -->
+<g id="edge10" class="edge" data-name="SimpleRewarderPerSec.onHermesReward-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M176.38,-586.38C185.46,-582.37 193.77,-576.81 200.02,-569.14 260,-495.47 167.38,-208.83 236.02,-143.14 286.56,-94.77 496.53,-109.17 599.61,-119.56" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="599.54,-123.07 609.84,-120.61 600.25,-116.11 599.54,-123.07" style=""/>
+</g>
+<!-- IERC20.safeTransfer -->
+<g id="node19" class="node" pointer-events="visible" data-name="IERC20.safeTransfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="658.22" cy="-72.14" rx="59.08" ry="18" style=""/>
+<text text-anchor="middle" x="658.22" y="-67.94" font-family="Times,serif" font-size="14.00" style="">safeTransfer</text>
+</g>
+<!-- SimpleRewarderPerSec.onHermesReward&#45;&gt;IERC20.safeTransfer -->
+<g id="edge11" class="edge" data-name="SimpleRewarderPerSec.onHermesReward-&gt;IERC20.safeTransfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M162.42,-582.75C176.67,-578.44 190.69,-571.68 200.02,-560.14 265.04,-479.72 162.91,-169.3 236.02,-96.14 337.01,4.92 528.17,-28.7 613.81,-54.53" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="612.89,-57.91 623.48,-57.55 614.98,-51.23 612.89,-57.91" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.onHermesReward&#45;&gt;IERC20.safeTransfer -->
+<g id="edge12" class="edge" data-name="SimpleRewarderPerSec.onHermesReward-&gt;IERC20.safeTransfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M185.19,-590.83C190.8,-587.45 195.87,-583.27 200.02,-578.14 265.04,-497.72 162.91,-187.3 236.02,-114.14 330.71,-19.37 504.7,-43.04 596.63,-61.11" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="596.12,-64.58 606.61,-63.11 597.49,-57.71 596.12,-64.58" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens -->
+<g id="node12" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.pendingTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="306.59" cy="-488.14" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="306.59" y="-483.94" font-family="Times,serif" font-size="14.00" style="">pendingTokens</text>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens&#45;&gt;SimpleRewarderPerSec.isEmissionValid -->
+<g id="edge14" class="edge" data-name="SimpleRewarderPerSec.pendingTokens-&gt;SimpleRewarderPerSec.isEmissionValid">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M366.35,-497.97C382.18,-500.61 399.48,-503.5 415.91,-506.25" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="415.56,-509.74 426,-507.94 416.71,-502.84 415.56,-509.74" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens&#45;&gt;IERC20.balanceOf -->
+<g id="edge13" class="edge" data-name="SimpleRewarderPerSec.pendingTokens-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M355.17,-474.93C363.49,-470.74 371.33,-465.27 377.17,-458.14 426.1,-398.39 357.99,-342.18 413.17,-288.14 464.16,-238.2 511.62,-297.84 570.93,-258.14 608.95,-232.69 634.1,-184.22 646.99,-153.63" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="650.38,-154.58 650.89,-144 643.89,-151.95 650.38,-154.58" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens&#45;&gt;timeElapsed.mul -->
+<g id="edge15" class="edge" data-name="SimpleRewarderPerSec.pendingTokens-&gt;timeElapsed.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M344.24,-472.81C354.91,-468.21 366.55,-463.08 377.17,-458.14 404.46,-445.44 435.05,-430.03 457.02,-418.76" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="458.87,-421.74 466.16,-414.05 455.67,-415.51 458.87,-421.74" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens&#45;&gt;tokenReward.mul -->
+<g id="edge17" class="edge" data-name="SimpleRewarderPerSec.pendingTokens-&gt;tokenReward.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M353.05,-474.51C361.83,-470.32 370.4,-464.95 377.17,-458.14 406.08,-429.04 387.83,-405.41 413.17,-373.14 425.27,-357.73 442.72,-344.47 457.62,-334.83" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="459.86,-337.56 466.5,-329.31 456.16,-331.62 459.86,-337.56" style=""/>
+</g>
+<!-- accTokenPerShare.add -->
+<g id="node22" class="node" pointer-events="visible" data-name="accTokenPerShare.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="488.05" cy="-203.14" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="488.05" y="-198.94" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- SimpleRewarderPerSec.pendingTokens&#45;&gt;accTokenPerShare.add -->
+<g id="edge16" class="edge" data-name="SimpleRewarderPerSec.pendingTokens-&gt;accTokenPerShare.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M355.34,-475.07C363.65,-470.87 371.44,-465.35 377.17,-458.14 433.32,-387.4 365.62,-334.93 413.17,-258.14 423.66,-241.21 441.43,-227.73 456.91,-218.36" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="458.76,-221.33 465.69,-213.32 455.28,-215.26 458.76,-221.33" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.emergencyWithdraw -->
+<g id="node13" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.emergencyWithdraw">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="108.01" cy="-542.14" rx="92.02" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-537.94" font-family="Times,serif" font-size="14.00" style="">emergencyWithdraw</text>
+</g>
+<!-- SimpleRewarderPerSec.emergencyWithdraw&#45;&gt;IERC20.balanceOf -->
+<g id="edge19" class="edge" data-name="SimpleRewarderPerSec.emergencyWithdraw-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M179.95,-530.68C187.62,-526.83 194.59,-521.78 200.02,-515.14 257.88,-444.31 168.57,-166.92 236.02,-105.14 345.78,-4.6 423.14,-87.42 570.93,-105.14 583.37,-106.63 596.6,-109.29 608.88,-112.23" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="608.37,-115.71 618.92,-114.74 610.07,-108.92 608.37,-115.71" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.emergencyWithdraw&#45;&gt;IERC20.safeTransfer -->
+<g id="edge18" class="edge" data-name="SimpleRewarderPerSec.emergencyWithdraw-&gt;IERC20.safeTransfer">
+
+<path fill="none" stroke="white" stroke-width="2" d="M180.01,-530.73C187.67,-526.88 194.63,-521.81 200.02,-515.14 264.91,-434.9 160.27,-122.23 236.02,-52.14 341.2,45.18 531.8,-18.02 615.69,-53.17" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="614.57,-56.49 625.14,-57.2 617.31,-50.06 614.57,-56.49" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.balance -->
+<g id="node14" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.balance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="108.01" cy="-650.14" rx="40.54" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-645.94" font-family="Times,serif" font-size="14.00" style="">balance</text>
+</g>
+<!-- SimpleRewarderPerSec.balance&#45;&gt;IERC20.balanceOf -->
+<g id="edge20" class="edge" data-name="SimpleRewarderPerSec.balance-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M148.28,-647.97C166.62,-644.86 187.19,-637.98 200.02,-623.14 273.42,-538.21 188.82,-474.99 236.02,-373.14 285.94,-265.4 310.01,-231.95 413.17,-173.14 470.1,-140.69 545.38,-130.2 597.2,-127.04" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="597.44,-130.53 607.23,-126.5 597.06,-123.54 597.44,-130.53" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.isEmissionValid&#45;&gt;IERC20.balanceOf -->
+<g id="edge21" class="edge" data-name="SimpleRewarderPerSec.isEmissionValid-&gt;IERC20.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M542.69,-505.72C553.27,-501.09 563.41,-494.77 570.93,-486.14 614.7,-435.92 644.16,-230.96 653.79,-154.81" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="657.31,-154.9 655.07,-144.54 650.36,-154.04 657.31,-154.9" style=""/>
+</g>
+<!-- SimpleRewarderPerSec.&lt;Receive Ether&gt; -->
+<g id="node16" class="node" pointer-events="visible" data-name="SimpleRewarderPerSec.&lt;Receive Ether&gt;">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="108.01" cy="-488.14" rx="76.21" ry="18" style=""/>
+<text text-anchor="middle" x="108.01" y="-483.94" font-family="Times,serif" font-size="14.00" style="">&lt;Receive Ether&gt;</text>
+</g>
+<!-- key -->
+<g id="node23" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="173.01,-975.14 43.01,-975.14 43.01,-887.14 173.01,-887.14 173.01,-975.14" style=""/>
+<text text-anchor="start" x="92.65" y="-956.54" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="88.76" y="-936.54" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="66.21" y="-916.54" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="52.61" y="-896.54" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node24" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="333.59,-975.14 279.59,-975.14 279.59,-887.14 333.59,-887.14 333.59,-975.14" style=""/>
+<text text-anchor="start" x="296.59" y="-956.54" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="296.59" y="-936.54" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="294.59,-911.14 294.59,-931.14 319.59,-931.14 319.59,-911.14 294.59,-911.14" style=""/>
+<text text-anchor="start" x="296.59" y="-916.54" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="296.59,-893.14 296.59,-909.14 317.59,-909.14 317.59,-893.14 296.59,-893.14" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge22" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M166.01,-961.14C219.17,-961.14 234.95,-961.14 283.44,-961.14" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="283.59,-964.64 293.59,-961.14 283.59,-957.64 283.59,-964.64" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge23" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M166.01,-941.14C219.17,-941.14 234.95,-941.14 283.44,-941.14" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="283.59,-944.64 293.59,-941.14 283.59,-937.64 283.59,-944.64" style=""/>
+</g>
+</g>
+</svg>

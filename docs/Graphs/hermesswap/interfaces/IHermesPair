@@ -1,0 +1,210 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="354pt" height="1642pt" viewBox="0.00 0.00 353.81 1642.00">
+<g id="graph0" class="graph" transform="translate(4,1638) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1638 349.81,-1638 349.81,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIHermesPair">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 235.81,-8 235.81,-8 241.81,-8 247.81,-14 247.81,-20 247.81,-20 247.81,-1477 247.81,-1477 247.81,-1483 241.81,-1489 235.81,-1489 235.81,-1489 20,-1489 20,-1489 14,-1489 8,-1483 8,-1477 8,-1477 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="127.91" y="-1472.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesPair  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="54.91,-1497 54.91,-1626 337.81,-1626 337.81,-1497 54.91,-1497" style=""/>
+<text text-anchor="middle" x="196.36" y="-1609.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IHermesPair.name -->
+<g id="node1" class="node" pointer-events="visible" data-name="IHermesPair.name">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1438" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1433.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- IHermesPair.symbol -->
+<g id="node2" class="node" pointer-events="visible" data-name="IHermesPair.symbol">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1384" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1379.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- IHermesPair.decimals -->
+<g id="node3" class="node" pointer-events="visible" data-name="IHermesPair.decimals">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1330" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1325.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- IHermesPair.totalSupply -->
+<g id="node4" class="node" pointer-events="visible" data-name="IHermesPair.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1276" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1271.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IHermesPair.balanceOf -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesPair.balanceOf">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1222" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1217.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IHermesPair.allowance -->
+<g id="node6" class="node" pointer-events="visible" data-name="IHermesPair.allowance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1168" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1163.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IHermesPair.approve -->
+<g id="node7" class="node" pointer-events="visible" data-name="IHermesPair.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1114" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1109.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- IHermesPair.transfer -->
+<g id="node8" class="node" pointer-events="visible" data-name="IHermesPair.transfer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1060" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1055.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IHermesPair.transferFrom -->
+<g id="node9" class="node" pointer-events="visible" data-name="IHermesPair.transferFrom">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-1006" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-1001.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- IHermesPair.DOMAIN_SEPARATOR -->
+<g id="node10" class="node" pointer-events="visible" data-name="IHermesPair.DOMAIN_SEPARATOR">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-952" rx="111.81" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-947.8" font-family="Times,serif" font-size="14.00" style="">DOMAIN_SEPARATOR</text>
+</g>
+<!-- IHermesPair.PERMIT_TYPEHASH -->
+<g id="node11" class="node" pointer-events="visible" data-name="IHermesPair.PERMIT_TYPEHASH">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-898" rx="101.92" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-893.8" font-family="Times,serif" font-size="14.00" style="">PERMIT_TYPEHASH</text>
+</g>
+<!-- IHermesPair.nonces -->
+<g id="node12" class="node" pointer-events="visible" data-name="IHermesPair.nonces">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-844" rx="37.71" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-839.8" font-family="Times,serif" font-size="14.00" style="">nonces</text>
+</g>
+<!-- IHermesPair.permit -->
+<g id="node13" class="node" pointer-events="visible" data-name="IHermesPair.permit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-790" rx="36.49" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-785.8" font-family="Times,serif" font-size="14.00" style="">permit</text>
+</g>
+<!-- IHermesPair.MINIMUM_LIQUIDITY -->
+<g id="node14" class="node" pointer-events="visible" data-name="IHermesPair.MINIMUM_LIQUIDITY">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-736" rx="111.19" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-731.8" font-family="Times,serif" font-size="14.00" style="">MINIMUM_LIQUIDITY</text>
+</g>
+<!-- IHermesPair.factory -->
+<g id="node15" class="node" pointer-events="visible" data-name="IHermesPair.factory">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-682" rx="38.26" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-677.8" font-family="Times,serif" font-size="14.00" style="">factory</text>
+</g>
+<!-- IHermesPair.token0 -->
+<g id="node16" class="node" pointer-events="visible" data-name="IHermesPair.token0">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-628" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-623.8" font-family="Times,serif" font-size="14.00" style="">token0</text>
+</g>
+<!-- IHermesPair.token1 -->
+<g id="node17" class="node" pointer-events="visible" data-name="IHermesPair.token1">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-574" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-569.8" font-family="Times,serif" font-size="14.00" style="">token1</text>
+</g>
+<!-- IHermesPair.getReserves -->
+<g id="node18" class="node" pointer-events="visible" data-name="IHermesPair.getReserves">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-520" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-515.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- IHermesPair.price0CumulativeLast -->
+<g id="node19" class="node" pointer-events="visible" data-name="IHermesPair.price0CumulativeLast">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-466" rx="96.7" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-461.8" font-family="Times,serif" font-size="14.00" style="">price0CumulativeLast</text>
+</g>
+<!-- IHermesPair.price1CumulativeLast -->
+<g id="node20" class="node" pointer-events="visible" data-name="IHermesPair.price1CumulativeLast">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-412" rx="96.7" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-407.8" font-family="Times,serif" font-size="14.00" style="">price1CumulativeLast</text>
+</g>
+<!-- IHermesPair.kLast -->
+<g id="node21" class="node" pointer-events="visible" data-name="IHermesPair.kLast">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-358" rx="32.48" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-353.8" font-family="Times,serif" font-size="14.00" style="">kLast</text>
+</g>
+<!-- IHermesPair.mint -->
+<g id="node22" class="node" pointer-events="visible" data-name="IHermesPair.mint">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-304" rx="28.99" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-299.8" font-family="Times,serif" font-size="14.00" style="">mint</text>
+</g>
+<!-- IHermesPair.burn -->
+<g id="node23" class="node" pointer-events="visible" data-name="IHermesPair.burn">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-250" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-245.8" font-family="Times,serif" font-size="14.00" style="">burn</text>
+</g>
+<!-- IHermesPair.swap -->
+<g id="node24" class="node" pointer-events="visible" data-name="IHermesPair.swap">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-196" rx="30.77" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-191.8" font-family="Times,serif" font-size="14.00" style="">swap</text>
+</g>
+<!-- IHermesPair.skim -->
+<g id="node25" class="node" pointer-events="visible" data-name="IHermesPair.skim">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-142" rx="29.64" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-137.8" font-family="Times,serif" font-size="14.00" style="">skim</text>
+</g>
+<!-- IHermesPair.sync -->
+<g id="node26" class="node" pointer-events="visible" data-name="IHermesPair.sync">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-88" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-83.8" font-family="Times,serif" font-size="14.00" style="">sync</text>
+</g>
+<!-- IHermesPair.initialize -->
+<g id="node27" class="node" pointer-events="visible" data-name="IHermesPair.initialize">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-34" rx="44.64" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-29.8" font-family="Times,serif" font-size="14.00" style="">initialize</text>
+</g>
+<!-- key -->
+<g id="node28" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="192.91,-1593 62.91,-1593 62.91,-1505 192.91,-1505 192.91,-1593" style=""/>
+<text text-anchor="start" x="112.54" y="-1574.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="108.65" y="-1554.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="86.11" y="-1534.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="72.51" y="-1514.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node29" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="329.81,-1593 275.81,-1593 275.81,-1505 329.81,-1505 329.81,-1593" style=""/>
+<text text-anchor="start" x="292.81" y="-1574.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="292.81" y="-1554.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="290.81,-1529 290.81,-1549 315.81,-1549 315.81,-1529 290.81,-1529" style=""/>
+<text text-anchor="start" x="292.81" y="-1534.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="292.81,-1511 292.81,-1527 313.81,-1527 313.81,-1511 292.81,-1511" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M185.91,-1579C228.48,-1579 241.62,-1579 279.59,-1579" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="279.81,-1582.5 289.81,-1579 279.81,-1575.5 279.81,-1582.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M185.91,-1559C228.48,-1559 241.62,-1559 279.59,-1559" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="279.81,-1562.5 289.81,-1559 279.81,-1555.5 279.81,-1562.5" style=""/>
+</g>
+</g>
+</svg>

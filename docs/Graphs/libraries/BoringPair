@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="297pt" height="323pt" viewBox="0.00 0.00 296.71 323.00">
+<g id="graph0" class="graph" transform="translate(4,319) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-319 292.71,-319 292.71,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterBoringPair">
+
+<path fill="#445773" stroke="#445773" d="M46.62,-93C46.62,-93 267.11,-93 267.11,-93 273.11,-93 279.11,-99 279.11,-105 279.11,-105 279.11,-158 279.11,-158 279.11,-164 273.11,-170 267.11,-170 267.11,-170 46.62,-170 46.62,-170 40.62,-170 34.62,-164 34.62,-158 34.62,-158 34.62,-105 34.62,-105 34.62,-99 40.62,-93 46.62,-93" style=""/>
+<text text-anchor="middle" x="156.86" y="-153.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoringPair  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIPair">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M186,-8C186,-8 268.71,-8 268.71,-8 274.71,-8 280.71,-14 280.71,-20 280.71,-20 280.71,-73 280.71,-73 280.71,-79 274.71,-85 268.71,-85 268.71,-85 186,-85 186,-85 180,-85 174,-79 174,-73 174,-73 174,-20 174,-20 174,-14 180,-8 186,-8" style=""/>
+<text text-anchor="middle" x="227.35" y="-68.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IPair</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-178 8,-307 262.35,-307 262.35,-178 8,-178" style=""/>
+<text text-anchor="middle" x="135.18" y="-290.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- BoringPair.factory -->
+<g id="node1" class="node" pointer-events="visible" data-name="BoringPair.factory">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-119" rx="38.26" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-114.8" font-family="Times,serif" font-size="14.00" style="">factory</text>
+</g>
+<!-- BoringPair.IFactory -->
+<g id="node2" class="node" pointer-events="visible" data-name="BoringPair.IFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="227.35" cy="-119" rx="43.5" ry="18" style=""/>
+<text text-anchor="middle" x="227.35" y="-114.8" font-family="Times,serif" font-size="14.00" style="">IFactory</text>
+</g>
+<!-- BoringPair.factory&#45;&gt;BoringPair.IFactory -->
+<g id="edge2" class="edge" data-name="BoringPair.factory-&gt;BoringPair.IFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M119.55,-119C135.89,-119 155.34,-119 173.13,-119" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="173.37,-122.5 183.37,-119 173.37,-115.5 173.37,-122.5" style=""/>
+</g>
+<!-- IPair.staticcall -->
+<g id="node3" class="node" pointer-events="visible" data-name="IPair.staticcall">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="227.35" cy="-34" rx="45.21" ry="18" style=""/>
+<text text-anchor="middle" x="227.35" y="-29.8" font-family="Times,serif" font-size="14.00" style="">staticcall</text>
+</g>
+<!-- BoringPair.factory&#45;&gt;IPair.staticcall -->
+<g id="edge1" class="edge" data-name="BoringPair.factory-&gt;IPair.staticcall">
+
+<path fill="none" stroke="white" stroke-width="2" d="M105.84,-104.96C129.44,-91.07 165.79,-69.66 192.41,-53.99" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="194.18,-57.01 201.02,-48.92 190.63,-50.97 194.18,-57.01" style=""/>
+</g>
+<!-- key -->
+<g id="node4" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-274 16,-274 16,-186 146,-186 146,-274" style=""/>
+<text text-anchor="start" x="65.64" y="-255.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-235.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-215.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-195.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node5" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="254.35,-274 200.35,-274 200.35,-186 254.35,-186 254.35,-274" style=""/>
+<text text-anchor="start" x="217.35" y="-255.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="217.35" y="-235.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="215.35,-210 215.35,-230 240.35,-230 240.35,-210 215.35,-210" style=""/>
+<text text-anchor="start" x="217.35" y="-215.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="217.35,-192 217.35,-208 238.35,-208 238.35,-192 217.35,-192" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge3" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-260C168.83,-260 178.73,-260 204.2,-260" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="204.35,-263.5 214.35,-260 204.35,-256.5 204.35,-263.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge4" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-240C168.83,-240 178.73,-240 204.2,-240" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="204.35,-243.5 214.35,-240 204.35,-236.5 204.35,-243.5" style=""/>
+</g>
+</g>
+</svg>

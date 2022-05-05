@@ -1,0 +1,114 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="327pt" height="508pt" viewBox="0.00 0.00 327.17 508.00">
+<g id="graph0" class="graph" transform="translate(4,504) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-504 323.17,-504 323.17,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterHermesFactory">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 299.17,-8 299.17,-8 305.17,-8 311.17,-14 311.17,-20 311.17,-20 311.17,-343 311.17,-343 311.17,-349 305.17,-355 299.17,-355 299.17,-355 20,-355 20,-355 14,-355 8,-349 8,-343 8,-343 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="159.58" y="-338.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesFactory</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="11.96,-363 11.96,-492 281.54,-492 281.54,-363 11.96,-363" style=""/>
+<text text-anchor="middle" x="146.75" y="-475.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- HermesFactory.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="HermesFactory.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="84.96" cy="-304" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-299.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- HermesFactory.allPairsLength -->
+<g id="node2" class="node" pointer-events="visible" data-name="HermesFactory.allPairsLength">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-250" rx="67.21" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-245.8" font-family="Times,serif" font-size="14.00" style="">allPairsLength</text>
+</g>
+<!-- HermesFactory.pairCodeHash -->
+<g id="node3" class="node" pointer-events="visible" data-name="HermesFactory.pairCodeHash">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-196" rx="66.06" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-191.8" font-family="Times,serif" font-size="14.00" style="">pairCodeHash</text>
+</g>
+<!-- HermesFactory.type -->
+<g id="node7" class="node" pointer-events="visible" data-name="HermesFactory.type">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="246.54" cy="-196" rx="27.83" ry="18" style=""/>
+<text text-anchor="middle" x="246.54" y="-191.8" font-family="Times,serif" font-size="14.00" style="">type</text>
+</g>
+<!-- HermesFactory.pairCodeHash&#45;&gt;HermesFactory.type -->
+<g id="edge1" class="edge" data-name="HermesFactory.pairCodeHash-&gt;HermesFactory.type">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M151.33,-196C170.86,-196 191.58,-196 208.61,-196" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="208.68,-199.5 218.68,-196 208.68,-192.5 208.68,-199.5" style=""/>
+</g>
+<!-- HermesFactory.createPair -->
+<g id="node4" class="node" pointer-events="visible" data-name="HermesFactory.createPair">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-142" rx="49.77" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-137.8" font-family="Times,serif" font-size="14.00" style="">createPair</text>
+</g>
+<!-- HermesFactory.createPair&#45;&gt;HermesFactory.type -->
+<g id="edge2" class="edge" data-name="HermesFactory.createPair-&gt;HermesFactory.type">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M121.77,-154.12C148.83,-163.27 185.69,-175.75 212.13,-184.7" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="211.12,-188.05 221.72,-187.94 213.37,-181.42 211.12,-188.05" style=""/>
+</g>
+<!-- HermesFactory.HermesPair -->
+<g id="node8" class="node" pointer-events="visible" data-name="HermesFactory.HermesPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="246.54" cy="-142" rx="56.75" ry="18" style=""/>
+<text text-anchor="middle" x="246.54" y="-137.8" font-family="Times,serif" font-size="14.00" style="">HermesPair</text>
+</g>
+<!-- HermesFactory.createPair&#45;&gt;HermesFactory.HermesPair -->
+<g id="edge3" class="edge" data-name="HermesFactory.createPair-&gt;HermesFactory.HermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M134.71,-142C148.86,-142 164.55,-142 179.57,-142" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="179.83,-145.5 189.83,-142 179.83,-138.5 179.83,-145.5" style=""/>
+</g>
+<!-- HermesFactory.setFeeTo -->
+<g id="node5" class="node" pointer-events="visible" data-name="HermesFactory.setFeeTo">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-88" rx="46.37" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-83.8" font-family="Times,serif" font-size="14.00" style="">setFeeTo</text>
+</g>
+<!-- HermesFactory.setFeeToSetter -->
+<g id="node6" class="node" pointer-events="visible" data-name="HermesFactory.setFeeToSetter">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="84.96" cy="-34" rx="68.92" ry="18" style=""/>
+<text text-anchor="middle" x="84.96" y="-29.8" font-family="Times,serif" font-size="14.00" style="">setFeeToSetter</text>
+</g>
+<!-- key -->
+<g id="node9" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="149.96,-459 19.96,-459 19.96,-371 149.96,-371 149.96,-459" style=""/>
+<text text-anchor="start" x="69.6" y="-440.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="65.71" y="-420.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="43.16" y="-400.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="29.56" y="-380.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node10" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="273.54,-459 219.54,-459 219.54,-371 273.54,-371 273.54,-459" style=""/>
+<text text-anchor="start" x="236.54" y="-440.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="236.54" y="-420.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="234.54,-395 234.54,-415 259.54,-415 259.54,-395 234.54,-395" style=""/>
+<text text-anchor="start" x="236.54" y="-400.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="236.54,-377 236.54,-393 257.54,-393 257.54,-377 236.54,-377" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge4" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M142.96,-445C179.6,-445 191.23,-445 223.38,-445" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="223.54,-448.5 233.54,-445 223.54,-441.5 223.54,-448.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge5" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M142.96,-425C179.6,-425 191.23,-425 223.38,-425" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="223.54,-428.5 233.54,-425 223.54,-421.5 223.54,-428.5" style=""/>
+</g>
+</g>
+</svg>

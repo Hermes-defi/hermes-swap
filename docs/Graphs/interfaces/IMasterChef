@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="272pt" height="508pt" viewBox="0.00 0.00 272.21 508.00">
+<g id="graph0" class="graph" transform="translate(4,504) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-504 268.21,-504 268.21,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIMasterChef">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 154.21,-8 154.21,-8 160.21,-8 166.21,-14 166.21,-20 166.21,-20 166.21,-343 166.21,-343 166.21,-349 160.21,-355 154.21,-355 154.21,-355 20,-355 20,-355 14,-355 8,-349 8,-343 8,-343 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="87.1" y="-338.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IMasterChef  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="14.1,-363 14.1,-492 256.21,-492 256.21,-363 14.1,-363" style=""/>
+<text text-anchor="middle" x="135.16" y="-475.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IMasterChef.poolInfo -->
+<g id="node1" class="node" pointer-events="visible" data-name="IMasterChef.poolInfo">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-304" rx="44.09" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-299.8" font-family="Times,serif" font-size="14.00" style="">poolInfo</text>
+</g>
+<!-- IMasterChef.totalAllocPoint -->
+<g id="node2" class="node" pointer-events="visible" data-name="IMasterChef.totalAllocPoint">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-250" rx="70.1" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-245.8" font-family="Times,serif" font-size="14.00" style="">totalAllocPoint</text>
+</g>
+<!-- IMasterChef.deposit -->
+<g id="node3" class="node" pointer-events="visible" data-name="IMasterChef.deposit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-196" rx="38.86" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-191.8" font-family="Times,serif" font-size="14.00" style="">deposit</text>
+</g>
+<!-- IMasterChef.devPercent -->
+<g id="node4" class="node" pointer-events="visible" data-name="IMasterChef.devPercent">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-142" rx="53.87" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-137.8" font-family="Times,serif" font-size="14.00" style="">devPercent</text>
+</g>
+<!-- IMasterChef.treasuryPercent -->
+<g id="node5" class="node" pointer-events="visible" data-name="IMasterChef.treasuryPercent">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-88" rx="71.19" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-83.8" font-family="Times,serif" font-size="14.00" style="">treasuryPercent</text>
+</g>
+<!-- IMasterChef.investorPercent -->
+<g id="node6" class="node" pointer-events="visible" data-name="IMasterChef.investorPercent">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="87.1" cy="-34" rx="71.21" ry="18" style=""/>
+<text text-anchor="middle" x="87.1" y="-29.8" font-family="Times,serif" font-size="14.00" style="">investorPercent</text>
+</g>
+<!-- key -->
+<g id="node7" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="152.1,-459 22.1,-459 22.1,-371 152.1,-371 152.1,-459" style=""/>
+<text text-anchor="start" x="71.74" y="-440.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="67.85" y="-420.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="45.31" y="-400.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="31.71" y="-380.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node8" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="248.21,-459 194.21,-459 194.21,-371 248.21,-371 248.21,-459" style=""/>
+<text text-anchor="start" x="211.21" y="-440.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="211.21" y="-420.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="209.21,-395 209.21,-415 234.21,-415 234.21,-395 209.21,-395" style=""/>
+<text text-anchor="start" x="211.21" y="-400.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="211.21,-377 211.21,-393 232.21,-393 232.21,-377 211.21,-377" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M145.1,-445C169.43,-445 177.93,-445 198.05,-445" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="198.21,-448.5 208.21,-445 198.21,-441.5 198.21,-448.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M145.1,-425C169.43,-425 177.93,-425 198.05,-425" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="198.21,-428.5 208.21,-425 198.21,-421.5 198.21,-428.5" style=""/>
+</g>
+</g>
+</svg>

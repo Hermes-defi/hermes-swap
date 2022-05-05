@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="287pt" height="292pt" viewBox="0.00 0.00 287.09 292.00">
+<g id="graph0" class="graph" transform="translate(4,288) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-288 283.09,-288 283.09,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterFullMath">
+
+<path fill="#445773" stroke="#445773" d="M44.46,-8C44.46,-8 259.09,-8 259.09,-8 265.09,-8 271.09,-14 271.09,-20 271.09,-20 271.09,-127 271.09,-127 271.09,-133 265.09,-139 259.09,-139 259.09,-139 44.46,-139 44.46,-139 38.46,-139 32.46,-133 32.46,-127 32.46,-127 32.46,-20 32.46,-20 32.46,-14 38.46,-8 44.46,-8" style=""/>
+<text text-anchor="middle" x="151.77" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">FullMath  (lib)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-147 8,-276 257.54,-276 257.54,-147 8,-147" style=""/>
+<text text-anchor="middle" x="132.77" y="-259.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- FullMath.fullMul -->
+<g id="node1" class="node" pointer-events="visible" data-name="FullMath.fullMul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="222.54" cy="-34" rx="40.59" ry="18" style=""/>
+<text text-anchor="middle" x="222.54" y="-29.8" font-family="Times,serif" font-size="14.00" style="">fullMul</text>
+</g>
+<!-- FullMath.fullDiv -->
+<g id="node2" class="node" pointer-events="visible" data-name="FullMath.fullDiv">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="222.54" cy="-88" rx="38.86" ry="18" style=""/>
+<text text-anchor="middle" x="222.54" y="-83.8" font-family="Times,serif" font-size="14.00" style="">fullDiv</text>
+</g>
+<!-- FullMath.mulDiv -->
+<g id="node3" class="node" pointer-events="visible" data-name="FullMath.mulDiv">
+
+<ellipse fill="#f2c383" stroke="#f2c383" stroke-width="3" cx="81" cy="-61" rx="40.59" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-56.8" font-family="Times,serif" font-size="14.00" style="">mulDiv</text>
+</g>
+<!-- FullMath.mulDiv&#45;&gt;FullMath.fullMul -->
+<g id="edge1" class="edge" data-name="FullMath.mulDiv-&gt;FullMath.fullMul">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.66,-53.91C135.97,-50.56 156.81,-46.52 175.2,-42.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="175.97,-46.38 185.13,-41.05 174.64,-39.51 175.97,-46.38" style=""/>
+</g>
+<!-- FullMath.mulDiv&#45;&gt;FullMath.fullDiv -->
+<g id="edge2" class="edge" data-name="FullMath.mulDiv-&gt;FullMath.fullDiv">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M118.66,-68.09C136.24,-71.5 157.47,-75.6 176.07,-79.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="175.61,-82.68 186.09,-81.14 176.94,-75.8 175.61,-82.68" style=""/>
+</g>
+<!-- key -->
+<g id="node4" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-243 16,-243 16,-155 146,-155 146,-243" style=""/>
+<text text-anchor="start" x="65.64" y="-224.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-204.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-184.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-164.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node5" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="249.54,-243 195.54,-243 195.54,-155 249.54,-155 249.54,-243" style=""/>
+<text text-anchor="start" x="212.54" y="-224.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="212.54" y="-204.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="210.54,-179 210.54,-199 235.54,-199 235.54,-179 210.54,-179" style=""/>
+<text text-anchor="start" x="212.54" y="-184.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="212.54,-161 212.54,-177 233.54,-177 233.54,-161 212.54,-161" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge3" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-229C166.68,-229 176.03,-229 199.42,-229" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="199.54,-232.5 209.54,-229 199.54,-225.5 199.54,-232.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge4" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-209C166.68,-209 176.03,-209 199.42,-209" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="199.54,-212.5 209.54,-209 199.54,-205.5 199.54,-212.5" style=""/>
+</g>
+</g>
+</svg>

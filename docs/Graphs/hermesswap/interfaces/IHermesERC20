@@ -1,0 +1,126 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="354pt" height="886pt" viewBox="0.00 0.00 353.81 886.00">
+<g id="graph0" class="graph" transform="translate(4,882) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-882 349.81,-882 349.81,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIHermesERC20">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 235.81,-8 235.81,-8 241.81,-8 247.81,-14 247.81,-20 247.81,-20 247.81,-721 247.81,-721 247.81,-727 241.81,-733 235.81,-733 235.81,-733 20,-733 20,-733 14,-733 8,-727 8,-721 8,-721 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="127.91" y="-716.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesERC20  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="54.91,-741 54.91,-870 337.81,-870 337.81,-741 54.91,-741" style=""/>
+<text text-anchor="middle" x="196.36" y="-853.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IHermesERC20.name -->
+<g id="node1" class="node" pointer-events="visible" data-name="IHermesERC20.name">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-682" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-677.8" font-family="Times,serif" font-size="14.00" style="">name</text>
+</g>
+<!-- IHermesERC20.symbol -->
+<g id="node2" class="node" pointer-events="visible" data-name="IHermesERC20.symbol">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-628" rx="39.45" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-623.8" font-family="Times,serif" font-size="14.00" style="">symbol</text>
+</g>
+<!-- IHermesERC20.decimals -->
+<g id="node3" class="node" pointer-events="visible" data-name="IHermesERC20.decimals">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-574" rx="45.22" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-569.8" font-family="Times,serif" font-size="14.00" style="">decimals</text>
+</g>
+<!-- IHermesERC20.totalSupply -->
+<g id="node4" class="node" pointer-events="visible" data-name="IHermesERC20.totalSupply">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-520" rx="55.64" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-515.8" font-family="Times,serif" font-size="14.00" style="">totalSupply</text>
+</g>
+<!-- IHermesERC20.balanceOf -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesERC20.balanceOf">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-466" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-461.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- IHermesERC20.allowance -->
+<g id="node6" class="node" pointer-events="visible" data-name="IHermesERC20.allowance">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-412" rx="50.36" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-407.8" font-family="Times,serif" font-size="14.00" style="">allowance</text>
+</g>
+<!-- IHermesERC20.approve -->
+<g id="node7" class="node" pointer-events="visible" data-name="IHermesERC20.approve">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-358" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-353.8" font-family="Times,serif" font-size="14.00" style="">approve</text>
+</g>
+<!-- IHermesERC20.transfer -->
+<g id="node8" class="node" pointer-events="visible" data-name="IHermesERC20.transfer">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-304" rx="40.55" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-299.8" font-family="Times,serif" font-size="14.00" style="">transfer</text>
+</g>
+<!-- IHermesERC20.transferFrom -->
+<g id="node9" class="node" pointer-events="visible" data-name="IHermesERC20.transferFrom">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-250" rx="61.41" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-245.8" font-family="Times,serif" font-size="14.00" style="">transferFrom</text>
+</g>
+<!-- IHermesERC20.DOMAIN_SEPARATOR -->
+<g id="node10" class="node" pointer-events="visible" data-name="IHermesERC20.DOMAIN_SEPARATOR">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-196" rx="111.81" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-191.8" font-family="Times,serif" font-size="14.00" style="">DOMAIN_SEPARATOR</text>
+</g>
+<!-- IHermesERC20.PERMIT_TYPEHASH -->
+<g id="node11" class="node" pointer-events="visible" data-name="IHermesERC20.PERMIT_TYPEHASH">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-142" rx="101.92" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-137.8" font-family="Times,serif" font-size="14.00" style="">PERMIT_TYPEHASH</text>
+</g>
+<!-- IHermesERC20.nonces -->
+<g id="node12" class="node" pointer-events="visible" data-name="IHermesERC20.nonces">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-88" rx="37.71" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-83.8" font-family="Times,serif" font-size="14.00" style="">nonces</text>
+</g>
+<!-- IHermesERC20.permit -->
+<g id="node13" class="node" pointer-events="visible" data-name="IHermesERC20.permit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="127.91" cy="-34" rx="36.49" ry="18" style=""/>
+<text text-anchor="middle" x="127.91" y="-29.8" font-family="Times,serif" font-size="14.00" style="">permit</text>
+</g>
+<!-- key -->
+<g id="node14" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="192.91,-837 62.91,-837 62.91,-749 192.91,-749 192.91,-837" style=""/>
+<text text-anchor="start" x="112.54" y="-818.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="108.65" y="-798.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="86.11" y="-778.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="72.51" y="-758.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node15" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="329.81,-837 275.81,-837 275.81,-749 329.81,-749 329.81,-837" style=""/>
+<text text-anchor="start" x="292.81" y="-818.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="292.81" y="-798.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="290.81,-773 290.81,-793 315.81,-793 315.81,-773 290.81,-773" style=""/>
+<text text-anchor="start" x="292.81" y="-778.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="292.81,-755 292.81,-771 313.81,-771 313.81,-755 292.81,-755" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M185.91,-823C228.48,-823 241.62,-823 279.59,-823" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="279.81,-826.5 289.81,-823 279.81,-819.5 279.81,-826.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M185.91,-803C228.48,-803 241.62,-803 279.59,-803" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="279.81,-806.5 289.81,-803 279.81,-799.5 279.81,-806.5" style=""/>
+</g>
+</g>
+</svg>

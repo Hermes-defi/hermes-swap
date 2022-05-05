@@ -1,0 +1,162 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="412pt" height="1210pt" viewBox="0.00 0.00 411.69 1210.00">
+<g id="graph0" class="graph" transform="translate(4,1206) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-1206 407.69,-1206 407.69,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterIHermesRouter01">
+
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 293.69,-8 293.69,-8 299.69,-8 305.69,-14 305.69,-20 305.69,-20 305.69,-1045 305.69,-1045 305.69,-1051 299.69,-1057 293.69,-1057 293.69,-1057 20,-1057 20,-1057 14,-1057 8,-1051 8,-1045 8,-1045 8,-20 8,-20 8,-14 14,-8 20,-8" style=""/>
+<text text-anchor="middle" x="156.84" y="-1040.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesRouter01  (iface)</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="83.84,-1065 83.84,-1194 395.69,-1194 395.69,-1065 83.84,-1065" style=""/>
+<text text-anchor="middle" x="239.77" y="-1177.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- IHermesRouter01.factory -->
+<g id="node1" class="node" pointer-events="visible" data-name="IHermesRouter01.factory">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-1006" rx="38.26" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-1001.8" font-family="Times,serif" font-size="14.00" style="">factory</text>
+</g>
+<!-- IHermesRouter01.WONE -->
+<g id="node2" class="node" pointer-events="visible" data-name="IHermesRouter01.WONE">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-952" rx="40" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-947.8" font-family="Times,serif" font-size="14.00" style="">WONE</text>
+</g>
+<!-- IHermesRouter01.addLiquidity -->
+<g id="node3" class="node" pointer-events="visible" data-name="IHermesRouter01.addLiquidity">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-898" rx="60.85" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-893.8" font-family="Times,serif" font-size="14.00" style="">addLiquidity</text>
+</g>
+<!-- IHermesRouter01.addLiquidityONE -->
+<g id="node4" class="node" pointer-events="visible" data-name="IHermesRouter01.addLiquidityONE">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="156.84" cy="-844" rx="80.54" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-839.8" font-family="Times,serif" font-size="14.00" style="">addLiquidityONE</text>
+</g>
+<!-- IHermesRouter01.removeLiquidity -->
+<g id="node5" class="node" pointer-events="visible" data-name="IHermesRouter01.removeLiquidity">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-790" rx="75.88" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-785.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidity</text>
+</g>
+<!-- IHermesRouter01.removeLiquidityONE -->
+<g id="node6" class="node" pointer-events="visible" data-name="IHermesRouter01.removeLiquidityONE">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-736" rx="95.57" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-731.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidityONE</text>
+</g>
+<!-- IHermesRouter01.removeLiquidityWithPermit -->
+<g id="node7" class="node" pointer-events="visible" data-name="IHermesRouter01.removeLiquidityWithPermit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-682" rx="120.99" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-677.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidityWithPermit</text>
+</g>
+<!-- IHermesRouter01.removeLiquidityONEWithPermit -->
+<g id="node8" class="node" pointer-events="visible" data-name="IHermesRouter01.removeLiquidityONEWithPermit">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-628" rx="140.69" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-623.8" font-family="Times,serif" font-size="14.00" style="">removeLiquidityONEWithPermit</text>
+</g>
+<!-- IHermesRouter01.swapExactTokensForTokens -->
+<g id="node9" class="node" pointer-events="visible" data-name="IHermesRouter01.swapExactTokensForTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-574" rx="123.28" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-569.8" font-family="Times,serif" font-size="14.00" style="">swapExactTokensForTokens</text>
+</g>
+<!-- IHermesRouter01.swapTokensForExactTokens -->
+<g id="node10" class="node" pointer-events="visible" data-name="IHermesRouter01.swapTokensForExactTokens">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-520" rx="123.28" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-515.8" font-family="Times,serif" font-size="14.00" style="">swapTokensForExactTokens</text>
+</g>
+<!-- IHermesRouter01.swapExactONEForTokens -->
+<g id="node11" class="node" pointer-events="visible" data-name="IHermesRouter01.swapExactONEForTokens">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="156.84" cy="-466" rx="114.61" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-461.8" font-family="Times,serif" font-size="14.00" style="">swapExactONEForTokens</text>
+</g>
+<!-- IHermesRouter01.swapTokensForExactONE -->
+<g id="node12" class="node" pointer-events="visible" data-name="IHermesRouter01.swapTokensForExactONE">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-412" rx="114.61" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-407.8" font-family="Times,serif" font-size="14.00" style="">swapTokensForExactONE</text>
+</g>
+<!-- IHermesRouter01.swapExactTokensForONE -->
+<g id="node13" class="node" pointer-events="visible" data-name="IHermesRouter01.swapExactTokensForONE">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-358" rx="114.61" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-353.8" font-family="Times,serif" font-size="14.00" style="">swapExactTokensForONE</text>
+</g>
+<!-- IHermesRouter01.swapONEForExactTokens -->
+<g id="node14" class="node" pointer-events="visible" data-name="IHermesRouter01.swapONEForExactTokens">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="156.84" cy="-304" rx="114.61" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-299.8" font-family="Times,serif" font-size="14.00" style="">swapONEForExactTokens</text>
+</g>
+<!-- IHermesRouter01.quote -->
+<g id="node15" class="node" pointer-events="visible" data-name="IHermesRouter01.quote">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-250" rx="32.48" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-245.8" font-family="Times,serif" font-size="14.00" style="">quote</text>
+</g>
+<!-- IHermesRouter01.getAmountOut -->
+<g id="node16" class="node" pointer-events="visible" data-name="IHermesRouter01.getAmountOut">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-196" rx="68.95" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-191.8" font-family="Times,serif" font-size="14.00" style="">getAmountOut</text>
+</g>
+<!-- IHermesRouter01.getAmountIn -->
+<g id="node17" class="node" pointer-events="visible" data-name="IHermesRouter01.getAmountIn">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-142" rx="62.56" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-137.8" font-family="Times,serif" font-size="14.00" style="">getAmountIn</text>
+</g>
+<!-- IHermesRouter01.getAmountsOut -->
+<g id="node18" class="node" pointer-events="visible" data-name="IHermesRouter01.getAmountsOut">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-88" rx="72.96" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-83.8" font-family="Times,serif" font-size="14.00" style="">getAmountsOut</text>
+</g>
+<!-- IHermesRouter01.getAmountsIn -->
+<g id="node19" class="node" pointer-events="visible" data-name="IHermesRouter01.getAmountsIn">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="156.84" cy="-34" rx="66.08" ry="18" style=""/>
+<text text-anchor="middle" x="156.84" y="-29.8" font-family="Times,serif" font-size="14.00" style="">getAmountsIn</text>
+</g>
+<!-- key -->
+<g id="node20" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="221.84,-1161 91.84,-1161 91.84,-1073 221.84,-1073 221.84,-1161" style=""/>
+<text text-anchor="start" x="141.48" y="-1142.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="137.59" y="-1122.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="115.05" y="-1102.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="101.45" y="-1082.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node21" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="387.69,-1161 333.69,-1161 333.69,-1073 387.69,-1073 387.69,-1161" style=""/>
+<text text-anchor="start" x="350.69" y="-1142.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="350.69" y="-1122.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="348.69,-1097 348.69,-1117 373.69,-1117 373.69,-1097 348.69,-1097" style=""/>
+<text text-anchor="start" x="350.69" y="-1102.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="350.69,-1079 350.69,-1095 371.69,-1095 371.69,-1079 350.69,-1079" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge1" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M214.84,-1147C270.31,-1147 286.7,-1147 337.43,-1147" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="337.69,-1150.5 347.69,-1147 337.69,-1143.5 337.69,-1150.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge2" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M214.84,-1127C270.31,-1127 286.7,-1127 337.43,-1127" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="337.69,-1130.5 347.69,-1127 337.69,-1123.5 337.69,-1130.5" style=""/>
+</g>
+</g>
+</svg>

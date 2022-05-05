@@ -1,0 +1,106 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="347pt" height="377pt" viewBox="0.00 0.00 347.15 377.00">
+<g id="graph0" class="graph" transform="translate(4,373) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-373 343.15,-373 343.15,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterBaseBoringBatchable">
+
+<path fill="#445773" stroke="#445773" d="M53.05,-8C53.05,-8 319.15,-8 319.15,-8 325.15,-8 331.15,-14 331.15,-20 331.15,-20 331.15,-127 331.15,-127 331.15,-133 325.15,-139 319.15,-139 319.15,-139 53.05,-139 53.05,-139 47.05,-139 41.05,-133 41.05,-127 41.05,-127 41.05,-20 41.05,-20 41.05,-14 47.05,-8 53.05,-8" style=""/>
+<text text-anchor="middle" x="186.1" y="-122.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BaseBoringBatchable</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterBoringBatchable">
+
+<path fill="#445773" stroke="#445773" d="M24.08,-147C24.08,-147 137.92,-147 137.92,-147 143.92,-147 149.92,-153 149.92,-159 149.92,-159 149.92,-212 149.92,-212 149.92,-218 143.92,-224 137.92,-224 137.92,-224 24.08,-224 24.08,-224 18.08,-224 12.08,-218 12.08,-212 12.08,-212 12.08,-159 12.08,-159 12.08,-153 18.08,-147 24.08,-147" style=""/>
+<text text-anchor="middle" x="81" y="-207.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">BoringBatchable</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterIERC20">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M220.33,-147C220.33,-147 284.82,-147 284.82,-147 290.82,-147 296.82,-153 296.82,-159 296.82,-159 296.82,-212 296.82,-212 296.82,-218 290.82,-224 284.82,-224 284.82,-224 220.33,-224 220.33,-224 214.33,-224 208.33,-218 208.33,-212 208.33,-212 208.33,-159 208.33,-159 208.33,-153 214.33,-147 220.33,-147" style=""/>
+<text text-anchor="middle" x="252.58" y="-207.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust4" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="8,-232 8,-361 287.58,-361 287.58,-232 8,-232" style=""/>
+<text text-anchor="middle" x="147.79" y="-344.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- BaseBoringBatchable._getRevertMsg -->
+<g id="node1" class="node" pointer-events="visible" data-name="BaseBoringBatchable._getRevertMsg">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="252.58" cy="-34" rx="70.65" ry="18" style=""/>
+<text text-anchor="middle" x="252.58" y="-29.8" font-family="Times,serif" font-size="14.00" style="">_getRevertMsg</text>
+</g>
+<!-- BaseBoringBatchable.batch -->
+<g id="node2" class="node" pointer-events="visible" data-name="BaseBoringBatchable.batch">
+
+<ellipse fill="#ffbdb9" stroke="brown" stroke-width="3" cx="81" cy="-61" rx="31.9" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-56.8" font-family="Times,serif" font-size="14.00" style="">batch</text>
+</g>
+<!-- BaseBoringBatchable.batch&#45;&gt;BaseBoringBatchable._getRevertMsg -->
+<g id="edge2" class="edge" data-name="BaseBoringBatchable.batch-&gt;BaseBoringBatchable._getRevertMsg">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M111.93,-56.24C131.4,-53.13 157.63,-48.96 182.11,-45.06" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="182.78,-48.5 192.1,-43.47 181.68,-41.59 182.78,-48.5" style=""/>
+</g>
+<!-- BaseBoringBatchable.delegatecall -->
+<g id="node3" class="node" pointer-events="visible" data-name="BaseBoringBatchable.delegatecall">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="252.58" cy="-88" rx="57.29" ry="18" style=""/>
+<text text-anchor="middle" x="252.58" y="-83.8" font-family="Times,serif" font-size="14.00" style="">delegatecall</text>
+</g>
+<!-- BaseBoringBatchable.batch&#45;&gt;BaseBoringBatchable.delegatecall -->
+<g id="edge1" class="edge" data-name="BaseBoringBatchable.batch-&gt;BaseBoringBatchable.delegatecall">
+
+<path fill="none" stroke="#80e097" stroke-width="2" d="M111.93,-65.76C133.85,-69.26 164.34,-74.11 191.24,-78.39" style=""/>
+<polygon fill="#80e097" stroke="#80e097" stroke-width="2" points="190.93,-81.89 201.35,-80 192.03,-74.97 190.93,-81.89" style=""/>
+</g>
+<!-- BoringBatchable.permitToken -->
+<g id="node4" class="node" pointer-events="visible" data-name="BoringBatchable.permitToken">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="81" cy="-173" rx="60.83" ry="18" style=""/>
+<text text-anchor="middle" x="81" y="-168.8" font-family="Times,serif" font-size="14.00" style="">permitToken</text>
+</g>
+<!-- IERC20.permit -->
+<g id="node5" class="node" pointer-events="visible" data-name="IERC20.permit">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="252.58" cy="-173" rx="36.49" ry="18" style=""/>
+<text text-anchor="middle" x="252.58" y="-168.8" font-family="Times,serif" font-size="14.00" style="">permit</text>
+</g>
+<!-- BoringBatchable.permitToken&#45;&gt;IERC20.permit -->
+<g id="edge3" class="edge" data-name="BoringBatchable.permitToken-&gt;IERC20.permit">
+
+<path fill="none" stroke="white" stroke-width="2" d="M142.26,-173C163.24,-173 186.42,-173 206.01,-173" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="206.19,-176.5 216.19,-173 206.19,-169.5 206.19,-176.5" style=""/>
+</g>
+<!-- key -->
+<g id="node6" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="146,-328 16,-328 16,-240 146,-240 146,-328" style=""/>
+<text text-anchor="start" x="65.64" y="-309.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="61.75" y="-289.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="39.2" y="-269.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="25.6" y="-249.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node7" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="279.58,-328 225.58,-328 225.58,-240 279.58,-240 279.58,-328" style=""/>
+<text text-anchor="start" x="242.58" y="-309.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="242.58" y="-289.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="240.58,-264 240.58,-284 265.58,-284 265.58,-264 240.58,-264" style=""/>
+<text text-anchor="start" x="242.58" y="-269.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="242.58,-246 242.58,-262 263.58,-262 263.58,-246 242.58,-246" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge4" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M139,-314C180.03,-314 192.82,-314 229.22,-314" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="229.58,-317.5 239.58,-314 229.58,-310.5 229.58,-317.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge5" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M139,-294C180.03,-294 192.82,-294 229.22,-294" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="229.58,-297.5 239.58,-294 229.58,-290.5 229.58,-297.5" style=""/>
+</g>
+</g>
+</svg>

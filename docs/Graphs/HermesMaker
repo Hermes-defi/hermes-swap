@@ -1,0 +1,499 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="954pt" height="966pt" viewBox="0.00 0.00 954.25 966.00">
+<g id="graph0" class="graph" transform="translate(4,962) scale(1)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-962 950.25,-962 950.25,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="clusterHermesMaker">
+
+<path fill="#445773" stroke="#445773" d="M20,-479C20,-479 926.25,-479 926.25,-479 932.25,-479 938.25,-485 938.25,-491 938.25,-491 938.25,-768 938.25,-768 938.25,-774 932.25,-780 926.25,-780 926.25,-780 20,-780 20,-780 14,-780 8,-774 8,-768 8,-768 8,-491 8,-491 8,-485 14,-479 20,-479" style=""/>
+<text text-anchor="middle" x="473.13" y="-763.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">HermesMaker</text>
+</g>
+<g id="clust2" class="cluster" data-name="clusterIHermesFactory">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M829.02,-309C829.02,-309 911.8,-309 911.8,-309 917.8,-309 923.8,-315 923.8,-321 923.8,-321 923.8,-374 923.8,-374 923.8,-380 917.8,-386 911.8,-386 911.8,-386 829.02,-386 829.02,-386 823.02,-386 817.02,-380 817.02,-374 817.02,-374 817.02,-321 817.02,-321 817.02,-315 823.02,-309 829.02,-309" style=""/>
+<text text-anchor="middle" x="870.41" y="-369.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesFactory</text>
+</g>
+<g id="clust3" class="cluster" data-name="clusterIHermesPair">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M816.72,-8C816.72,-8 924.11,-8 924.11,-8 930.11,-8 936.11,-14 936.11,-20 936.11,-20 936.11,-289 936.11,-289 936.11,-295 930.11,-301 924.11,-301 924.11,-301 816.72,-301 816.72,-301 810.72,-301 804.72,-295 804.72,-289 804.72,-289 804.72,-20 804.72,-20 804.72,-14 810.72,-8 816.72,-8" style=""/>
+<text text-anchor="middle" x="870.41" y="-284.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IHermesPair</text>
+</g>
+<g id="clust4" class="cluster" data-name="clusteramount0">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M581.6,-394C581.6,-394 627.6,-394 627.6,-394 633.6,-394 639.6,-400 639.6,-406 639.6,-406 639.6,-459 639.6,-459 639.6,-465 633.6,-471 627.6,-471 627.6,-471 581.6,-471 581.6,-471 575.6,-471 569.6,-465 569.6,-459 569.6,-459 569.6,-406 569.6,-406 569.6,-400 575.6,-394 581.6,-394" style=""/>
+<text text-anchor="middle" x="604.6" y="-454.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amount0</text>
+</g>
+<g id="clust5" class="cluster" data-name="clusteramountIn">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M847.41,-394C847.41,-394 893.41,-394 893.41,-394 899.41,-394 905.41,-400 905.41,-406 905.41,-406 905.41,-459 905.41,-459 905.41,-465 899.41,-471 893.41,-471 893.41,-471 847.41,-471 847.41,-471 841.41,-471 835.41,-465 835.41,-459 835.41,-459 835.41,-406 835.41,-406 835.41,-400 841.41,-394 847.41,-394" style=""/>
+<text text-anchor="middle" x="870.41" y="-454.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">amountIn</text>
+</g>
+<g id="clust6" class="cluster" data-name="clusterreserve0">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M847.41,-873C847.41,-873 893.41,-873 893.41,-873 899.41,-873 905.41,-879 905.41,-885 905.41,-885 905.41,-938 905.41,-938 905.41,-944 899.41,-950 893.41,-950 893.41,-950 847.41,-950 847.41,-950 841.41,-950 835.41,-944 835.41,-938 835.41,-938 835.41,-885 835.41,-885 835.41,-879 841.41,-873 847.41,-873" style=""/>
+<text text-anchor="middle" x="870.41" y="-933.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserve0</text>
+</g>
+<g id="clust7" class="cluster" data-name="clusterreserve1">
+
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M847.41,-788C847.41,-788 893.41,-788 893.41,-788 899.41,-788 905.41,-794 905.41,-800 905.41,-800 905.41,-853 905.41,-853 905.41,-859 899.41,-865 893.41,-865 893.41,-865 847.41,-865 847.41,-865 841.41,-865 835.41,-859 835.41,-853 835.41,-853 835.41,-800 835.41,-800 835.41,-794 841.41,-788 847.41,-788" style=""/>
+<text text-anchor="middle" x="870.41" y="-848.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">reserve1</text>
+</g>
+<g id="clust8" class="cluster" data-name="cluster_01">
+
+<polygon fill="#2e3e56" stroke="black" points="16.25,-804 16.25,-933 307.29,-933 307.29,-804 16.25,-804" style=""/>
+<text text-anchor="middle" x="161.77" y="-916.4" font-family="Times,serif" font-size="14.00" style="">Legend</text>
+</g>
+<!-- HermesMaker.&lt;Constructor&gt; -->
+<g id="node1" class="node" pointer-events="visible" data-name="HermesMaker.&lt;Constructor&gt;">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="89.25" cy="-729" rx="67.55" ry="18" style=""/>
+<text text-anchor="middle" x="89.25" y="-724.8" font-family="Times,serif" font-size="14.00" style="">&lt;Constructor&gt;</text>
+</g>
+<!-- HermesMaker.IHermesFactory -->
+<g id="node11" class="node" pointer-events="visible" data-name="HermesMaker.IHermesFactory">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="272.29" cy="-729" rx="73.57" ry="18" style=""/>
+<text text-anchor="middle" x="272.29" y="-724.8" font-family="Times,serif" font-size="14.00" style="">IHermesFactory</text>
+</g>
+<!-- HermesMaker.&lt;Constructor&gt;&#45;&gt;HermesMaker.IHermesFactory -->
+<g id="edge1" class="edge" data-name="HermesMaker.&lt;Constructor&gt;-&gt;HermesMaker.IHermesFactory">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M156.9,-729C167.13,-729 177.81,-729 188.35,-729" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="188.39,-732.5 198.39,-729 188.39,-725.5 188.39,-732.5" style=""/>
+</g>
+<!-- HermesMaker.bridgeFor -->
+<g id="node2" class="node" pointer-events="visible" data-name="HermesMaker.bridgeFor">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="604.6" cy="-599" rx="49.24" ry="18" style=""/>
+<text text-anchor="middle" x="604.6" y="-594.8" font-family="Times,serif" font-size="14.00" style="">bridgeFor</text>
+</g>
+<!-- HermesMaker.setBridge -->
+<g id="node3" class="node" pointer-events="visible" data-name="HermesMaker.setBridge">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="89.25" cy="-675" rx="48.09" ry="18" style=""/>
+<text text-anchor="middle" x="89.25" y="-670.8" font-family="Times,serif" font-size="14.00" style="">setBridge</text>
+</g>
+<!-- HermesMaker.onlyEOA -->
+<g id="node4" class="node" pointer-events="visible" data-name="HermesMaker.onlyEOA">
+
+<polygon fill="#edad56" stroke="#1bc6a6" stroke-width="3" points="141.28,-609.54 141.28,-624.46 110.8,-635 67.71,-635 37.23,-624.46 37.23,-609.54 67.71,-599 110.8,-599 141.28,-609.54" style=""/>
+<polygon fill="none" stroke="#1bc6a6" stroke-width="3" points="145.28,-606.7 145.28,-627.3 111.48,-639 67.03,-639 33.23,-627.3 33.23,-606.7 67.03,-595 111.48,-595 145.28,-606.7" style=""/>
+<text text-anchor="middle" x="89.25" y="-612.8" font-family="Times,serif" font-size="14.00" style="">onlyEOA</text>
+</g>
+<!-- HermesMaker.convert -->
+<g id="node5" class="node" pointer-events="visible" data-name="HermesMaker.convert">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="89.25" cy="-559" rx="39.99" ry="18" style=""/>
+<text text-anchor="middle" x="89.25" y="-554.8" font-family="Times,serif" font-size="14.00" style="">convert</text>
+</g>
+<!-- HermesMaker._convert -->
+<g id="node7" class="node" pointer-events="visible" data-name="HermesMaker._convert">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="272.29" cy="-505" rx="44.64" ry="18" style=""/>
+<text text-anchor="middle" x="272.29" y="-500.8" font-family="Times,serif" font-size="14.00" style="">_convert</text>
+</g>
+<!-- HermesMaker.convert&#45;&gt;HermesMaker._convert -->
+<g id="edge2" class="edge" data-name="HermesMaker.convert-&gt;HermesMaker._convert">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M123.04,-549.22C151.85,-540.63 194.05,-528.04 226.07,-518.49" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="227.07,-521.84 235.65,-515.63 225.07,-515.13 227.07,-521.84" style=""/>
+</g>
+<!-- HermesMaker.convertMultiple -->
+<g id="node6" class="node" pointer-events="visible" data-name="HermesMaker.convertMultiple">
+
+<ellipse fill="#ffbdb9" stroke="#ffbdb9" stroke-width="3" cx="89.25" cy="-505" rx="73.01" ry="18" style=""/>
+<text text-anchor="middle" x="89.25" y="-500.8" font-family="Times,serif" font-size="14.00" style="">convertMultiple</text>
+</g>
+<!-- HermesMaker.convertMultiple&#45;&gt;HermesMaker._convert -->
+<g id="edge3" class="edge" data-name="HermesMaker.convertMultiple-&gt;HermesMaker._convert">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M162.59,-505C180.69,-505 199.81,-505 216.88,-505" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="217.22,-508.5 227.22,-505 217.22,-501.5 217.22,-508.5" style=""/>
+</g>
+<!-- HermesMaker._convertStep -->
+<g id="node8" class="node" pointer-events="visible" data-name="HermesMaker._convertStep">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="444.07" cy="-542" rx="61.98" ry="18" style=""/>
+<text text-anchor="middle" x="444.07" y="-537.8" font-family="Times,serif" font-size="14.00" style="">_convertStep</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;HermesMaker._convertStep -->
+<g id="edge10" class="edge" data-name="HermesMaker._convert-&gt;HermesMaker._convertStep">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M312.24,-513.49C333.49,-518.12 360.22,-523.95 383.98,-529.12" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="383.44,-532.59 393.95,-531.3 384.93,-525.75 383.44,-532.59" style=""/>
+</g>
+<!-- HermesMaker.IHermesPair -->
+<g id="node12" class="node" pointer-events="visible" data-name="HermesMaker.IHermesPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-643" rx="59.68" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-638.8" font-family="Times,serif" font-size="14.00" style="">IHermesPair</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;HermesMaker.IHermesPair -->
+<g id="edge4" class="edge" data-name="HermesMaker._convert-&gt;HermesMaker.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M280.23,-522.96C293.94,-555.62 327.98,-623.84 382.08,-651 526.19,-723.34 725.78,-683.55 818.4,-658.48" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="819.39,-661.84 828.1,-655.81 817.53,-655.1 819.39,-661.84" style=""/>
+</g>
+<!-- HermesMaker.IERC20 -->
+<g id="node13" class="node" pointer-events="visible" data-name="HermesMaker.IERC20">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-562" rx="42.88" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-557.8" font-family="Times,serif" font-size="14.00" style="">IERC20</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge6" class="edge" data-name="HermesMaker._convert-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M281.16,-522.98C295.82,-553.91 330.57,-616.24 382.08,-641 439.25,-668.48 604.97,-638.58 667.15,-626 724.51,-614.39 788.59,-592.54 828.95,-577.63" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="830.28,-580.87 838.43,-574.09 827.84,-574.31 830.28,-580.87" style=""/>
+</g>
+<!-- IHermesFactory.getPair -->
+<g id="node14" class="node" pointer-events="visible" data-name="IHermesFactory.getPair">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-335" rx="38.28" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-330.8" font-family="Times,serif" font-size="14.00" style="">getPair</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;IHermesFactory.getPair -->
+<g id="edge5" class="edge" data-name="HermesMaker._convert-&gt;IHermesFactory.getPair">
+
+<path fill="none" stroke="white" stroke-width="2" d="M300.35,-490.85C347.93,-466.55 450.26,-416.93 542.06,-390 639.49,-361.41 757.87,-346.12 822.21,-339.37" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="822.85,-342.82 832.44,-338.32 822.14,-335.86 822.85,-342.82" style=""/>
+</g>
+<!-- IHermesPair.balanceOf -->
+<g id="node15" class="node" pointer-events="visible" data-name="IHermesPair.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-88" rx="50.92" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-83.8" font-family="Times,serif" font-size="14.00" style="">balanceOf</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;IHermesPair.balanceOf -->
+<g id="edge7" class="edge" data-name="HermesMaker._convert-&gt;IHermesPair.balanceOf">
+
+<path fill="none" stroke="white" stroke-width="2" d="M279.66,-487.19C293.41,-450.86 328.95,-367.23 382.08,-315 509.84,-189.4 720.01,-124.53 817.16,-99.93" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="818.19,-103.28 827.04,-97.47 816.49,-96.49 818.19,-103.28" style=""/>
+</g>
+<!-- IHermesPair.burn -->
+<g id="node16" class="node" pointer-events="visible" data-name="IHermesPair.burn">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-34" rx="28.98" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-29.8" font-family="Times,serif" font-size="14.00" style="">burn</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;IHermesPair.burn -->
+<g id="edge8" class="edge" data-name="HermesMaker._convert-&gt;IHermesPair.burn">
+
+<path fill="none" stroke="white" stroke-width="2" d="M275.41,-486.71C282.05,-437.21 306.71,-298.91 382.08,-218 507.18,-83.69 740.24,-46.69 831.44,-37.13" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="831.98,-40.59 841.59,-36.11 831.29,-33.62 831.98,-40.59" style=""/>
+</g>
+<!-- IHermesPair.token0 -->
+<g id="node17" class="node" pointer-events="visible" data-name="IHermesPair.token0">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-142" rx="37.14" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-137.8" font-family="Times,serif" font-size="14.00" style="">token0</text>
+</g>
+<!-- HermesMaker._convert&#45;&gt;IHermesPair.token0 -->
+<g id="edge9" class="edge" data-name="HermesMaker._convert-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M287.88,-487.92C307.66,-465.45 344.8,-425.57 382.08,-398 535.62,-284.43 746.41,-192.17 831.51,-157.16" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="833.08,-160.3 841.01,-153.27 830.43,-153.82 833.08,-160.3" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.bridgeFor -->
+<g id="edge14" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.bridgeFor">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M501.41,-549.27C526.15,-557.03 554.15,-567.85 574.57,-577.84" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="573.17,-581.06 583.67,-582.51 576.37,-574.83 573.17,-581.06" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.bridgeFor -->
+<g id="edge25" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.bridgeFor">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M483.85,-555.94C506.73,-564.17 535.76,-574.61 559.51,-583.15" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="558.4,-586.47 569,-586.56 560.77,-579.88 558.4,-586.47" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.bridgeFor -->
+<g id="edge26" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.bridgeFor">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M465.79,-558.91C486.36,-569.96 518.82,-582.8 547.07,-591.67" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="546.28,-595.08 556.86,-594.63 548.3,-588.38 546.28,-595.08" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._convertStep -->
+<g id="edge16" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._convertStep">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M436.83,-560.15C435.72,-569.54 438.13,-578 444.07,-578 447.68,-578 449.99,-574.86 450.99,-570.28" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="454.5,-570.25 451.3,-560.15 447.5,-570.04 454.5,-570.25" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._convertStep -->
+<g id="edge27" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._convertStep">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M432.15,-559.7C425.56,-577 429.53,-596 444.07,-596 455.87,-596 460.71,-583.45 458.58,-569.47" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="461.93,-568.47 455.99,-559.7 455.17,-570.26 461.93,-568.47" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._convertStep -->
+<g id="edge29" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._convertStep">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M429.09,-559.72C415.4,-584.11 420.39,-614 444.07,-614 464.78,-614 471.19,-591.12 463.3,-569.05" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="466.38,-567.36 459.05,-559.72 460.01,-570.27 466.38,-567.36" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._convertStep -->
+<g id="edge31" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._convertStep">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M426.99,-559.67C405.25,-590.85 410.94,-632 444.07,-632 474.22,-632 481.64,-597.91 466.34,-568.28" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="469.31,-566.42 461.15,-559.67 463.32,-570.04 469.31,-566.42" style=""/>
+</g>
+<!-- HermesMaker._swap -->
+<g id="node9" class="node" pointer-events="visible" data-name="HermesMaker._swap">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="738.86" cy="-525" rx="35.92" ry="18" style=""/>
+<text text-anchor="middle" x="738.86" y="-520.8" font-family="Times,serif" font-size="14.00" style="">_swap</text>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge15" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M450.57,-524.04C475.56,-487.21 580.92,-484.21 667.15,-478 691.69,-476.23 720.92,-472.97 732.63,-497.16" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="729.43,-498.61 736.01,-506.91 736.04,-496.32 729.43,-498.61" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge22" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M458.1,-524.42C492.37,-504.7 587.85,-501.71 667.15,-496 687.34,-494.55 710.69,-492.08 724.86,-499.97" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="722.87,-502.88 732.72,-506.77 727.45,-497.58 722.87,-502.88" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge24" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M483.22,-527.95C527.49,-521.49 602.67,-518.64 667.15,-514 679.21,-513.13 692.4,-511.9 704.08,-511.73" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="704.26,-515.23 714.32,-511.9 704.38,-508.23 704.26,-515.23" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge28" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M505.92,-540.14C550.57,-538.56 612.68,-535.92 667.15,-532 675.73,-531.38 684.88,-530.58 693.65,-529.74" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="694.12,-533.22 703.72,-528.75 693.43,-526.25 694.12,-533.22" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge30" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M489.35,-554.31C534.2,-557.23 605.56,-554.43 667.15,-550 682,-548.93 698.57,-547.31 711.94,-544.01" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="713.33,-547.25 721.87,-540.99 711.29,-540.55 713.33,-547.25" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge32" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M459.37,-559.54C494.68,-576.63 588.81,-573.64 667.15,-568 688.43,-566.47 713.24,-563.81 727.09,-551.14" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="730.07,-553.02 733.56,-543.02 724.59,-548.66 730.07,-553.02" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._swap -->
+<g id="edge33" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M450.91,-560.16C476.5,-595.18 581.3,-592.18 667.15,-586 692.13,-584.2 721.96,-580.85 733.24,-552.62" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="736.59,-553.62 736.11,-543.03 729.89,-551.6 736.59,-553.62" style=""/>
+</g>
+<!-- HermesMaker._toHERMES -->
+<g id="node10" class="node" pointer-events="visible" data-name="HermesMaker._toHERMES">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="604.6" cy="-505" rx="62.59" ry="18" style=""/>
+<text text-anchor="middle" x="604.6" y="-500.8" font-family="Times,serif" font-size="14.00" style="">_toHERMES</text>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._toHERMES -->
+<g id="edge13" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._toHERMES">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M456.72,-524.33C477.72,-507.92 522.94,-494.1 557.7,-490.96" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="558.33,-494.43 568.11,-490.34 557.92,-487.44 558.33,-494.43" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._toHERMES -->
+<g id="edge18" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._toHERMES">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M470.89,-525.69C487.63,-519.35 510.32,-513 532.2,-508.22" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="533.1,-511.61 542.18,-506.14 531.67,-504.76 533.1,-511.61" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._toHERMES -->
+<g id="edge20" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._toHERMES">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M493.06,-530.8C509.59,-526.94 528.29,-522.58 545.54,-518.55" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="546.55,-521.91 555.5,-516.23 544.96,-515.09 546.55,-521.91" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._toHERMES -->
+<g id="edge21" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._toHERMES">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M506.36,-540.88C527.24,-536.75 549.88,-530.9 568.05,-524.78" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="569.4,-528.01 577.65,-521.36 567.05,-521.42 569.4,-528.01" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker._toHERMES -->
+<g id="edge23" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker._toHERMES">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M480.25,-556.67C512.08,-555.9 557.8,-543.81 583.71,-528.27" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="585.69,-531.16 591.99,-522.64 581.75,-525.37 585.69,-531.16" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge12" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M501.42,-535.14C586.43,-533.59 745.82,-541.36 823.92,-551.11" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="823.56,-554.59 833.94,-552.43 824.48,-547.65 823.56,-554.59" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge17" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M505.41,-544.84C589.07,-548.79 738.84,-555.85 817.66,-559.56" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="817.68,-563.07 827.84,-560.04 818.01,-556.07 817.68,-563.07" style=""/>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge19" class="edge" data-name="HermesMaker._convertStep-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M492.92,-553.18C574.19,-563.08 738.35,-570.85 820.4,-568.7" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="820.59,-572.2 830.47,-568.37 820.36,-565.2 820.59,-572.2" style=""/>
+</g>
+<!-- amount0.add -->
+<g id="node20" class="node" pointer-events="visible" data-name="amount0.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="604.6" cy="-420" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="604.6" y="-415.8" font-family="Times,serif" font-size="14.00" style="">add</text>
+</g>
+<!-- HermesMaker._convertStep&#45;&gt;amount0.add -->
+<g id="edge11" class="edge" data-name="HermesMaker._convertStep-&gt;amount0.add">
+
+<path fill="none" stroke="white" stroke-width="2" d="M467.11,-525.04C496.2,-502.65 547.29,-463.33 578.04,-439.67" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="580.34,-442.31 586.14,-433.44 576.08,-436.77 580.34,-442.31" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;HermesMaker.IHermesPair -->
+<g id="edge34" class="edge" data-name="HermesMaker._swap-&gt;HermesMaker.IHermesPair">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M755.5,-541.16C768.42,-554.33 787.38,-573.26 804.72,-589 816.14,-599.37 829.12,-610.35 840.45,-619.69" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="838.4,-622.54 848.35,-626.16 842.83,-617.12 838.4,-622.54" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge41" class="edge" data-name="HermesMaker._swap-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M773.9,-528.7C791.82,-532.9 813.83,-539.14 832.2,-545.2" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="831.11,-548.52 841.7,-548.44 833.37,-541.9 831.11,-548.52" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;HermesMaker.IERC20 -->
+<g id="edge45" class="edge" data-name="HermesMaker._swap-&gt;HermesMaker.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M764.84,-537.59C780.36,-543.19 800.85,-549.42 819.59,-554.36" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="818.92,-557.8 829.47,-556.88 820.65,-551.02 818.92,-557.8" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;IHermesFactory.getPair -->
+<g id="edge35" class="edge" data-name="HermesMaker._swap-&gt;IHermesFactory.getPair">
+
+<path fill="none" stroke="white" stroke-width="2" d="M745.74,-507.07C755.23,-479.9 775.81,-427.47 804.72,-390 814.59,-377.2 827.88,-365.27 839.85,-355.81" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="842.05,-358.54 847.86,-349.69 837.79,-352.98 842.05,-358.54" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;IHermesPair.token0 -->
+<g id="edge38" class="edge" data-name="HermesMaker._swap-&gt;IHermesPair.token0">
+
+<path fill="none" stroke="white" stroke-width="2" d="M740.91,-506.88C745.02,-441.98 761.88,-222.22 804.72,-169 810.37,-161.97 818.18,-156.75 826.41,-152.88" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="827.86,-156.07 835.8,-149.06 825.21,-149.59 827.86,-156.07" style=""/>
+</g>
+<!-- IHermesPair.getReserves -->
+<g id="node18" class="node" pointer-events="visible" data-name="IHermesPair.getReserves">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-196" rx="57.89" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-191.8" font-family="Times,serif" font-size="14.00" style="">getReserves</text>
+</g>
+<!-- HermesMaker._swap&#45;&gt;IHermesPair.getReserves -->
+<g id="edge36" class="edge" data-name="HermesMaker._swap-&gt;IHermesPair.getReserves">
+
+<path fill="none" stroke="white" stroke-width="2" d="M741.56,-506.84C747.36,-448.51 768.04,-267.13 804.72,-223 808.08,-218.95 812.16,-215.5 816.61,-212.56" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="818.56,-215.48 825.54,-207.51 815.11,-209.38 818.56,-215.48" style=""/>
+</g>
+<!-- IHermesPair.swap -->
+<g id="node19" class="node" pointer-events="visible" data-name="IHermesPair.swap">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-250" rx="30.77" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-245.8" font-family="Times,serif" font-size="14.00" style="">swap</text>
+</g>
+<!-- HermesMaker._swap&#45;&gt;IHermesPair.swap -->
+<g id="edge42" class="edge" data-name="HermesMaker._swap-&gt;IHermesPair.swap">
+
+<path fill="none" stroke="white" stroke-width="2" d="M741.17,-506.96C745.19,-465.81 759.9,-364.94 804.72,-296 812.59,-283.89 823.92,-272.99 834.91,-264.65" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="837.03,-267.43 843.17,-258.8 832.99,-261.72 837.03,-267.43" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;IHermesPair.swap -->
+<g id="edge46" class="edge" data-name="HermesMaker._swap-&gt;IHermesPair.swap">
+
+<path fill="none" stroke="white" stroke-width="2" d="M742.31,-506.95C747.65,-468.37 763.37,-377.6 804.72,-314 815.43,-297.52 832.53,-283.29 846.46,-272.16" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="849,-274.61 854.64,-265.64 844.64,-269.14 849,-274.61" style=""/>
+</g>
+<!-- amountIn.mul -->
+<g id="node21" class="node" pointer-events="visible" data-name="amountIn.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-420" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-415.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesMaker._swap&#45;&gt;amountIn.mul -->
+<g id="edge37" class="edge" data-name="HermesMaker._swap-&gt;amountIn.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M751.13,-507.84C770.21,-486.7 809.53,-453.57 837.6,-433.97" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="839.59,-436.86 845.92,-428.36 835.67,-431.06 839.59,-436.86" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;amountIn.mul -->
+<g id="edge39" class="edge" data-name="HermesMaker._swap-&gt;amountIn.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M758.7,-509.73C781.4,-491.34 819.6,-460.37 844.66,-440.06" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="847.05,-442.63 852.61,-433.62 842.64,-437.19 847.05,-442.63" style=""/>
+</g>
+<!-- HermesMaker._swap&#45;&gt;amountIn.mul -->
+<g id="edge43" class="edge" data-name="HermesMaker._swap-&gt;amountIn.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M767.34,-514C792.85,-496.78 830.07,-466.05 851.81,-443.87" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="854.52,-446.1 858.81,-436.42 849.41,-441.31 854.52,-446.1" style=""/>
+</g>
+<!-- reserve0.mul -->
+<g id="node22" class="node" pointer-events="visible" data-name="reserve0.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-899" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-894.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesMaker._swap&#45;&gt;reserve0.mul -->
+<g id="edge40" class="edge" data-name="HermesMaker._swap-&gt;reserve0.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M741.13,-543.33C745.86,-606.95 764.31,-817.09 804.72,-869 812.31,-878.75 823.81,-885.45 835.02,-890.01" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="834.09,-893.4 844.69,-893.48 836.46,-886.81 834.09,-893.4" style=""/>
+</g>
+<!-- reserve1.mul -->
+<g id="node23" class="node" pointer-events="visible" data-name="reserve1.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="870.41" cy="-814" rx="27" ry="18" style=""/>
+<text text-anchor="middle" x="870.41" y="-809.8" font-family="Times,serif" font-size="14.00" style="">mul</text>
+</g>
+<!-- HermesMaker._swap&#45;&gt;reserve1.mul -->
+<g id="edge44" class="edge" data-name="HermesMaker._swap-&gt;reserve1.mul">
+
+<path fill="none" stroke="white" stroke-width="2" d="M739.35,-543.02C739,-588.74 744.16,-710.77 804.72,-784 812.53,-793.45 823.97,-800.07 835.07,-804.65" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="834.05,-808 844.64,-808.16 836.46,-801.43 834.05,-808" style=""/>
+</g>
+<!-- HermesMaker._toHERMES&#45;&gt;HermesMaker._swap -->
+<g id="edge47" class="edge" data-name="HermesMaker._toHERMES-&gt;HermesMaker._swap">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M660.54,-513.31C671.84,-515.02 683.58,-516.79 694.4,-518.43" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="694.04,-521.91 704.45,-519.95 695.09,-514.99 694.04,-521.91" style=""/>
+</g>
+<!-- key -->
+<g id="node24" class="node" pointer-events="visible" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="154.25,-900 24.25,-900 24.25,-812 154.25,-812 154.25,-900" style=""/>
+<text text-anchor="start" x="73.89" y="-881.4" font-family="Times,serif" font-size="14.00" style="">Internal Call</text>
+<text text-anchor="start" x="70" y="-861.4" font-family="Times,serif" font-size="14.00" style="">External Call</text>
+<text text-anchor="start" x="47.46" y="-841.4" font-family="Times,serif" font-size="14.00" style="">Defined Contract</text>
+<text text-anchor="start" x="33.86" y="-821.4" font-family="Times,serif" font-size="14.00" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node25" class="node" pointer-events="visible" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="299.29,-900 245.29,-900 245.29,-812 299.29,-812 299.29,-900" style=""/>
+<text text-anchor="start" x="262.29" y="-881.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<text text-anchor="start" x="262.29" y="-861.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="#445773" stroke="transparent" points="260.29,-836 260.29,-856 285.29,-856 285.29,-836 260.29,-836" style=""/>
+<text text-anchor="start" x="262.29" y="-841.4" font-family="Times,serif" font-size="14.00" style="">   </text>
+<polygon fill="none" stroke="#e8726d" points="262.29,-818 262.29,-834 283.29,-834 283.29,-818 262.29,-818" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge48" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M147.25,-886C193.45,-886 207.5,-886 249.05,-886" style=""/>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="249.29,-889.5 259.29,-886 249.29,-882.5 249.29,-889.5" style=""/>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge49" class="edge" data-name="key-&gt;key2">
+
+<path fill="none" stroke="white" stroke-width="2" d="M147.25,-866C193.45,-866 207.5,-866 249.05,-866" style=""/>
+<polygon fill="white" stroke="white" stroke-width="2" points="249.29,-869.5 259.29,-866 249.29,-862.5 249.29,-869.5" style=""/>
+</g>
+</g>
+</svg>

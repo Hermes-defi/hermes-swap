@@ -1298,6 +1298,7 @@ contract StableHermesStaking is Ownable
             IERC20 _token = rewardTokens[i];
             user.rewardDebt[_token] = 0;
         }
+        internalHermesBalance = internalHermesBalance.sub(_amount);
         hermes.safeTransfer(msg.sender, _amount);
         emit EmergencyWithdraw(msg.sender, _amount);
     }

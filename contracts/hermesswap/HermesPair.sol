@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity =0.6.12;
-import "hardhat/console.sol";
+//import "hardhat/console.sol";
 import "./HermesERC20.sol";
 import "./libraries/Math.sol";
 import "./libraries/UQ112x112.sol";

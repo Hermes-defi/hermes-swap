@@ -1,6 +1,4 @@
-// File: contracts\hermesswap\interfaces\IHermesPair.sol
-
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+// SPDX-License-Identifier: GPL-3.0
 
 pragma solidity >=0.5.0;
 
@@ -101,7 +99,7 @@ interface IHermesPair {
 
 // File: contracts\hermesswap\libraries\SafeMath.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity =0.6.12;
 
@@ -123,7 +121,7 @@ library SafeMathHermes {
 
 // File: contracts\hermesswap\libraries\HermesLibrary.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.5.0;
 
@@ -153,8 +151,7 @@ library HermesLibrary {
                         hex"ff",
                         factory,
                         keccak256(abi.encodePacked(token0, token1)),
-                        // 940641180a2372e7a7d08779b9f0bad6a0e31179658a16260fcffc13a3af986d
-                        hex"83bc7bb34b67d17e1f2fc8ad5d7a0f8a374a52474546c4ecbfb368acdc0ff2e1" // init code fuji
+                        hex"03c9640d9393b1b682a303babdafdc02f951d2fbb496894041dd62c9704a2663" // init code fuji
                     )
                 )
             )
@@ -243,7 +240,7 @@ library HermesLibrary {
 
 // File: contracts\hermesswap\libraries\TransferHelper.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.6.0;
 
@@ -288,7 +285,7 @@ library TransferHelper {
 
 // File: contracts\hermesswap\interfaces\IHermesRouter01.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.6.2;
 
@@ -447,7 +444,7 @@ interface IHermesRouter01 {
 
 // File: contracts\hermesswap\interfaces\IHermesRouter02.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.6.2;
 
@@ -501,7 +498,7 @@ interface IHermesRouter02 is IHermesRouter01 {
 
 // File: contracts\hermesswap\interfaces\IHermesFactory.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.5.0;
 
@@ -511,8 +508,6 @@ interface IHermesFactory {
     function feeTo() external view returns (address);
 
     function feeToSetter() external view returns (address);
-
-    function migrator() external view returns (address);
 
     function getPair(address tokenA, address tokenB) external view returns (address pair);
 
@@ -526,12 +521,11 @@ interface IHermesFactory {
 
     function setFeeToSetter(address) external;
 
-    function setMigrator(address) external;
 }
 
 // File: contracts\hermesswap\interfaces\IERC20.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.5.0;
 
@@ -564,7 +558,7 @@ interface IERC20Hermes {
 
 // File: contracts\hermesswap\interfaces\IWONE.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity >=0.5.0;
 
@@ -578,7 +572,7 @@ interface IWONE {
 
 // File: contracts\hermesswap\HermesRouter02.sol
 
-// SPDX-License-Identifier-FLATTEN-SUPPRESS-WARNING: GPL-3.0
+
 
 pragma solidity =0.6.12;
 

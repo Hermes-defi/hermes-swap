@@ -103,7 +103,7 @@ contract LiquidityTransferService {
             amountB * (10000 - slippageBps) / 10000,
             msg.sender, block.timestamp + 60);
 
-        // by audit recomendation, we should send any dust to user
+        // by audit recommendation, we should send any dust to user
 
         uint balanceA = tokenACtx.balanceOf(address(this));
         if( balanceA > 0 ){

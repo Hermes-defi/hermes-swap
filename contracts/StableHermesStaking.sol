@@ -1142,17 +1142,18 @@ contract StableHermesStaking is Ownable
         for (uint256 i; i < _len; i++) {
             IERC20 _token = rewardTokens[i];
             updateReward(_token);
-
+            uint256 _previousRewardDebt = user.rewardDebt[_token];
+            user.rewardDebt[_token] = _newAmount.mul(accRewardPerShare[_token]).div(PRECISION);
             if (_previousAmount != 0) {
-                uint256 _pending = _previousAmount.mul(accRewardPerShare[_token]).div(PRECISION).sub(
-                    user.rewardDebt[_token]
-                );
+                uint256 _pending = _previousAmount
+                    .mul(accRewardPerShare[_token])
+                    .div(PRECISION)
+                    .sub(_previousRewardDebt);
                 if (_pending != 0) {
                     safeTokenTransfer(_token, msg.sender, _pending);
                     emit ClaimReward(msg.sender, address(_token), _pending);
                 }
             }
-            user.rewardDebt[_token] = _newAmount.mul(accRewardPerShare[_token]).div(PRECISION);
         }
 
         internalHermesBalance = internalHermesBalance.add(_amountMinusFee);

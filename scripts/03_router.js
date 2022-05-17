@@ -12,15 +12,18 @@ async function main() {
         const WONE9Mock = await _WONE9Mock.deploy();
         await WONE9Mock.deployed();
         weth = WONE9Mock.address;
+        console.log('weth 1', weth);
     }else if (network.chainId == '1666700000') {
         // testnet
         const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
         const WONE9Mock = await _WONE9Mock.deploy();
         await WONE9Mock.deployed();
         weth = WONE9Mock.address;
+        console.log('weth testnet', weth);
     }else if (network.chainId == '1666600000') {
         // mainnet
         weth = '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a';
+        console.log('weth mainnet', weth);
     }
 
 

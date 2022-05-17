@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 const fs = require('fs');
-// npx hardhat run scripts\main.js --network one
+// npx hardhat run scripts\02_factory.js --network testnet
 async function main() {
     const _HermesFactory = await hre.ethers.getContractFactory("HermesFactory");
     const HermesFactory = await _HermesFactory.deploy(process.env.DEV);

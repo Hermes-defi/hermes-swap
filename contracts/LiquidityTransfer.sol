@@ -95,6 +95,28 @@ contract LiquidityTransferService {
         tokenACtx.approve(address(routerDst), amountA);
         tokenBCtx.approve(address(routerDst), amountB);
 
+        // Calculation for reserve imbalance (if any)
+        (uint112 _reserve0, uint112 _reserve1, ) = dstPair.getReserves();
+        // Make sure there are reserves to calculate against
+        if (_reserve0 > 0 && _reserve1 > 0) {
+            // Simulate much higher reserves for a more accurate quote on low liquidity pairs
+            _reserve0 = _reserve0 * 10000;
+            _reserve1 = _reserve1 * 10000;
+           // Check how much B we can get for A
+            uint quoteResult = routerDst.quote(amountA, _reserve0, _reserve1);
+            // If the quote indicates there's an excess of amountB, we can use 100% of amountA
+            if (quoteResult <= amountB) {
+                amountB = quoteResult;
+            } else {
+                // Check how much A we can get for B
+                quoteResult = routerDst.quote(amountB, _reserve1, _reserve0);
+                // If the quote indicates there's an excess of amountA, we can use 100% of amountB
+                if (quoteResult <= amountA) {
+                    amountA = quoteResult;
+                }
+            }
+        }
+
         (uint _amountA, uint _amountB, uint _liquidity) =
         routerDst.addLiquidity(tokenA, tokenB,
             amountA,

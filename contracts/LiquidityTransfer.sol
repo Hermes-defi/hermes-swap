@@ -103,13 +103,13 @@ contract LiquidityTransferService {
             _reserve0 = _reserve0 * 10000;
             _reserve1 = _reserve1 * 10000;
            // Check how much B we can get for A
-            uint quoteResult = routerDst.quote(amountA, _reserve1, _reserve0);
+            uint quoteResult = routerDst.quote(amountA, _reserve0, _reserve1);
             // If the quote indicates there's an excess of amountB, we can use 100% of amountA
             if (quoteResult <= amountB) {
                 amountB = quoteResult;
             } else {
                 // Check how much A we can get for B
-                quoteResult = routerDst.quote(amountB, _reserve0, _reserve1);
+                quoteResult = routerDst.quote(amountB, _reserve1, _reserve0);
                 // If the quote indicates there's an excess of amountA, we can use 100% of amountB
                 if (quoteResult <= amountA) {
                     amountA = quoteResult;

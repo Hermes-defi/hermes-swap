@@ -53,7 +53,7 @@ contract LiquidityTransferService {
         slippageBps = points;
     }
 
-    function run() external {
+    function run(uint tokenAAmount, uint tokenBAmount) external {
 
         IHermesPair srcPairCtx = IHermesPair(srcPair);
         uint256 liquidity = srcPairCtx.balanceOf(msg.sender);
@@ -65,15 +65,16 @@ contract LiquidityTransferService {
 
         liquidity = srcPairCtx.balanceOf(address(this));
 
-        (uint256 tokenAAmount, uint256 tokenBAmount) = getLiquidityValue(srcPairCtx,liquidity);
+        // reserve already changed, as auditor noted, does not make sense
+        // (uint256 tokenAAmount, uint256 tokenBAmount) = getLiquidityValue(srcPairCtx,liquidity);
 
         srcPairCtx.approve(address(routerSrc), liquidity);
         (uint amountA, uint amountB) = routerSrc.removeLiquidity(
                 tokenA,
                 tokenB,
                 liquidity,
-                tokenAAmount * (10000 - slippageBps) / 10000,
-                tokenBAmount * (10000 - slippageBps) / 10000,
+                tokenAAmount,
+                tokenBAmount,
                 address(this), block.timestamp + 60);
 
         /*
@@ -89,34 +90,37 @@ contract LiquidityTransferService {
         IHermesERC20 tokenACtx = IHermesERC20(tokenA);
         IHermesERC20 tokenBCtx = IHermesERC20(tokenB);
 
+        {
         amountA = tokenACtx.balanceOf(address(this));
         amountB = tokenBCtx.balanceOf(address(this));
 
         tokenACtx.approve(address(routerDst), amountA);
         tokenBCtx.approve(address(routerDst), amountB);
+        }
 
-        // Calculation for reserve imbalance (if any)
-        (uint112 _reserve0, uint112 _reserve1, ) = dstPair.getReserves();
-        // Make sure there are reserves to calculate against
-        if (_reserve0 > 0 && _reserve1 > 0) {
-            // Simulate much higher reserves for a more accurate quote on low liquidity pairs
-            _reserve0 = _reserve0 * 10000;
-            _reserve1 = _reserve1 * 10000;
-           // Check how much B we can get for A
-            uint quoteResult = routerDst.quote(amountA, _reserve0, _reserve1);
-            // If the quote indicates there's an excess of amountB, we can use 100% of amountA
-            if (quoteResult <= amountB) {
-                amountB = quoteResult;
-            } else {
-                // Check how much A we can get for B
-                quoteResult = routerDst.quote(amountB, _reserve1, _reserve0);
-                // If the quote indicates there's an excess of amountA, we can use 100% of amountB
-                if (quoteResult <= amountA) {
-                    amountA = quoteResult;
+        {
+            // Calculation for reserve imbalance (if any)
+            (uint112 _reserve0, uint112 _reserve1, ) = IHermesPair(dstPair).getReserves();
+            // Make sure there are reserves to calculate against
+            if (_reserve0 > 0 && _reserve1 > 0) {
+                // Simulate much higher reserves for a more accurate quote on low liquidity pairs
+                _reserve0 = _reserve0 * 10000;
+                _reserve1 = _reserve1 * 10000;
+               // Check how much B we can get for A
+                uint quoteResult = routerDst.quote(amountA, _reserve0, _reserve1);
+                // If the quote indicates there's an excess of amountB, we can use 100% of amountA
+                if (quoteResult <= amountB) {
+                    amountB = quoteResult;
+                } else {
+                    // Check how much A we can get for B
+                    quoteResult = routerDst.quote(amountB, _reserve1, _reserve0);
+                    // If the quote indicates there's an excess of amountA, we can use 100% of amountB
+                    if (quoteResult <= amountA) {
+                        amountA = quoteResult;
+                    }
                 }
             }
         }
-
         (uint _amountA, uint _amountB, uint _liquidity) =
         routerDst.addLiquidity(tokenA, tokenB,
             amountA,

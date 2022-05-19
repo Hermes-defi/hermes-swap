@@ -31,7 +31,7 @@ describe("LiquidityTransfer", function () {
         await this.routerB.deployed()
 
         const pairCodeHash = await this.factoryA.pairCodeHash();
-        expect(pairCodeHash).to.be.eq('0x03c9640d9393b1b682a303babdafdc02f951d2fbb496894041dd62c9704a2663');
+        expect(pairCodeHash).to.be.eq('0x5bbfcf823970c73bfb9bb416ffd1e2dcd34008ae45fc1b0cc517c5ac72800bbe');
 
     })
 
@@ -94,6 +94,7 @@ describe("LiquidityTransfer", function () {
     })
 
     it("should move liquidity for erc20/one", async function () {
+        const user = '0x0000000000000000000000000000000000000000';
         const amountONE = '1000000000000000000';
         this.amount = '1000000000'
         await this.tokenA.mint(this.dev.address, this.amount);
@@ -131,7 +132,7 @@ describe("LiquidityTransfer", function () {
 
         srcBalanceOfLpDev = await this.srcPair.balanceOf(this.dev.address);
         await this.srcPair.approve(this.main.address, srcBalanceOfLpDev);
-        await this.main.run();
+        await this.main.run('0', '0');
 
         dstBalanceOfLpDev = (await this.dstPair.balanceOf(this.dev.address)).toString();
         expect(dstBalanceOfLpDev).to.be.eq('31622776584372')

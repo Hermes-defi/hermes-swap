@@ -560,27 +560,6 @@ contract MasterChefHermesV2 is Ownable, ReentrancyGuard {
         emit OnBlockDeltaEndStageChanged(_blockEnds);
     }
 
-    function setUserFeeStage(uint256[] memory _userFees) public onlyOwner {
-        userFeeStage = _userFees;
-        emit OnUserFeeStageChanged(_userFees);
-        checkFees();
-    }
-
-    function setDevFeeStage(uint256[] memory _devFees) public onlyOwner {
-        devFeeStage = _devFees;
-        emit OnDevFeeStageChanged(_devFees);
-        checkFees();
-    }
-
-    function checkFees() internal{
-        for( uint i = 0 ; i < userFeeStage.length; i++ ){
-            uint v1 = userFeeStage[i];
-            uint v2 = devFeeStage[i];
-            require( v1+v2 == 100, "fees values not 100%" );
-            require( v2 <= 5, "dev fee should not be more than 5%" );
-        }
-    }
-
     /// @dev This function execute withdraw fee logic, the rule for withdraw is:
     /// before 1 day = 1% withdraw fee
     /// before 1 week = 0.2% withdraw fee

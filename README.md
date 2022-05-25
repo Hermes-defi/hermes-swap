@@ -40,3 +40,13 @@ npx hardhat run scripts/01_token_mc.js --network testnet
 - deploy the router: `npx hardhat run scripts/03_router.js --network testnet`
 
 At this point you should have a factory and a router linked.
+
+# Current contracts
+
+## testnet
+
+- factory 0xE229Be87174a3Bb7Fda09208C81469e694fD9cd4
+- init code 0x5cf59abc84cd7f68c883a009ad37629c4d0f17c6446d4593f96965fafa849147
+- router 0xa533fA4376e9996D7902909a174A52058032Cf84
+- wone 0x4Ea23f80A911b3535Fe4b95254Fd939553950aaa
+- distributor 0x669aBa76A65c9A538760Ce8A66171e49F10BA1Ff

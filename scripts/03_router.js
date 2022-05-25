@@ -8,18 +8,21 @@ async function main() {
     let weth;
     const network = await ethers.getDefaultProvider().getNetwork();
     if (network.chainId == 1) {
-        const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
-        const WONE9Mock = await _WONE9Mock.deploy();
-        await WONE9Mock.deployed();
-        weth = WONE9Mock.address;
-        console.log('weth 1', weth);
+        // // testnet
+        // const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
+        // const WONE9Mock = await _WONE9Mock.deploy();
+        // await WONE9Mock.deployed();
+        // weth = WONE9Mock.address;
+        weth = '0x4Ea23f80A911b3535Fe4b95254Fd939553950aaa';
+        console.log('weth testnet 1', weth);
     }else if (network.chainId == '1666700000') {
-        // testnet
-        const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
-        const WONE9Mock = await _WONE9Mock.deploy();
-        await WONE9Mock.deployed();
-        weth = WONE9Mock.address;
-        console.log('weth testnet', weth);
+        // // testnet
+        // const _WONE9Mock = await hre.ethers.getContractFactory("WONE9Mock");
+        // const WONE9Mock = await _WONE9Mock.deploy();
+        // await WONE9Mock.deployed();
+        // weth = WONE9Mock.address;
+        weth = '0x4Ea23f80A911b3535Fe4b95254Fd939553950aaa';
+        console.log('weth testnet 7', weth);
     }else if (network.chainId == '1666600000') {
         // mainnet
         weth = '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a';

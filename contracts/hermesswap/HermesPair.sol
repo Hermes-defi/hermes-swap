@@ -122,7 +122,7 @@ contract HermesPair is HermesERC20 {
                 // console.log(' rootK > rootKLast', rootK, rootKLast);
                 if (rootK > rootKLast) {
                     uint256 numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint256 denominator = rootK.mul(6).add(rootKLast);
+                    uint256 denominator = rootK.mul(11).add(rootKLast);
                     uint256 liquidity = numerator / denominator;
                     // console.log(" feeTo", feeTo, liquidity);
                     if (liquidity > 0) _mint(feeTo, liquidity);

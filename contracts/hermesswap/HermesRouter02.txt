@@ -1,4 +1,7 @@
+
 // SPDX-License-Identifier: GPL-3.0
+
+// File: contracts\hermesswap\interfaces\IHermesPair.sol
 
 pragma solidity >=0.5.0;
 
@@ -151,7 +154,7 @@ library HermesLibrary {
                         hex"ff",
                         factory,
                         keccak256(abi.encodePacked(token0, token1)),
-                        hex"03c9640d9393b1b682a303babdafdc02f951d2fbb496894041dd62c9704a2663" // init code fuji
+                        hex"5cf59abc84cd7f68c883a009ad37629c4d0f17c6446d4593f96965fafa849147" // init code fuji
                     )
                 )
             )

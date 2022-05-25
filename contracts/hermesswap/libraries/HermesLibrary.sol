@@ -30,7 +30,7 @@ library HermesLibrary {
                         hex"ff",
                         factory,
                         keccak256(abi.encodePacked(token0, token1)),
-                        hex"5cf59abc84cd7f68c883a009ad37629c4d0f17c6446d4593f96965fafa849147" // init code fuji
+                        hex"9c66fba717c8166e595d9849d865156b699a23cb3bf12174a296d0158470c328" // init code fuji
                     )
                 )
             )
@@ -67,7 +67,7 @@ library HermesLibrary {
     ) internal pure returns (uint256 amountOut) {
         require(amountIn > 0, "HermesLibrary: INSUFFICIENT_INPUT_AMOUNT");
         require(reserveIn > 0 && reserveOut > 0, "HermesLibrary: INSUFFICIENT_LIQUIDITY");
-        uint256 amountInWithFee = amountIn.mul(997);
+        uint256 amountInWithFee = amountIn.mul(998);
         uint256 numerator = amountInWithFee.mul(reserveOut);
         uint256 denominator = reserveIn.mul(1000).add(amountInWithFee);
         amountOut = numerator / denominator;
@@ -82,7 +82,7 @@ library HermesLibrary {
         require(amountOut > 0, "HermesLibrary: INSUFFICIENT_OUTPUT_AMOUNT");
         require(reserveIn > 0 && reserveOut > 0, "HermesLibrary: INSUFFICIENT_LIQUIDITY");
         uint256 numerator = reserveIn.mul(amountOut).mul(1000);
-        uint256 denominator = reserveOut.sub(amountOut).mul(997);
+        uint256 denominator = reserveOut.sub(amountOut).mul(998);
         amountIn = (numerator / denominator).add(1);
     }
 

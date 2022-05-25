@@ -122,7 +122,7 @@ contract HermesPair is HermesERC20 {
                 // console.log(' rootK > rootKLast', rootK, rootKLast);
                 if (rootK > rootKLast) {
                     uint256 numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint256 denominator = rootK.mul(11).add(rootKLast);
+                    uint256 denominator = rootK.mul(6).add(rootKLast);
                     uint256 liquidity = numerator / denominator;
                     // console.log(" feeTo", feeTo, liquidity);
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -212,8 +212,8 @@ contract HermesPair is HermesERC20 {
         require(amount0In > 0 || amount1In > 0, "Hermes: INSUFFICIENT_INPUT_AMOUNT");
         {
             // scope for reserve{0,1}Adjusted, avoids stack too deep errors
-            uint256 balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(3));
-            uint256 balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(3));
+            uint256 balance0Adjusted = balance0.mul(1000).sub(amount0In.mul(2));
+            uint256 balance1Adjusted = balance1.mul(1000).sub(amount1In.mul(2));
             require(balance0Adjusted.mul(balance1Adjusted) >= uint256(_reserve0).mul(_reserve1).mul(1000**2), "Hermes: K");
         }
 

@@ -1,3 +1,5 @@
+// https://hermesdefi.io/
+
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity =0.6.12;
@@ -7,7 +9,7 @@ import "./libraries/SafeMath.sol";
 contract HermesERC20 {
     using SafeMathHermes for uint256;
 
-    string public constant name = "Hermes LP Token";
+    string public constant name = "Hermes LP";
     string public constant symbol = "HLP";
     uint8 public constant decimals = 18;
     uint256 public totalSupply;

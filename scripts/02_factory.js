@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 const fs = require('fs');
-// npx hardhat run scripts\02_factory.js --network testnet
+// npx hardhat run scripts\02_factory.js --network harmony
 async function main() {
     const distributor = '0x669aBa76A65c9A538760Ce8A66171e49F10BA1Ff';
     const [dev] = await hre.ethers.getSigners();

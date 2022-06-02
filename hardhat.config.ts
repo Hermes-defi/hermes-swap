@@ -63,7 +63,7 @@ const config: HardhatUserConfig = {
 
 
         harmony: {
-            url: "https://api.s0.t.hmny.io",
+            url: "https://rpc.hermesdefi.io/",
             accounts:
                 process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
             chainId: 1666600000,

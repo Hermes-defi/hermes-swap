@@ -1,8 +1,8 @@
 const hre = require("hardhat");
 
-// npx hardhat run scripts\03_xhrms.js --network testnet
+// npx hardhat run scripts\03_xhrms.js --network harmony
 async function main() {
-    let _HRMS = '0x53EA989fbD576d162C534aD371992842f1fE791B'
+    let _HRMS = '0xba4476a302f5bc1dc4053cf79106dc43455904a3'
     const _HermesBar = await hre.ethers.getContractFactory("HermesBar");
     const HermesBar = await _HermesBar.deploy(_HRMS);
     await HermesBar.deployed();
